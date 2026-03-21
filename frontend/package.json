@@ -1,0 +1,19 @@
+{
+  "name": "cbt-ai-therapist-frontend",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0 -p 3000",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0 -p 3000"
+  },
+  "dependencies": {
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.14",
+    "typescript": "5.9.3"
+  }
+}
