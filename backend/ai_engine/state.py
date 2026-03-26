@@ -5,6 +5,7 @@ class HospitalState(TypedDict):
     chat_history: str
     user_message: str
     user_name: str
+    selected_model: str       # "gemini" or "slm"
     
     # 1. Routing Data (Từ Triage Dispatcher)
     risk_level: str           # "SAFE" hoặc "CRITICAL"

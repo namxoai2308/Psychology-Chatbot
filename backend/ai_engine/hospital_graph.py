@@ -1,19 +1,26 @@
+from langgraph.checkpoint.sqlite import SqliteSaver
 from langgraph.graph import StateGraph, END
-from langgraph.checkpoint.memory import MemorySaver
+import sqlite3
+import os
 
 from ai_engine.state import HospitalState
 from ai_engine.agents.triage_agent import triage_node
-from ai_engine.agents.cbt_dept import cbt_phase_node, cbt_therapist_node
-from ai_engine.agents.mbi_dept import mbi_phase_node, mbi_therapist_node
-from ai_engine.agents.ba_dept import ba_phase_node, ba_therapist_node
-from ai_engine.agents.gemini_client import generate_text, FAST_MODEL
-from ai_engine.runtime import _PROMPTS
+from ai_engine.agents.departments import (
+    cbt_phase_node, cbt_therapist_node,
+    mbi_phase_node, mbi_therapist_node,
+    ba_phase_node, ba_therapist_node
+)
+from ai_engine.agents.llm_service import generate_text_async, FAST_MODEL
+from ai_engine.runtime import _PROMPTS, _render
 
-def crisis_node(state: HospitalState) -> HospitalState:
-    print("🚨 KHOA CẤP CỨU: Kích hoạt Protocol Cứu hộ sinh mạng...")
-    txt = generate_text(
-        model=FAST_MODEL, 
-        contents=_PROMPTS.crisis + f"\n\nTin nhắn người dùng: {state['user_message']}\nTherapist trả lời khẩn cấp:"
+_HISTORY_MAX_LINES = 20  # giữ 10 lượt gần nhất (mỗi lượt = 2 dòng)
+
+async def crisis_node(state: HospitalState) -> HospitalState:
+    print("KHOA CẤP CỨU: Kích hoạt Protocol Cứu hộ sinh mạng...")
+    txt = await generate_text_async(
+        model=FAST_MODEL,
+        contents=_render(_PROMPTS.crisis, user_message=state["user_message"]),
+        model_type=state.get("selected_model", "gemini")
     )
     return {"final_reply": txt.strip()}
 
@@ -29,10 +36,11 @@ def route_triage(state: HospitalState) -> str:
     else:
         return "CBT_Phase"
 
-def memory_updater_node(state: HospitalState) -> HospitalState:
+async def memory_updater_node(state: HospitalState) -> HospitalState:
     new_msg = f"User: {state['user_message']}\nBot: {state.get('final_reply', '')}\n"
-    hist = state.get("chat_history", "") + new_msg
-    print(f"\n=> 💬 BÁC SĨ TRẢ LỜI:\n{state.get('final_reply', '')}")
+    lines = (state.get("chat_history", "") + new_msg).splitlines(keepends=True)
+    hist = "".join(lines[-_HISTORY_MAX_LINES:])
+    print(f"\n=> BÁC SĨ TRẢ LỜI:\n{state.get('final_reply', '')}")
     print("="*60 + "\n")
     return {"chat_history": hist}
 
@@ -74,6 +82,11 @@ builder.add_edge("BA_Therapist", "MemoryUpdater")
 builder.add_edge("Crisis", "MemoryUpdater")
 builder.add_edge("MemoryUpdater", END)
 
-# Compile Graph
-memory = MemorySaver()
+# Compile Graph with Persistent SQLite
+db_path = os.path.join(os.path.dirname(__file__), "..", "database")
+os.makedirs(db_path, exist_ok=True)
+sqlite_conn = sqlite3.connect(os.path.join(db_path, "checkpoints.sqlite"), check_same_thread=False)
+
+memory = SqliteSaver(sqlite_conn)
+# memory.setup() has been removed in newer versions, it auto-creates tables on write.
 hospital_app = builder.compile(checkpointer=memory)

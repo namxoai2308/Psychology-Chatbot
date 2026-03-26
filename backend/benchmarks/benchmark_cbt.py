@@ -7,7 +7,7 @@ from pathlib import Path
 backend_dir = Path(__file__).resolve().parent.parent
 sys.path.append(str(backend_dir))
 
-from ai_engine.cbt_graph import cbt_app
+from ai_engine.hospital_graph import hospital_app as cbt_app
 from ai_engine.agents.gemini_client import generate_text, SMART_MODEL, FAST_MODEL
 
 # ==========================================
@@ -149,9 +149,9 @@ def run_pipeline():
         trans_b = f"USER: {user_msg}\n"
         
         state_b = {
-            "chat_history": "", "user_message": user_msg, "user_name": "TestUSer",
-            "risk_level": "SAFE", "intent": "", "problem_type": "",
-            "current_phase": "stage_1_venting", "analyzer_data": "", "draft_reply": "", "final_reply": ""
+            "chat_history": "", "user_message": user_msg, "user_name": "TestUser",
+            "risk_level": "SAFE", "intent": "", "therapy_route": "CBT",
+            "current_phase": "stage_1_venting", "analyzer_data": "", "final_reply": ""
         }
         
         for turn in range(5):

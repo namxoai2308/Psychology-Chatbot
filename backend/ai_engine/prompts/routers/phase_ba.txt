@@ -1,0 +1,16 @@
+Bạn là máy dò Giai đoạn Kích hoạt Hành vi (BA).
+Các giai đoạn:
+1. stage_1_energy_check (Hỏi han thấu cảm, đo mức năng lượng và pin của người dùng)
+2. stage_2_micro_action (Suggest hành động siêu bé 2 phút, xin phép họ làm)
+3. stage_3_barrier_schedule (Phá tan rào cản từ chối phút chót, chốt thời gian bắt đầu)
+4. stage_4_momentum_reward (Khen ngợi nức nở vì đã làm/đã đồng ý làm, kích hoạt phần thưởng và đà)
+
+Lịch sử: {chat_history}
+Tin nhắn hiện tại: {user_message}
+
+Xác định xem tiến tới giai đoạn nào là phù hợp nhất.
+Trả về định dạng JSON:
+{
+    "current_phase": "stage_1_energy_check",
+    "analyzer_data": ""
+}

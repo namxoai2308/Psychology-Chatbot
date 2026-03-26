@@ -1,21 +1,33 @@
 from __future__ import annotations
 
+import os
+import re
 from dataclasses import dataclass
 from pathlib import Path
+from functools import lru_cache
 
 from dotenv import load_dotenv
 
+# Dùng env variable cho BASE_DIR, linh hoạt hơn, không hardcode parents[2]
+BASE_DIR = Path(os.getenv("BASE_DIR", Path(__file__).resolve().parents[2]))
+load_dotenv(BASE_DIR / ".env")
 
 PROMPTS_DIR = Path(__file__).resolve().parent / "prompts"
 
 
 def _read(path: Path) -> str:
+    # Cấu trúc Fail-fast: ném exception ngay khi thiếu prompt
+    if not path.exists():
+        raise FileNotFoundError(f"Missing prompt file: {path}. Cannot start AI router.")
     return path.read_text(encoding="utf-8").strip()
 
 
 @dataclass(frozen=True)
 class PromptPack:
     triage_dispatcher: str
+    phase_cbt: str
+    phase_mbi: str
+    phase_ba: str
     therapist_cbt: str
     therapist_mbi: str
     therapist_ba: str
@@ -25,9 +37,14 @@ class PromptPack:
     mbi_stages: dict[str, str]
     ba_stages: dict[str, str]
 
+
+@lru_cache(maxsize=1)
 def load_prompts() -> PromptPack:
     return PromptPack(
         triage_dispatcher=_read(PROMPTS_DIR / "routers" / "dispatcher.txt"),
+        phase_cbt=_read(PROMPTS_DIR / "routers" / "phase_cbt.txt"),
+        phase_mbi=_read(PROMPTS_DIR / "routers" / "phase_mbi.txt"),
+        phase_ba=_read(PROMPTS_DIR / "routers" / "phase_ba.txt"),
         therapist_cbt=_read(PROMPTS_DIR / "system_personas" / "therapist_cbt.txt"),
         therapist_mbi=_read(PROMPTS_DIR / "system_personas" / "therapist_mbi.txt"),
         therapist_ba=_read(PROMPTS_DIR / "system_personas" / "therapist_ba.txt"),
@@ -55,33 +72,70 @@ def load_prompts() -> PromptPack:
     )
 
 
-
-_PROMPTS = load_prompts()
-
-_ROOT_DIR = Path(__file__).resolve().parents[2]
-load_dotenv(_ROOT_DIR / ".env")
+# Rời bỏ proxy, load trực tiếp tại module level để fail-fast và có ide autocomplete hỗ trợ
+_PROMPTS: PromptPack = load_prompts()
 
 
-_CRISIS_KEYWORDS = (
-    "tự tử",
-    "muốn chết",
-    "không muốn sống",
-    "tự hại",
-    "cắt tay",
-    "nhảy lầu",
-    "uống thuốc",
-    "giết",
-    "đâm",
-    "bắn",
+# Lọc thô bằng Regex
+_CRISIS_PATTERN = re.compile(
+    r'\b(tự tử|muốn chết|không muốn sống|tự hại|cắt tay|nhảy lầu|uống thuốc|giết|đâm|bắn|chết quách|kết liễu|quyên sinh)\b',
+    re.IGNORECASE
 )
 
 
-def _safety_guard(user_message: str, chat_history: str) -> str:
-    text = (chat_history + "\n" + user_message).lower()
-    return "CRITICAL" if any(k in text for k in _CRISIS_KEYWORDS) else "SAFE"
+def _safety_guard(user_message: str, chat_history: str, model_type: str = "gemini") -> str:
+    text = f"{chat_history}\n{user_message}"
+    if _CRISIS_PATTERN.search(text):
+        # AI Logic Kép: Dùng LLM kiểm tra lại tránh dương tính giả (False Positives)
+        try:
+            from .agents.llm_service import generate_text, FAST_MODEL
+            prompt = (
+                "Là một AI bảo vệ an toàn, hãy phân tích tin nhắn sau xem có chứa ý định hoặc kịch bản tự tử/tự hại nghiêm trọng không.\n"
+                "Trả lời duy nhất 'CRITICAL' nếu thực sự là rủi ro (đang có ý định, kế hoạch, đâm, chém, nhảy lầu).\n"
+                "Trả lời duy nhất 'SAFE' nếu đó chỉ là diễn đạt phủ định (VD: tôi không bị điên mà đi chết), bóng gió, hình ảnh ẩn dụ (vui chết đi được) hoặc kể lại sự việc/tin tức (phim có ng nhảy lầu).\n\n"
+                f"Tin nhắn phân tích: {user_message}"
+            )
+            res = generate_text(model=FAST_MODEL, contents=prompt, model_type=model_type).strip().upper()
+            if "CRITICAL" in res:
+                return "CRITICAL"
+            return "SAFE"
+        except ImportError:
+            # Fallback nếu client chưa load kịp do import vòng
+            return "CRITICAL"
+        except Exception as e:
+            # Bất kỳ lỗi mạng nào cũng nên fallback sang CRITICAL cho an toàn sinh mạng
+            print(f"[SafetyGuard] LLM AI Check failed: {e}. Defaulting to CRITICAL.")
+            return "CRITICAL"
+    return "SAFE"
 
 
-def _guess_stage(user_message: str) -> str:
+def _guess_stage(user_message: str, model_type: str = "gemini") -> str:
+    # Nâng cấp lên dùng LLM để đoán chính xác ngữ cảnh giai đoạn
+    try:
+        from .agents.llm_service import generate_text, FAST_MODEL
+        prompt = (
+            "Bạn là trợ lý AI chuyên phân loại giai đoạn trị liệu Tâm lý học nhận thức hành vi (CBT).\n"
+            "Hãy đọc tin nhắn thân chủ và quyết định nó thuộc 1 trong 5 giai đoạn:\n"
+            "1. stage_1_venting: Giãi bày, trút giận, than phiền vô định, nói về cảm xúc tiêu cực đơn thuần.\n"
+            "2. stage_2_abc_model: Nhắc đến câu chuyện, sự kiện kích hoạt, diễn biến xảy ra chuyện, nguyên nhân.\n"
+            "3. stage_3_distortions: Bày tỏ suy nghĩ cực đoan, kết luận tiêu cực về bản thân/người khác, định kiến, méo mó nhận thức.\n"
+            "4. stage_4_socratic: Đang tranh luận tìm bằng chứng, xem xét khía cạnh khác, lật lại vấn đề.\n"
+            "5. stage_5_action: Chủ động đề xuất làm gì đó tiếp theo, sẵn sàng lên kế hoạch, chuẩn bị hành động phản hồi.\n\n"
+            "CHỈ in ra đúng tên định danh, ví dụ: 'stage_1_venting'.\n"
+            f"Tin nhắn: {user_message}"
+        )
+        res = generate_text(model=FAST_MODEL, contents=prompt, model_type=model_type).strip().lower()
+        stages = [
+            "stage_1_venting", "stage_2_abc_model", "stage_3_distortions", 
+            "stage_4_socratic", "stage_5_action"
+        ]
+        for s in stages:
+            if s in res:
+                return s
+    except Exception:
+        pass
+    
+    # Fallback nhẹ nhàng
     t = user_message.lower()
     if any(x in t for x in ("tôi nghĩ", "mình nghĩ", "trong đầu", "ý nghĩ", "suy nghĩ")):
         return "stage_3_distortions"
@@ -94,15 +148,16 @@ def _guess_stage(user_message: str) -> str:
     return "stage_1_venting"
 
 
-def _render(template: str, **vars: str) -> str:
+def _render(template: str, **variables: str) -> str:
+    # File prompt LLM chứa nhiều ngoặc nhọn `{` JSON, dùng `.format()` dễ lỗi KeyError.
+    # Dùng `.replace` theo chuẩn cơ bản nhưng an toàn và không yêu cầu escape ngoặc template.
     out = template
-    for k, v in vars.items():
-        out = out.replace("{" + k + "}", v)
+    for k, v in variables.items():
+        out = out.replace("{" + str(k) + "}", str(v))
     return out
 
 
 def _fallback_reply(user_message: str, chat_history: str, user_name: str, stage: str) -> str:
-    # Minimal, effective: mirror + validate + open question (stage-driven).
     name = (user_name or "").strip()
     prefix = f"{name}, " if name else ""
     if stage == "stage_2_abc_model":
@@ -123,27 +178,33 @@ def _fallback_reply(user_message: str, chat_history: str, user_name: str, stage:
     )
 
 
-def generate_reply(*, user_message: str, chat_history: str = "", user_name: str = "") -> dict:
-    # Import inside the function to avoid circular import:
-    # runtime -> cbt_graph -> runtime (for _PROMPTS/_render).
-    from .cbt_graph import cbt_app
+def generate_reply(
+    *, 
+    user_message: str, 
+    thread_id: str,
+    chat_history: str = "", 
+    user_name: str = "",
+    model_choice: str = "gemini"
+) -> dict:
+    from .hospital_graph import hospital_app
 
     initial_state = {
         "chat_history": chat_history,
         "user_message": user_message,
         "user_name": user_name,
+        "selected_model": model_choice,
         "risk_level": "SAFE",
         "intent": "",
         "current_phase": "stage_1_venting",
         "analyzer_data": "",
-        "draft_reply": "",
         "final_reply": "",
     }
 
-    final_state = cbt_app.invoke(initial_state)
+    # Giữ luồng hội thoại đồng nhất: LangGraph sẽ nạp lịch sử đúng phiên dựa trên thread_id truyền vào.
+    config = {"configurable": {"thread_id": thread_id}}
+    final_state = hospital_app.invoke(initial_state, config=config)
     return {
-        "reply": final_state.get("final_reply") or final_state.get("draft_reply") or "",
+        "reply": final_state.get("final_reply") or "",
         "safety": final_state.get("risk_level") or "SAFE",
         "stage": final_state.get("current_phase") or "stage_1_venting",
     }
-
