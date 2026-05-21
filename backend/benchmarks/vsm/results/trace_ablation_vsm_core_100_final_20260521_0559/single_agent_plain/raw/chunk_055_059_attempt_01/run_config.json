@@ -1,0 +1,30 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "env": {
+    "FAST_MODEL": "",
+    "SMART_MODEL": ""
+  },
+  "filters": {
+    "case_group": null,
+    "case_id": "vsm_mbi_006_sleep_anxiety,vsm_mbi_007_presentation_panic,vsm_mbi_008_family_call_overload,vsm_mbi_009_social_noise_overwhelm,vsm_mbi_010_commute_rumination",
+    "limit": null,
+    "skip": 0
+  },
+  "git_commit": "9543281a9d1cf189b0ce996211808626d0c0d06d",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "out_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/single_agent_plain/raw/chunk_055_059_attempt_01",
+  "selected_case_ids": [
+    "vsm_mbi_006_sleep_anxiety",
+    "vsm_mbi_007_presentation_panic",
+    "vsm_mbi_008_family_call_overload",
+    "vsm_mbi_009_social_noise_overwhelm",
+    "vsm_mbi_010_commute_rumination"
+  ],
+  "selected_model": "deepseek",
+  "systems": [
+    "single_agent_plain"
+  ],
+  "turn_count": 60
+}

@@ -1,0 +1,57 @@
+\chapter{Route Stage Contracts}
+
+The system uses stage contracts to keep CBT, MBI, and BA responses aligned with their intended route. These contracts are engineering controls. They are not clinical protocols, but they define what the system should attempt to do at each step.
+
+\begin{table}[H]
+\centering
+\caption{CBT stage contract used by the prototype.}
+\label{tab:appendix_cbt_contract}
+\small
+\begin{tabular}{p{0.20\textwidth}p{0.34\textwidth}p{0.32\textwidth}}
+\toprule
+Stage & Therapist goal & Main constraint \\
+\midrule
+Venting & Validate emotion and invite context & Do not challenge thoughts yet. \\
+ABC model & Separate event, automatic thought, and emotion & Do not label distortion too early. \\
+Distortion & Name the cognitive pattern gently & Avoid harsh correction. \\
+Socratic & Ask evidence or double-standard question & Peer agents should usually remain silent. \\
+Reframe/action & Form a balanced thought and small next step & Keep action realistic and specific. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{MBI stage contract used by the prototype.}
+\label{tab:appendix_mbi_contract}
+\small
+\begin{tabular}{p{0.20\textwidth}p{0.34\textwidth}p{0.32\textwidth}}
+\toprule
+Stage & Therapist goal & Main constraint \\
+\midrule
+Grounding & Stabilize attention and body awareness & Do not analyze thoughts. \\
+Decentering & Help the user observe thoughts as mental events & Do not debate whether thoughts are true. \\
+Body scan & Notice physical sensations without judgment & Keep language concrete and slow. \\
+Mindful action & Choose one small present-moment action & Avoid large plans or productivity pressure. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{BA stage contract used by the prototype.}
+\label{tab:appendix_ba_contract}
+\small
+\begin{tabular}{p{0.20\textwidth}p{0.34\textwidth}p{0.32\textwidth}}
+\toprule
+Stage & Therapist goal & Main constraint \\
+\midrule
+Energy check & Validate depletion and ask for energy level & Do not assign a large task. \\
+Micro-action & Select one tiny action matched to energy & Keep the action small enough to start. \\
+Barrier/schedule & Identify obstacle and set a concrete time or cue & Do not blame the user for avoidance. \\
+Reward/momentum & Reinforce completion and decide rest or next step & Do not escalate too quickly. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The contracts are also used in benchmark design. Each VSM turn contains an expected route, expected stage, required technique hint, and forbidden patterns. The deterministic scorer checks these fields for the proposed system, while external baselines are evaluated from visible text.

@@ -1,0 +1,320 @@
+MBI/BA DETERMINISTIC REGRESSION - 2026-05-15
+========================================================================
+
+## ROUTE MBI
+
+### MBI-01 panic exam
+[TURN 1] user=Mình đang hoảng, tim đập nhanh và khó thở.
+- expected=mbi_stage_1_grounding actual=mbi_stage_1_grounding stage_ok=True
+- transition=STAY confidence=0.86 y_alom=['NONE']
+- evidence=['User reports acute overload or body panic cues.', 'Evidence quote: Mình đang hoảng, tim đập nhanh và khó thở.']
+- validator_valid=True reason=mbi_stage_1_grounding satisfies route response contract.
+[TURN 2] user=Mình đỡ hơn chút nhưng suy nghĩ vẫn chạy.
+- expected=mbi_stage_2_decentering actual=mbi_stage_2_decentering stage_ok=True
+- transition=ADVANCE confidence=0.84 y_alom=['NONE']
+- evidence=['User is caught by recurring thoughts but not asking for logic debate.', 'Evidence quote: Mình đỡ hơn chút nhưng suy nghĩ vẫn chạy.']
+- validator_valid=True reason=mbi_stage_2_decentering satisfies route response contract.
+[TURN 3] user=Mình thấy nặng ở ngực.
+- expected=mbi_stage_3_body_scan actual=mbi_stage_3_body_scan stage_ok=True
+- transition=ADVANCE confidence=0.83 y_alom=['NONE']
+- evidence=['User identifies a concrete body sensation.', 'Evidence quote: Mình thấy nặng ở ngực.']
+- validator_valid=True reason=mbi_stage_3_body_scan satisfies route response contract.
+
+### MBI-02 body settle
+[TURN 1] user=Đầu mình quay cuồng, tay run.
+- expected=mbi_stage_1_grounding actual=mbi_stage_1_grounding stage_ok=True
+- transition=STAY confidence=0.86 y_alom=['NONE']
+- evidence=['User reports acute overload or body panic cues.', 'Evidence quote: Đầu mình quay cuồng, tay run.']
+- validator_valid=True reason=mbi_stage_1_grounding satisfies route response contract.
+[TURN 2] user=Mình thở chậm lại rồi, vẫn bị cuốn bởi ý nghĩ.
+- expected=mbi_stage_2_decentering actual=mbi_stage_2_decentering stage_ok=True
+- transition=ADVANCE confidence=0.84 y_alom=['NONE']
+- evidence=['User is caught by recurring thoughts but not asking for logic debate.', 'Evidence quote: Mình thở chậm lại rồi, vẫn bị cuốn bởi ý nghĩ.']
+- validator_valid=True reason=mbi_stage_2_decentering satisfies route response contract.
+[TURN 3] user=Mình ổn hơn và muốn uống nước.
+- expected=mbi_stage_4_mindful_action actual=mbi_stage_4_mindful_action stage_ok=True
+- transition=ADVANCE confidence=0.84 y_alom=['Hope']
+- evidence=['User is regulated enough to close with a mindful action.', 'Evidence quote: Mình ổn hơn và muốn uống nước.']
+- validator_valid=True reason=mbi_stage_4_mindful_action satisfies route response contract.
+
+### MBI-03 recurring thought
+[TURN 1] user=Ý nghĩ đó cứ xuất hiện lại, mình bị cuốn.
+- expected=mbi_stage_2_decentering actual=mbi_stage_2_decentering stage_ok=True
+- transition=ADVANCE confidence=0.8 y_alom=['NONE']
+- evidence=['User is caught by recurring thoughts but not asking for logic debate.', 'Evidence quote: Ý nghĩ đó cứ xuất hiện lại, mình bị cuốn.']
+- validator_valid=True reason=mbi_stage_2_decentering satisfies route response contract.
+[TURN 2] user=Mình thấy vai căng.
+- expected=mbi_stage_3_body_scan actual=mbi_stage_3_body_scan stage_ok=True
+- transition=ADVANCE confidence=0.83 y_alom=['NONE']
+- evidence=['User identifies a concrete body sensation.', 'Evidence quote: Mình thấy vai căng.']
+- validator_valid=True reason=mbi_stage_3_body_scan satisfies route response contract.
+[TURN 3] user=Mình dịu hơn rồi, vươn vai chậm được.
+- expected=mbi_stage_4_mindful_action actual=mbi_stage_4_mindful_action stage_ok=True
+- transition=ADVANCE confidence=0.84 y_alom=['Hope']
+- evidence=['User is regulated enough to close with a mindful action.', 'Evidence quote: Mình dịu hơn rồi, vươn vai chậm được.']
+- validator_valid=True reason=mbi_stage_4_mindful_action satisfies route response contract.
+
+### MBI-04 throat
+[TURN 1] user=Mình ngộp quá, không thở nổi.
+- expected=mbi_stage_1_grounding actual=mbi_stage_1_grounding stage_ok=True
+- transition=STAY confidence=0.86 y_alom=['NONE']
+- evidence=['User reports acute overload or body panic cues.', 'Evidence quote: Mình ngộp quá, không thở nổi.']
+- validator_valid=True reason=mbi_stage_1_grounding satisfies route response contract.
+[TURN 2] user=Mình biết đó là ý nghĩ nhưng vẫn bị cuốn.
+- expected=mbi_stage_2_decentering actual=mbi_stage_2_decentering stage_ok=True
+- transition=ADVANCE confidence=0.8 y_alom=['NONE']
+- evidence=['User is caught by recurring thoughts but not asking for logic debate.', 'Evidence quote: Mình biết đó là ý nghĩ nhưng vẫn bị cuốn.']
+- validator_valid=True reason=mbi_stage_2_decentering satisfies route response contract.
+[TURN 3] user=Cổ họng mình nghẹn lại.
+- expected=mbi_stage_3_body_scan actual=mbi_stage_3_body_scan stage_ok=True
+- transition=ADVANCE confidence=0.83 y_alom=['NONE']
+- evidence=['User identifies a concrete body sensation.', 'Evidence quote: Cổ họng mình nghẹn lại.']
+- validator_valid=True reason=mbi_stage_3_body_scan satisfies route response contract.
+
+### MBI-05 present action
+[TURN 1] user=Tim mình đập mạnh, tay run.
+- expected=mbi_stage_1_grounding actual=mbi_stage_1_grounding stage_ok=True
+- transition=STAY confidence=0.86 y_alom=['NONE']
+- evidence=['User reports acute overload or body panic cues.', 'Evidence quote: Tim mình đập mạnh, tay run.']
+- validator_valid=True reason=mbi_stage_1_grounding satisfies route response contract.
+[TURN 2] user=Mình cảm nhận bàn chân chạm sàn và đỡ hơn.
+- expected=mbi_stage_4_mindful_action actual=mbi_stage_4_mindful_action stage_ok=True
+- transition=ADVANCE confidence=0.84 y_alom=['Hope']
+- evidence=['User is regulated enough to close with a mindful action.', 'Evidence quote: Mình cảm nhận bàn chân chạm sàn và đỡ hơn.']
+- validator_valid=True reason=mbi_stage_4_mindful_action satisfies route response contract.
+
+### MBI-06 loop
+[TURN 1] user=Mình cứ nghĩ nhiều, như vòng lặp không dừng.
+- expected=mbi_stage_2_decentering actual=mbi_stage_2_decentering stage_ok=True
+- transition=ADVANCE confidence=0.8 y_alom=['NONE']
+- evidence=['User is caught by recurring thoughts but not asking for logic debate.', 'Evidence quote: Mình cứ nghĩ nhiều, như vòng lặp không dừng.']
+- validator_valid=True reason=mbi_stage_2_decentering satisfies route response contract.
+[TURN 2] user=Cảm giác nằm ở bụng, hơi đau.
+- expected=mbi_stage_3_body_scan actual=mbi_stage_3_body_scan stage_ok=True
+- transition=ADVANCE confidence=0.83 y_alom=['NONE']
+- evidence=['User identifies a concrete body sensation.', 'Evidence quote: Cảm giác nằm ở bụng, hơi đau.']
+- validator_valid=True reason=mbi_stage_3_body_scan satisfies route response contract.
+
+### MBI-07 panic to window
+[TURN 1] user=Mình thấy hoảng trước cuộc họp.
+- expected=mbi_stage_1_grounding actual=mbi_stage_1_grounding stage_ok=True
+- transition=STAY confidence=0.86 y_alom=['NONE']
+- evidence=['User reports acute overload or body panic cues.', 'Evidence quote: Mình thấy hoảng trước cuộc họp.']
+- validator_valid=True reason=mbi_stage_1_grounding satisfies route response contract.
+[TURN 2] user=Mình bớt hoảng rồi, nhìn ra cửa sổ 30 giây được.
+- expected=mbi_stage_4_mindful_action actual=mbi_stage_4_mindful_action stage_ok=True
+- transition=ADVANCE confidence=0.84 y_alom=['Hope']
+- evidence=['User is regulated enough to close with a mindful action.', 'Evidence quote: Mình bớt hoảng rồi, nhìn ra cửa sổ 30 giây được.']
+- validator_valid=True reason=mbi_stage_4_mindful_action satisfies route response contract.
+
+### MBI-08 chest
+[TURN 1] user=Mình đang có suy nghĩ rằng mọi thứ sẽ tệ.
+- expected=mbi_stage_2_decentering actual=mbi_stage_2_decentering stage_ok=True
+- transition=ADVANCE confidence=0.8 y_alom=['NONE']
+- evidence=['User is caught by recurring thoughts but not asking for logic debate.', 'Evidence quote: Mình đang có suy nghĩ rằng mọi thứ sẽ tệ.']
+- validator_valid=True reason=mbi_stage_2_decentering satisfies route response contract.
+[TURN 2] user=Ngực mình nhẹ hơn nhưng vẫn còn căng.
+- expected=mbi_stage_3_body_scan actual=mbi_stage_3_body_scan stage_ok=True
+- transition=ADVANCE confidence=0.84 y_alom=['NONE']
+- evidence=['User identifies a concrete body sensation.', 'Evidence quote: Ngực mình nhẹ hơn nhưng vẫn còn căng.']
+- validator_valid=True reason=mbi_stage_3_body_scan satisfies route response contract.
+[TURN 3] user=Mình nhẹ hơn, đứng dậy đi chậm được.
+- expected=mbi_stage_4_mindful_action actual=mbi_stage_4_mindful_action stage_ok=True
+- transition=ADVANCE confidence=0.84 y_alom=['Hope']
+- evidence=['User is regulated enough to close with a mindful action.', 'Evidence quote: Mình nhẹ hơn, đứng dậy đi chậm được.']
+- validator_valid=True reason=mbi_stage_4_mindful_action satisfies route response contract.
+
+### MBI-09 acute
+[TURN 1] user=Mình choáng và quay cuồng.
+- expected=mbi_stage_1_grounding actual=mbi_stage_1_grounding stage_ok=True
+- transition=STAY confidence=0.86 y_alom=['NONE']
+- evidence=['User reports acute overload or body panic cues.', 'Evidence quote: Mình choáng và quay cuồng.']
+- validator_valid=True reason=mbi_stage_1_grounding satisfies route response contract.
+[TURN 2] user=Mình thở chậm lại rồi.
+- expected=mbi_stage_2_decentering actual=mbi_stage_2_decentering stage_ok=True
+- transition=ADVANCE confidence=0.8 y_alom=['NONE']
+- evidence=['User is caught by recurring thoughts but not asking for logic debate.', 'Evidence quote: Mình thở chậm lại rồi.']
+- validator_valid=True reason=mbi_stage_2_decentering satisfies route response contract.
+
+### MBI-10 shoulder
+[TURN 1] user=Suy nghĩ cứ xuất hiện lại.
+- expected=mbi_stage_2_decentering actual=mbi_stage_2_decentering stage_ok=True
+- transition=ADVANCE confidence=0.8 y_alom=['NONE']
+- evidence=['User is caught by recurring thoughts but not asking for logic debate.', 'Evidence quote: Suy nghĩ cứ xuất hiện lại.']
+- validator_valid=True reason=mbi_stage_2_decentering satisfies route response contract.
+[TURN 2] user=Vai gáy rất mỏi.
+- expected=mbi_stage_3_body_scan actual=mbi_stage_3_body_scan stage_ok=True
+- transition=ADVANCE confidence=0.83 y_alom=['NONE']
+- evidence=['User identifies a concrete body sensation.', 'Evidence quote: Vai gáy rất mỏi.']
+- validator_valid=True reason=mbi_stage_3_body_scan satisfies route response contract.
+
+## ROUTE BA
+
+### BA-01 bed all day
+[TURN 1] user=Mình chẳng muốn làm gì, chỉ nằm cả ngày.
+- expected=ba_stage_1_energy_check actual=ba_stage_1_energy_check stage_ok=True
+- transition=STAY confidence=0.84 y_alom=['Universality', 'Catharsis']
+- evidence=['User describes low activation, depletion, or self-blame.', 'Evidence quote: Mình chẳng muốn làm gì, chỉ nằm cả ngày.']
+- validator_valid=True reason=ba_stage_1_energy_check satisfies route response contract.
+[TURN 2] user=Pin mình khoảng 2/10 thôi.
+- expected=ba_stage_2_micro_action actual=ba_stage_2_micro_action stage_ok=True
+- transition=ADVANCE confidence=0.84 y_alom=['Hope']
+- evidence=['User provided an energy level.', 'Evidence quote: Pin mình khoảng 2/10 thôi.']
+- validator_valid=True reason=ba_stage_2_micro_action satisfies route response contract.
+[TURN 3] user=Mình chọn uống nước trước.
+- expected=ba_stage_3_barrier_schedule actual=ba_stage_3_barrier_schedule stage_ok=True
+- transition=ADVANCE confidence=0.82 y_alom=['Interpersonal Learning']
+- evidence=['User selected a concrete micro-action.', 'Evidence quote: Mình chọn uống nước trước.']
+- validator_valid=True reason=ba_stage_3_barrier_schedule satisfies route response contract.
+
+### BA-02 open doc
+[TURN 1] user=Mình hết pin, không muốn mở bài ra.
+- expected=ba_stage_1_energy_check actual=ba_stage_1_energy_check stage_ok=True
+- transition=STAY confidence=0.76 y_alom=['Universality', 'Catharsis']
+- evidence=['User describes low activation, depletion, or self-blame.', 'Evidence quote: Mình hết pin, không muốn mở bài ra.']
+- validator_valid=True reason=ba_stage_1_energy_check satisfies route response contract.
+[TURN 2] user=Năng lượng chắc 4/10.
+- expected=ba_stage_2_micro_action actual=ba_stage_2_micro_action stage_ok=True
+- transition=ADVANCE confidence=0.84 y_alom=['Hope']
+- evidence=['User provided an energy level.', 'Evidence quote: Năng lượng chắc 4/10.']
+- validator_valid=True reason=ba_stage_2_micro_action satisfies route response contract.
+[TURN 3] user=Mình sẽ mở tài liệu 2 phút.
+- expected=ba_stage_3_barrier_schedule actual=ba_stage_3_barrier_schedule stage_ok=True
+- transition=ADVANCE confidence=0.82 y_alom=['Interpersonal Learning']
+- evidence=['User selected a concrete micro-action.', 'Evidence quote: Mình sẽ mở tài liệu 2 phút.']
+- validator_valid=True reason=ba_stage_3_barrier_schedule satisfies route response contract.
+
+### BA-03 done
+[TURN 1] user=Mình thấy mình lười quá và cứ trì hoãn.
+- expected=ba_stage_1_energy_check actual=ba_stage_1_energy_check stage_ok=True
+- transition=STAY confidence=0.84 y_alom=['Universality', 'Catharsis']
+- evidence=['User describes low activation, depletion, or self-blame.', 'Evidence quote: Mình thấy mình lười quá và cứ trì hoãn.']
+- validator_valid=True reason=ba_stage_1_energy_check satisfies route response contract.
+[TURN 2] user=Mức pin của mình là 1/10.
+- expected=ba_stage_2_micro_action actual=ba_stage_2_micro_action stage_ok=True
+- transition=ADVANCE confidence=0.84 y_alom=['Hope']
+- evidence=['User provided an energy level.', 'Evidence quote: Mức pin của mình là 1/10.']
+- validator_valid=True reason=ba_stage_2_micro_action satisfies route response contract.
+[TURN 3] user=Xong rồi.
+- expected=ba_stage_4_momentum_reward actual=ba_stage_4_momentum_reward stage_ok=True
+- transition=ADVANCE confidence=0.86 y_alom=['Hope']
+- evidence=['User reports completing the micro-action.', 'Evidence quote: Xong rồi.']
+- validator_valid=True reason=ba_stage_4_momentum_reward satisfies route response contract.
+
+### BA-04 wash face
+[TURN 1] user=Mình kiệt sức và cứ lướt điện thoại để né việc.
+- expected=ba_stage_1_energy_check actual=ba_stage_1_energy_check stage_ok=True
+- transition=STAY confidence=0.84 y_alom=['Universality', 'Catharsis']
+- evidence=['User describes low activation, depletion, or self-blame.', 'Evidence quote: Mình kiệt sức và cứ lướt điện thoại để né việc.']
+- validator_valid=True reason=ba_stage_1_energy_check satisfies route response contract.
+[TURN 2] user=Mình còn khoảng 30% pin.
+- expected=ba_stage_2_micro_action actual=ba_stage_2_micro_action stage_ok=True
+- transition=ADVANCE confidence=0.84 y_alom=['Hope']
+- evidence=['User provided an energy level.', 'Evidence quote: Mình còn khoảng 30% pin.']
+- validator_valid=True reason=ba_stage_2_micro_action satisfies route response contract.
+[TURN 3] user=Mình chọn rửa mặt.
+- expected=ba_stage_3_barrier_schedule actual=ba_stage_3_barrier_schedule stage_ok=True
+- transition=ADVANCE confidence=0.82 y_alom=['Interpersonal Learning']
+- evidence=['User selected a concrete micro-action.', 'Evidence quote: Mình chọn rửa mặt.']
+- validator_valid=True reason=ba_stage_3_barrier_schedule satisfies route response contract.
+
+### BA-05 complete water
+[TURN 1] user=Mình cạn năng lượng, thấy bản thân vô dụng.
+- expected=ba_stage_1_energy_check actual=ba_stage_1_energy_check stage_ok=True
+- transition=STAY confidence=0.84 y_alom=['Universality', 'Catharsis']
+- evidence=['User describes low activation, depletion, or self-blame.', 'Evidence quote: Mình cạn năng lượng, thấy bản thân vô dụng.']
+- validator_valid=True reason=ba_stage_1_energy_check satisfies route response contract.
+[TURN 2] user=Năng lượng khoảng 5/10 nhưng vẫn nản.
+- expected=ba_stage_2_micro_action actual=ba_stage_2_micro_action stage_ok=True
+- transition=ADVANCE confidence=0.84 y_alom=['Hope']
+- evidence=['User provided an energy level.', 'Evidence quote: Năng lượng khoảng 5/10 nhưng vẫn nản.']
+- validator_valid=True reason=ba_stage_2_micro_action satisfies route response contract.
+[TURN 3] user=Mình vừa uống nước.
+- expected=ba_stage_4_momentum_reward actual=ba_stage_4_momentum_reward stage_ok=True
+- transition=ADVANCE confidence=0.86 y_alom=['Hope']
+- evidence=['User reports completing the micro-action.', 'Evidence quote: Mình vừa uống nước.']
+- validator_valid=True reason=ba_stage_4_momentum_reward satisfies route response contract.
+
+### BA-06 stretch
+[TURN 1] user=Mình chẳng muốn làm gì.
+- expected=ba_stage_1_energy_check actual=ba_stage_1_energy_check stage_ok=True
+- transition=STAY confidence=0.76 y_alom=['Universality', 'Catharsis']
+- evidence=['User describes low activation, depletion, or self-blame.', 'Evidence quote: Mình chẳng muốn làm gì.']
+- validator_valid=True reason=ba_stage_1_energy_check satisfies route response contract.
+[TURN 2] user=Pin mình 3/10.
+- expected=ba_stage_2_micro_action actual=ba_stage_2_micro_action stage_ok=True
+- transition=ADVANCE confidence=0.84 y_alom=['Hope']
+- evidence=['User provided an energy level.', 'Evidence quote: Pin mình 3/10.']
+- validator_valid=True reason=ba_stage_2_micro_action satisfies route response contract.
+[TURN 3] user=Mình sẽ đứng dậy vươn vai.
+- expected=ba_stage_3_barrier_schedule actual=ba_stage_3_barrier_schedule stage_ok=True
+- transition=ADVANCE confidence=0.82 y_alom=['Interpersonal Learning']
+- evidence=['User selected a concrete micro-action.', 'Evidence quote: Mình sẽ đứng dậy vươn vai.']
+- validator_valid=True reason=ba_stage_3_barrier_schedule satisfies route response contract.
+
+### BA-07 opened
+[TURN 1] user=Mình cứ trì hoãn bài tập.
+- expected=ba_stage_1_energy_check actual=ba_stage_1_energy_check stage_ok=True
+- transition=STAY confidence=0.76 y_alom=['Universality', 'Catharsis']
+- evidence=['User describes low activation, depletion, or self-blame.', 'Evidence quote: Mình cứ trì hoãn bài tập.']
+- validator_valid=True reason=ba_stage_1_energy_check satisfies route response contract.
+[TURN 2] user=Mình còn 4/10.
+- expected=ba_stage_2_micro_action actual=ba_stage_2_micro_action stage_ok=True
+- transition=ADVANCE confidence=0.84 y_alom=['Hope']
+- evidence=['User provided an energy level.', 'Evidence quote: Mình còn 4/10.']
+- validator_valid=True reason=ba_stage_2_micro_action satisfies route response contract.
+[TURN 3] user=Mình mở rồi và thấy nhẹ hơn chút.
+- expected=ba_stage_4_momentum_reward actual=ba_stage_4_momentum_reward stage_ok=True
+- transition=ADVANCE confidence=0.86 y_alom=['Hope']
+- evidence=['User reports completing the micro-action.', 'Evidence quote: Mình mở rồi và thấy nhẹ hơn chút.']
+- validator_valid=True reason=ba_stage_4_momentum_reward satisfies route response contract.
+
+### BA-08 shutdown
+[TURN 1] user=Mình nằm từ sáng đến giờ.
+- expected=ba_stage_1_energy_check actual=ba_stage_1_energy_check stage_ok=True
+- transition=STAY confidence=0.76 y_alom=['Universality', 'Catharsis']
+- evidence=['User describes low activation, depletion, or self-blame.', 'Evidence quote: Mình nằm từ sáng đến giờ.']
+- validator_valid=True reason=ba_stage_1_energy_check satisfies route response contract.
+[TURN 2] user=Pin mình 2/10.
+- expected=ba_stage_2_micro_action actual=ba_stage_2_micro_action stage_ok=True
+- transition=ADVANCE confidence=0.84 y_alom=['Hope']
+- evidence=['User provided an energy level.', 'Evidence quote: Pin mình 2/10.']
+- validator_valid=True reason=ba_stage_2_micro_action satisfies route response contract.
+
+### BA-09 action done
+[TURN 1] user=Mình không muốn làm việc gì cả.
+- expected=ba_stage_1_energy_check actual=ba_stage_1_energy_check stage_ok=True
+- transition=STAY confidence=0.76 y_alom=['Universality', 'Catharsis']
+- evidence=['User describes low activation, depletion, or self-blame.', 'Evidence quote: Mình không muốn làm việc gì cả.']
+- validator_valid=True reason=ba_stage_1_energy_check satisfies route response contract.
+[TURN 2] user=Mình chọn mở sách ra thôi.
+- expected=ba_stage_3_barrier_schedule actual=ba_stage_3_barrier_schedule stage_ok=True
+- transition=ADVANCE confidence=0.82 y_alom=['Interpersonal Learning']
+- evidence=['User selected a concrete micro-action.', 'Evidence quote: Mình chọn mở sách ra thôi.']
+- validator_valid=True reason=ba_stage_3_barrier_schedule satisfies route response contract.
+[TURN 3] user=Đã làm xong, tâm trạng đỡ hơn.
+- expected=ba_stage_4_momentum_reward actual=ba_stage_4_momentum_reward stage_ok=True
+- transition=ADVANCE confidence=0.86 y_alom=['Hope']
+- evidence=['User reports completing the micro-action.', 'Evidence quote: Đã làm xong, tâm trạng đỡ hơn.']
+- validator_valid=True reason=ba_stage_4_momentum_reward satisfies route response contract.
+
+### BA-10 tiny start
+[TURN 1] user=Mình thấy mình vô kỷ luật.
+- expected=ba_stage_1_energy_check actual=ba_stage_1_energy_check stage_ok=True
+- transition=STAY confidence=0.76 y_alom=['Universality', 'Catharsis']
+- evidence=['User describes low activation, depletion, or self-blame.', 'Evidence quote: Mình thấy mình vô kỷ luật.']
+- validator_valid=True reason=ba_stage_1_energy_check satisfies route response contract.
+[TURN 2] user=Năng lượng 3/10.
+- expected=ba_stage_2_micro_action actual=ba_stage_2_micro_action stage_ok=True
+- transition=ADVANCE confidence=0.84 y_alom=['Hope']
+- evidence=['User provided an energy level.', 'Evidence quote: Năng lượng 3/10.']
+- validator_valid=True reason=ba_stage_2_micro_action satisfies route response contract.
+[TURN 3] user=Mình thử mở sách ra thôi.
+- expected=ba_stage_3_barrier_schedule actual=ba_stage_3_barrier_schedule stage_ok=True
+- transition=ADVANCE confidence=0.82 y_alom=['Interpersonal Learning']
+- evidence=['User selected a concrete micro-action.', 'Evidence quote: Mình thử mở sách ra thôi.']
+- validator_valid=True reason=ba_stage_3_barrier_schedule satisfies route response contract.
+
+SUMMARY
+- STAGE_PASS: 54/54 = 100.00%
+- VALIDATOR_PASS: 54/54 = 100.00%

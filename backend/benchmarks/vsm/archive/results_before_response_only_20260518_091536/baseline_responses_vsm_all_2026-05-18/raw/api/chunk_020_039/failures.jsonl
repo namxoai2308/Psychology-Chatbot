@@ -1,0 +1,6 @@
+{"case_id": "vsm_probe_yalom_004_interpersonal_learning_roommate", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 2}
+{"case_id": "vsm_ba_001_low_energy_bed", "failure_type": "hard_fail", "forbidden_hits": ["phải làm nhiều hơn"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 12}
+{"case_id": "vsm_ba_002_missed_class", "failure_type": "hard_fail", "forbidden_hits": ["phải làm nhiều hơn"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 12}
+{"case_id": "vsm_ba_003_messy_room", "failure_type": "hard_fail", "forbidden_hits": ["phải làm thêm"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 7}
+{"case_id": "vsm_ba_003_messy_room", "failure_type": "hard_fail", "forbidden_hits": ["phải làm nhiều hơn"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 12}
+{"case_id": "vsm_ba_005_social_withdrawal", "failure_type": "hard_fail", "forbidden_hits": ["phải làm nhiều hơn"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 12}

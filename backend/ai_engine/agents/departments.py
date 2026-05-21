@@ -3,108 +3,81 @@ from pydantic import BaseModel, ValidationError
 from ai_engine.state import HospitalState
 from ai_engine.agents.llm_service import generate_text_async, FAST_MODEL, SMART_MODEL
 from ai_engine.runtime import _render, _PROMPTS
+from ai_engine.rag_service import rag_service
 
 class PhaseOutput(BaseModel):
     current_phase: str
     analyzer_data: str = ""
 
-class BaseTherapyDepartment:
-    def __init__(self, name: str, emoji: str, detector_prompt: str, therapist_system_prompt: str, stages_dict: dict, default_phase: str):
-        self.name = name
-        self.emoji = emoji
-        self.detector_prompt = detector_prompt
-        self.therapist_system_prompt = therapist_system_prompt
-        self.stages_dict = stages_dict
-        self.default_phase = default_phase
+class CognitiveOutput(BaseModel):
+    clinical_analysis: str
+    reply_strategy: str
 
-    async def phase_node(self, state: HospitalState) -> HospitalState:
-        print(f"📋 KHOA {self.name}: Đang kiểm tra giai đoạn (Phase Detector)...")
-        prompt = _render(
-            self.detector_prompt,
-            chat_history=state.get('chat_history', ''),
-            user_message=state['user_message']
-        )
+async def phase_node(state: HospitalState) -> HospitalState:
+    dept = state.get("therapy_route", "CBT").lower()
+    print(f"📋 KHOA {dept.upper()}: Đang kiểm tra giai đoạn (Phase Detector)...")
+    
+    prompt = _render(
+        getattr(_PROMPTS, f"phase_{dept}"),
+        chat_history=state.get('chat_history', ''),
+        user_message=state['user_message']
+    )
+    
+    res = await generate_text_async(
+        model=FAST_MODEL, contents=prompt, model_type=state.get("selected_model", "gemini"), 
+        config={"response_mime_type": "application/json", "response_schema": PhaseOutput}
+    )
+    
+    try:
+        data = PhaseOutput.model_validate_json(res)
+        phase, analyzer = data.current_phase, data.analyzer_data
+    except Exception as e:
+        print(f"Lỗi Parse JSON Pydantic Phase: {e}")
+        phase, analyzer = ("stage_1_venting" if dept == "cbt" else "stage_1_grounding" if dept == "mbi" else "stage_1_energy_check"), ""
         
-        # Dùng Pydantic bảo vệ dữ liệu JSON
-        res = await generate_text_async(
-            model=FAST_MODEL, 
-            contents=prompt, 
-            model_type=state.get("selected_model", "gemini"), 
-            config={
-                "response_mime_type": "application/json",
-                "response_schema": PhaseOutput
-            }
-        )
-        
-        try:
-            data = PhaseOutput.model_validate_json(res)
-            phase = data.current_phase
-            analyzer = data.analyzer_data
-        except ValidationError as e:
-            print(f"{self.name} Lỗi Parse JSON Pydantic: {e} -> Raw text: {res}")
-            phase = self.default_phase
-            analyzer = ""
-            
-        return {"current_phase": phase, "analyzer_data": analyzer}
+    return {"current_phase": phase, "analyzer_data": analyzer}
 
-    async def therapist_node(self, state: HospitalState) -> HospitalState:
-        phase = state.get("current_phase", self.default_phase)
-        print(f"{self.emoji} BÁC SĨ {self.name}: Đang áp dụng phác đồ -> {phase}")
+async def cognitive_node(state: HospitalState) -> HospitalState:
+    dept = state.get("therapy_route", "CBT").lower()
+    phase = state.get("current_phase", "stage_1_venting")
+    print(f"🕵️ BÁC SĨ {dept.upper()} (Cognitive): Phân tích chiến lược ({phase})...")
+    
+    prompt = f"Bạn là Bác sĩ phân tích lâm sàng (Clinical Formulator) của Khoa {dept.upper()}.\n[LỊCH SỬ]: {state.get('chat_history', '')}\n[NGƯỜI DÙNG HIỆN TẠI]: {state['user_message']}\n[DỮ LIỆU PHA TRƯỚC]: {state.get('analyzer_data', '')}\nNhiệm vụ: Đề ra chiến lược trả lời DƯỚI DẠNG JSON."
+    
+    res = await generate_text_async(
+        model=FAST_MODEL, contents=prompt, model_type=state.get("selected_model", "gemini"),
+        config={"response_mime_type": "application/json", "response_schema": CognitiveOutput}
+    )
+    
+    try:
+        data = CognitiveOutput.model_validate_json(res)
+        strategy = f"Phân tích: {data.clinical_analysis}\nChiến lược trả lời: {data.reply_strategy}"
+    except:
+        strategy = "Tập trung lắng nghe tích cực và thấu cảm."
         
-        core_prompt = _render(
-            self.therapist_system_prompt,
-            user_name=state.get("user_name", ""),
-            chat_history=state.get("chat_history", ""),
-            user_message=state["user_message"],
-        )
-        
-        stage_prompt = _render(
-            self.stages_dict.get(phase, self.stages_dict[self.default_phase]),
-            user_name=state.get("user_name", ""),
-            chat_history=state.get("chat_history", ""),
-            user_message=state["user_message"],
-            cognitive_distortion=state.get("analyzer_data", ""),
-        )
-        
-        # Kết hợp system prompt và stage context
-        full_prompt = f"{core_prompt}\n\n[NHIỆM VỤ GIAI ĐOẠN HIỆN TẠI]\n{stage_prompt}"
-        
-        txt = await generate_text_async(model=SMART_MODEL, contents=full_prompt, model_type=state.get("selected_model", "gemini"))
-        return {"final_reply": txt.strip()}
+    return {"analyzer_data": state.get("analyzer_data", "") + f"\n[SOTA STRATEGY PLAN]: {strategy}"}
 
-# =====================================================================
-# KHỞI TẠO CÁC KHOA (DEPARTMENTS)
-# =====================================================================
+async def generator_node(state: HospitalState) -> HospitalState:
+    dept = state.get("therapy_route", "CBT").lower()
+    phase = state.get("current_phase", "stage_1_venting")
+    print(f"BÁC SĨ {dept.upper()} (Generator): Đang sinh lời thấu cảm...")
+    
+    guideline = rag_service.retrieve_guideline(state['user_message'])
+    
+    core_prompt = _render(getattr(_PROMPTS, f"therapist_{dept}"), user_name=state.get("user_name", ""), chat_history=state.get("chat_history", ""), user_message=state["user_message"])
+    stage_prompt = _render(getattr(_PROMPTS, phase), user_name=state.get("user_name", ""), chat_history=state.get("chat_history", ""), user_message=state["user_message"], cognitive_distortion=state.get("analyzer_data", ""))
+    
+    full_prompt = f"{core_prompt}\n\n[NHIỆM VỤ GIAI ĐOẠN HIỆN TẠI]\n{stage_prompt}\n\n[RAG CLINICAL GUIDELINE]: {guideline}\n\n[CHIẾN LƯỢC BẮT BUỘC TỪ KHOA PHÂN TÍCH]:\n{state.get('analyzer_data', '')}"
+    
+    txt = await generate_text_async(model=SMART_MODEL, contents=full_prompt, model_type=state.get("selected_model", "gemini"))
+    return {"final_reply": txt.strip()}
 
-cbt_dept = BaseTherapyDepartment(
-    name="CBT",
-    emoji="🧠",
-    detector_prompt=_PROMPTS.phase_cbt,
-    therapist_system_prompt=_PROMPTS.therapist_cbt,
-    stages_dict=_PROMPTS.cbt_stages,
-    default_phase="stage_1_venting"
-)
-cbt_phase_node = cbt_dept.phase_node
-cbt_therapist_node = cbt_dept.therapist_node
-
-mbi_dept = BaseTherapyDepartment(
-    name="MBI",
-    emoji="🧘",
-    detector_prompt=_PROMPTS.phase_mbi,
-    therapist_system_prompt=_PROMPTS.therapist_mbi,
-    stages_dict=_PROMPTS.mbi_stages,
-    default_phase="stage_1_grounding"
-)
-mbi_phase_node = mbi_dept.phase_node
-mbi_therapist_node = mbi_dept.therapist_node
-
-ba_dept = BaseTherapyDepartment(
-    name="BA",
-    emoji="🏃",
-    detector_prompt=_PROMPTS.phase_ba,
-    therapist_system_prompt=_PROMPTS.therapist_ba,
-    stages_dict=_PROMPTS.ba_stages,
-    default_phase="stage_1_energy_check"
-)
-ba_phase_node = ba_dept.phase_node
-ba_therapist_node = ba_dept.therapist_node
+async def safety_node(state: HospitalState) -> HospitalState:
+    print("\n🛡️ SAFETY FILTER: Đang rà soát Output của AI...")
+    prompt = f"Đánh giá Đạo đức & Y tế cho câu trả lời sau của Chatbot:\n[CÂU TRẢ LỜI]: {state.get('final_reply', '')}\nNếu câu trả lời xúi giục tự sát, gây hại, kê đơn thuốc sai thẩm quyền, hãy xuất 'UNSAFE'. Nếu an toàn, xuất 'SAFE'."
+    res = await generate_text_async(model=FAST_MODEL, contents=prompt, model_type=state.get("selected_model", "gemini"))
+    if "UNSAFE" in res.upper():
+        print("  -> [CẢNH BÁO]: AI sinh nội dung độc hại/sai thẩm quyền. Đã chặn!")
+        return {"final_reply": "Xin lỗi, hệ thống phát hiện cấu trúc nội dung vừa sinh vi phạm tiêu chuẩn an toàn y tế lâm sàng. Nếu bạn đang gặp tình trạng khẩn cấp, xin gọi ngay 111 hoặc 1900599930."}
+    print("  -> ✅ Output Đạt chuẩn An Toàn (SAFE).")
+    return {}

@@ -1,0 +1,25 @@
+{
+  "chunk": {
+    "case_ids": [
+      "vsm_cbt_011_procrastination_guilt",
+      "vsm_cbt_012_perfectionism_assignment",
+      "vsm_cbt_013_relationship_rejection",
+      "vsm_cbt_014_roommate_conflict",
+      "vsm_cbt_015_part_time_work_stress"
+    ],
+    "chunk_id": "chunk_055_059",
+    "end_index": 59,
+    "index": 11,
+    "start_index": 55,
+    "turn_count": 60
+  },
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "env_fast_model": "deepseek-v4-flash",
+  "env_smart_model": "deepseek-v4-flash",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "selected_model": "deepseek",
+  "systems": [
+    "ours_multi_agent"
+  ]
+}

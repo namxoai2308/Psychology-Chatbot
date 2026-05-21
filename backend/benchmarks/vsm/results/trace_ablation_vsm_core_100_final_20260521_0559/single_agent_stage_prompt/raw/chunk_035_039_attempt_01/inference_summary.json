@@ -1,0 +1,28 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "failures": 31,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/single_agent_stage_prompt/raw/chunk_035_039_attempt_01",
+  "reliability_failures": 0,
+  "result_rows": 5,
+  "result_turns": 60,
+  "run_config": "run_config.json",
+  "selected_case_ids": [
+    "vsm_cbt_016_failed_quiz_spiral",
+    "vsm_cbt_017_teacher_feedback_shame",
+    "vsm_cbt_018_club_leadership_pressure",
+    "vsm_cbt_019_graduate_uncertainty",
+    "vsm_cbt_020_language_class_anxiety"
+  ],
+  "systems": {
+    "single_agent_stage_prompt": {
+      "avg_latency_ms": 4787.56,
+      "cases": 5,
+      "failures": 31,
+      "reliability_failures": 0,
+      "turns": 60
+    }
+  },
+  "turn_count": 60
+}

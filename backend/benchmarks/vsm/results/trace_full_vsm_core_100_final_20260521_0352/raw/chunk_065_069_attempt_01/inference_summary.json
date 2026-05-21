@@ -1,0 +1,28 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "failures": 50,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_065_069_attempt_01",
+  "reliability_failures": 0,
+  "result_rows": 5,
+  "result_turns": 60,
+  "run_config": "run_config.json",
+  "selected_case_ids": [
+    "vsm_mbi_016_morning_dread",
+    "vsm_mbi_017_screen_fatigue",
+    "vsm_mbi_018_uncertain_future_rumination",
+    "vsm_mbi_019_competition_waiting",
+    "vsm_mbi_020_room_silence_intrusion"
+  ],
+  "systems": {
+    "ours_full": {
+      "avg_latency_ms": 6683.02,
+      "cases": 5,
+      "failures": 50,
+      "reliability_failures": 0,
+      "turns": 60
+    }
+  },
+  "turn_count": 60
+}

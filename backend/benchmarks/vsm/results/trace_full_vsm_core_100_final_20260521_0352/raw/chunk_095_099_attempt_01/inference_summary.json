@@ -1,0 +1,28 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "failures": 28,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_095_099_attempt_01",
+  "reliability_failures": 0,
+  "result_rows": 5,
+  "result_turns": 60,
+  "run_config": "run_config.json",
+  "selected_case_ids": [
+    "vsm_yalom_011_universality_social_media",
+    "vsm_yalom_012_hope_recovery_question",
+    "vsm_yalom_013_interpersonal_feedback",
+    "vsm_yalom_014_peer_silence_medical",
+    "vsm_yalom_015_catharsis_shame"
+  ],
+  "systems": {
+    "ours_full": {
+      "avg_latency_ms": 5540.94,
+      "cases": 5,
+      "failures": 28,
+      "reliability_failures": 0,
+      "turns": 60
+    }
+  },
+  "turn_count": 60
+}

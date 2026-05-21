@@ -1,0 +1,139 @@
+\begin{thebibliography}{17}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Beck et~al.(1979)Beck, Rush, Shaw, and Emery}]{beck1979cognitive}
+Aaron~T. Beck, A.~John Rush, Brian~F. Shaw, and Gary Emery. 1979.
+\newblock \emph{Cognitive Therapy of Depression}.
+\newblock Guilford Press.
+
+\bibitem[{Blackburn et~al.(2001)Blackburn, James, Milne, Baker, Standart,
+  Garland, and Reichelt}]{Blackburn2001CTSR}
+I.~M. Blackburn, I.~A. James, D.~L. Milne, C.~Baker, S.~Standart, A.~Garland,
+  and F.~K. Reichelt. 2001.
+\newblock \href {https://doi.org/10.1017/S135246580100411X} {The revised
+  cognitive therapy scale ({CTS-R}): Psychometric properties}.
+\newblock \emph{Behavioural and Cognitive Psychotherapy}, 29(4):431--446.
+
+\bibitem[{Chen et~al.(2023)Chen, Xing, Lin, Zheng, Wang, Liu, and
+  Xu}]{Chen2023SoulChat}
+Y.~Chen, X.~Xing, J.~Lin, H.~Zheng, Z.~Wang, Q.~Liu, and X.~Xu. 2023.
+\newblock \href {https://arxiv.org/abs/2306.06325} {Soulchat: Improving {LLMs}'
+  empathy, listening, and comfort abilities through fine-tuning}.
+\newblock In \emph{Findings of EMNLP 2023}.
+
+\bibitem[{Chiu et~al.(2024)Chiu, Sharma, Lin, and
+  Althoff}]{Chiu2024LLMTherapists}
+Y.~Y. Chiu, A.~Sharma, I.~W. Lin, and T.~Althoff. 2024.
+\newblock \href {https://arxiv.org/abs/2402.11584} {A computational framework
+  for behavioral assessment of {LLM} therapists}.
+\newblock \emph{Preprint}, arXiv:2402.11584.
+
+\bibitem[{Elahimanesh et~al.(2026)Elahimanesh, Mohammadkhani, Zahedi~Movahed,
+  Abootorabi, Salehi, and Edalat}]{Elahimanesh2026StructureMatters}
+Sina Elahimanesh, Mohammadali Mohammadkhani, Sara Zahedi~Movahed, Mohammadmahdi
+  Abootorabi, Shayan Salehi, and Abbas Edalat. 2026.
+\newblock \href {https://arxiv.org/abs/2603.00774} {Structure matters:
+  Evaluating multi-agents orchestration in generative therapeutic chatbots}.
+\newblock \emph{Preprint}, arXiv:2603.00774.
+
+\bibitem[{Lee et~al.(2024)Lee, Kim, Kim, Kang, Yang, Kim, Kang, Jung, Kim, Lee,
+  Chung, Yu, Lee, and Yeo}]{Lee2024Cactus}
+Suyeon Lee, Sunghwan Kim, Minju Kim, Dongjin Kang, Dongil Yang, Harim Kim,
+  Minseok Kang, Dayi Jung, Min~Hee Kim, Seungbeen Lee, Kyoung-Mee Chung,
+  Youngjae Yu, Dongha Lee, and Jinyoung Yeo. 2024.
+\newblock \href {https://arxiv.org/abs/2407.03103} {Cactus: Towards
+  psychological counseling conversations using cognitive behavioral theory}.
+\newblock In \emph{Proceedings of EMNLP 2024}.
+
+\bibitem[{Li et~al.(2025)Li, Yao, Bunyi, Frank, Hwang, and
+  Liu}]{Li2025CounselBench}
+Yahan Li, Jifan Yao, John Bosco~S. Bunyi, Adam~C. Frank, Angel Hwang, and
+  Ruishan Liu. 2025.
+\newblock \href {https://arxiv.org/abs/2506.08584} {Counselbench: A large-scale
+  expert evaluation and adversarial benchmark of large language models in
+  mental health counseling}.
+\newblock \emph{Preprint}, arXiv:2506.08584.
+
+\bibitem[{Liu et~al.(2026)Liu, Ma, Tao, Hu, and Yang}]{Liu2026CCDCBT}
+Chang Liu, Changsheng Ma, Yongfeng Tao, Bin Hu, and Minqiang Yang. 2026.
+\newblock \href {https://arxiv.org/abs/2604.06551} {{CCD-CBT}: Multi-agent
+  therapeutic interaction for {CBT} guided by cognitive conceptualization
+  diagram}.
+\newblock \emph{Preprint}, arXiv:2604.06551.
+
+\bibitem[{Liu et~al.(2023)Liu, Iter, Xu, Wang, Xu, and Zhu}]{liu2023geval}
+Yang Liu, Dan Iter, Yichong Xu, Shuohang Wang, Ruochen Xu, and Chenguang Zhu.
+  2023.
+\newblock {G-Eval}: {NLG} evaluation using {GPT-4} with better human alignment.
+\newblock In \emph{Proceedings of the 2023 Conference on Empirical Methods in
+  Natural Language Processing}, pages 2511--2522. Association for Computational
+  Linguistics.
+
+\bibitem[{Rashkin et~al.(2019)Rashkin, Smith, Li, and
+  Boureau}]{rashkin2019towards}
+Hannah Rashkin, Eric~Michael Smith, Margaret Li, and Y-Lan Boureau. 2019.
+\newblock Towards empathetic open-domain conversation models: A new benchmark
+  and dataset.
+\newblock In \emph{Proceedings of the 57th Annual Meeting of the Association
+  for Computational Linguistics}, pages 5370--5381. Association for
+  Computational Linguistics.
+
+\bibitem[{Salemi et~al.(2025)Salemi, Parmar, Goyal, Song, Yoon, Zamani,
+  Pfister, and Palangi}]{Salemi2025BlackboardSystem}
+A.~Salemi, M.~Parmar, P.~Goyal, Y.~Song, J.~Yoon, H.~Zamani, T.~Pfister, and
+  H.~Palangi. 2025.
+\newblock \href {https://arxiv.org/abs/2510.01285} {{LLM}-based multi-agent
+  blackboard system for information discovery in data science}.
+\newblock \emph{Preprint}, arXiv:2510.01285.
+
+\bibitem[{Sharma et~al.(2023)Sharma, Rushton, Lin, Wadden, Lucas, Miner,
+  Nguyen, and Althoff}]{Sharma2023CognitiveReframing}
+Ashish Sharma, Kevin Rushton, Inna Lin, David Wadden, Khendra Lucas, Adam
+  Miner, Theresa Nguyen, and Tim Althoff. 2023.
+\newblock \href {https://doi.org/10.18653/v1/2023.acl-long.555} {Cognitive
+  reframing of negative thoughts through human-language model interaction}.
+\newblock In \emph{Proceedings of the 61st Annual Meeting of the Association
+  for Computational Linguistics (Volume 1: Long Papers)}, pages 9977--10000.
+  Association for Computational Linguistics.
+
+\bibitem[{Sobowale et~al.(2025)Sobowale, Humphrey, and
+  Zhao}]{Sobowale2025CAPEII}
+Kunmi Sobowale, Daniel~Kevin Humphrey, and Sophia~Yingruo Zhao. 2025.
+\newblock \href {https://doi.org/10.2196/79838} {Evaluating generative {AI}
+  psychotherapy chatbots used by youth: Cross-sectional study}.
+\newblock \emph{JMIR Mental Health}, 12:e79838.
+
+\bibitem[{Wu et~al.(2023)Wu, Bansal, Zhang, Wu, Li, Zhu, Jiang, Zhang, Zhang,
+  Liu, Awadallah, White, Burger, and Wang}]{Wu2023AutoGen}
+Qingyun Wu, Gagan Bansal, Jieyu Zhang, Yiran Wu, Beibin Li, Erkang Zhu,
+  Li~Jiang, Xiaoyun Zhang, Shaokun Zhang, Jiale Liu, Ahmed~Hassan Awadallah,
+  Ryen~W. White, Doug Burger, and Chi Wang. 2023.
+\newblock \href {https://arxiv.org/abs/2308.08155} {Autogen: Enabling next-gen
+  {LLM} applications via multi-agent conversation}.
+\newblock \emph{Preprint}, arXiv:2308.08155.
+
+\bibitem[{Xu et~al.(2025)Xu, Yang, Li, Zhu, Tan, Yang, Qiu, Ma, Wu, Li, Sha,
+  Li, Hu, Qu, Wong, and Xu}]{Xu2025AutoCBT}
+Ancheng Xu, Di~Yang, Renhao Li, Jingwei Zhu, Minghuan Tan, Min Yang, Wanxin
+  Qiu, Mingchen Ma, Haihong Wu, Bingyu Li, Feng Sha, Chengming Li, Xiping Hu,
+  Qiang Qu, Derek~F. Wong, and Ruifeng Xu. 2025.
+\newblock \href {https://arxiv.org/abs/2501.09426} {Autocbt: An autonomous
+  multi-agent framework for cognitive behavioral therapy in psychological
+  counseling}.
+\newblock \emph{Preprint}, arXiv:2501.09426.
+
+\bibitem[{Yalom and Leszcz(2020)}]{Yalom2020GroupPsychotherapy}
+I.~D. Yalom and M.~Leszcz. 2020.
+\newblock \emph{The Theory and Practice of Group Psychotherapy}, 6 edition.
+\newblock Basic Books.
+
+\bibitem[{Zheng et~al.(2023)Zheng, Chiang, Sheng, Zhuang, Wu, Zhuang, Lin, Li,
+  Li, Xing, Zhang, Gonzalez, and Stoica}]{Zheng2023LLMJudge}
+Lianmin Zheng, Wei-Lin Chiang, Ying Sheng, Siyuan Zhuang, Zhanghao Wu, Yonghao
+  Zhuang, Zi~Lin, Zhuohan Li, Dacheng Li, Eric~P. Xing, Hao Zhang, Joseph~E.
+  Gonzalez, and Ion Stoica. 2023.
+\newblock \href {https://arxiv.org/abs/2306.05685} {Judging {LLM}-as-a-judge
+  with mt-bench and chatbot arena}.
+\newblock \emph{Preprint}, arXiv:2306.05685.
+
+\end{thebibliography}

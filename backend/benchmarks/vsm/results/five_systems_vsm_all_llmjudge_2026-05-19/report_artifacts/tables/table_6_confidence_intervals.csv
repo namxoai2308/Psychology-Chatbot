@@ -1,0 +1,6 @@
+System,Metric,Mean,Std,95% CI Low,95% CI High,Turns
+Base Model,final_hybrid_score,67.9,13.0,67.3,68.5,1606
+CAMEL-CBT,final_hybrid_score,51.5,9.0,51.0,51.9,1606
+Ours Multi-Agent,final_hybrid_score,87.3,10.7,86.8,87.8,1606
+Prompt 1-1,final_hybrid_score,74.4,17.9,73.5,75.2,1606
+SeaLLM,final_hybrid_score,45.3,6.6,45.0,45.6,1606

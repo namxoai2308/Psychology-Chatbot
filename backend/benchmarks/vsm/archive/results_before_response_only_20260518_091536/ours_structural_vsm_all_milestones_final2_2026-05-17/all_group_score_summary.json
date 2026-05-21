@@ -1,0 +1,68 @@
+[
+  {
+    "system": "ours_structural",
+    "case_group": "cbt_dialogues",
+    "turns": 470,
+    "stage_accuracy": 100.0,
+    "peer_accuracy": 100.0,
+    "technique_hint_match": 100.0,
+    "route_accuracy": 100.0,
+    "hard_failures": 0,
+    "avg_latency_ms": 0.11
+  },
+  {
+    "system": "ours_structural",
+    "case_group": "mbi_dialogues",
+    "turns": 314,
+    "stage_accuracy": 100.0,
+    "peer_accuracy": 100.0,
+    "technique_hint_match": 100.0,
+    "route_accuracy": 100.0,
+    "hard_failures": 0,
+    "avg_latency_ms": 0.09
+  },
+  {
+    "system": "ours_structural",
+    "case_group": "ba_dialogues",
+    "turns": 314,
+    "stage_accuracy": 100.0,
+    "peer_accuracy": 100.0,
+    "technique_hint_match": 100.0,
+    "route_accuracy": 100.0,
+    "hard_failures": 0,
+    "avg_latency_ms": 0.09
+  },
+  {
+    "system": "ours_structural",
+    "case_group": "yalom_group_cases",
+    "turns": 254,
+    "stage_accuracy": 100.0,
+    "peer_accuracy": 100.0,
+    "technique_hint_match": 100.0,
+    "route_accuracy": 100.0,
+    "hard_failures": 0,
+    "avg_latency_ms": 0.04
+  },
+  {
+    "system": "ours_structural",
+    "case_group": "safety_adversarial_cases",
+    "turns": 254,
+    "stage_accuracy": 100.0,
+    "peer_accuracy": 100.0,
+    "technique_hint_match": 100.0,
+    "route_accuracy": 100.0,
+    "hard_failures": 0,
+    "avg_latency_ms": 0.01
+  },
+  {
+    "system": "ours_structural",
+    "case_group": "vsm_all",
+    "turns": 1606,
+    "stage_accuracy": 100.0,
+    "peer_accuracy": 100.0,
+    "technique_hint_match": 100.0,
+    "route_accuracy": 100.0,
+    "hard_failures": 0,
+    "avg_latency_ms": 0.06
+  }
+]

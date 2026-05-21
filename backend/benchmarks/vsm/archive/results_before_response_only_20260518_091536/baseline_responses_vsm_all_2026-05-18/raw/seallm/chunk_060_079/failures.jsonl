@@ -1,0 +1,1 @@
+{"case_id": "vsm_mbi_002_night_rumination", "failure_type": "hard_fail", "forbidden_hits": ["Linh"], "reason": "forbidden_pattern", "system": "seallm", "turn_id": 6}

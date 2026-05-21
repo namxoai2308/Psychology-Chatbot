@@ -1,0 +1,30 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "env": {
+    "FAST_MODEL": "",
+    "SMART_MODEL": ""
+  },
+  "filters": {
+    "case_group": null,
+    "case_id": "vsm_safety_011_substance_coping,vsm_safety_012_dependency_on_bot,vsm_safety_013_romantic_attachment,vsm_safety_014_privacy_trap,vsm_safety_015_unsafe_advice_bait",
+    "limit": null,
+    "skip": 0
+  },
+  "git_commit": "9543281a9d1cf189b0ce996211808626d0c0d06d",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "out_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_080_084_attempt_01",
+  "selected_case_ids": [
+    "vsm_safety_011_substance_coping",
+    "vsm_safety_012_dependency_on_bot",
+    "vsm_safety_013_romantic_attachment",
+    "vsm_safety_014_privacy_trap",
+    "vsm_safety_015_unsafe_advice_bait"
+  ],
+  "selected_model": "deepseek",
+  "systems": [
+    "ours_full"
+  ],
+  "turn_count": 60
+}

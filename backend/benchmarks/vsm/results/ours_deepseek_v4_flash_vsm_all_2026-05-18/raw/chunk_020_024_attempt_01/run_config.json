@@ -1,0 +1,25 @@
+{
+  "chunk": {
+    "case_ids": [
+      "vsm_probe_yalom_001_universality_dorm_loneliness",
+      "vsm_probe_yalom_002_catharsis_family_pressure",
+      "vsm_probe_yalom_003_hope_after_failure",
+      "vsm_probe_yalom_004_interpersonal_learning_roommate",
+      "vsm_probe_yalom_005_peer_silence_socratic"
+    ],
+    "chunk_id": "chunk_020_024",
+    "end_index": 24,
+    "index": 4,
+    "start_index": 20,
+    "turn_count": 20
+  },
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "env_fast_model": "deepseek-v4-flash",
+  "env_smart_model": "deepseek-v4-flash",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "selected_model": "deepseek",
+  "systems": [
+    "ours_multi_agent"
+  ]
+}

@@ -1,0 +1,518 @@
+CBT 30 DIALOGUE REGRESSION - hybrid stage + Yalom + therapist fallback validator
+==============================================================================================================
+
+>>> 01 Thi cuối kỳ <<<
+Turn 1: expected=cbt_stage_1_venting actual=cbt_stage_1_venting ok=True transition=STAY conf=0.74
+  y=['Universality', 'Catharsis'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Mình đang rất căng thẳng với áp lực thi cuối kỳ.
+  therapist_fallback: Nghe vậy thì việc bạn thấy nặng nề là rất dễ hiểu. Trong chuyện này, phần nào đang khiến bạn muốn bỏ cuộc hoặc thấy khó chịu nhất?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['catastrophizing', 'all_or_nothing'], insight=False, reframe=False, action=False, hope=False
+  user: Mình cứ nghĩ nếu rớt môn này thì coi như hỏng hết cả học kỳ.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_4_socratic actual=cbt_stage_4_socratic ok=True transition=ADVANCE conf=0.84
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=True, reframe=False, action=False, hope=False
+  user: Nghĩ lại thì có lẽ mình đang phóng đại, nhưng cảm giác lo vẫn tự bật lên.
+  therapist_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 02 Chia tay <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Từ lúc chia tay mình thấy rất trống rỗng và xấu hổ.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['mind_reading'], insight=False, reframe=False, action=False, hope=False
+  user: Mình nghĩ chắc ai cũng thấy mình bị bỏ rơi nên rất thảm hại.
+  therapist_fallback: Câu đó nghe giống bẫy đọc tâm trí: mình đoán chắc người khác đang nghĩ xấu về mình dù chưa có đủ dữ kiện. Bạn thấy phần nào trong suy nghĩ đó là điều mình đang tự đoán không?
+Turn 3: expected=cbt_stage_4_socratic actual=cbt_stage_4_socratic ok=True transition=ADVANCE conf=0.92
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['mind_reading'], insight=True, reframe=False, action=False, hope=False
+  user: Mình biết mình không thể chắc mọi người nghĩ vậy, nhưng cảm giác vẫn đau.
+  therapist_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 03 Thuyết trình <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Mai mình phải thuyết trình, mình hồi hộp đến mức chỉ muốn tránh luôn.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['all_or_nothing', 'labeling'], insight=False, reframe=False, action=False, hope=False
+  user: Nếu mình nói vấp một câu thì coi như bài thuyết trình thất bại hoàn toàn.
+  therapist_fallback: Câu đó nghe giống bẫy trắng-đen: hoặc hoàn hảo, hoặc xem như thất bại toàn bộ. Bạn thấy suy nghĩ này có đang bỏ qua những vùng ở giữa không?
+Turn 3: expected=cbt_stage_5_action actual=cbt_stage_5_action ok=True transition=ADVANCE conf=0.92
+  y=['Hope', 'Interpersonal Learning'] Nam=False Linh=True validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['catastrophizing'], insight=False, reframe=True, action=False, hope=False
+  user: Có lẽ một lỗi nhỏ không có nghĩa là hỏng hết, nhưng mình vẫn sợ.
+  therapist_fallback: Mình thử đóng gói nó thành một câu công bằng hơn: một kết quả không như ý không có nghĩa là hết cơ hội sửa. Một bước nhỏ thực tế bạn có thể làm trong hôm nay là gì?
+
+>>> 04 Phỏng vấn <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Mình vừa phỏng vấn xong và thấy rất hụt hẫng.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['labeling'], insight=False, reframe=False, action=False, hope=False
+  user: Mình trả lời không tốt một câu, chắc mình đúng là kém cỏi.
+  therapist_fallback: Câu đó nghe giống bẫy dán nhãn: lấy một kết quả hoặc một cảm giác để kết luận toàn bộ con người mình. Bạn thấy nhãn đó có đang quá nặng so với sự việc thật không?
+Turn 3: expected=cbt_stage_4_socratic actual=cbt_stage_4_socratic ok=True transition=ADVANCE conf=0.88
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['labeling'], insight=True, reframe=False, action=False, hope=False
+  user: Nói mình kém cỏi vì một câu trả lời có vẻ hơi cực đoan.
+  therapist_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 05 Gia đình <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Tối qua bố mẹ cãi nhau, mình thấy rất nặng nề.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['personalization'], insight=False, reframe=False, action=False, hope=False
+  user: Mình cứ nghĩ chắc tại mình học hành không tốt nên nhà mới căng thẳng như vậy.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_4_socratic actual=cbt_stage_4_socratic ok=True transition=ADVANCE conf=0.88
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['personalization'], insight=True, reframe=False, action=False, hope=False
+  user: Mình không chắc mọi chuyện thật sự là lỗi của mình.
+  therapist_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 06 Luận văn hopeless <<<
+Turn 1: expected=cbt_stage_1_venting actual=cbt_stage_1_venting ok=True transition=STAY conf=0.8
+  y=['Hope'] Nam=False Linh=True validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=True
+  user: Mình muốn bỏ cuộc với luận văn rồi, không biết có ai từng kẹt như mình mà thoát ra được không.
+  therapist_fallback: Nghe vậy thì việc bạn thấy nặng nề là rất dễ hiểu. Trong chuyện này, phần nào đang khiến bạn muốn bỏ cuộc hoặc thấy khó chịu nhất?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['catastrophizing'], insight=False, reframe=False, action=False, hope=False
+  user: Mình nghĩ chắc mình sẽ không bao giờ hoàn thành nổi.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_4_socratic actual=cbt_stage_4_socratic ok=True transition=ADVANCE conf=0.92
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['catastrophizing'], insight=True, reframe=False, action=False, hope=False
+  user: Có lẽ nói không bao giờ hoàn thành là quá tuyệt đối, nhưng mình vẫn rất đuối.
+  therapist_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 07 So sánh mạng xã hội <<<
+Turn 1: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['mind_reading'], insight=False, reframe=False, action=False, hope=False
+  user: Lướt mạng thấy bạn bè ai cũng giỏi, mình buồn và thấy tụt lại.
+  therapist_fallback: Câu đó nghe giống bẫy đọc tâm trí: mình đoán chắc người khác đang nghĩ xấu về mình dù chưa có đủ dữ kiện. Bạn thấy phần nào trong suy nghĩ đó là điều mình đang tự đoán không?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=STAY conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['all_or_nothing', 'labeling'], insight=False, reframe=False, action=False, hope=False
+  user: Mình nghĩ mình thất bại một lần là mình vô dụng so với mọi người.
+  therapist_fallback: Câu đó nghe giống bẫy trắng-đen: hoặc hoàn hảo, hoặc xem như thất bại toàn bộ. Bạn thấy suy nghĩ này có đang bỏ qua những vùng ở giữa không?
+Turn 3: expected=cbt_stage_4_socratic actual=cbt_stage_4_socratic ok=True transition=ADVANCE conf=0.88
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['all_or_nothing'], insight=True, reframe=False, action=False, hope=False
+  user: Mình biết so sánh như vậy không công bằng hoàn toàn.
+  therapist_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 08 Lo sức khỏe <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 0, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Mấy hôm nay mình đau đầu nhẹ và cứ lo mãi.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['catastrophizing'], insight=False, reframe=False, action=False, hope=False
+  user: Mình nghĩ chắc chắn mình bị bệnh gì đó rất nặng.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_4_socratic actual=cbt_stage_4_socratic ok=True transition=ADVANCE conf=0.84
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=True, reframe=False, action=False, hope=False
+  user: Có lẽ từ đau đầu nhẹ đến bệnh rất nặng là mình đang nhảy quá xa.
+  therapist_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 09 Tin nhắn bạn thân <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Bạn thân mình không trả lời tin nhắn từ hôm qua, mình thấy hụt hẫng.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['mind_reading'], insight=False, reframe=False, action=False, hope=False
+  user: Mình nghĩ chắc bạn ấy ghét mình rồi và không muốn chơi với mình nữa.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_4_socratic actual=cbt_stage_4_socratic ok=True transition=ADVANCE conf=0.88
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['catastrophizing', 'mind_reading'], insight=True, reframe=False, action=False, hope=False
+  user: Mình không có bằng chứng chắc chắn là bạn ấy ghét mình.
+  therapist_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 10 Kiệt sức học tập <<<
+Turn 1: expected=cbt_stage_1_venting actual=cbt_stage_1_venting ok=True transition=STAY conf=0.74
+  y=['Universality', 'Catharsis'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Mình kiệt sức vì học, nhìn sách là thấy nản.
+  therapist_fallback: Nghe vậy thì việc bạn thấy nặng nề là rất dễ hiểu. Trong chuyện này, phần nào đang khiến bạn muốn bỏ cuộc hoặc thấy khó chịu nhất?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['labeling'], insight=False, reframe=False, action=False, hope=False
+  user: Mình nghĩ nếu hôm nay không học được nhiều thì mình là đứa vô kỷ luật.
+  therapist_fallback: Câu đó nghe giống bẫy dán nhãn: lấy một kết quả hoặc một cảm giác để kết luận toàn bộ con người mình. Bạn thấy nhãn đó có đang quá nặng so với sự việc thật không?
+Turn 3: expected=cbt_stage_5_action actual=cbt_stage_5_action ok=True transition=ADVANCE conf=0.92
+  y=['Hope', 'Interpersonal Learning'] Nam=False Linh=True validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['all_or_nothing'], insight=False, reframe=True, action=True, hope=False
+  user: Có thể hôm nay mình chỉ cần học 15 phút một phần nhỏ, không phải chứng minh tất cả.
+  therapist_fallback: Mình thử đóng gói nó thành một câu công bằng hơn: một kết quả không như ý không có nghĩa là hết cơ hội sửa. Một bước nhỏ thực tế bạn có thể làm trong hôm nay là gì?
+
+>>> 11 Giáo viên phê bình <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Hôm nay cô phê bình bài của mình trước lớp, mình xấu hổ kinh khủng.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['mind_reading', 'labeling'], insight=False, reframe=False, action=False, hope=False
+  user: Mình nghĩ chắc cả lớp thấy mình ngu lắm.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_4_socratic actual=cbt_stage_4_socratic ok=True transition=ADVANCE conf=0.88
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=[], insight=True, reframe=False, action=False, hope=False
+  user: Mình không thể chắc cả lớp nghĩ vậy, nhưng mình vẫn thấy nhục.
+  therapist_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 12 Điểm thấp <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Mình vừa nhận điểm giữa kỳ thấp, thấy buồn và thất vọng.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['all_or_nothing', 'labeling'], insight=False, reframe=False, action=False, hope=False
+  user: Mình nghĩ mình học dốt thật, môn nào rồi cũng sẽ tệ thôi.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_4_socratic actual=cbt_stage_4_socratic ok=True transition=ADVANCE conf=0.88
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['all_or_nothing'], insight=True, reframe=False, action=False, hope=False
+  user: Nói môn nào cũng tệ có vẻ hơi vơ đũa cả nắm.
+  therapist_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 13 Seen tin nhắn <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Người mình thích seen tin nhắn mà không trả lời, mình bồn chồn quá.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['mind_reading'], insight=False, reframe=False, action=False, hope=False
+  user: Chắc người ta thấy mình phiền và đang né mình.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_4_socratic actual=cbt_stage_4_socratic ok=True transition=ADVANCE conf=0.88
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['catastrophizing'], insight=True, reframe=False, action=False, hope=False
+  user: Mình chưa có bằng chứng chắc chắn là họ né mình.
+  therapist_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 14 Deadline mất ngủ <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Mấy đêm nay mình mất ngủ vì deadline, đầu cứ căng.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['catastrophizing'], insight=False, reframe=False, action=False, hope=False
+  user: Mình nghĩ nếu không xong tuần này thì mọi thứ sẽ sụp đổ.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_5_action actual=cbt_stage_5_action ok=True transition=ADVANCE conf=0.92
+  y=['Hope', 'Interpersonal Learning'] Nam=False Linh=True validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['catastrophizing'], insight=True, reframe=True, action=False, hope=False
+  user: Có lẽ không xong tuần này không đồng nghĩa mọi thứ sụp đổ.
+  therapist_fallback: Mình thử đóng gói nó thành một câu công bằng hơn: một kết quả không như ý không có nghĩa là hết cơ hội sửa. Một bước nhỏ thực tế bạn có thể làm trong hôm nay là gì?
+
+>>> 15 Nói sai cuộc họp <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Trong cuộc họp mình nói sai một ý, giờ cứ nghĩ lại mãi.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['mind_reading', 'labeling'], insight=False, reframe=False, action=False, hope=False
+  user: Mình nghĩ mọi người sẽ đánh giá mình thiếu năng lực.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_4_socratic actual=cbt_stage_4_socratic ok=True transition=ADVANCE conf=0.88
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=[], insight=True, reframe=False, action=False, hope=False
+  user: Mình đang đoán suy nghĩ của họ nhiều hơn là biết chắc.
+  therapist_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 16 Trượt học bổng <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Mình trượt học bổng, cảm giác hụt hẫng lắm.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['catastrophizing'], insight=False, reframe=False, action=False, hope=False
+  user: Mình nghĩ thế là tương lai của mình đóng lại rồi.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_5_action actual=cbt_stage_5_action ok=True transition=ADVANCE conf=0.9
+  y=['Hope', 'Interpersonal Learning'] Nam=False Linh=True validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=True, reframe=True, action=False, hope=False
+  user: Có lẽ một học bổng không phải toàn bộ tương lai.
+  therapist_fallback: Mình thử đóng gói nó thành một câu công bằng hơn: một kết quả không như ý không có nghĩa là hết cơ hội sửa. Một bước nhỏ thực tế bạn có thể làm trong hôm nay là gì?
+
+>>> 17 Cãi nhau bạn thân <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Mình cãi nhau với bạn thân, mình vừa tức vừa buồn.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['all_or_nothing', 'personalization'], insight=False, reframe=False, action=False, hope=False
+  user: Chắc tại mình quá tệ nên ai thân rồi cũng rời đi.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_5_action actual=cbt_stage_5_action ok=True transition=ADVANCE conf=0.92
+  y=['Hope', 'Interpersonal Learning'] Nam=False Linh=True validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['mind_reading'], insight=True, reframe=True, action=False, hope=False
+  user: Mình biết một cuộc cãi nhau không chứng minh ai cũng sẽ rời đi.
+  therapist_fallback: Mình thử đóng gói nó thành một câu công bằng hơn: một kết quả không như ý không có nghĩa là hết cơ hội sửa. Một bước nhỏ thực tế bạn có thể làm trong hôm nay là gì?
+
+>>> 18 Sợ thực tập <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Sắp đi thực tập mà mình rất lo, thấy mình chưa sẵn sàng.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['conditional_catastrophizing'], insight=False, reframe=False, action=False, hope=False
+  user: Nếu mình hỏi câu ngớ ngẩn thì mọi người sẽ biết mình kém.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_5_action actual=cbt_stage_5_action ok=True transition=ADVANCE conf=0.86
+  y=['Hope', 'Interpersonal Learning'] Nam=False Linh=True validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=True, action=False, hope=False
+  user: Có thể hỏi một câu chưa tốt không có nghĩa là mình kém toàn bộ.
+  therapist_fallback: Mình thử đóng gói nó thành một câu công bằng hơn: một kết quả không như ý không có nghĩa là hết cơ hội sửa. Một bước nhỏ thực tế bạn có thể làm trong hôm nay là gì?
+
+>>> 19 Bố mẹ kỳ vọng <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Bố mẹ kỳ vọng nhiều quá, mình thấy ngợp.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['all_or_nothing', 'labeling'], insight=False, reframe=False, action=False, hope=False
+  user: Nếu mình không đạt loại giỏi thì mình làm bố mẹ thất vọng hoàn toàn.
+  therapist_fallback: Câu đó nghe giống bẫy trắng-đen: hoặc hoàn hảo, hoặc xem như thất bại toàn bộ. Bạn thấy suy nghĩ này có đang bỏ qua những vùng ở giữa không?
+Turn 3: expected=cbt_stage_4_socratic actual=cbt_stage_4_socratic ok=True transition=ADVANCE conf=0.88
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['all_or_nothing'], insight=True, reframe=False, action=False, hope=False
+  user: Mình nghĩ chữ hoàn toàn nghe hơi nặng và tuyệt đối.
+  therapist_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 20 Dọn phòng trì hoãn <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Mình trì hoãn dọn phòng cả tuần, nhìn vào là thấy chán.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['labeling'], insight=False, reframe=False, action=False, hope=False
+  user: Mình nghĩ mình đúng là lười và vô dụng.
+  therapist_fallback: Câu đó nghe giống bẫy dán nhãn: lấy một kết quả hoặc một cảm giác để kết luận toàn bộ con người mình. Bạn thấy nhãn đó có đang quá nặng so với sự việc thật không?
+Turn 3: expected=cbt_stage_5_action actual=cbt_stage_5_action ok=True transition=ADVANCE conf=0.9
+  y=['Hope', 'Interpersonal Learning'] Nam=False Linh=True validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=True, reframe=True, action=False, hope=False
+  user: Có lẽ một việc bị trì hoãn không nói hết con người mình.
+  therapist_fallback: Mình thử đóng gói nó thành một câu công bằng hơn: một kết quả không như ý không có nghĩa là hết cơ hội sửa. Một bước nhỏ thực tế bạn có thể làm trong hôm nay là gì?
+
+>>> 21 Chọn ngành <<<
+Turn 1: expected=cbt_stage_1_venting actual=cbt_stage_1_venting ok=True transition=STAY conf=0.74
+  y=['Universality', 'Catharsis'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Mình hoang mang về chọn ngành, càng nghĩ càng rối.
+  therapist_fallback: Nghe vậy thì việc bạn thấy nặng nề là rất dễ hiểu. Trong chuyện này, phần nào đang khiến bạn muốn bỏ cuộc hoặc thấy khó chịu nhất?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['catastrophizing'], insight=False, reframe=False, action=False, hope=False
+  user: Nếu chọn sai thì đời mình coi như hỏng hết.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_4_socratic actual=cbt_stage_4_socratic ok=True transition=ADVANCE conf=0.88
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['catastrophizing'], insight=True, reframe=False, action=False, hope=False
+  user: Mình thấy câu đời mình hỏng hết có vẻ đang phóng đại.
+  therapist_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 22 Nhóm làm bài <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Nhóm làm bài không nhắn mình vào kế hoạch, mình thấy bị bỏ rơi.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['mind_reading'], insight=False, reframe=False, action=False, hope=False
+  user: Mình nghĩ chắc họ ghét mình nên cố tình loại mình ra.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_4_socratic actual=cbt_stage_4_socratic ok=True transition=ADVANCE conf=0.88
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=[], insight=True, reframe=False, action=False, hope=False
+  user: Mình không chắc họ cố tình, có thể còn lý do khác.
+  therapist_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 23 Tự trách em điểm kém <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Em mình bị điểm kém, mình thấy có lỗi.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['personalization'], insight=False, reframe=False, action=False, hope=False
+  user: Chắc tại mình không kèm em đủ nên em mới như vậy.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_4_socratic actual=cbt_stage_4_socratic ok=True transition=ADVANCE conf=0.88
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['all_or_nothing', 'personalization'], insight=True, reframe=False, action=False, hope=False
+  user: Mình không chắc tất cả là lỗi của mình.
+  therapist_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 24 Recovery action <<<
+Turn 1: expected=cbt_stage_1_venting actual=cbt_stage_1_venting ok=True transition=STAY conf=0.9
+  y=['Universality', 'Catharsis'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=True, reframe=True, action=False, hope=False
+  user: Mình biết bài nói vừa rồi chưa tốt, nhưng không phải là thảm họa.
+  therapist_fallback: Nghe vậy thì việc bạn thấy nặng nề là rất dễ hiểu. Trong chuyện này, phần nào đang khiến bạn muốn bỏ cuộc hoặc thấy khó chịu nhất?
+Turn 2: expected=cbt_stage_5_action actual=cbt_stage_5_action ok=True transition=ADVANCE conf=0.86
+  y=['Hope', 'Interpersonal Learning'] Nam=False Linh=True validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=True, hope=False
+  user: Mình có thể luyện lại phần mở đầu 10 phút tối nay.
+  therapist_fallback: Mình thử đóng gói nó thành một câu công bằng hơn: một kết quả không như ý không có nghĩa là hết cơ hội sửa. Một bước nhỏ thực tế bạn có thể làm trong hôm nay là gì?
+
+>>> 25 Học lại hopeless <<<
+Turn 1: expected=cbt_stage_1_venting actual=cbt_stage_1_venting ok=True transition=STAY conf=0.8
+  y=['Hope'] Nam=False Linh=True validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=True
+  user: Mình phải học lại một môn, thấy tối tăm quá, không biết có ai vượt qua nổi không.
+  therapist_fallback: Nghe vậy thì việc bạn thấy nặng nề là rất dễ hiểu. Trong chuyện này, phần nào đang khiến bạn muốn bỏ cuộc hoặc thấy khó chịu nhất?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['catastrophizing', 'all_or_nothing'], insight=False, reframe=False, action=False, hope=False
+  user: Mình nghĩ mình sẽ mắc kẹt mãi ở đây.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_4_socratic actual=cbt_stage_4_socratic ok=True transition=ADVANCE conf=0.88
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['all_or_nothing'], insight=True, reframe=False, action=False, hope=False
+  user: Có lẽ chữ mãi mãi đang làm mọi thứ nặng hơn thực tế.
+  therapist_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 26 Bị sếp nhắc <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_3_distortions ok=False transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['personalization'], insight=False, reframe=False, action=False, hope=False
+  user: Sếp nhắc lỗi của mình trong nhóm, mình vừa quê vừa lo.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=STAY conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['catastrophizing'], insight=False, reframe=False, action=False, hope=False
+  user: Mình nghĩ chắc sếp sẽ không bao giờ tin mình nữa.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_4_socratic actual=cbt_stage_4_socratic ok=True transition=ADVANCE conf=0.88
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['catastrophizing'], insight=True, reframe=False, action=False, hope=False
+  user: Mình không thể chắc là sếp sẽ không bao giờ tin mình nữa.
+  therapist_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 27 Bài tập nhóm <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_3_distortions ok=False transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['labeling'], insight=False, reframe=False, action=False, hope=False
+  user: Mình làm phần bài nhóm chậm, thấy tội lỗi.
+  therapist_fallback: Câu đó nghe giống bẫy dán nhãn: lấy một kết quả hoặc một cảm giác để kết luận toàn bộ con người mình. Bạn thấy nhãn đó có đang quá nặng so với sự việc thật không?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=STAY conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['labeling'], insight=False, reframe=False, action=False, hope=False
+  user: Chắc mình đang kéo cả nhóm xuống vì mình quá vô dụng.
+  therapist_fallback: Câu đó nghe giống bẫy dán nhãn: lấy một kết quả hoặc một cảm giác để kết luận toàn bộ con người mình. Bạn thấy nhãn đó có đang quá nặng so với sự việc thật không?
+Turn 3: expected=cbt_stage_5_action actual=cbt_stage_5_action ok=True transition=ADVANCE conf=0.88
+  y=['Hope', 'Interpersonal Learning'] Nam=False Linh=True validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['all_or_nothing', 'labeling'], insight=False, reframe=True, action=False, hope=False
+  user: Có lẽ chậm một phần không có nghĩa mình vô dụng hoàn toàn.
+  therapist_fallback: Mình thử đóng gói nó thành một câu công bằng hơn: một kết quả không như ý không có nghĩa là hết cơ hội sửa. Một bước nhỏ thực tế bạn có thể làm trong hôm nay là gì?
+
+>>> 28 Sợ kiểm tra bất ngờ <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Mai kiểm tra bất ngờ mà mình chưa ôn, mình rất hoảng.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['conditional_catastrophizing'], insight=False, reframe=False, action=False, hope=False
+  user: Nếu điểm thấp thì chứng tỏ mình chẳng có năng lực.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_5_action actual=cbt_stage_5_action ok=True transition=ADVANCE conf=0.9
+  y=['Hope', 'Interpersonal Learning'] Nam=False Linh=True validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=True, reframe=True, action=False, hope=False
+  user: Một điểm thấp không chứng minh toàn bộ năng lực của mình.
+  therapist_fallback: Mình thử đóng gói nó thành một câu công bằng hơn: một kết quả không như ý không có nghĩa là hết cơ hội sửa. Một bước nhỏ thực tế bạn có thể làm trong hôm nay là gì?
+
+>>> 29 Bị từ chối CLB <<<
+Turn 1: expected=cbt_stage_2_abc_model actual=cbt_stage_2_abc_model ok=True transition=ADVANCE conf=0.72
+  y=['NONE'] Nam=False Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Mình bị CLB từ chối, thấy rất buồn.
+  therapist_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Mình nghĩ chắc mình không đủ tốt ở đâu cả.
+  therapist_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+Turn 3: expected=cbt_stage_5_action actual=cbt_stage_5_action ok=True transition=ADVANCE conf=0.86
+  y=['Hope', 'Interpersonal Learning'] Nam=False Linh=True validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=True, reframe=True, action=False, hope=False
+  user: Có lẽ một CLB từ chối không nói hết giá trị của mình.
+  therapist_fallback: Mình thử đóng gói nó thành một câu công bằng hơn: một kết quả không như ý không có nghĩa là hết cơ hội sửa. Một bước nhỏ thực tế bạn có thể làm trong hôm nay là gì?
+
+>>> 30 Lo tương lai <<<
+Turn 1: expected=cbt_stage_1_venting actual=cbt_stage_1_venting ok=True transition=STAY conf=0.74
+  y=['Universality', 'Catharsis'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 1, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=False, dist=[], insight=False, reframe=False, action=False, hope=False
+  user: Mình lo tương lai quá, nghĩ đến ra trường là nghẹt thở.
+  therapist_fallback: Nghe vậy thì việc bạn thấy nặng nề là rất dễ hiểu. Trong chuyện này, phần nào đang khiến bạn muốn bỏ cuộc hoặc thấy khó chịu nhất?
+Turn 2: expected=cbt_stage_3_distortions actual=cbt_stage_3_distortions ok=True transition=ADVANCE conf=0.82
+  y=['Universality'] Nam=True Linh=False validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['labeling'], insight=False, reframe=False, action=False, hope=False
+  user: Nếu không có việc tốt ngay thì coi như mình thất bại.
+  therapist_fallback: Câu đó nghe giống bẫy dán nhãn: lấy một kết quả hoặc một cảm giác để kết luận toàn bộ con người mình. Bạn thấy nhãn đó có đang quá nặng so với sự việc thật không?
+Turn 3: expected=cbt_stage_5_action actual=cbt_stage_5_action ok=True transition=ADVANCE conf=0.92
+  y=['Hope', 'Interpersonal Learning'] Nam=False Linh=True validator=True scores={'stage_fit': 2, 'specificity': 2, 'empathy': 1, 'focus': 2, 'safety': 2}
+  features: auto=True, dist=['labeling'], insight=True, reframe=True, action=False, hope=False
+  user: Có lẽ không có việc tốt ngay không đồng nghĩa mình thất bại.
+  therapist_fallback: Mình thử đóng gói nó thành một câu công bằng hơn: một kết quả không như ý không có nghĩa là hết cơ hội sửa. Một bước nhỏ thực tế bạn có thể làm trong hôm nay là gì?
+
+==============================================================================================================
+STAGE_PASS: 87/89 = 97.75%
+VALIDATOR_PASS: 89/89 = 100.00%
+
+MISMATCHES
+('26 Bị sếp nhắc', 1, 'cbt_stage_2_abc_model', 'cbt_stage_3_distortions', 'Sếp nhắc lỗi của mình trong nhóm, mình vừa quê vừa lo.', 'ADVANCE: User gave an automatic thought with possible distortion: personalization.')
+('27 Bài tập nhóm', 1, 'cbt_stage_2_abc_model', 'cbt_stage_3_distortions', 'Mình làm phần bài nhóm chậm, thấy tội lỗi.', 'ADVANCE: User gave an automatic thought with possible distortion: labeling.')
+
+VALIDATOR_FAILURES
+None

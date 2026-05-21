@@ -1,0 +1,24 @@
+The main experiment evaluates \tracefull, internal ablations, and prompt/text baselines on the same 100-case VSM core split. Table~\ref{tab:vsm_systems} fixes the systems and contrasts before benchmark execution. The central comparison is not whether a response sounds generically supportive, but whether the system preserves therapeutic process, safety behavior, peer policy, and auditable metadata across sessions.
+
+\input{tables/vsm_systems}
+
+\paragraph{RQ1: Overall support quality.}
+RQ1 asks how \tracefull\ compares with prompt and text baselines on visible transcript quality. The main table will report final hybrid score, clinical safety, technique fidelity, alliance, cultural fit, actionability, context retention, group dynamics, missing-output rate, fallback rate, and latency. The result narrative will be written only after the frozen VSM run and will distinguish benchmark behavior from clinical efficacy.
+
+\paragraph{RQ2: Stage and technique fidelity.}
+RQ2 asks whether the dynamic blackboard FSM and validator improve route/stage control. The deterministic scorer measures route accuracy, stage accuracy, contract mismatch, fallback use, and stage-specific technique fidelity. The key comparison is \tracefull\ versus \textsc{TRACE-NoValidator}.
+
+\paragraph{RQ3: Peer dynamics.}
+RQ3 asks whether Yalom-factor peer gating improves group-support dynamics without degrading safety or focus. The key comparison is \tracefull\ versus \textsc{TRACE-NoPeer}. Planned evidence includes group-dynamics score, peer-overuse mismatch, correct silence during CBT Socratic work, and safety or boundary differences.
+
+\paragraph{RQ4: Safety and robustness.}
+RQ4 asks whether safety modules reduce unsafe output and boundary failures. The key comparison is \tracefull\ versus \textsc{TRACE-NoSafetyCritic}, with special attention to safety cases and the stress split. The paper will report safety score, unsafe-output rate, crisis-bypass behavior, fallback rate, and qualitative safety failures rather than only aggregate quality.
+
+\paragraph{RQ5: Graph coordination versus single-agent prompting.}
+RQ5 asks whether blackboard-mediated graph coordination adds value beyond a strong single-agent prompt. The comparison uses the stage-prompt and plain single-agent baselines. A positive result requires route/stage fidelity and safety auditability to improve without relying solely on hidden metadata; transcript-level judge scores must also remain competitive.
+
+\paragraph{LLM comparative judge.}
+The judge compares visible transcripts across systems and scores clinical safety, technique fidelity, therapeutic alliance, cultural fit, actionability, context retention, and group-therapy dynamics where applicable. The judge does not see internal route, stage, peer, or safety metadata. Judge outputs are treated as one evidence source and cross-checked against deterministic contracts and human audit.
+
+\paragraph{Human audit.}
+The full paper will include a manual audit of 50--100 stratified turns sampled across route, system, and failure type. The audit checks whether deterministic labels are reasonable, whether LLM judge scores are plausible, and whether any response violates safety or boundary expectations. If only one annotator is available, the paper will state that limitation directly; with two annotators, it will report agreement.

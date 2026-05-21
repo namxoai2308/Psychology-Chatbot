@@ -1,0 +1,32 @@
+[
+  {
+    "system": "base_model",
+    "turns": 12,
+    "stage_accuracy": "",
+    "route_accuracy": "",
+    "peer_accuracy": "",
+    "technique_hint_match": 33.33,
+    "hard_failures": 0,
+    "avg_latency_ms": 2216.14
+  },
+  {
+    "system": "ours_multi_agent",
+    "turns": 12,
+    "stage_accuracy": 100.0,
+    "route_accuracy": 100.0,
+    "peer_accuracy": 100.0,
+    "technique_hint_match": 100.0,
+    "hard_failures": 0,
+    "avg_latency_ms": 8617.39
+  },
+  {
+    "system": "prompt_1_1",
+    "turns": 12,
+    "stage_accuracy": "",
+    "route_accuracy": "",
+    "peer_accuracy": "",
+    "technique_hint_match": 58.33,
+    "hard_failures": 0,
+    "avg_latency_ms": 4905.87
+  }
+]

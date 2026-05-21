@@ -1,0 +1,25 @@
+{
+  "chunk": {
+    "case_ids": [
+      "vsm_ba_016_exam_revision_freeze",
+      "vsm_ba_017_shower_avoidance",
+      "vsm_ba_018_meal_prep_block",
+      "vsm_ba_019_library_avoidance",
+      "vsm_ba_020_message_reply_delay"
+    ],
+    "chunk_id": "chunk_040_044",
+    "end_index": 44,
+    "index": 8,
+    "start_index": 40,
+    "turn_count": 60
+  },
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "env_fast_model": "deepseek-v4-flash",
+  "env_smart_model": "deepseek-v4-flash",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "selected_model": "deepseek",
+  "systems": [
+    "ours_multi_agent"
+  ]
+}

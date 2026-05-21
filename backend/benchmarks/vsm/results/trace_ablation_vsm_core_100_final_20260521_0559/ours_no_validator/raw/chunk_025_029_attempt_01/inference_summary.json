@@ -1,0 +1,28 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "failures": 8,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_validator/raw/chunk_025_029_attempt_01",
+  "reliability_failures": 0,
+  "result_rows": 5,
+  "result_turns": 60,
+  "run_config": "run_config.json",
+  "selected_case_ids": [
+    "vsm_cbt_006_scholarship_pressure",
+    "vsm_cbt_007_social_media_comparison",
+    "vsm_cbt_008_body_image_labeling",
+    "vsm_cbt_009_class_discussion_fear",
+    "vsm_cbt_010_impostor_syndrome"
+  ],
+  "systems": {
+    "ours_no_validator": {
+      "avg_latency_ms": 7234.72,
+      "cases": 5,
+      "failures": 8,
+      "reliability_failures": 0,
+      "turns": 60
+    }
+  },
+  "turn_count": 60
+}

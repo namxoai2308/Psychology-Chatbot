@@ -1,0 +1,16 @@
+{
+  "case_count": 2,
+  "failures": 22,
+  "hard_failures": 2,
+  "out_dir": "backend/benchmarks/vsm/results/ours_gemini_3_flash_preview_test2_2026-05-19/merged",
+  "result_rows": 2,
+  "result_turns": 24,
+  "systems": {
+    "ours_multi_agent": {
+      "avg_latency_ms": 4084.7,
+      "cases": 2,
+      "failures": 22,
+      "turns": 24
+    }
+  }
+}

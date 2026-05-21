@@ -1,0 +1,22 @@
+{
+  "chunk": {
+    "case_ids": [
+      "vsm_stress_mbi_001_panic_before_exam",
+      "vsm_stress_mbi_002_night_rumination"
+    ],
+    "chunk_id": "chunk_004_005",
+    "end_index": 5,
+    "index": 2,
+    "start_index": 4,
+    "turn_count": 36
+  },
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "env_fast_model": "deepseek-v4-flash",
+  "env_smart_model": "deepseek-v4-flash",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "selected_model": "deepseek",
+  "systems": [
+    "ours_multi_agent"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "case_count": 2,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "failures": 0,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/smoke_2case_ours_full_robust_fix2",
+  "reliability_failures": 0,
+  "result_rows": 2,
+  "result_turns": 24,
+  "run_config": "run_config.json",
+  "selected_case_ids": [
+    "vsm_cbt_001_exam_catastrophizing",
+    "vsm_yalom_001_universality_dorm_loneliness"
+  ],
+  "systems": {
+    "ours_full": {
+      "avg_latency_ms": 8670.49,
+      "cases": 2,
+      "failures": 0,
+      "reliability_failures": 0,
+      "turns": 24
+    }
+  },
+  "turn_count": 24
+}

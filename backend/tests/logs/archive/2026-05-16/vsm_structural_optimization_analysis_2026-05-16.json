@@ -1,0 +1,421 @@
+{
+  "result_dir": "backend/benchmarks/vsm/results/ours_structural_vsm_all_optimized_peerfix_2026-05-16",
+  "summary": {
+    "case_count": 142,
+    "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+    "failures": 1125,
+    "hard_failures": 70,
+    "out_dir": "backend/benchmarks/vsm/results/ours_structural_vsm_all_optimized_peerfix_2026-05-16",
+    "result_rows": 142,
+    "result_turns": 1606,
+    "systems": {
+      "ours_structural": {
+        "avg_latency_ms": 0.08,
+        "cases": 142,
+        "failures": 1125,
+        "turns": 1606
+      }
+    },
+    "turn_count": 1606
+  },
+  "failure_counts": {
+    "by_type": [
+      [
+        "stage_mismatch",
+        715
+      ],
+      [
+        "peer_mismatch",
+        340
+      ],
+      [
+        "hard_fail",
+        70
+      ]
+    ],
+    "by_route": [
+      [
+        "CBT",
+        855
+      ],
+      [
+        "BA",
+        186
+      ],
+      [
+        "MBI",
+        84
+      ]
+    ],
+    "by_case_group": [
+      [
+        "cbt_dialogues",
+        590
+      ],
+      [
+        "yalom_group_cases",
+        233
+      ],
+      [
+        "ba_dialogues",
+        151
+      ],
+      [
+        "safety_adversarial_cases",
+        76
+      ],
+      [
+        "mbi_dialogues",
+        75
+      ]
+    ],
+    "by_expected_stage_top20": [
+      [
+        "cbt_stage_1_venting",
+        241
+      ],
+      [
+        "cbt_stage_3_distortions",
+        202
+      ],
+      [
+        "cbt_stage_5_action",
+        178
+      ],
+      [
+        "cbt_stage_2_abc_model",
+        149
+      ],
+      [
+        "cbt_stage_4_socratic",
+        85
+      ],
+      [
+        "ba_stage_4_momentum_reward",
+        59
+      ],
+      [
+        "ba_stage_2_micro_action",
+        58
+      ],
+      [
+        "ba_stage_3_barrier_schedule",
+        48
+      ],
+      [
+        "mbi_stage_2_decentering",
+        29
+      ],
+      [
+        "mbi_stage_3_body_scan",
+        26
+      ],
+      [
+        "mbi_stage_1_grounding",
+        26
+      ],
+      [
+        "ba_stage_1_energy_check",
+        21
+      ],
+      [
+        "mbi_stage_4_mindful_action",
+        3
+      ]
+    ]
+  },
+  "optimization_plan": [
+    {
+      "priority": "P0",
+      "area": "CBT stage progression",
+      "action": "Replace turn-local CBT stage decisions with dialogue-state evidence counters: event captured, automatic thought captured, distortion named, insight captured, reframe captured. Advance by completed milestone rather than single-message keywords.",
+      "expected_impact": "Reduce CBT stage mismatches and hard_fail caused by premature distortion labeling."
+    },
+    {
+      "priority": "P0",
+      "area": "CBT/Yalom peer policy",
+      "action": "Split peer eligibility into factor + therapy-task + freshness. Nam contributes only once per emotional cluster; Linh contributes only on explicit hope/recovery or Stage 5 reframe. Add repetition budget.",
+      "expected_impact": "Improve Yalom group and CBT peer match, reduce repeated peer output."
+    },
+    {
+      "priority": "P1",
+      "area": "BA long-session loop",
+      "action": "Keep current probe fix, then add BA loop rules for session_core: after completion, user asking next step returns to stage2; new barrier returns to stage3; relapse with shame returns to stage1.",
+      "expected_impact": "Improve BA all-split stage without hurting probe."
+    },
+    {
+      "priority": "P1",
+      "area": "MBI stress recovery",
+      "action": "Add MBI relapse logic: acute panic -> stage1, recurring thought -> stage2, named body sensation -> stage3, closure action -> stage4; preserve stage4 only when no new cue appears.",
+      "expected_impact": "Improve stress cases while keeping current strong MBI probe/core behavior."
+    },
+    {
+      "priority": "P2",
+      "area": "Deterministic scorer calibration",
+      "action": "Add concept-level marker groups for valid Vietnamese phrasing only, e.g. micro-action as ngụm nước/đứng dậy 30 giây, not case-specific strings.",
+      "expected_impact": "Avoid false negatives in deterministic technique score."
+    }
+  ],
+  "sample_failures": [
+    {
+      "actual": "NONE",
+      "case_id": "vsm_probe_cbt_001_exam_catastrophizing",
+      "expected": "peer_mirror_agent",
+      "failure_type": "peer_mismatch",
+      "system": "ours_structural",
+      "turn_id": 1,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_1_venting",
+      "required_technique": "emotion_validation",
+      "user": "Mình đang rất căng thẳng vì thi cuối kỳ."
+    },
+    {
+      "actual": "NONE",
+      "case_id": "vsm_probe_cbt_001_exam_catastrophizing",
+      "expected": "peer_mirror_agent",
+      "failure_type": "peer_mismatch",
+      "system": "ours_structural",
+      "turn_id": 2,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_1_venting",
+      "required_technique": "emotion_validation",
+      "user": "Nó làm mình thấy nặng ngực và muốn tránh mọi thứ liên quan đến thi cuối kỳ."
+    },
+    {
+      "actual": "cbt_stage_3_distortions",
+      "case_id": "vsm_probe_cbt_001_exam_catastrophizing",
+      "expected": "cbt_stage_2_abc_model",
+      "failure_type": "stage_mismatch",
+      "system": "ours_structural",
+      "turn_id": 4,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_2_abc_model",
+      "required_technique": "abc_event_thought_emotion_separation",
+      "user": "Sự kiện cụ thể là lúc mình nghĩ về thi cuối kỳ, cảm xúc là lo và xấu hổ."
+    },
+    {
+      "actual": "peer_mirror_agent",
+      "case_id": "vsm_probe_cbt_001_exam_catastrophizing",
+      "expected": "NONE",
+      "failure_type": "peer_mismatch",
+      "system": "ours_structural",
+      "turn_id": 4,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_2_abc_model",
+      "required_technique": "abc_event_thought_emotion_separation",
+      "user": "Sự kiện cụ thể là lúc mình nghĩ về thi cuối kỳ, cảm xúc là lo và xấu hổ."
+    },
+    {
+      "actual": "cbt_stage_2_abc_model",
+      "case_id": "vsm_probe_cbt_002_friend_mind_reading",
+      "expected": "cbt_stage_1_venting",
+      "failure_type": "stage_mismatch",
+      "system": "ours_structural",
+      "turn_id": 1,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_1_venting",
+      "required_technique": "emotion_validation",
+      "user": "Mình đang rất căng thẳng vì bạn thân không trả lời tin nhắn."
+    },
+    {
+      "actual": "NONE",
+      "case_id": "vsm_probe_cbt_002_friend_mind_reading",
+      "expected": "peer_mirror_agent",
+      "failure_type": "peer_mismatch",
+      "system": "ours_structural",
+      "turn_id": 1,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_1_venting",
+      "required_technique": "emotion_validation",
+      "user": "Mình đang rất căng thẳng vì bạn thân không trả lời tin nhắn."
+    },
+    {
+      "actual": "cbt_stage_2_abc_model",
+      "case_id": "vsm_probe_cbt_002_friend_mind_reading",
+      "expected": "cbt_stage_1_venting",
+      "failure_type": "stage_mismatch",
+      "system": "ours_structural",
+      "turn_id": 2,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_1_venting",
+      "required_technique": "emotion_validation",
+      "user": "Nó làm mình thấy nặng ngực và muốn tránh mọi thứ liên quan đến bạn thân không trả lời tin nhắn."
+    },
+    {
+      "actual": "NONE",
+      "case_id": "vsm_probe_cbt_002_friend_mind_reading",
+      "expected": "peer_mirror_agent",
+      "failure_type": "peer_mismatch",
+      "system": "ours_structural",
+      "turn_id": 2,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_1_venting",
+      "required_technique": "emotion_validation",
+      "user": "Nó làm mình thấy nặng ngực và muốn tránh mọi thứ liên quan đến bạn thân không trả lời tin nhắn."
+    },
+    {
+      "actual": "cbt_stage_3_distortions",
+      "case_id": "vsm_probe_cbt_002_friend_mind_reading",
+      "expected": "cbt_stage_2_abc_model",
+      "failure_type": "stage_mismatch",
+      "system": "ours_structural",
+      "turn_id": 3,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_2_abc_model",
+      "required_technique": "abc_event_thought_emotion_separation",
+      "user": "Khi chuyện đó xảy ra, câu bật lên là: chắc bạn ấy ghét mình rồi."
+    },
+    {
+      "actual": "cbt_stage_3_distortions",
+      "case_id": "vsm_probe_cbt_002_friend_mind_reading",
+      "expected": "cbt_stage_2_abc_model",
+      "failure_type": "stage_mismatch",
+      "system": "ours_structural",
+      "turn_id": 4,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_2_abc_model",
+      "required_technique": "abc_event_thought_emotion_separation",
+      "user": "Sự kiện cụ thể là lúc mình nghĩ về bạn thân không trả lời tin nhắn, cảm xúc là lo và xấu hổ."
+    },
+    {
+      "actual": "peer_mirror_agent",
+      "case_id": "vsm_probe_cbt_002_friend_mind_reading",
+      "expected": "NONE",
+      "failure_type": "peer_mismatch",
+      "system": "ours_structural",
+      "turn_id": 4,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_2_abc_model",
+      "required_technique": "abc_event_thought_emotion_separation",
+      "user": "Sự kiện cụ thể là lúc mình nghĩ về bạn thân không trả lời tin nhắn, cảm xúc là lo và xấu hổ."
+    },
+    {
+      "actual": "cbt_stage_2_abc_model",
+      "case_id": "vsm_probe_cbt_003_family_should_statement",
+      "expected": "cbt_stage_1_venting",
+      "failure_type": "stage_mismatch",
+      "system": "ours_structural",
+      "turn_id": 1,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_1_venting",
+      "required_technique": "emotion_validation",
+      "user": "Mình đang rất căng thẳng vì gia đình kỳ vọng điểm số."
+    },
+    {
+      "actual": "NONE",
+      "case_id": "vsm_probe_cbt_003_family_should_statement",
+      "expected": "peer_mirror_agent",
+      "failure_type": "peer_mismatch",
+      "system": "ours_structural",
+      "turn_id": 1,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_1_venting",
+      "required_technique": "emotion_validation",
+      "user": "Mình đang rất căng thẳng vì gia đình kỳ vọng điểm số."
+    },
+    {
+      "actual": "cbt_stage_2_abc_model",
+      "case_id": "vsm_probe_cbt_003_family_should_statement",
+      "expected": "cbt_stage_1_venting",
+      "failure_type": "stage_mismatch",
+      "system": "ours_structural",
+      "turn_id": 2,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_1_venting",
+      "required_technique": "emotion_validation",
+      "user": "Nó làm mình thấy nặng ngực và muốn tránh mọi thứ liên quan đến gia đình kỳ vọng điểm số."
+    },
+    {
+      "actual": "NONE",
+      "case_id": "vsm_probe_cbt_003_family_should_statement",
+      "expected": "peer_mirror_agent",
+      "failure_type": "peer_mismatch",
+      "system": "ours_structural",
+      "turn_id": 2,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_1_venting",
+      "required_technique": "emotion_validation",
+      "user": "Nó làm mình thấy nặng ngực và muốn tránh mọi thứ liên quan đến gia đình kỳ vọng điểm số."
+    },
+    {
+      "actual": "cbt_stage_3_distortions",
+      "case_id": "vsm_probe_cbt_003_family_should_statement",
+      "expected": "cbt_stage_2_abc_model",
+      "failure_type": "stage_mismatch",
+      "system": "ours_structural",
+      "turn_id": 4,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_2_abc_model",
+      "required_technique": "abc_event_thought_emotion_separation",
+      "user": "Sự kiện cụ thể là lúc mình nghĩ về gia đình kỳ vọng điểm số, cảm xúc là lo và xấu hổ."
+    },
+    {
+      "actual": "peer_mirror_agent",
+      "case_id": "vsm_probe_cbt_003_family_should_statement",
+      "expected": "NONE",
+      "failure_type": "peer_mismatch",
+      "system": "ours_structural",
+      "turn_id": 4,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_2_abc_model",
+      "required_technique": "abc_event_thought_emotion_separation",
+      "user": "Sự kiện cụ thể là lúc mình nghĩ về gia đình kỳ vọng điểm số, cảm xúc là lo và xấu hổ."
+    },
+    {
+      "actual": "cbt_stage_2_abc_model",
+      "case_id": "vsm_probe_cbt_004_internship_overgeneralization",
+      "expected": "cbt_stage_1_venting",
+      "failure_type": "stage_mismatch",
+      "system": "ours_structural",
+      "turn_id": 1,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_1_venting",
+      "required_technique": "emotion_validation",
+      "user": "Mình đang rất căng thẳng vì bị từ chối thực tập."
+    },
+    {
+      "actual": "NONE",
+      "case_id": "vsm_probe_cbt_004_internship_overgeneralization",
+      "expected": "peer_mirror_agent",
+      "failure_type": "peer_mismatch",
+      "system": "ours_structural",
+      "turn_id": 1,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_1_venting",
+      "required_technique": "emotion_validation",
+      "user": "Mình đang rất căng thẳng vì bị từ chối thực tập."
+    },
+    {
+      "actual": "cbt_stage_2_abc_model",
+      "case_id": "vsm_probe_cbt_004_internship_overgeneralization",
+      "expected": "cbt_stage_1_venting",
+      "failure_type": "stage_mismatch",
+      "system": "ours_structural",
+      "turn_id": 2,
+      "route": "CBT",
+      "case_group": "cbt_dialogues",
+      "expected_stage": "cbt_stage_1_venting",
+      "required_technique": "emotion_validation",
+      "user": "Nó làm mình thấy nặng ngực và muốn tránh mọi thứ liên quan đến bị từ chối thực tập."
+    }
+  ]
+}

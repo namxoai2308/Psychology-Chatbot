@@ -1,0 +1,15 @@
+{"case_id": "vsm_cbt_001_exam_catastrophizing", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 2}
+{"case_id": "vsm_cbt_002_friend_mind_reading", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 1}
+{"case_id": "vsm_cbt_004_internship_overgeneralization", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 2}
+{"case_id": "vsm_cbt_005_presentation_all_or_nothing", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 2}
+{"actual": "cbt_stage_2_abc_model", "case_id": "vsm_cbt_001_exam_catastrophizing", "expected": "cbt_stage_1_venting", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 1}
+{"actual": "NONE", "case_id": "vsm_cbt_001_exam_catastrophizing", "expected": "peer_mirror_agent", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 1}
+{"actual": "cbt_stage_2_abc_model", "case_id": "vsm_cbt_002_friend_mind_reading", "expected": "cbt_stage_1_venting", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 1}
+{"actual": "NONE", "case_id": "vsm_cbt_002_friend_mind_reading", "expected": "peer_mirror_agent", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 1}
+{"actual": "cbt_stage_5_action", "case_id": "vsm_cbt_002_friend_mind_reading", "expected": "cbt_stage_2_abc_model", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 2}
+{"actual": "cbt_stage_2_abc_model", "case_id": "vsm_cbt_003_family_should_statement", "expected": "cbt_stage_1_venting", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 1}
+{"actual": "NONE", "case_id": "vsm_cbt_003_family_should_statement", "expected": "peer_mirror_agent", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 1}
+{"actual": "cbt_stage_2_abc_model", "case_id": "vsm_cbt_004_internship_overgeneralization", "expected": "cbt_stage_1_venting", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 1}
+{"actual": "NONE", "case_id": "vsm_cbt_004_internship_overgeneralization", "expected": "peer_mirror_agent", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 1}
+{"actual": "cbt_stage_2_abc_model", "case_id": "vsm_cbt_005_presentation_all_or_nothing", "expected": "cbt_stage_1_venting", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 1}
+{"actual": "NONE", "case_id": "vsm_cbt_005_presentation_all_or_nothing", "expected": "peer_mirror_agent", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 1}

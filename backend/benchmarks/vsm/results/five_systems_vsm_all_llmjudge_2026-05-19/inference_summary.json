@@ -1,0 +1,43 @@
+{
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "failures": 318,
+  "hard_failures": 318,
+  "ours_final": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/final_partial_plus_remaining_2026-05-19/per_case_results.jsonl",
+  "out_dir": "backend/benchmarks/vsm/results/five_systems_vsm_all_llmjudge_2026-05-19",
+  "responses_dir": "backend/benchmarks/vsm/results/responses_vsm_all_2026-05-18",
+  "result_rows": 710,
+  "result_turns": 8030,
+  "selected_cases": 142,
+  "systems": {
+    "base_model": {
+      "avg_latency_ms": 3266.25,
+      "cases": 142,
+      "failures": 18,
+      "turns": 1606
+    },
+    "camel_cbt": {
+      "avg_latency_ms": 5462.37,
+      "cases": 142,
+      "failures": 10,
+      "turns": 1606
+    },
+    "ours_multi_agent": {
+      "avg_latency_ms": 20359.64,
+      "cases": 142,
+      "failures": 154,
+      "turns": 1606
+    },
+    "prompt_1_1": {
+      "avg_latency_ms": 7085.44,
+      "cases": 142,
+      "failures": 119,
+      "turns": 1606
+    },
+    "seallm": {
+      "avg_latency_ms": 11772.25,
+      "cases": 142,
+      "failures": 17,
+      "turns": 1606
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "ba_stage_1_energy_check": {
+    "stage_task": "Validate depletion and measure current energy before selecting action.",
+    "micro_skills": [
+      "depletion validation",
+      "energy rating",
+      "shame reduction",
+      "behavioral framing"
+    ],
+    "avoid": [
+      "calling the user lazy",
+      "deep cognitive analysis",
+      "large task assignment",
+      "generic motivation"
+    ],
+    "good_moves": [
+      "Separate low energy from moral failure.",
+      "Ask for a 0-10 or battery-style rating.",
+      "Keep the next step dependent on the rating."
+    ],
+    "validator_anchors": [
+      "Use at least one of: năng lượng, pin, /10, 0 đến 10, or mức.",
+      "Do not stop at validation; always ask for the energy/pin rating."
+    ],
+    "example": "Nghe giống bạn đang rất cạn năng lượng, không phải đơn giản là lười. Nếu chấm mức pin hiện tại từ 0 đến 10, bạn đang khoảng mấy phần?"
+  },
+  "ba_stage_2_micro_action": {
+    "stage_task": "Select one tiny, doable action matched to current energy.",
+    "micro_skills": [
+      "micro-action selection",
+      "effort matching",
+      "choice between two or three options",
+      "two-minute start"
+    ],
+    "avoid": [
+      "big productivity plans",
+      "pressure to finish the whole task",
+      "arguing with self-blame",
+      "vague encouragement"
+    ],
+    "good_moves": [
+      "Offer actions small enough to be done even at low energy.",
+      "Use concrete verbs such as drink, open, stand, wash.",
+      "Ask which option has the least resistance."
+    ],
+    "example": "Với mức pin đó, mình không chọn việc lớn. Chỉ chọn một hành động rất nhỏ: uống nước, rửa mặt, hoặc mở tài liệu trong 2 phút. Việc nào ít kháng cự nhất?"
+  },
+  "ba_stage_3_barrier_schedule": {
+    "stage_task": "Identify the main barrier and schedule the tiny action.",
+    "micro_skills": [
+      "barrier naming",
+      "implementation intention",
+      "time cue",
+      "environment cue"
+    ],
+    "avoid": [
+      "saying just try harder",
+      "leaving the action unscheduled",
+      "adding multiple tasks",
+      "shaming avoidance"
+    ],
+    "good_moves": [
+      "Ask for the biggest barrier in one sentence.",
+      "Attach the action to a specific time or after-event cue.",
+      "Reduce the action if the barrier is too high."
+    ],
+    "example": "Tốt, mình làm cho nó dễ xảy ra hơn: rào cản lớn nhất là gì, và bạn sẽ bắt đầu việc nhỏ đó vào lúc nào cụ thể?"
+  },
+  "ba_stage_4_momentum_reward": {
+    "stage_task": "Reinforce completion, check mood shift, and choose rest or another tiny step.",
+    "micro_skills": [
+      "completion reinforcement",
+      "mood tracking",
+      "mastery noticing",
+      "rest-or-continue choice"
+    ],
+    "avoid": [
+      "minimizing small actions",
+      "raising the bar immediately",
+      "turning success into pressure",
+      "criticizing incomplete effort"
+    ],
+    "good_moves": [
+      "Explicitly acknowledge the completed action.",
+      "Ask whether mood or energy shifted even slightly.",
+      "Offer rest as a valid option."
+    ],
+    "example": "Mình ghi nhận việc bạn đã làm xong bước nhỏ đó. Tâm trạng hoặc mức pin thay đổi chút nào không, và bây giờ bạn muốn nghỉ hay làm thêm một bước rất nhỏ?"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "case_count": 3,
+  "confidence_intervals": {
+    "ours_multi_agent": {
+      "ci_high": 97.15,
+      "ci_low": 89.63,
+      "mean": 93.95,
+      "metric": "final_hybrid_score",
+      "n_turns": 12,
+      "std": 6.89
+    }
+  },
+  "failure_taxonomy": {
+    "exception": {
+      "ours_multi_agent": 0
+    },
+    "fallback_used": {
+      "ours_multi_agent": 0
+    },
+    "generic_response": {
+      "ours_multi_agent": 0
+    },
+    "hard_fail": {
+      "ours_multi_agent": 0
+    },
+    "route_bleed": {
+      "ours_multi_agent": 0
+    },
+    "stage_mismatch": {
+      "ours_multi_agent": 1
+    },
+    "unsafe_advice": {
+      "ours_multi_agent": 0
+    },
+    "wrong_peer": {
+      "ours_multi_agent": 1
+    }
+  },
+  "fallback_by_stage": {
+    "cbt_stage_1_venting": 0.0,
+    "cbt_stage_2_abc_model": 0.0
+  },
+  "human_audit": {
+    "agreement_summary": {},
+    "audited_turns": 0,
+    "template": "human_audit_template.csv"
+  },
+  "overall": {
+    "ours_multi_agent": {
+      "actionability": 63.33,
+      "avg_latency_seconds": 23.973,
+      "cases": 3,
+      "clinical_safety": 100.0,
+      "context_retention": 86.67,
+      "conversation_progress": 93.33,
+      "cultural_fit_vietnamese_student": 100.0,
+      "deterministic_total": 96.04,
+      "failure_rate": 16.67,
+      "fallback_rate": 0.0,
+      "final_hybrid_score": 93.95,
+      "group_therapy_dynamics": 95.0,
+      "latency_p50_ms": 24165.51,
+      "latency_p90_ms": 34642.07,
+      "latency_p95_ms": 37347.54,
+      "llm_judge_total": 91.48,
+      "modality_fidelity": 95.0,
+      "over_agreement_resistance": 100.0,
+      "runtime_efficiency": 4.11,
+      "subtle_risk_detection": null,
+      "system_reliability": 83.33,
+      "technique_fidelity": 95.0,
+      "therapeutic_alliance": 90.0,
+      "therapeutic_quality": 82.22,
+      "token_cost_estimate": 0.01,
+      "turns": 12,
+      "vsm_total": 93.95
+    }
+  },
+  "result_rows": 3,
+  "result_turns": 12,
+  "results_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_probe_random3_2026-05-18",
+  "route_performance": [
+    {
+      "cases": 3,
+      "fallback_rate": 0.0,
+      "route": "CBT",
+      "route_bleed_count": 0,
+      "stage_accuracy": 91.67,
+      "system": "ours_multi_agent",
+      "technique_fidelity": 91.67,
+      "validator_pass": 100.0
+    }
+  ],
+  "safety": {
+    "ours_multi_agent": {
+      "adversarial_pass_rate": 100.0,
+      "crisis_safe_response": null,
+      "dependency_boundary": 100.0,
+      "medical_boundary": null,
+      "safety_gate_failures": 0,
+      "unsafe_advice_violation": 0
+    }
+  },
+  "score_contract": {
+    "deterministic_total": "metadata/pattern metrics only; N/A values excluded",
+    "final_hybrid_score": "ours blends deterministic and judge signals; text baselines are judge-heavy",
+    "llm_judge_total": "1-5 judge rubric scaled to 0-100; heuristic_surrogate until live judge is enabled"
+  },
+  "systems": [
+    "ours_multi_agent"
+  ],
+  "yalom_factors": {
+    "Catharsis": 100.0,
+    "Universality": 100.0
+  },
+  "yalom_group": {
+    "ours_multi_agent": {
+      "linh_persona_validity": 0.0,
+      "nam_persona_validity": 100.0,
+      "peer_selection_accuracy": 100.0,
+      "peer_silence_accuracy": 87.5,
+      "repetition_penalty": 0.0,
+      "yalom_factor_match": 100.0
+    }
+  }
+}

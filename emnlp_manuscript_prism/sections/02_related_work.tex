@@ -1,0 +1,21 @@
+TRACE connects work on supportive dialogue, therapy-oriented generation, agent orchestration, blackboard coordination, safety evaluation, and peer support. Table~\ref{tab:related_work_comparison} summarizes the positioning.
+
+\paragraph{Supportive and CBT dialogue.}
+Empathetic dialogue benchmarks and mental-health chat systems evaluate affective understanding, listening, and supportive response quality \citep{rashkin2019towards,Chen2023SoulChat}. CBT-oriented work makes techniques such as cognitive reframing and counseling moves more explicit \citep{Sharma2023CognitiveReframing,Lee2024Cactus}. These lines improve response content, but they still leave a session-control question: when should the system validate, elicit ABC evidence, label a distortion, ask a Socratic question, or plan action?
+
+\paragraph{Therapy agents.}
+Recent therapeutic systems move beyond single prompts toward routed or supervised multi-agent interaction \citep{Xu2025AutoCBT,Liu2026CCDCBT,Elahimanesh2026StructureMatters}. TRACE is closest to this family, but it treats orchestration as auditable process control across CBT, behavioral activation, mindfulness-based intervention, Yalom-style peer support, and safety routing rather than as CBT response generation alone.
+
+\paragraph{Blackboard agents.}
+General LLM agent frameworks support collaboration through conversation, tools, or shared workspaces \citep{Wu2023AutoGen,Salemi2025BlackboardSystem}. For support dialogue, free-form agent interaction is not enough: peer agents, validators, safety modules, and therapist planners need the same route, stage, evidence, safety, and intervention state. TRACE adapts the blackboard pattern by making that state visible to benchmark contracts.
+
+\paragraph{Case formulation and competence.}
+CBT case formulation links events, interpretations, emotions, and actions \citep{beck1979cognitive}, while competence scales emphasize observable behaviors such as collaboration, guided discovery, and appropriate methods \citep{Blackburn2001CTSR}. TRACE does not implement a clinical conceptualization diagram. It uses a lightweight engineering formulation that records route evidence, milestones, interventions, peer history, and safety flags for audit.
+
+\paragraph{Safety evaluation.}
+Therapy-like systems should be evaluated by observable behavior rather than surface fluency alone \citep{Chiu2024LLMTherapists}. Youth chatbot studies and counseling benchmarks motivate expert review, safety boundaries, and adversarial tests \citep{Sobowale2025CAPEII,Li2025CounselBench}. LLM-as-judge methods can scale comparison \citep{liu2023geval,Zheng2023LLMJudge}, but aggregate scores can hide route, stage, or peer-policy failures. VSM therefore separates deterministic contracts, transcript judging, and human audit.
+
+\paragraph{Peer support.}
+Group-therapy theory describes factors such as universality, catharsis, instillation of hope, cohesion, and interpersonal learning \citep{Yalom2020GroupPsychotherapy}. TRACE adapts a narrow subset as peer-policy constraints, not as a claim to implement group psychotherapy. Peer drafts are used only when route, stage, safety, boundary intent, and cooldown allow them, making peer support measurable and ablatable rather than decorative.
+
+\input{tables/related_work_comparison}

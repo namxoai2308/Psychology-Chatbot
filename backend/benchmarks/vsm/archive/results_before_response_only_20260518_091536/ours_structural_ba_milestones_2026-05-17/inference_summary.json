@@ -1,0 +1,18 @@
+{
+  "case_count": 28,
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "failures": 54,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/ours_structural_ba_milestones_2026-05-17",
+  "result_rows": 28,
+  "result_turns": 314,
+  "systems": {
+    "ours_structural": {
+      "avg_latency_ms": 0.09,
+      "cases": 28,
+      "failures": 54,
+      "turns": 314
+    }
+  },
+  "turn_count": 314
+}

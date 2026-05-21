@@ -1,0 +1,6 @@
+system,turns,technique_pass_pct,stage_pass_pct,route_pass_pct,peer_pass_pct,hard_fail_count,forbidden_count,fallback_count,error_count,avg_latency_ms
+base_model,6,50.0,0.0,0.0,0.0,0,0,0,0,1893.14
+camel_cbt,6,33.3,0.0,0.0,0.0,0,0,0,1,4378.78
+ours_multi_agent,6,83.3,66.7,100.0,66.7,0,0,0,0,6198.71
+prompt_1_1,6,100.0,0.0,0.0,0.0,0,0,0,0,3266.17
+seallm,6,66.7,0.0,0.0,0.0,0,0,0,0,6576.67

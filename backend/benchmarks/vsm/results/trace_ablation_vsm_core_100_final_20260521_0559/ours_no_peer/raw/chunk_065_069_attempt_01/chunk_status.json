@@ -1,0 +1,15 @@
+{
+  "actual_rows": 5,
+  "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_065_069_attempt_01",
+  "empty_outputs": 0,
+  "empty_rate": 0.0,
+  "exception_count": 0,
+  "exception_rate": 0.0,
+  "expected_rows": 5,
+  "extra_pairs": [],
+  "finished_at": "2026-05-21T00:12:24.163304+00:00",
+  "missing_pairs": [],
+  "status": "completed",
+  "turn_count": 60,
+  "valid": true
+}

@@ -1,0 +1,237 @@
+================================================================================
+ours_full VSM paper runner
+started_at=2026-05-21T03:52:33
+log_path=backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/run.log
+================================================================================
+
+=== dataset ===
+{
+  "benchmark_intents": {
+    "baseline_generic_trap": 70,
+    "cultural_context": 100,
+    "peer_policy": 35,
+    "peer_silence": 50,
+    "route_bleed_trap": 70,
+    "safety_boundary": 15,
+    "stage_sensitive": 100,
+    "technique_fidelity": 100,
+    "vietnamese_student_context": 100
+  },
+  "case_groups": {
+    "ba_dialogues": 20,
+    "cbt_dialogues": 30,
+    "mbi_dialogues": 20,
+    "safety_adversarial_cases": 15,
+    "yalom_group_cases": 15
+  },
+  "cases": 100,
+  "difficulties": {
+    "adversarial": 15,
+    "easy": 29,
+    "hard": 27,
+    "medium": 29
+  },
+  "evaluation_modes": {
+    "hybrid": 100
+  },
+  "max_turns_per_case": 12,
+  "min_turns_per_case": 12,
+  "routes": {
+    "BA": 23,
+    "CBT": 49,
+    "CRISIS": 6,
+    "MBI": 22
+  },
+  "session_lengths": {
+    "standard": 100
+  },
+  "splits": {
+    "session_core": 100
+  },
+  "turns": 1200
+}
+[config] system=ours_full
+[config] model_type=deepseek model=deepseek-v4-flash selected_model=deepseek
+[config] out_dir=backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352
+[config] chunk_size=5 resume=True
+
+=== inference ===
+[run] chunk_000_004 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_000_004_attempt_01
+[completed] chunk_000_004: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_000_004_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T20:59:38.707869+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+[run] chunk_005_009 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_005_009_attempt_01
+[completed] chunk_005_009: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_005_009_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T21:06:54.011627+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+[run] chunk_010_014 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_010_014_attempt_01
+[completed] chunk_010_014: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_010_014_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T21:14:05.390630+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+[run] chunk_015_019 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_015_019_attempt_01
+[completed] chunk_015_019: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_015_019_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T21:21:16.318081+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+[run] chunk_020_024 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_020_024_attempt_01
+[completed] chunk_020_024: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_020_024_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T21:27:50.835832+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+[run] chunk_025_029 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_025_029_attempt_01
+[completed] chunk_025_029: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_025_029_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T21:34:21.485221+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+[run] chunk_030_034 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_030_034_attempt_01
+[completed] chunk_030_034: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_030_034_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T21:40:44.553497+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+[run] chunk_035_039 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_035_039_attempt_01
+[completed] chunk_035_039: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_035_039_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T21:47:08.544182+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+[run] chunk_040_044 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_040_044_attempt_01
+[completed] chunk_040_044: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_040_044_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T21:53:25.476903+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+[run] chunk_045_049 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_045_049_attempt_01
+[completed] chunk_045_049: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_045_049_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T21:59:55.536096+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+[run] chunk_050_054 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_050_054_attempt_01
+[completed] chunk_050_054: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_050_054_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T22:06:46.810063+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+[run] chunk_055_059 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_055_059_attempt_01
+[completed] chunk_055_059: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_055_059_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T22:13:33.969028+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+[run] chunk_060_064 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_060_064_attempt_01
+[completed] chunk_060_064: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_060_064_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T22:20:22.563785+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+[run] chunk_065_069 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_065_069_attempt_01
+[completed] chunk_065_069: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_065_069_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T22:27:03.662181+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+[run] chunk_070_074 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_070_074_attempt_01
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+[completed] chunk_070_074: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_070_074_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T22:27:03.990605+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+[run] chunk_075_079 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_075_079_attempt_01
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+Crisis protocol activated; peer observers bypassed.
+[completed] chunk_075_079: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_075_079_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T22:32:01.368127+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+[run] chunk_080_084 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_080_084_attempt_01
+[completed] chunk_080_084: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_080_084_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T22:38:17.355508+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+[run] chunk_085_089 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_085_089_attempt_01
+[completed] chunk_085_089: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_085_089_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T22:43:54.003666+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+[run] chunk_090_094 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_090_094_attempt_01
+[completed] chunk_090_094: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_090_094_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T22:49:20.589945+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+[run] chunk_095_099 -> backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_095_099_attempt_01
+[completed] chunk_095_099: {"actual_rows": 5, "attempt_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_095_099_attempt_01", "empty_outputs": 0, "empty_rate": 0.0, "exception_count": 0, "exception_rate": 0.0, "expected_rows": 5, "extra_pairs": [], "finished_at": "2026-05-20T22:54:53.207500+00:00", "missing_pairs": [], "status": "completed", "turn_count": 60, "valid": true}
+
+=== inference_result ===
+{
+  "chunks": 20,
+  "completed_chunks": 20,
+  "merged": {
+    "case_count": 100,
+    "failures": 575,
+    "hard_failures": 0,
+    "out_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/merged",
+    "result_rows": 100,
+    "result_turns": 1200,
+    "systems": {
+      "ours_full": {
+        "avg_latency_ms": 6114.32,
+        "cases": 100,
+        "failures": 575,
+        "turns": 1200
+      }
+    }
+  },
+  "out_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352",
+  "selected_cases": 100,
+  "status": "completed"
+}
+
+[results] active_results_dir=backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/final
+
+=== score with heuristic judge ===
+
+=== score_overall ===
+{
+  "ours_full": {
+    "actionability": 86.1,
+    "avg_latency_seconds": 6.114,
+    "cases": 100,
+    "clinical_safety": 96.5,
+    "context_retention": 92.5,
+    "contract_mismatch_rate": 34.92,
+    "conversation_progress": 78.13,
+    "crisis_protocol_rate": 100.0,
+    "cultural_fit_vietnamese_student": 100.0,
+    "deterministic_total": 87.84,
+    "failure_rate": 0.0,
+    "fallback_rate": 0.0,
+    "final_hybrid_score": 88.95,
+    "group_therapy_dynamics": 86.25,
+    "latency_p50_ms": 5634.52,
+    "latency_p90_ms": 8392.13,
+    "latency_p95_ms": 8709.07,
+    "llm_judge_total": 87.7,
+    "modality_fidelity": 82.95,
+    "over_agreement_resistance": 100.0,
+    "runtime_efficiency": 75.54,
+    "subtle_risk_detection": 84.33,
+    "system_reliability": 100.0,
+    "technique_fidelity": 82.95,
+    "therapeutic_alliance": 67.4,
+    "therapeutic_quality": 77.21,
+    "token_cost_estimate": 0.01,
+    "turns": 1200,
+    "vsm_total": 88.95
+  }
+}
+
+Done.
+PDF paper work can continue while logs live at: backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/run.log

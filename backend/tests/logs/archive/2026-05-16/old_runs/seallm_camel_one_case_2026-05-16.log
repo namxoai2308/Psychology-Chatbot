@@ -1,0 +1,49 @@
+SEALLM + CAMEL ONE-CASE LIVE TEST
+generated_at: 2026-05-16T00:03:33
+case_id: vsm_cbt_001_exam_catastrophizing
+route: CBT
+
+[HEALTH]
+seallm: {"ok": true, "service": "seallm", "model": "SeaLLMs/SeaLLMs-v3-7B-Chat", "cuda": true, "gpu_count": 2, "prompt_style": "qwen", "has_chat_template": true}
+camel_cbt: {"ok": true, "service": "camel_cbt", "model": "cactus-camel/camel-llama3", "cuda": true, "gpu_count": 2, "prompt_style": "llama3", "has_chat_template": true}
+
+==========================================================================================
+SYSTEM: seallm
+
+TURN 1 | latency_ms=8343.57
+expected_stage: cbt_stage_1_venting
+required_technique: emotion_validation
+USER: Mình đang rất căng thẳng với áp lực thi cuối kỳ.
+ASSISTANT: Tôi hiểu rằng bạn đang gặp khó khăn trong việc đối phó với áp lực thi cuối kỳ. Hãy thử thực hiện các biện pháp giảm căng thẳng như tập thể dục, thiền, hoặc nói chuyện với người thân hoặc bạn bè để chia sẻ nỗi lo của mình. Nếu tình trạng căng thẳng kéo dài, hãy tìm kiếm sự giúp đỡ từ giáo viên hoặc chuyên gia tâm lý.
+
+TURN 2 | latency_ms=8032.47
+expected_stage: cbt_stage_2_abc_model
+required_technique: abc_event_thought_emotion_separation
+USER: Hôm qua mình nhìn lịch thi xong thấy hoảng, cứ nghĩ mình không kịp ôn.
+ASSISTANT: Đừng lo lắng quá nhiều. Hãy bắt đầu ôn tập ngay từ bây giờ và lập kế hoạch học tập cụ thể. Chia nhỏ mục tiêu và tiến hành ôn tập từng phần một. Đừng quên nghỉ ngơi và giữ sức khỏe tốt. Bạn có thể nhờ sự giúp đỡ từ giáo viên hoặc bạn bè để hiểu rõ hơn về các môn học.
+==========================================================================================
+SYSTEM: camel_cbt
+
+TURN 1 | latency_ms=4651.58
+expected_stage: cbt_stage_1_venting
+required_technique: emotion_validation
+USER: Mình đang rất căng thẳng với áp lực thi cuối kỳ.
+ASSISTANT: I'm sorry to hear that you're feeling stressed about the final exams. Can you tell me more about what's been going on and how it's affecting you?
+
+TURN 2 | latency_ms=3999.5
+expected_stage: cbt_stage_2_abc_model
+required_technique: abc_event_thought_emotion_separation
+USER: Hôm qua mình nhìn lịch thi xong thấy hoảng, cứ nghĩ mình không kịp ôn.
+ASSISTANT: It sounds like seeing the exam schedule has really heightened your anxiety. What thoughts were running through your mind when you saw the schedule?
+
+[SUMMARY]
+{
+  "seallm": {
+    "ok_turns": 2,
+    "total_turns": 2
+  },
+  "camel_cbt": {
+    "ok_turns": 2,
+    "total_turns": 2
+  }
+}

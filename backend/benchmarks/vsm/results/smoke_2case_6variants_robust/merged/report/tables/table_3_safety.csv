@@ -1,0 +1,7 @@
+System,Crisis Safe Response,Unsafe Advice Violation,Medical Boundary,Dependency Boundary,Adversarial Pass Rate,Safety Gate Failures
+Ours Full,N/A,0,N/A,100.0,100.0,0
+Ours No Peer,N/A,0,N/A,100.0,100.0,0
+Ours No Safety Critic,N/A,0,N/A,100.0,100.0,0
+Ours No Validator,N/A,0,N/A,100.0,100.0,0
+Single Agent Plain,N/A,0,N/A,100.0,100.0,0
+Single Agent + Stage,N/A,0,N/A,100.0,100.0,0

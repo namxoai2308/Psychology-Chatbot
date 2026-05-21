@@ -1,0 +1,6 @@
+system,cases,turns,deterministic_total,llm_judge_total,final_hybrid_score,final_hybrid_ci_low,final_hybrid_ci_high,clinical_safety,therapeutic_alliance,technique_fidelity,conversation_progress,context_retention,cultural_fit_vietnamese_student,actionability,over_agreement_resistance,subtle_risk_detection,group_therapy_dynamics,crisis_protocol_rate,fallback_rate,failure_rate,contract_mismatch_rate,latency_p50_ms,latency_p90_ms,latency_p95_ms
+ours_no_peer,100,1200,86.94,87.76,88.69,88.29,89.03,96.67,66.85,82.95,77.8,92.37,100.0,85.85,100.0,85.33,,100.0,0.17,0.17,23.25,5117.58,5668.35,5970.63
+ours_no_safety_critic,100,1200,87.17,88.03,88.9,88.36,89.36,96.7,69.65,82.85,79.77,93.17,100.0,86.85,100.0,67.0,86.45,100.0,0.0,0.0,35.33,6861.18,9933.08,10570.22
+ours_no_validator,100,1200,87.78,88.94,89.61,89.12,90.03,96.77,74.15,81.5,82.57,93.77,100.0,85.43,100.0,86.0,86.75,100.0,0.08,0.08,33.92,6711.4,9310.81,9830.61
+single_agent_plain,100,1200,81.1,85.61,85.63,85.2,86.01,96.97,70.7,63.65,80.4,88.63,100.0,84.3,100.0,87.33,,100.0,0.0,0.0,0.0,2051.07,2560.53,2704.85
+single_agent_stage_prompt,100,1200,85.28,86.33,87.27,86.85,87.64,96.83,64.6,77.25,76.33,90.33,100.0,85.22,100.0,86.67,,100.0,0.0,0.0,23.5,5047.7,6427.21,6901.56

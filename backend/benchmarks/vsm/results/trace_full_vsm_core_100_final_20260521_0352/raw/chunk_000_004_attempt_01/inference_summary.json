@@ -1,0 +1,28 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "failures": 22,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_000_004_attempt_01",
+  "reliability_failures": 0,
+  "result_rows": 5,
+  "result_turns": 60,
+  "run_config": "run_config.json",
+  "selected_case_ids": [
+    "vsm_ba_001_low_energy_bed",
+    "vsm_ba_002_missed_class",
+    "vsm_ba_003_messy_room",
+    "vsm_ba_004_assignment_avoidance",
+    "vsm_ba_005_social_withdrawal"
+  ],
+  "systems": {
+    "ours_full": {
+      "avg_latency_ms": 7087.42,
+      "cases": 5,
+      "failures": 22,
+      "reliability_failures": 0,
+      "turns": 60
+    }
+  },
+  "turn_count": 60
+}

@@ -1,0 +1,57 @@
+%!TEX TS-program = xelatex
+\documentclass[en]{uet-awesome-thesis} % use [vi] for vietnamese
+
+\title{Multi-Agent Virtual Group Therapy for Student Mental Health Issues}
+\author{Nguyễn Hải Nam}
+\major{Artificial Intelligence}
+\vietuniversity{Đại học Công nghệ, Đại học Quốc gia Hà Nội}
+\viettitle{Hệ thống trị liệu nhóm ảo đa tác nhân hỗ trợ sức khỏe tâm lý sinh viên}
+\vietmajor{Trí tuệ nhân tạo}
+\advisor{Ph.D Tran Van Khanh}
+\university{University of Engineering and Technology}
+\universitycity{Hanoi}
+\degreeyear{2026}
+
+\begin{document}
+
+\input{frontmatter/coverpage}
+\pagenumbering{roman}
+
+\input{frontmatter/thanks}
+
+\addcontentsline{toc}{chapter}{Abstract}
+\input{frontmatter/abstract}
+
+\tableofcontents
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+
+\newpage
+\pagenumbering{arabic}
+
+\input{chapters/chapter1}
+\input{chapters/chapter2}
+\input{chapters/chapter3}
+\input{chapters/chapter4}
+\input{chapters/chapter5}
+
+\singlespacing
+
+\clearpage
+\bibliography{refs}
+\addcontentsline{toc}{chapter}{References}
+\bibliographystyle{plainnat}
+
+\begin{appendices}
+\input{chapters/appendixA}
+\input{chapters/appendixB}
+\input{chapters/appendixC}
+\end{appendices}
+
+\end{document}

@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{p{0.17\linewidth}p{0.24\linewidth}p{0.32\linewidth}p{0.17\linewidth}}
+\toprule
+Metric group & Source & Definition & Reported as \\
+\midrule
+Reliability & Runner logs & Completed turns, missing outputs, runtime exceptions, hard failures, unsafe generations, route bleed, and fallback use. & failure rate, fallback rate, missing rate \\
+Contract fidelity & Deterministic scorer & Agreement between expected and observed route, stage, peer use, validator status, and safety-critic behavior. & route/stage/peer accuracy, contract mismatch \\
+Technique quality & LLM judge + audit & Whether visible responses follow CBT, BA, MBI, Yalom, or safety task requirements without premature advice or modality drift. & technique fidelity, actionability \\
+Safety and boundaries & Deterministic scorer + LLM judge + audit & Avoidance of diagnosis, dependence reinforcement, unsafe advice, crisis mishandling, and peer overreach. & clinical safety, boundary score \\
+Group dynamics & LLM judge + peer contract & Appropriateness, brevity, persona validity, and non-repetition of peer contributions. & group dynamics, peer accuracy \\
+Efficiency & Runner metadata & End-to-end per-turn runtime under the frozen inference configuration. & average latency, p95 latency \\
+\bottomrule
+\end{tabular}
+\caption{VSM scoring views. Deterministic metrics inspect behavioral contracts, while transcript-level judge and audit scores evaluate user-visible response quality.}
+\label{tab:vsm_metrics}
+\end{table*}

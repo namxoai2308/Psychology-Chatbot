@@ -1,0 +1,69 @@
+ROUTE-AWARE CLINICAL KNOWLEDGE LOADER - 2026-05-15
+========================================================================
+
+## CBT / cbt_stage_3_distortions
+Route: CBT
+Stage task: Name one thinking trap gently without arguing against it yet.
+Micro-skills:
+- normalize automatic thoughts
+- name one likely distortion
+- ask whether the label fits
+Avoid:
+- deep evidence testing
+- asking generic feelings questions
+- using several distortion labels at once
+
+## MBI / mbi_stage_1_grounding
+Route: MBI
+Stage task: Stabilize acute overload through present-moment anchoring before any analysis.
+Micro-skills:
+- paced exhale
+- feet-on-floor anchoring
+- one-sense orientation
+- short body contact cue
+Avoid:
+- cognitive disputation
+- asking for evidence
+
+## MBI / mbi_stage_2_decentering
+Route: MBI
+Stage task: Help the user observe thoughts as mental events without debating them.
+Micro-skills:
+- thought labeling
+- decentering phrase
+- noticing without arguing
+- returning to breath or senses
+Avoid:
+- proving the thought wrong
+- naming CBT distortions
+
+## BA / ba_stage_1_energy_check
+Route: BA
+Stage task: Validate depletion and measure current energy before selecting action.
+Micro-skills:
+- depletion validation
+- energy rating
+- shame reduction
+- behavioral framing
+Avoid:
+- calling the user lazy
+- deep cognitive analysis
+
+## BA / ba_stage_3_barrier_schedule
+Route: BA
+Stage task: Identify the main barrier and schedule the tiny action.
+Micro-skills:
+- barrier naming
+- implementation intention
+- time cue
+- environment cue
+Avoid:
+- saying just try harder
+- leaving the action unscheduled
+
+## CBT compatibility function
+Route: CBT
+Stage task: Name one thinking trap gently without arguing against it yet.
+Micro-skills:
+- normalize automatic thoughts
+- name one likely distortion

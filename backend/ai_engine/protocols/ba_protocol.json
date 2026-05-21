@@ -1,0 +1,10 @@
+{
+  "modality": "BA",
+  "phases": ["activity_monitoring", "value_assessment", "action_planning", "activation"],
+  "rules": [
+    "Tập trung vào hành vi và hoạt động thể chất, bỏ qua việc sửa chữa nhận thức.",
+    "Bắt đầu bằng những hành động cực nhỏ (Micro-steps).",
+    "Tuyệt đối không đi sâu vào lý thuyết và tâm trí (CBT/MBI).",
+    "Gắn kết hành động nhỏ với giá trị sống của User."
+  ]
+}

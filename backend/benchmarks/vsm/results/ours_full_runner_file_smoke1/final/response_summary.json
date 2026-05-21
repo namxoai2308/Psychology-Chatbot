@@ -1,0 +1,7 @@
+{
+  "cases": 1,
+  "complete": true,
+  "empty_outputs": 0,
+  "file": "backend/benchmarks/vsm/results/ours_full_runner_file_smoke1/final/ours_full.responses.jsonl",
+  "turns": 12
+}

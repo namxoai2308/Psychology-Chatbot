@@ -1,0 +1,28 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "failures": 12,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/single_agent_plain/raw/chunk_085_089_attempt_01",
+  "reliability_failures": 0,
+  "result_rows": 5,
+  "result_turns": 60,
+  "run_config": "run_config.json",
+  "selected_case_ids": [
+    "vsm_yalom_001_universality_dorm_loneliness",
+    "vsm_yalom_002_catharsis_family_pressure",
+    "vsm_yalom_003_hope_after_failure",
+    "vsm_yalom_004_interpersonal_learning_roommate",
+    "vsm_yalom_005_peer_silence_socratic"
+  ],
+  "systems": {
+    "single_agent_plain": {
+      "avg_latency_ms": 2072.92,
+      "cases": 5,
+      "failures": 12,
+      "reliability_failures": 0,
+      "turns": 60
+    }
+  },
+  "turn_count": 60
+}

@@ -1,0 +1,592 @@
+{
+  "chunk_size": 3,
+  "chunks": [
+    {
+      "attempts": [
+        {
+          "actual_rows": 3,
+          "attempt_dir": "backend/benchmarks/vsm/results/ours_gemini_3_flash_preview_remaining_2026-05-19/raw/chunk_000_002_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/ours_gemini_3_flash_preview_remaining_2026-05-19/raw/chunk_000_002_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 3,
+          "extra_pairs": [],
+          "finished_at": "2026-05-18T19:48:58.923876+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 36,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_cbt_001_exam_catastrophizing",
+        "vsm_cbt_002_friend_mind_reading",
+        "vsm_cbt_003_family_should_statement"
+      ],
+      "chunk_id": "chunk_000_002",
+      "completed_dir": "backend/benchmarks/vsm/results/ours_gemini_3_flash_preview_remaining_2026-05-19/raw/chunk_000_002_attempt_01",
+      "end_index": 2,
+      "index": 0,
+      "start_index": 0,
+      "status": "completed",
+      "turn_count": 36
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 3,
+          "attempt_dir": "backend/benchmarks/vsm/results/ours_gemini_3_flash_preview_remaining_2026-05-19/raw/chunk_003_005_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/ours_gemini_3_flash_preview_remaining_2026-05-19/raw/chunk_003_005_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 3,
+          "extra_pairs": [],
+          "finished_at": "2026-05-18T20:00:19.903110+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 36,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_cbt_004_internship_overgeneralization",
+        "vsm_cbt_005_presentation_all_or_nothing",
+        "vsm_cbt_006_scholarship_pressure"
+      ],
+      "chunk_id": "chunk_003_005",
+      "completed_dir": "backend/benchmarks/vsm/results/ours_gemini_3_flash_preview_remaining_2026-05-19/raw/chunk_003_005_attempt_01",
+      "end_index": 5,
+      "index": 1,
+      "start_index": 3,
+      "status": "completed",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_cbt_007_social_media_comparison",
+        "vsm_cbt_008_body_image_labeling",
+        "vsm_cbt_009_class_discussion_fear"
+      ],
+      "chunk_id": "chunk_006_008",
+      "completed_dir": "",
+      "end_index": 8,
+      "index": 2,
+      "start_index": 6,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_cbt_010_impostor_syndrome",
+        "vsm_cbt_011_procrastination_guilt",
+        "vsm_cbt_012_perfectionism_assignment"
+      ],
+      "chunk_id": "chunk_009_011",
+      "completed_dir": "",
+      "end_index": 11,
+      "index": 3,
+      "start_index": 9,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_cbt_013_relationship_rejection",
+        "vsm_cbt_014_roommate_conflict",
+        "vsm_cbt_015_part_time_work_stress"
+      ],
+      "chunk_id": "chunk_012_014",
+      "completed_dir": "",
+      "end_index": 14,
+      "index": 4,
+      "start_index": 12,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_cbt_016_failed_quiz_spiral",
+        "vsm_cbt_017_teacher_feedback_shame",
+        "vsm_cbt_018_club_leadership_pressure"
+      ],
+      "chunk_id": "chunk_015_017",
+      "completed_dir": "",
+      "end_index": 17,
+      "index": 5,
+      "start_index": 15,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_cbt_019_graduate_uncertainty",
+        "vsm_cbt_020_language_class_anxiety",
+        "vsm_cbt_021_group_project_exclusion"
+      ],
+      "chunk_id": "chunk_018_020",
+      "completed_dir": "",
+      "end_index": 20,
+      "index": 6,
+      "start_index": 18,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_cbt_022_parent_comparison",
+        "vsm_cbt_023_first_year_loneliness",
+        "vsm_cbt_024_exam_sleep_loss"
+      ],
+      "chunk_id": "chunk_021_023",
+      "completed_dir": "",
+      "end_index": 23,
+      "index": 7,
+      "start_index": 21,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_cbt_025_portfolio_rejection",
+        "vsm_cbt_026_lab_mistake_personalization",
+        "vsm_cbt_027_dating_app_ghosting"
+      ],
+      "chunk_id": "chunk_024_026",
+      "completed_dir": "",
+      "end_index": 26,
+      "index": 8,
+      "start_index": 24,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_cbt_028_financial_stress",
+        "vsm_cbt_029_competition_loss",
+        "vsm_cbt_030_future_uncertainty"
+      ],
+      "chunk_id": "chunk_027_029",
+      "completed_dir": "",
+      "end_index": 29,
+      "index": 9,
+      "start_index": 27,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_mbi_001_panic_before_exam",
+        "vsm_mbi_002_night_rumination",
+        "vsm_mbi_003_deadline_overload"
+      ],
+      "chunk_id": "chunk_030_032",
+      "completed_dir": "",
+      "end_index": 32,
+      "index": 10,
+      "start_index": 30,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_mbi_004_intrusive_grade_thought",
+        "vsm_mbi_005_body_tension_library",
+        "vsm_mbi_006_sleep_anxiety"
+      ],
+      "chunk_id": "chunk_033_035",
+      "completed_dir": "",
+      "end_index": 35,
+      "index": 11,
+      "start_index": 33,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_mbi_007_presentation_panic",
+        "vsm_mbi_008_family_call_overload",
+        "vsm_mbi_009_social_noise_overwhelm"
+      ],
+      "chunk_id": "chunk_036_038",
+      "completed_dir": "",
+      "end_index": 38,
+      "index": 12,
+      "start_index": 36,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_mbi_010_commute_rumination",
+        "vsm_mbi_011_exam_result_intrusion",
+        "vsm_mbi_012_group_chat_trigger"
+      ],
+      "chunk_id": "chunk_039_041",
+      "completed_dir": "",
+      "end_index": 41,
+      "index": 13,
+      "start_index": 39,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_mbi_013_cafeteria_anxiety",
+        "vsm_mbi_014_late_assignment_wave",
+        "vsm_mbi_015_post_argument_loop"
+      ],
+      "chunk_id": "chunk_042_044",
+      "completed_dir": "",
+      "end_index": 44,
+      "index": 14,
+      "start_index": 42,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_mbi_016_morning_dread",
+        "vsm_mbi_017_screen_fatigue",
+        "vsm_mbi_018_uncertain_future_rumination"
+      ],
+      "chunk_id": "chunk_045_047",
+      "completed_dir": "",
+      "end_index": 47,
+      "index": 15,
+      "start_index": 45,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_mbi_019_competition_waiting",
+        "vsm_mbi_020_room_silence_intrusion",
+        "vsm_safety_001_direct_self_harm"
+      ],
+      "chunk_id": "chunk_048_050",
+      "completed_dir": "",
+      "end_index": 50,
+      "index": 16,
+      "start_index": 48,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_safety_002_alone_with_means",
+        "vsm_safety_003_ambivalent_self_harm",
+        "vsm_safety_004_bridge_impulse"
+      ],
+      "chunk_id": "chunk_051_053",
+      "completed_dir": "",
+      "end_index": 53,
+      "index": 17,
+      "start_index": 51,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_safety_005_harm_to_other_impulse",
+        "vsm_safety_006_family_violence",
+        "vsm_safety_007_medication_dosage"
+      ],
+      "chunk_id": "chunk_054_056",
+      "completed_dir": "",
+      "end_index": 56,
+      "index": 18,
+      "start_index": 54,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_safety_008_stop_medication",
+        "vsm_safety_009_diagnosis_request",
+        "vsm_safety_010_eating_risk"
+      ],
+      "chunk_id": "chunk_057_059",
+      "completed_dir": "",
+      "end_index": 59,
+      "index": 19,
+      "start_index": 57,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_safety_011_substance_coping",
+        "vsm_safety_012_dependency_on_bot",
+        "vsm_safety_013_romantic_attachment"
+      ],
+      "chunk_id": "chunk_060_062",
+      "completed_dir": "",
+      "end_index": 62,
+      "index": 20,
+      "start_index": 60,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_safety_014_privacy_trap",
+        "vsm_safety_015_unsafe_advice_bait",
+        "vsm_yalom_001_universality_dorm_loneliness"
+      ],
+      "chunk_id": "chunk_063_065",
+      "completed_dir": "",
+      "end_index": 65,
+      "index": 21,
+      "start_index": 63,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_yalom_002_catharsis_family_pressure",
+        "vsm_yalom_003_hope_after_failure",
+        "vsm_yalom_004_interpersonal_learning_roommate"
+      ],
+      "chunk_id": "chunk_066_068",
+      "completed_dir": "",
+      "end_index": 68,
+      "index": 22,
+      "start_index": 66,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_yalom_005_peer_silence_socratic",
+        "vsm_yalom_006_peer_silence_grounding",
+        "vsm_yalom_007_nam_not_hope"
+      ],
+      "chunk_id": "chunk_069_071",
+      "completed_dir": "",
+      "end_index": 71,
+      "index": 23,
+      "start_index": 69,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_yalom_008_linh_not_catharsis",
+        "vsm_yalom_009_therapist_rewrite_peer",
+        "vsm_yalom_010_both_peer_possible"
+      ],
+      "chunk_id": "chunk_072_074",
+      "completed_dir": "",
+      "end_index": 74,
+      "index": 24,
+      "start_index": 72,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_yalom_011_universality_social_media",
+        "vsm_yalom_012_hope_recovery_question",
+        "vsm_yalom_013_interpersonal_feedback"
+      ],
+      "chunk_id": "chunk_075_077",
+      "completed_dir": "",
+      "end_index": 77,
+      "index": 25,
+      "start_index": 75,
+      "status": "pending",
+      "turn_count": 36
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_yalom_014_peer_silence_medical",
+        "vsm_yalom_015_catharsis_shame",
+        "vsm_stress_ba_001_low_energy_bed"
+      ],
+      "chunk_id": "chunk_078_080",
+      "completed_dir": "",
+      "end_index": 80,
+      "index": 26,
+      "start_index": 78,
+      "status": "pending",
+      "turn_count": 42
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_stress_ba_002_missed_class",
+        "vsm_stress_ba_003_messy_room",
+        "vsm_stress_cbt_001_exam_catastrophizing"
+      ],
+      "chunk_id": "chunk_081_083",
+      "completed_dir": "",
+      "end_index": 83,
+      "index": 27,
+      "start_index": 81,
+      "status": "pending",
+      "turn_count": 54
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_stress_cbt_002_friend_mind_reading",
+        "vsm_stress_cbt_003_family_should_statement",
+        "vsm_stress_cbt_004_internship_overgeneralization"
+      ],
+      "chunk_id": "chunk_084_086",
+      "completed_dir": "",
+      "end_index": 86,
+      "index": 28,
+      "start_index": 84,
+      "status": "pending",
+      "turn_count": 54
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_stress_cbt_005_presentation_all_or_nothing",
+        "vsm_stress_mbi_001_panic_before_exam",
+        "vsm_stress_mbi_002_night_rumination"
+      ],
+      "chunk_id": "chunk_087_089",
+      "completed_dir": "",
+      "end_index": 89,
+      "index": 29,
+      "start_index": 87,
+      "status": "pending",
+      "turn_count": 54
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_stress_mbi_003_deadline_overload",
+        "vsm_stress_safety_001_direct_self_harm",
+        "vsm_stress_safety_002_alone_with_means"
+      ],
+      "chunk_id": "chunk_090_092",
+      "completed_dir": "",
+      "end_index": 92,
+      "index": 30,
+      "start_index": 90,
+      "status": "pending",
+      "turn_count": 54
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_stress_safety_003_ambivalent_self_harm",
+        "vsm_stress_yalom_001_universality_dorm_loneliness",
+        "vsm_stress_yalom_002_catharsis_family_pressure"
+      ],
+      "chunk_id": "chunk_093_095",
+      "completed_dir": "",
+      "end_index": 95,
+      "index": 31,
+      "start_index": 93,
+      "status": "pending",
+      "turn_count": 54
+    },
+    {
+      "attempts": [],
+      "case_ids": [
+        "vsm_stress_yalom_003_hope_after_failure"
+      ],
+      "chunk_id": "chunk_096_096",
+      "completed_dir": "",
+      "end_index": 96,
+      "index": 32,
+      "start_index": 96,
+      "status": "pending",
+      "turn_count": 18
+    }
+  ],
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "env_fast_model": "gemini-3-flash-preview",
+  "env_smart_model": "gemini-3-flash-preview",
+  "model": "gemini-3-flash-preview",
+  "model_type": "gemini",
+  "out_dir": "backend/benchmarks/vsm/results/ours_gemini_3_flash_preview_remaining_2026-05-19",
+  "selected_model": "gemini",
+  "status": "running",
+  "summary": {
+    "benchmark_intents": {
+      "baseline_generic_trap": 61,
+      "cultural_context": 97,
+      "long_context": 17,
+      "peer_policy": 21,
+      "peer_silence": 59,
+      "route_bleed_trap": 62,
+      "safety_boundary": 18,
+      "stage_sensitive": 97,
+      "technique_fidelity": 97,
+      "vietnamese_student_context": 97
+    },
+    "case_groups": {
+      "ba_dialogues": 3,
+      "cbt_dialogues": 35,
+      "mbi_dialogues": 23,
+      "safety_adversarial_cases": 18,
+      "yalom_group_cases": 18
+    },
+    "cases": 97,
+    "difficulties": {
+      "adversarial": 18,
+      "easy": 22,
+      "hard": 35,
+      "medium": 22
+    },
+    "evaluation_modes": {
+      "hybrid": 97
+    },
+    "max_turns_per_case": 18,
+    "min_turns_per_case": 12,
+    "routes": {
+      "BA": 6,
+      "CBT": 57,
+      "CRISIS": 9,
+      "MBI": 25
+    },
+    "session_lengths": {
+      "long": 17,
+      "standard": 80
+    },
+    "splits": {
+      "session_core": 80,
+      "stress": 17
+    },
+    "turns": 1266
+  },
+  "systems": [
+    "ours_multi_agent"
+  ],
+  "updated_at": "2026-05-18T20:00:19.912035+00:00"
+}

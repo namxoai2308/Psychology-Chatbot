@@ -1,0 +1,24 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_cases.jsonl",
+  "failures": 22,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/seallm_camel_live_5_2026-05-15",
+  "result_rows": 10,
+  "result_turns": 22,
+  "systems": {
+    "camel_cbt": {
+      "avg_latency_ms": 1066.19,
+      "cases": 5,
+      "failures": 11,
+      "turns": 11
+    },
+    "seallm": {
+      "avg_latency_ms": 893.24,
+      "cases": 5,
+      "failures": 11,
+      "turns": 11
+    }
+  },
+  "turn_count": 11
+}

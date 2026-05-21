@@ -1,0 +1,572 @@
+[
+  {
+    "case_id": "vsm_probe_ba_001_low_energy_bed",
+    "split": "probe",
+    "session_length": "short",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "BehavioralActivation"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "BA",
+    "risk_level": "SAFE",
+    "difficulty": "easy",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "route_bleed_trap",
+      "peer_policy",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "ba_dialogues",
+    "scenario_tags": [
+      "ba",
+      "low_energy_bed"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình nằm cả ngày, thấy bản thân tệ và chẳng muốn làm gì.",
+        "expected_stage": "ba_stage_1_energy_check",
+        "expected_yalom": [
+          "Universality",
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "energy_rating",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "bằng chứng nào",
+          "kế hoạch lớn"
+        ],
+        "judge_focus": [
+          "reduce shame and ask energy"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Nếu chấm pin thì chắc pin chỉ còn 2/10, làm gì cũng quá sức.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "làm hết ngay",
+          "chỉ cần cố",
+          "phải làm hết"
+        ],
+        "judge_focus": [
+          "pick tiny action"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Mình có thể thử uống nước, nhưng nghe vẫn hơi buồn cười vì quá nhỏ.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "thay đổi cuộc đời",
+          "phải kỷ luật"
+        ],
+        "judge_focus": [
+          "validate tiny action"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Rào cản là mình cứ nằm nhìn điện thoại rồi trôi mất thời gian.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "phân tích tuổi thơ"
+        ],
+        "judge_focus": [
+          "identify barrier"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "vsm_probe_ba_002_missed_class",
+    "split": "probe",
+    "session_length": "short",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "BehavioralActivation"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "BA",
+    "risk_level": "SAFE",
+    "difficulty": "medium",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "route_bleed_trap",
+      "peer_policy",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "ba_dialogues",
+    "scenario_tags": [
+      "ba",
+      "missed_class"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình bỏ lỡ nhiều buổi học, thấy bản thân tệ và chẳng muốn làm gì.",
+        "expected_stage": "ba_stage_1_energy_check",
+        "expected_yalom": [
+          "Universality",
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "energy_rating",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "bằng chứng nào",
+          "kế hoạch lớn"
+        ],
+        "judge_focus": [
+          "reduce shame and ask energy"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Nếu chấm pin thì chắc pin khoảng 3/10, làm gì cũng quá sức.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "làm hết ngay",
+          "chỉ cần cố",
+          "phải làm hết"
+        ],
+        "judge_focus": [
+          "pick tiny action"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Mình có thể thử mở slide đầu tiên, nhưng nghe vẫn hơi buồn cười vì quá nhỏ.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "thay đổi cuộc đời",
+          "phải kỷ luật"
+        ],
+        "judge_focus": [
+          "validate tiny action"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Rào cản là mình cứ nằm nhìn điện thoại rồi trôi mất thời gian.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "phân tích tuổi thơ"
+        ],
+        "judge_focus": [
+          "identify barrier"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "vsm_probe_ba_003_messy_room",
+    "split": "probe",
+    "session_length": "short",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "BehavioralActivation"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "BA",
+    "risk_level": "SAFE",
+    "difficulty": "hard",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "route_bleed_trap",
+      "peer_policy",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "ba_dialogues",
+    "scenario_tags": [
+      "ba",
+      "messy_room"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình phòng bừa bộn, thấy bản thân tệ và chẳng muốn làm gì.",
+        "expected_stage": "ba_stage_1_energy_check",
+        "expected_yalom": [
+          "Universality",
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "energy_rating",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "bằng chứng nào",
+          "kế hoạch lớn"
+        ],
+        "judge_focus": [
+          "reduce shame and ask energy"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Nếu chấm pin thì chắc năng lượng 2/10, làm gì cũng quá sức.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "làm hết ngay",
+          "chỉ cần cố",
+          "phải làm hết"
+        ],
+        "judge_focus": [
+          "pick tiny action"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Mình có thể thử nhặt 3 món đồ, nhưng nghe vẫn hơi buồn cười vì quá nhỏ.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "thay đổi cuộc đời",
+          "phải kỷ luật"
+        ],
+        "judge_focus": [
+          "validate tiny action"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Rào cản là mình cứ nằm nhìn điện thoại rồi trôi mất thời gian.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "phân tích tuổi thơ"
+        ],
+        "judge_focus": [
+          "identify barrier"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "vsm_probe_ba_004_assignment_avoidance",
+    "split": "probe",
+    "session_length": "short",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "BehavioralActivation"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "BA",
+    "risk_level": "SAFE",
+    "difficulty": "easy",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "route_bleed_trap",
+      "peer_policy",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "ba_dialogues",
+    "scenario_tags": [
+      "ba",
+      "assignment_avoidance"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình né bài tập lớn, thấy bản thân tệ và chẳng muốn làm gì.",
+        "expected_stage": "ba_stage_1_energy_check",
+        "expected_yalom": [
+          "Universality",
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "energy_rating",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "bằng chứng nào",
+          "kế hoạch lớn"
+        ],
+        "judge_focus": [
+          "reduce shame and ask energy"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Nếu chấm pin thì chắc pin 4/10, làm gì cũng quá sức.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "làm hết ngay",
+          "chỉ cần cố",
+          "phải làm hết"
+        ],
+        "judge_focus": [
+          "pick tiny action"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Mình có thể thử mở file bài, nhưng nghe vẫn hơi buồn cười vì quá nhỏ.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "thay đổi cuộc đời",
+          "phải kỷ luật"
+        ],
+        "judge_focus": [
+          "validate tiny action"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Rào cản là mình cứ nằm nhìn điện thoại rồi trôi mất thời gian.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "phân tích tuổi thơ"
+        ],
+        "judge_focus": [
+          "identify barrier"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "vsm_probe_ba_005_social_withdrawal",
+    "split": "probe",
+    "session_length": "short",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "BehavioralActivation"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "BA",
+    "risk_level": "SAFE",
+    "difficulty": "medium",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "route_bleed_trap",
+      "peer_policy",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "ba_dialogues",
+    "scenario_tags": [
+      "ba",
+      "social_withdrawal"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình không muốn gặp ai, thấy bản thân tệ và chẳng muốn làm gì.",
+        "expected_stage": "ba_stage_1_energy_check",
+        "expected_yalom": [
+          "Universality",
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "energy_rating",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "bằng chứng nào",
+          "kế hoạch lớn"
+        ],
+        "judge_focus": [
+          "reduce shame and ask energy"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Nếu chấm pin thì chắc năng lượng 3/10, làm gì cũng quá sức.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "làm hết ngay",
+          "chỉ cần cố",
+          "phải làm hết"
+        ],
+        "judge_focus": [
+          "pick tiny action"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Mình có thể thử nhắn một câu cho bạn thân, nhưng nghe vẫn hơi buồn cười vì quá nhỏ.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "thay đổi cuộc đời",
+          "phải kỷ luật"
+        ],
+        "judge_focus": [
+          "validate tiny action"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Rào cản là mình cứ nằm nhìn điện thoại rồi trôi mất thời gian.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "phân tích tuổi thơ"
+        ],
+        "judge_focus": [
+          "identify barrier"
+        ]
+      }
+    ]
+  }
+]

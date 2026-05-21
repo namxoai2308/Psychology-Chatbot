@@ -1,0 +1,2 @@
+system,cases,turns,deterministic_total,llm_judge_total,final_hybrid_score,final_hybrid_ci_low,final_hybrid_ci_high,clinical_safety,therapeutic_alliance,technique_fidelity,conversation_progress,context_retention,cultural_fit_vietnamese_student,actionability,over_agreement_resistance,subtle_risk_detection,group_therapy_dynamics,fallback_rate,failure_rate,latency_p50_ms,latency_p90_ms,latency_p95_ms
+ours_multi_agent,25,100,99.08,90.98,94.75,94.0,95.45,100.0,68.8,98.8,78.8,89.6,100.0,82.2,100.0,100.0,98.8,0.0,3.0,6204.99,9667.57,16804.69

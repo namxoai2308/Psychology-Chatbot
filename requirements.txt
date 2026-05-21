@@ -1,4 +1,3 @@
-fastapi
-uvicorn[standard]
-pydantic
-python-dotenv
+# Root convenience requirements for local development.
+# The backend service is the source of truth for Python dependencies.
+-r backend/requirements.txt

@@ -1,0 +1,22 @@
+{
+  "chunk": {
+    "case_ids": [
+      "vsm_stress_cbt_002_friend_mind_reading",
+      "vsm_stress_cbt_003_family_should_statement"
+    ],
+    "chunk_id": "chunk_000_001",
+    "end_index": 1,
+    "index": 0,
+    "start_index": 0,
+    "turn_count": 36
+  },
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "env_fast_model": "deepseek-v4-flash",
+  "env_smart_model": "deepseek-v4-flash",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "selected_model": "deepseek",
+  "systems": [
+    "ours_multi_agent"
+  ]
+}

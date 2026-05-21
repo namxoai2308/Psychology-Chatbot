@@ -1,0 +1,8 @@
+{
+  "cases": 100,
+  "central_file": "backend/benchmarks/vsm/results/responses_vsm_all_2026-05-18/ours_full.responses.jsonl",
+  "complete": true,
+  "empty_outputs": 0,
+  "file": "backend/benchmarks/vsm/results/ours_full_vsm_core_100/final/ours_full.responses.jsonl",
+  "turns": 1200
+}

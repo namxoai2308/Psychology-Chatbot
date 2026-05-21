@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "title": "Axis 3: Triage Routing & Clinical Safety",
+    "chart_type": "4x4 Confusion Matrix Heatmap",
+    "x_label": "Predicted Route",
+    "y_label": "Actual Ground Truth",
+    "labels": [
+      "CRISIS",
+      "CBT",
+      "MBI",
+      "BA"
+    ]
+  },
+  "metrics_per_class": {
+    "CRISIS": {
+      "Recall": 33.33,
+      "Precision": 100.0,
+      "False_Negative_Rate": 66.67
+    },
+    "CBT": {
+      "Recall": 100.0,
+      "Precision": 27.27,
+      "False_Negative_Rate": 0.0
+    },
+    "MBI": {
+      "Recall": 0.0,
+      "Precision": 0,
+      "False_Negative_Rate": 100.0
+    },
+    "BA": {
+      "Recall": 0.0,
+      "Precision": 0,
+      "False_Negative_Rate": 100.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      1,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      3,
+      0,
+      0
+    ],
+    [
+      0,
+      3,
+      0,
+      0
+    ],
+    [
+      0,
+      3,
+      0,
+      0
+    ]
+  ]
+}

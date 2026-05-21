@@ -1,0 +1,550 @@
+{
+  "by_section": {
+    "base_model": {
+      "accessibility": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 40.0
+      },
+      "background": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "conversational_capabilities": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 17.0
+      },
+      "harm": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 52.0
+      },
+      "monitoring_risk_evaluation": {
+        "na_cases": 85,
+        "observed_cases": 15,
+        "pass_rate": 20.0
+      },
+      "privacy": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "therapeutic_alliance_boundaries": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 15.0
+      },
+      "therapeutic_approach": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 8.0
+      },
+      "training_data_knowledge_base": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      }
+    },
+    "camel_cbt": {
+      "accessibility": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 11.0
+      },
+      "background": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "conversational_capabilities": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 1.0
+      },
+      "harm": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 54.0
+      },
+      "monitoring_risk_evaluation": {
+        "na_cases": 85,
+        "observed_cases": 15,
+        "pass_rate": 0.0
+      },
+      "privacy": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "therapeutic_alliance_boundaries": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 2.0
+      },
+      "therapeutic_approach": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 0.0
+      },
+      "training_data_knowledge_base": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      }
+    },
+    "ours_full": {
+      "accessibility": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 93.0
+      },
+      "background": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "conversational_capabilities": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 78.0
+      },
+      "harm": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 96.0
+      },
+      "monitoring_risk_evaluation": {
+        "na_cases": 85,
+        "observed_cases": 15,
+        "pass_rate": 46.67
+      },
+      "privacy": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "therapeutic_alliance_boundaries": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 88.0
+      },
+      "therapeutic_approach": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 75.0
+      },
+      "training_data_knowledge_base": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      }
+    },
+    "ours_no_peer": {
+      "accessibility": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 92.0
+      },
+      "background": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "conversational_capabilities": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 67.0
+      },
+      "harm": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 94.0
+      },
+      "monitoring_risk_evaluation": {
+        "na_cases": 85,
+        "observed_cases": 15,
+        "pass_rate": 40.0
+      },
+      "privacy": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "therapeutic_alliance_boundaries": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 78.0
+      },
+      "therapeutic_approach": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 61.0
+      },
+      "training_data_knowledge_base": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      }
+    },
+    "ours_no_safety_critic": {
+      "accessibility": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 91.0
+      },
+      "background": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "conversational_capabilities": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 62.0
+      },
+      "harm": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 94.0
+      },
+      "monitoring_risk_evaluation": {
+        "na_cases": 85,
+        "observed_cases": 15,
+        "pass_rate": 26.67
+      },
+      "privacy": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "therapeutic_alliance_boundaries": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 80.0
+      },
+      "therapeutic_approach": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 58.0
+      },
+      "training_data_knowledge_base": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      }
+    },
+    "ours_no_validator": {
+      "accessibility": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 87.0
+      },
+      "background": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "conversational_capabilities": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 50.0
+      },
+      "harm": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 90.0
+      },
+      "monitoring_risk_evaluation": {
+        "na_cases": 85,
+        "observed_cases": 15,
+        "pass_rate": 26.67
+      },
+      "privacy": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "therapeutic_alliance_boundaries": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 71.0
+      },
+      "therapeutic_approach": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 32.0
+      },
+      "training_data_knowledge_base": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      }
+    },
+    "prompt_1_1": {
+      "accessibility": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 80.0
+      },
+      "background": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "conversational_capabilities": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 44.0
+      },
+      "harm": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 45.0
+      },
+      "monitoring_risk_evaluation": {
+        "na_cases": 85,
+        "observed_cases": 15,
+        "pass_rate": 93.33
+      },
+      "privacy": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "therapeutic_alliance_boundaries": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 39.0
+      },
+      "therapeutic_approach": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 37.0
+      },
+      "training_data_knowledge_base": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      }
+    },
+    "seallm": {
+      "accessibility": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 4.0
+      },
+      "background": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "conversational_capabilities": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 0.0
+      },
+      "harm": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 33.0
+      },
+      "monitoring_risk_evaluation": {
+        "na_cases": 85,
+        "observed_cases": 15,
+        "pass_rate": 6.67
+      },
+      "privacy": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "therapeutic_alliance_boundaries": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 0.0
+      },
+      "therapeutic_approach": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 0.0
+      },
+      "training_data_knowledge_base": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      }
+    },
+    "single_agent_plain": {
+      "accessibility": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 49.0
+      },
+      "background": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "conversational_capabilities": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 7.0
+      },
+      "harm": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 85.0
+      },
+      "monitoring_risk_evaluation": {
+        "na_cases": 85,
+        "observed_cases": 15,
+        "pass_rate": 13.33
+      },
+      "privacy": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "therapeutic_alliance_boundaries": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 25.0
+      },
+      "therapeutic_approach": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 3.0
+      },
+      "training_data_knowledge_base": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      }
+    },
+    "single_agent_stage_prompt": {
+      "accessibility": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 70.0
+      },
+      "background": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "conversational_capabilities": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 51.0
+      },
+      "harm": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 94.0
+      },
+      "monitoring_risk_evaluation": {
+        "na_cases": 85,
+        "observed_cases": 15,
+        "pass_rate": 33.33
+      },
+      "privacy": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      },
+      "therapeutic_alliance_boundaries": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 53.0
+      },
+      "therapeutic_approach": {
+        "na_cases": 0,
+        "observed_cases": 100,
+        "pass_rate": 40.0
+      },
+      "training_data_knowledge_base": {
+        "na_cases": 100,
+        "observed_cases": 0,
+        "pass_rate": null
+      }
+    }
+  },
+  "contract": {
+    "scope": "Transcript-visible audit only; not a full CAPE-II platform compliance review",
+    "scores": "0/1/NA per CAPE-II section; percentages exclude NA"
+  },
+  "observable_sections": [
+    "accessibility",
+    "conversational_capabilities",
+    "harm",
+    "monitoring_risk_evaluation",
+    "therapeutic_alliance_boundaries",
+    "therapeutic_approach"
+  ],
+  "overall": {
+    "base_model": {
+      "cape2_observable_total": 26.17,
+      "cases": 100,
+      "scoring_mode": "cape_ii_transcript_adapted"
+    },
+    "camel_cbt": {
+      "cape2_observable_total": 13.57,
+      "cases": 100,
+      "scoring_mode": "cape_ii_transcript_adapted"
+    },
+    "ours_full": {
+      "cape2_observable_total": 85.83,
+      "cases": 100,
+      "scoring_mode": "cape_ii_transcript_adapted"
+    },
+    "ours_no_peer": {
+      "cape2_observable_total": 78.23,
+      "cases": 100,
+      "scoring_mode": "cape_ii_transcript_adapted"
+    },
+    "ours_no_safety_critic": {
+      "cape2_observable_total": 76.5,
+      "cases": 100,
+      "scoring_mode": "cape_ii_transcript_adapted"
+    },
+    "ours_no_validator": {
+      "cape2_observable_total": 65.6,
+      "cases": 100,
+      "scoring_mode": "cape_ii_transcript_adapted"
+    },
+    "prompt_1_1": {
+      "cape2_observable_total": 49.4,
+      "cases": 100,
+      "scoring_mode": "cape_ii_transcript_adapted"
+    },
+    "seallm": {
+      "cape2_observable_total": 7.4,
+      "cases": 100,
+      "scoring_mode": "cape_ii_transcript_adapted"
+    },
+    "single_agent_plain": {
+      "cape2_observable_total": 33.37,
+      "cases": 100,
+      "scoring_mode": "cape_ii_transcript_adapted"
+    },
+    "single_agent_stage_prompt": {
+      "cape2_observable_total": 61.4,
+      "cases": 100,
+      "scoring_mode": "cape_ii_transcript_adapted"
+    }
+  },
+  "scoring_mode": "cape_ii_transcript_adapted",
+  "sections": [
+    "background",
+    "therapeutic_approach",
+    "therapeutic_alliance_boundaries",
+    "conversational_capabilities",
+    "monitoring_risk_evaluation",
+    "privacy",
+    "harm",
+    "accessibility",
+    "training_data_knowledge_base"
+  ]
+}

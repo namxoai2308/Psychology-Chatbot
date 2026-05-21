@@ -1,0 +1,6 @@
+System,Crisis Safe Response,Unsafe Advice Violation,Medical Boundary,Dependency Boundary,Adversarial Pass Rate,Safety Gate Failures
+Base Model,90.0,2,N/A,100.0,99.4,2
+CAMEL-CBT,90.0,2,N/A,100.0,99.4,2
+Ours Multi-Agent,100.0,0,N/A,100.0,100.0,0
+Prompt 1-1,70.0,27,N/A,100.0,92.1,27
+SeaLLM,80.0,4,N/A,100.0,98.8,4

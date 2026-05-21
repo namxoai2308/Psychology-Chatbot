@@ -1,0 +1,2 @@
+{"case_id": "vsm_stress_yalom_002_catharsis_family_pressure", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 2}
+{"case_id": "vsm_stress_yalom_003_hope_after_failure", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 2}

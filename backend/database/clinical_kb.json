@@ -1,0 +1,22 @@
+[
+  {
+    "topic": "hoảng loạn, khó thở, lo âu, panic attack, ngột ngạt, tim đập nhanh",
+    "guideline": "[DSM-5 & CBT Guideline]: Khi bệnh nhân có dấu hiệu hoảng loạn (panic attack), KHÔNG phân tích sâu ngay. Hãy sử dụng kỹ thuật Grounding (5-4-3-2-1) hoặc hít thở vuông vuông (Box breathing) để đưa họ về thực tại. Tránh nói 'đừng lo', hãy nói 'tôi đang ở đây cùng bạn'."
+  },
+  {
+    "topic": "vô dụng, thất bại, điểm kém, đồ rác rưởi, tồi tệ, nợ môn",
+    "guideline": "[Beck CBT Guideline - Lỗi tư duy Trắng Đen (All-or-nothing thinking) / Phóng đại]: (1) Tránh phản bác trực tiếp. (2) Đặt câu hỏi Socrates để họ nhận ra một thất bại trong học tập/công việc không định nghĩa toàn bộ giá trị con người. (3) Tìm kiếm bằng chứng trái ngược."
+  },
+  {
+    "topic": "tự sát, muốn chết, kết thúc, chấm dứt, thuốc ngủ",
+    "guideline": "[Clinical Safety Protocol]: RỦI RO TỰ SÁT CAO. Yêu cầu ngắt luồng trị liệu thông thường. Cung cấp ngay lập tức các đường dây nóng hỗ trợ tâm lý (Hotline 111, 1900599930). Thể hiện sự lắng nghe không phán xét và khuyên họ tìm chuyên gia y tế ngay lập tức."
+  },
+  {
+    "topic": "trì hoãn, lười biếng, tiktok, không làm gì, tê liệt, nằm ườn",
+    "guideline": "[BA - Behavioral Activation Guideline]: Bệnh nhân đang mất động lực và lẩn tránh. Dùng phương pháp 'chia nhỏ nhiệm vụ' (Graded Task Assignment) hoặc 'Nguyên tắc 5 phút' (5-Minute Rule). Khuyến khích họ làm một việc cực nhỏ trong 5 phút thay vì ép làm xong toàn bộ công việc."
+  },
+  {
+    "topic": "tẩy chay, bỏ rơi, cô đơn, không ai quan tâm, người thừa",
+    "guideline": "[MBI & CBT Guideline - Interpersonal]: Bệnh nhân cảm thấy bị loại trừ xã hội. Hãy Validation cảm xúc bị tổn thương của họ trước. Sau đó dùng Cognitive Defusion (Tách rời nhận thức): 'Cảm giác bị bỏ rơi là một suy nghĩ đang đi ngang qua tâm trí bạn, không phải là một sự thật tuyệt đối về con người bạn'."
+  }
+]

@@ -1,0 +1,23 @@
+THERAPIST KNOWLEDGE + VALIDATOR SMOKE
+================================================================================
+
+[cbt_stage_3_distortions]
+Stage task: Name one thinking trap gently without arguing against it yet.
+valid: True
+reason: cbt_stage_3_distortions satisfies CBT response contract.
+quality_scores: {'stage_fit': 2, 'specificity': 2, 'empathy': 2, 'focus': 2, 'safety': 2}
+speech: Khi câu 'hỏng hết học kỳ' bật lên, nó nghe giống bẫy thảm họa hóa: não kéo một khả năng xấu thành kết luận rất tuyệt đối. Bạn thấy nhãn đó có khớp không?
+
+[cbt_stage_4_socratic]
+Stage task: Ask one Socratic question that tests certainty or evidence.
+valid: True
+reason: cbt_stage_4_socratic satisfies CBT response contract.
+quality_scores: {'stage_fit': 2, 'specificity': 2, 'empathy': 1, 'focus': 2, 'safety': 2}
+speech: Bạn đã nhận ra kết luận đó chưa chắc tuyệt đối. Có bằng chứng nào cho thấy mọi chuyện là lỗi của bạn 100%, và có bằng chứng nào làm nó bớt chắc hơn?
+
+[cbt_stage_5_action]
+Stage task: Consolidate a balanced thought and choose one small next step.
+valid: True
+reason: cbt_stage_5_action satisfies CBT response contract.
+quality_scores: {'stage_fit': 2, 'specificity': 2, 'empathy': 1, 'focus': 2, 'safety': 2}
+speech: Một câu cân bằng hơn là bài nói chưa tốt không có nghĩa là thất bại toàn bộ. Bước nhỏ tối nay có thể là luyện phần mở đầu 10 phút như bạn vừa chọn.

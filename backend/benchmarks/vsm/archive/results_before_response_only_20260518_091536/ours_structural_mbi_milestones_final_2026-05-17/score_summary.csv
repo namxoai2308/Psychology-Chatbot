@@ -1,0 +1,2 @@
+system,case_group,turns,stage_accuracy,peer_accuracy,technique_hint_match,route_accuracy,hard_failures,avg_latency_ms
+ours_structural,mbi_dialogues,314,100.0,100.0,100.0,100.0,0,0.09

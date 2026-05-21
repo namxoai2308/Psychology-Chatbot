@@ -1,0 +1,7 @@
+System,Route,Cases,Stage Accuracy,Technique Fidelity,Route Bleed Count,Validator Pass,Fallback Rate
+Ours Full,CBT,2,100.0,66.7,0,100.0,0.0%
+Ours No Peer,CBT,2,100.0,75.0,0,100.0,0.0%
+Ours No Safety Critic,CBT,2,100.0,75.0,0,100.0,0.0%
+Ours No Validator,CBT,2,100.0,75.0,0,100.0,0.0%
+Single Agent Plain,CBT,2,0.0,37.5,0,100.0,0.0%
+Single Agent + Stage,CBT,2,100.0,70.8,0,100.0,0.0%

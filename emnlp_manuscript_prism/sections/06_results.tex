@@ -1,0 +1,22 @@
+\label{sec:result_placeholders}
+This section defines the result slots for the frozen VSM run. The cells are intentionally left as dashes until all selected systems finish inference, transcript-level judging, scoring, and human audit. No table in this draft contains evidence from partial runs.
+
+\paragraph{Main comparison.}
+Table~\ref{tab:main_results} specifies the main comparison across \trace, ablations, and baselines. The final paper will state whether \tracefull\ improves over the strongest complete baseline only after the full score summary is generated.
+
+\input{tables/main_results}
+
+\paragraph{Ablation deltas.}
+Table~\ref{tab:ablation_results} specifies mechanism-level deltas relative to \tracefull. Removing peer agents should primarily affect group dynamics, removing the validator should affect stage or technique fidelity, and removing the safety critic should affect safety or boundary robustness. If an expected delta is absent, the corresponding mechanism claim will be weakened.
+
+\input{tables/ablation_results}
+
+\paragraph{Route, peer, and safety slices.}
+Route-level reporting is required because a high overall score can hide modality drift, poor peer timing, or weak safety behavior concentrated in one group. The final result pass will also report peer-factor distribution and safety-boundary behavior.
+
+\input{tables/route_results}
+\input{tables/y_distribution}
+\input{tables/safety_results}
+
+\paragraph{Reliability and latency.}
+The final paper will report missing-output rate, runtime failure rate, fallback rate, average latency, and p95 latency. If the full graph is slower than baselines, the analysis will frame that as the cost of auditability and multi-stage control rather than omitting it.

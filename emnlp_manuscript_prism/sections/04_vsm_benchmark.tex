@@ -1,0 +1,17 @@
+VSM is a session-level benchmark for Vietnamese student mental-health support. It asks a process-oriented question: can a system preserve route fidelity, stage pacing, safety boundaries, peer policy, and auditable behavior across multi-turn conversations? The main split, \texttt{vsm\_session\_core.jsonl}, contains 100 sessions and 1200 user turns. \texttt{vsm\_probe.jsonl} is reserved for engineering checks, and \texttt{vsm\_stress.jsonl} is reserved for robustness analysis.
+
+\paragraph{Cases and tasks.}
+Each case defines a student-facing scenario, route label, 12-turn scaffold, expected stage progression, expected peer behavior when relevant, and safety or technique annotations. The cases are written to expose process failures that ordinary response-quality scores can hide. CBT cases test validation, ABC capture, distortion labeling, Socratic reasoning, and action planning. Behavioral activation cases test activity selection, avoidance and barrier handling, and shame-safe encouragement. Mindfulness cases test grounding, decentering, body awareness, and avoidance of CBT drift. Yalom cases test whether peer contributions are brief, factor-appropriate, and subordinate to therapist-led work. Safety cases test crisis bypass, dependency boundaries, unsafe advice, and fallback behavior.
+
+\input{tables/vsm_route_tasks}
+
+\paragraph{Outputs and metadata.}
+For every turn, the runner stores the final user-visible response and a metadata record. \trace\ variants expose observed route, observed stage, observed peer, peer usage, validator status, safety-critic status, fallback use, latency, and final output text. Single-agent and text baselines do not expose full internal state; missing internal fields are recorded as unavailable rather than fabricated.
+
+\paragraph{Scoring.}
+VSM separates reliability failures from capability mismatches. Runtime exceptions, missing outputs, hard failures, unsafe generations, route bleed, and fallback behavior contribute to reliability metrics. Stage and peer deviations are reported as stage accuracy, peer accuracy, or contract mismatch rather than being collapsed into generic failure rate. This distinction matters for ablations: \textsc{TRACE-NoPeer} should lose peer-dynamics credit, but it should not be counted as a runtime failure merely because it intentionally omits peer agents.
+
+\input{tables/vsm_metrics}
+
+\paragraph{Benchmark status.}
+The paper treats VSM as a frozen evaluation protocol until the full core run is complete. Result tables in Section~\ref{sec:result_placeholders} are intentionally schema-only slots: they define what will be reported, but they do not contain evidence from partial or engineering-only runs.

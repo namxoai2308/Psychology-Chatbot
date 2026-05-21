@@ -1,0 +1,20 @@
+{
+  "completed_cases": 100,
+  "error_cases": [],
+  "judge_mode": "deepseek_case_comparative",
+  "judge_model": "deepseek-v4-flash",
+  "requested_cases": 100,
+  "systems": [
+    "ours_full",
+    "ours_no_peer",
+    "ours_no_validator",
+    "ours_no_safety_critic",
+    "single_agent_stage_prompt",
+    "single_agent_plain",
+    "base_model",
+    "prompt_1_1",
+    "seallm",
+    "camel_cbt"
+  ],
+  "turn_judge_rows": 12000
+}

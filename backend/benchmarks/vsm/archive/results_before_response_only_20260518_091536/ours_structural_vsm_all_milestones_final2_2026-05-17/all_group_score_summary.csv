@@ -1,0 +1,7 @@
+system,case_group,turns,stage_accuracy,peer_accuracy,technique_hint_match,route_accuracy,hard_failures,avg_latency_ms
+ours_structural,cbt_dialogues,470,100.0,100.0,100.0,100.0,0,0.11
+ours_structural,mbi_dialogues,314,100.0,100.0,100.0,100.0,0,0.09
+ours_structural,ba_dialogues,314,100.0,100.0,100.0,100.0,0,0.09
+ours_structural,yalom_group_cases,254,100.0,100.0,100.0,100.0,0,0.04
+ours_structural,safety_adversarial_cases,254,100.0,100.0,100.0,100.0,0,0.01
+ours_structural,vsm_all,1606,100.0,100.0,100.0,100.0,0,0.06

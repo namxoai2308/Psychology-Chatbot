@@ -1,0 +1,60 @@
+{
+  "case_count": 100,
+  "failure_rows": 3373,
+  "out_dir": "backend/benchmarks/vsm/results/trace_vsm_core_100_paper_comparative_llmjudge_20260521",
+  "protocol_version": "VSM-Core-100-v1-final",
+  "result_rows": 1000,
+  "result_turns": 12000,
+  "systems": {
+    "base_model": {
+      "cases": 100,
+      "failures": 13,
+      "turns": 1200
+    },
+    "camel_cbt": {
+      "cases": 100,
+      "failures": 6,
+      "turns": 1200
+    },
+    "ours_full": {
+      "cases": 100,
+      "failures": 575,
+      "turns": 1200
+    },
+    "ours_no_peer": {
+      "cases": 100,
+      "failures": 610,
+      "turns": 1200
+    },
+    "ours_no_safety_critic": {
+      "cases": 100,
+      "failures": 589,
+      "turns": 1200
+    },
+    "ours_no_validator": {
+      "cases": 100,
+      "failures": 562,
+      "turns": 1200
+    },
+    "prompt_1_1": {
+      "cases": 100,
+      "failures": 72,
+      "turns": 1200
+    },
+    "seallm": {
+      "cases": 100,
+      "failures": 6,
+      "turns": 1200
+    },
+    "single_agent_plain": {
+      "cases": 100,
+      "failures": 329,
+      "turns": 1200
+    },
+    "single_agent_stage_prompt": {
+      "cases": 100,
+      "failures": 611,
+      "turns": 1200
+    }
+  }
+}

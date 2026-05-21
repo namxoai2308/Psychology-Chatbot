@@ -1,0 +1,7 @@
+{
+  "cases": 100,
+  "complete": true,
+  "empty_outputs": 0,
+  "file": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/final/ours_full.responses.jsonl",
+  "turns": 1200
+}

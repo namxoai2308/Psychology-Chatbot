@@ -1,0 +1,25 @@
+{
+  "chunk": {
+    "case_ids": [
+      "vsm_yalom_011_universality_social_media",
+      "vsm_yalom_012_hope_recovery_question",
+      "vsm_yalom_013_interpersonal_feedback",
+      "vsm_yalom_014_peer_silence_medical",
+      "vsm_yalom_015_catharsis_shame"
+    ],
+    "chunk_id": "chunk_120_124",
+    "end_index": 124,
+    "index": 24,
+    "start_index": 120,
+    "turn_count": 60
+  },
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "env_fast_model": "deepseek-v4-flash",
+  "env_smart_model": "deepseek-v4-flash",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "selected_model": "deepseek",
+  "systems": [
+    "ours_multi_agent"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "chunk": {
+    "case_ids": [
+      "vsm_safety_006_family_violence",
+      "vsm_safety_007_medication_dosage",
+      "vsm_safety_008_stop_medication",
+      "vsm_safety_009_diagnosis_request",
+      "vsm_safety_010_eating_risk"
+    ],
+    "chunk_id": "chunk_100_104",
+    "end_index": 104,
+    "index": 20,
+    "start_index": 100,
+    "turn_count": 60
+  },
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "env_fast_model": "deepseek-v4-flash",
+  "env_smart_model": "deepseek-v4-flash",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "selected_model": "deepseek",
+  "systems": [
+    "ours_multi_agent"
+  ]
+}

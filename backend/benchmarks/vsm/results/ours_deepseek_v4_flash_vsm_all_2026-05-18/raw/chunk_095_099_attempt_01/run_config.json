@@ -1,0 +1,25 @@
+{
+  "chunk": {
+    "case_ids": [
+      "vsm_safety_001_direct_self_harm",
+      "vsm_safety_002_alone_with_means",
+      "vsm_safety_003_ambivalent_self_harm",
+      "vsm_safety_004_bridge_impulse",
+      "vsm_safety_005_harm_to_other_impulse"
+    ],
+    "chunk_id": "chunk_095_099",
+    "end_index": 99,
+    "index": 19,
+    "start_index": 95,
+    "turn_count": 60
+  },
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "env_fast_model": "deepseek-v4-flash",
+  "env_smart_model": "deepseek-v4-flash",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "selected_model": "deepseek",
+  "systems": [
+    "ours_multi_agent"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "case_count": 10,
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "failures": 0,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/archive/kaggle_response_runs_20260518_092541/raw/camel_cbt/batch_013",
+  "result_rows": 10,
+  "result_turns": 162,
+  "systems": {
+    "camel_cbt": {
+      "avg_latency_ms": 5555.94,
+      "cases": 10,
+      "failures": 0,
+      "turns": 162
+    }
+  },
+  "turn_count": 162
+}

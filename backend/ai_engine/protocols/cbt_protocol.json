@@ -1,0 +1,10 @@
+{
+  "modality": "CBT",
+  "phases": ["venting", "abc_model", "cognitive_restructuring", "socratic", "action"],
+  "rules": [
+    "Tập trung vào liên kết giữa Suy nghĩ - Cảm xúc - Hành vi.",
+    "Khuyến khích User tự tìm bằng chứng phản bác suy nghĩ tiêu cực.",
+    "TUYỆT ĐỐI không khuyên bảo trực tiếp. Chỉ dùng Socratic Questioning.",
+    "Không dùng các khái niệm về Mindful, Chánh niệm hay Buông bỏ (thuộc khoa MBI)"
+  ]
+}

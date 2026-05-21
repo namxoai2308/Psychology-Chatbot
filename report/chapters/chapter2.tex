@@ -1,0 +1,159 @@
+\chapter{LITERATURE REVIEW}
+
+This chapter reviews the literature that shapes the design of the proposed system. It follows a funnel structure. The chapter first discusses AI-based mental-health support and why student-facing dialogue systems require more than fluent conversation. It then reviews therapeutic foundations that motivate route-specific structure for CBT, mindfulness-based intervention, and behavioral activation. The third section develops the idea of virtual group therapy, where Yalom-inspired peer support is combined with multi-agent blackboard coordination. The fourth section reviews evaluation and safety methods for LLM-based mental-health systems. The chapter closes by identifying the research gap addressed by this thesis.
+
+\section{AI-Based Mental-Health Support}
+
+\subsection{Screening Measures}
+
+Student-support systems need an initial understanding of the user's distress before deciding how to respond. In psychological and digital-health settings, this first signal is often gathered through short self-report screening instruments. The Depression Anxiety Stress Scales were introduced to measure symptoms associated with depression, anxiety, and stress \citep{Lovibond1995DASS}.
+
+This thesis uses DASS-21 because its three-factor structure is convenient for the prototype's initial route selection. In this implementation, stress, anxiety, and depressive-pattern signals are treated as approximate routing cues rather than clinical rules. DASS-21 is also suitable for this thesis because it has been validated within the Vietnamese student context \citep{Le2017DASS21Vietnamese}. Although using this instrument does not make the proposed chatbot clinically validated, it establishes DASS-21 as a practical screening reference for a domestic student-support prototype.
+
+The system therefore treats screening as a routing aid, not as diagnosis or measurement of treatment outcome. This distinction is important because students often describe distress in mixed and informal language. Academic pressure, family expectations, social comparison, loneliness, procrastination, relationship stress, and burnout may appear together in the same conversation. A useful system should not force every user into one intervention style. It should first collect enough context to decide whether the user needs emotional ventilation, cognitive clarification, grounding, behavioral activation, or safety escalation.
+
+\subsection{LLM Support Systems}
+
+Recent LLM-based mental-health systems show that large language models can be adapted toward supportive conversation. SoulChat improves empathy, listening, and comfort abilities through fine-tuning \citep{Chen2023SoulChat}. Earlier work such as Woebot also showed that conversational agents can deliver structured CBT-oriented support in a controlled setting \citep{Fitzpatrick2017Woebot}. These systems demonstrate that conversational AI can produce responses that feel more attentive than rule-based chatbots, especially when the model is tuned toward support-seeking dialogue.
+
+Other work focuses more directly on therapeutic language use. Cognitive reframing research studies how language-model interaction can help users reinterpret negative thoughts \citep{Sharma2023CognitiveReframing}. CACTUS explores counseling conversations grounded in cognitive behavioral theory \citep{Lee2024Cactus}. Together, these studies suggest that LLM mental-health systems should be judged not only by empathy, but also by whether they use appropriate therapeutic moves.
+
+The present thesis builds on that direction. It does not attempt to create a general-purpose therapist model. Instead, it treats LLMs as components inside a controlled dialogue engine. The system should know whether the current turn calls for validation, an ABC-model question, a grounding instruction, a micro-action plan, a peer-support draft, or a safety response. This requires structure outside the base model.
+
+\subsection{One-to-One Limits}
+
+A single-agent mental-health chatbot can sound warm while still behaving poorly over multiple turns. It may ask the same broad question repeatedly, jump from emotional validation to cognitive challenge too early, mix CBT with mindfulness in a confusing way, or give advice before understanding the user's context. These problems are not only usability issues. In a mental-health setting, poor timing can weaken trust, miss risk signals, or encourage dependence on the chatbot.
+
+Generic one-to-one prompting also makes role control difficult. The same model is expected to assess the user's state, select a therapeutic route, provide the response, remember the session, and enforce safety boundaries. When all of these responsibilities are compressed into one prompt, the system becomes hard to debug. If the response is unsafe or technically weak, it is unclear whether the failure came from assessment, planning, role confusion, safety checking, or the final wording.
+
+This motivates a more structured architecture. The proposed system separates screening, clinical assessment, peer drafting, therapist orchestration, guardrails, and memory update. The objective is not to replace professional counseling. The objective is to build a research prototype whose behavior can be inspected, constrained, and evaluated more clearly than a generic chatbot.
+
+\section{Therapeutic Foundations for Structured Support}
+
+\subsection{CBT Competence}
+
+Cognitive Behavioral Therapy (CBT) is relevant to many student problems because it links situations, interpretations, emotions, and actions. A review of meta-analyses by \citet{Hofmann2012CBTMetaAnalyses} summarizes evidence for CBT across a range of psychological problems. In a student-support prototype, CBT is especially useful for exam catastrophizing, mind-reading in social relationships, perfectionism, self-labeling, fear of failure, and impostor-like thoughts.
+
+For this thesis, CBT is operationalized as a stage-based route. The system should first allow emotional ventilation, then identify the activating event and automatic thought, then name a cognitive distortion gently, then ask a Socratic question, and finally help the user form a balanced reframe or next action. This sequence is important because a technically correct CBT question can still be poorly timed. Asking for evidence too early may feel invalidating, while staying in ventilation too long may prevent progress.
+
+Therapist competence is also defined by observable behavior. The Revised Cognitive Therapy Scale emphasizes collaboration, feedback, guided discovery, interpersonal effectiveness, and appropriate use of cognitive therapy methods \citep{Blackburn2001CTSR}. This principle informs the system validators used in this thesis. The therapist agent is not evaluated only by whether it sounds caring. It is also evaluated by whether it performs the right kind of therapeutic action for the current stage.
+
+\subsection{MBI and BA}
+
+Not every distressed student should receive CBT first. When the user is physiologically activated, panicking, or overwhelmed by repetitive thoughts, mindfulness-based intervention (MBI) may be more appropriate. School-based mindfulness intervention research supports the relevance of mindfulness for student well-being \citep{Zenner2014MindfulnessSchools}. In the proposed system, MBI is implemented through grounding, decentering, body awareness, and mindful action. It does not debate the truth of a thought; it changes the user's relationship to the thought.
+
+Behavioral Activation (BA) is included for low-energy and avoidance patterns. Behavioral activation research supports the relevance of small activity changes for improving well-being and reducing avoidance \citep{Mazzucchelli2010BehavioralActivation}. In this thesis, BA focuses on energy check, micro-action selection, barrier and schedule planning, and reinforcement of small progress. This makes it suitable for students who describe staying in bed, skipping classes, losing routine, or feeling too depleted to start.
+
+The distinction among CBT, MBI, and BA is central to the system design. A user who is breathing rapidly before an exam should not be pushed into cognitive restructuring before grounding. A user who cannot get out of bed may need a tiny action rather than a discussion of core beliefs. A user who has already identified a catastrophic thought may need Socratic exploration rather than another generic request to describe emotions. Route fidelity therefore becomes a technical requirement, not only a clinical preference.
+
+\subsection{Safety Boundaries}
+
+Mental-health support systems require clear boundaries. The system must avoid diagnosis, medication instruction, coercive reassurance, over-agreement, privacy violations, and responses that increase dependency on the chatbot. CounselBench shows that mental-health counseling responses need expert and adversarial evaluation rather than only general helpfulness scoring \citep{Li2025CounselBench}. DialogGuard further frames psychosocial safety through risks such as privacy violations, manipulation, psychological harm, and discriminatory behavior \citep{Luo2025DialogGuard}. These concerns are especially relevant when users disclose self-harm, substance risk, eating concerns, violence, or medical questions.
+
+In this thesis, safety is handled as part of the dialogue architecture. Crisis inputs should bypass normal group interaction. Medical-boundary questions should be redirected toward professional support. Dependency signals should be answered in a way that supports the user's real-world support network instead of strengthening attachment to the system. These rules limit what the virtual therapist and peer agents are allowed to do.
+
+Safety boundaries also shape the evaluation design. A system that performs well on friendly CBT examples may still fail when the user asks for medication dosage, expresses ambiguous self-harm, or tries to make the chatbot the only source of comfort. For that reason, the benchmark used in this thesis includes safety and boundary cases instead of measuring only response helpfulness.
+
+\section{Virtual Group Therapy}
+
+\subsection{Why Group Support}
+
+The proposed system is not only a one-to-one therapist chatbot. In this thesis, the term virtual group therapy refers to a Yalom-informed design metaphor, not a claim that the system implements clinical group psychotherapy. The therapist remains the main voice, while limited peer agents may contribute short drafts when group support is useful. The motivation is that students often suffer not only from distress itself, but also from shame, isolation, and the belief that nobody else experiences similar difficulties.
+
+In human group settings, peer presence can reduce isolation and create a sense of shared experience. A virtual system cannot reproduce the full ethical, interpersonal, and clinical complexity of real group therapy. However, it can borrow a narrow design principle: peer voices should appear only when they serve a clear therapeutic function. They should not compete with the therapist, take control of the session, or give advice beyond their role.
+
+This distinction is important for implementation. The system does not allow Nam or Linh to speak directly to the user by default. They observe the blackboard, propose drafts when their Yalom factor is relevant, and remain silent when the therapist needs to conduct stage-specific CBT, MBI, BA, or safety work. This makes peer support controllable rather than decorative.
+
+\subsection{Yalom Factors}
+
+Yalom and Leszcz describe 11 therapeutic factors in group psychotherapy, including universality, catharsis, instillation of hope, and interpersonal learning \citep{Yalom2020GroupPsychotherapy}. This thesis uses a subset of these factors as design constraints for two virtual peer agents. Out of the 11 factors, universality, catharsis, and instillation of hope were selected because they are the most readily simulated via text-based LLM agents without requiring deep, long-term relationship building. The goal is not to implement full group psychotherapy. The goal is to give each peer a narrow, controllable therapeutic function that can be explicitly checked by the system.
+
+Nam is designed as an emotional mirror. His contribution is appropriate when the user may benefit from universality or catharsis: feeling less alone, naming the emotional weight of a situation, or reducing shame. Nam should not ask technical CBT questions, suggest an intervention, or lead the conversation. Linh is designed as a hope witness. Her contribution is appropriate when the user expresses hopelessness, asks whether recovery is possible, or needs a realistic example of coping. Linh should not offer unrealistic reassurance or turn the session into her own story.
+
+The therapist orchestrator has final authority over both peers. It may include a peer draft, rewrite it, or discard it entirely. This is a safety and quality-control decision. A peer draft that is emotionally accurate but poorly timed can still be harmful to the dialogue flow. For example, a peer should normally remain silent during a CBT Socratic stage if the therapist needs to help the user test a thought carefully.
+
+\subsection{Blackboard Coordination}
+
+Multi-agent LLM systems provide a way to divide work across specialized roles. AutoGen presents a framework for multi-agent LLM applications \citep{Wu2023AutoGen}. This motivates agent specialization, but mental-health support requires stronger coordination than an open conversation among agents.
+
+The blackboard pattern is useful for this purpose. Recent work describes shared-workspace coordination in LLM multi-agent systems \citep{Salemi2025BlackboardSystem}. In the proposed system, the blackboard stores route, stage, case formulation, safety flags, peer drafts, contribution decisions, therapist plan, and final output. Agents do not coordinate by calling each other directly. They coordinate by reading and updating shared state.
+
+Mental-health-specific multi-agent work further supports this direction. AutoCBT studies an autonomous multi-agent framework for CBT with routing and supervisory mechanisms \citep{Xu2025AutoCBT}. Structure Matters evaluates orchestration design in generative therapeutic chatbots \citep{Elahimanesh2026StructureMatters}. CCD-CBT emphasizes cognitive conceptualization and dynamic therapist reasoning in CBT-oriented multi-agent interaction \citep{Liu2026CCDCBT}. These studies suggest that a therapeutic multi-agent system needs more than multiple personas; it needs state, supervision, and explicit control over how agents influence the final response.
+
+The therapist planning layer uses internal structure for quality control. In this thesis, planning is not shown to the user. The user sees only the final therapist response and any therapist-approved peer contribution, not the private reasoning trace.
+
+\section{Evaluation of LLM Mental-Health Systems}
+
+\subsection{Behavioral Safety}
+
+Evaluation of mental-health dialogue should focus on observable behavior. A computational framework for behavioral assessment of LLM therapists argues that therapist-like systems should be evaluated by what they do in conversation, not only by whether the text sounds supportive \citep{Chiu2024LLMTherapists}. CAPE-II similarly motivates evaluating psychotherapy chatbots across clinically meaningful behavior rather than general fluency alone \citep{Sobowale2025CAPEII}. This idea aligns with the design of the VSM benchmark, which measures route fidelity, stage progression, safety, peer timing, context retention, and conversation progress.
+
+Safety evaluation must be separated from general helpfulness. A response may be empathetic but still unsafe if it misses crisis risk, gives medical advice, encourages dependency, or ignores privacy boundaries. CounselBench reports that expert evaluation of mental-health counseling responses can reveal safety issues that automated judges may underrate \citep{Li2025CounselBench}. DialogGuard further motivates psychosocial safety checks for sensitive responses \citep{Luo2025DialogGuard}. For student-support dialogue, this means the system must be tested not only on ordinary stress scenarios, but also on boundary and adversarial cases.
+
+The proposed system therefore uses both runtime guardrails and benchmark-level safety metrics. Runtime guardrails attempt to prevent unsafe final outputs. Benchmark safety metrics make remaining weaknesses visible. This separation is useful because safety should not be hidden inside an overall quality score.
+
+\subsection{Judges and Synthetic Data}
+
+LLM-as-a-judge methods make scalable evaluation more practical. Work on MT-Bench and Chatbot Arena shows that LLM judges can compare chatbot outputs, while also requiring caution because judge models may have biases or may overrate fluent responses \citep{Zheng2023LLMJudge}. This thesis therefore treats judge-assisted scoring as one component of evaluation, not as the sole source of truth.
+
+Synthetic dialogue evaluation is also useful before real deployment. PATIENT-psi studies how large language models can simulate patients for training mental-health professionals \citep{Wang2024PatientPsi}. In this thesis, VSM cases are synthetic and taxonomy-grounded. They are designed to test controlled situations such as stage transitions, wrong-route traps, peer timing, safety boundaries, and multi-turn context retention.
+
+Synthetic evaluation has limits. It cannot establish treatment outcomes, and it cannot replace clinician annotation or user studies. Its value in this thesis is engineering-oriented: it helps expose whether the system follows its own contracts, whether baselines fail in predictable ways, and whether the benchmark pipeline can support later human audit.
+
+\subsection{VSM Requirements}
+
+A benchmark for this thesis must evaluate more than single-turn empathy. The system is intended to maintain a conversation, follow a selected route, advance or hold stages appropriately, integrate or silence peer agents, and avoid unsafe output. Therefore, the benchmark must be multi-turn and must include both ordinary student-support cases and difficult safety or boundary cases.
+
+The VSM benchmark is designed around this requirement. It contains short probe cases for fast regression, session-core cases for multi-turn evaluation, and stress cases for longer-context behavior. Its metrics include clinical safety, therapeutic quality, modality fidelity, group therapy dynamics, conversation progress, system reliability, and runtime efficiency. For the proposed system, deterministic metadata can be used to inspect stage, route, peer, and safety decisions. For baselines, text-only judge scoring is needed to avoid unfairly penalizing systems that do not expose internal state.
+
+This evaluation design follows the same principle as the architecture: separate responsibilities so that failures are visible. A low score should indicate whether the system failed because it selected the wrong route, used the wrong technique, repeated a peer, missed a safety boundary, lost context, or produced a generic response. This makes the benchmark useful for development rather than only for final reporting.
+
+\begin{table}[tb]
+\centering
+\caption{Representative related work and the design gap motivating this thesis.}
+\label{tab:related_work_comparison}
+\small
+\begin{tabular}{p{0.17\textwidth}p{0.23\textwidth}p{0.25\textwidth}p{0.23\textwidth}}
+\toprule
+Work & Main focus & Strength & Remaining gap \\
+\midrule
+Woebot / SoulChat & Structured or empathetic mental-health dialogue & Shows feasibility of automated support & Limited explicit process control \\
+CACTUS / cognitive reframing & CBT-oriented language use & Makes therapeutic moves more explicit & Does not model virtual group dynamics \\
+AutoCBT / CCD-CBT & Multi-agent CBT reasoning & Supports routing, supervision, and case formulation & Primarily CBT-centered rather than group-support centered \\
+CounselBench / DialogGuard & Expert, adversarial, and psychosocial safety evaluation & Highlights safety and boundary assessment & Not tailored to Yalom-style peer timing \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Summary and Research Gap}
+
+The reviewed literature shows several relevant lines of progress. DASS-21 provides a structured but limited signal about distress. CBT, MBI, and BA provide intervention routes that can be translated into stage-aware dialogue behavior. LLM-based counseling systems demonstrate the potential of language models for supportive conversation. Group therapy theory explains why peer support can matter. Multi-agent and blackboard research offers architectural tools for coordinating specialized components. Evaluation work highlights the need for behavioral assessment, safety checks, adversarial cases, and cautious use of LLM judges.
+
+The first gap is a process-control gap. Many LLM counseling systems can produce supportive text, but the literature still leaves open how to make a student-support system reliably hold or advance a therapeutic stage across multiple turns. For this thesis, that gap motivates explicit route contracts, stage detection, therapist planning, and response validation.
+
+The second gap is a virtual-group gap. Group therapy theory explains why universality, catharsis, hope, and interpersonal learning can matter, but most LLM counseling systems remain one-to-one systems. They do not operationalize peer support as controlled, therapist-approved contributions. For this thesis, that gap motivates Nam and Linh as Yalom-inspired observers rather than independent counselors.
+
+The third gap is an evaluation gap. Existing benchmarks and judge-based evaluations are useful, but a system like this also needs to measure route fidelity, stage progression, peer silence, peer timing, fallback behavior, safety boundaries, and multi-turn context retention. For this thesis, that gap motivates the VSM benchmark and its combination of deterministic checks, judge-assisted scoring, and human-audit preparation.
+
+This thesis addresses these gaps as an engineering and evaluation contribution. It does not claim clinical treatment effectiveness. Instead, it proposes a blackboard-based virtual group therapy prototype for supportive Vietnamese student dialogue and evaluates whether the system can follow its intended structure more reliably than generic prompting.
+
+Chapter 3 describes how this literature is translated into system design and implementation. In particular, it explains the blackboard state, DASS onboarding, clinical assessor, stage contracts, Nam and Linh peer agents, therapist orchestrator, safety guardrails, and memory updater. Table \ref{tab:literature_design_map} summarizes how the reviewed themes inform concrete design decisions.
+
+\begin{table}[tb]
+\centering
+\caption{Mapping from literature themes to system design decisions.}
+\label{tab:literature_design_map}
+\small
+\begin{tabular}{p{0.28\textwidth}p{0.34\textwidth}p{0.28\textwidth}}
+\toprule
+Literature theme & Design implication & System component \\
+\midrule
+Psychometric screening & Use short self-report scales as routing support, not diagnosis & Onboarding and initial route selection \\
+CBT, MBI, and BA foundations & Keep intervention routes distinct and stage-aware & Route contracts and validators \\
+Yalom group factors & Allow limited peer support with explicit therapeutic functions & Nam and Linh peer agents \\
+Multi-agent blackboard systems & Coordinate specialized agents through shared state & Blackboard dialogue graph \\
+Reasoning and case formulation & Plan internally before producing concise user-facing responses & Therapist plan and case formulation \\
+Safety and behavioral evaluation & Evaluate observable behavior, boundaries, adversarial risk, and robustness & Guardrails and VSM benchmark \\
+\bottomrule
+\end{tabular}
+\end{table}

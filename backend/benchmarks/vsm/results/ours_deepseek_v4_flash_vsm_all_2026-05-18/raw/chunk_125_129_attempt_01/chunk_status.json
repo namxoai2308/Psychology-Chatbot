@@ -1,0 +1,12 @@
+{
+  "case_ids": [
+    "vsm_stress_ba_001_low_energy_bed",
+    "vsm_stress_ba_002_missed_class",
+    "vsm_stress_ba_003_messy_room",
+    "vsm_stress_cbt_001_exam_catastrophizing",
+    "vsm_stress_cbt_002_friend_mind_reading"
+  ],
+  "chunk_id": "chunk_125_129",
+  "started_at": "2026-05-19T01:46:57.958528+00:00",
+  "status": "running"
+}

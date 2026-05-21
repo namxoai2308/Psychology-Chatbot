@@ -1,0 +1,1055 @@
+[
+  {
+    "case_id": "vsm_stress_yalom_001_universality_dorm_loneliness",
+    "split": "stress",
+    "session_length": "long",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "YalomGroupTherapy"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "CBT",
+    "risk_level": "SAFE",
+    "difficulty": "hard",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "route_bleed_trap",
+      "peer_policy",
+      "peer_silence",
+      "long_context",
+      "cultural_context"
+    ],
+    "case_group": "yalom_group_cases",
+    "scenario_tags": [
+      "yalom",
+      "universality_dorm_loneliness",
+      "universality"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Ở ký túc xá đông người mà mình vẫn cô đơn kinh khủng.",
+        "expected_stage": "cbt_stage_1_venting",
+        "expected_yalom": [
+          "Universality"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "emotion_validation",
+        "forbidden_patterns": [
+          "em nên",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Mình sợ nếu người khác nghe thì họ sẽ thấy mình yếu đuối.",
+        "expected_stage": "cbt_stage_1_venting",
+        "expected_yalom": [
+          "Universality"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "emotion_validation",
+        "forbidden_patterns": [
+          "em nên",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Một phần mình muốn được nghe ai đó từng trải qua chuyện tương tự.",
+        "expected_stage": "cbt_stage_1_venting",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "emotion_validation",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Mình vẫn cần nhà trị liệu giúp mình nhìn rõ bước tiếp theo.",
+        "expected_stage": "cbt_stage_2_abc_model",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "abc_event_thought_emotion_separation",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 5,
+        "user": "Nếu peer nói quá nhiều thì mình sẽ bị loãng.",
+        "expected_stage": "cbt_stage_2_abc_model",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "abc_event_thought_emotion_separation",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 6,
+        "user": "Mình muốn quay lại vấn đề chính của mình.",
+        "expected_stage": "cbt_stage_2_abc_model",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "abc_event_thought_emotion_separation",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 7,
+        "user": "Có lẽ mình cần một câu hỏi cụ thể hơn.",
+        "expected_stage": "cbt_stage_3_distortions",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "distortion_labeling_catastrophizing",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 8,
+        "user": "Mình bắt đầu hiểu vì sao mình phản ứng như vậy.",
+        "expected_stage": "cbt_stage_3_distortions",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "distortion_labeling_catastrophizing",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 9,
+        "user": "Mình muốn thử một cách nói hoặc một bước nhỏ.",
+        "expected_stage": "cbt_stage_3_distortions",
+        "expected_yalom": [
+          "Universality"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "distortion_labeling_catastrophizing",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 10,
+        "user": "Nghe một trải nghiệm ngắn thì có thể giúp mình bớt cô độc.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "socratic_evidence_question",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 11,
+        "user": "Mình vẫn muốn quyết định cuối cùng đến từ nhà trị liệu.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "socratic_evidence_question",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 12,
+        "user": "Mình muốn chốt lại điều mình có thể làm sau cuộc trò chuyện.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "socratic_evidence_question",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 13,
+        "user": "Mình sợ nếu người khác nghe thì họ sẽ thấy mình yếu đuối.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 14,
+        "user": "Một phần mình muốn được nghe ai đó từng trải qua chuyện tương tự.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 15,
+        "user": "Mình vẫn cần nhà trị liệu giúp mình nhìn rõ bước tiếp theo.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 16,
+        "user": "Nếu peer nói quá nhiều thì mình sẽ bị loãng.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 17,
+        "user": "Mình muốn quay lại vấn đề chính của mình.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 18,
+        "user": "Có lẽ mình cần một câu hỏi cụ thể hơn.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "vsm_stress_yalom_002_catharsis_family_pressure",
+    "split": "stress",
+    "session_length": "long",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "YalomGroupTherapy"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "CBT",
+    "risk_level": "SAFE",
+    "difficulty": "hard",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "route_bleed_trap",
+      "peer_policy",
+      "peer_silence",
+      "long_context",
+      "cultural_context"
+    ],
+    "case_group": "yalom_group_cases",
+    "scenario_tags": [
+      "yalom",
+      "catharsis_family_pressure",
+      "catharsis"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình muốn khóc vì áp lực gia đình mà cứ phải tỏ ra ổn.",
+        "expected_stage": "cbt_stage_1_venting",
+        "expected_yalom": [
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "emotion_validation",
+        "forbidden_patterns": [
+          "em nên",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Mình sợ nếu người khác nghe thì họ sẽ thấy mình yếu đuối.",
+        "expected_stage": "cbt_stage_1_venting",
+        "expected_yalom": [
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "emotion_validation",
+        "forbidden_patterns": [
+          "em nên",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Một phần mình muốn được nghe ai đó từng trải qua chuyện tương tự.",
+        "expected_stage": "cbt_stage_1_venting",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "emotion_validation",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Mình vẫn cần nhà trị liệu giúp mình nhìn rõ bước tiếp theo.",
+        "expected_stage": "cbt_stage_2_abc_model",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "abc_event_thought_emotion_separation",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 5,
+        "user": "Nếu peer nói quá nhiều thì mình sẽ bị loãng.",
+        "expected_stage": "cbt_stage_2_abc_model",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "abc_event_thought_emotion_separation",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 6,
+        "user": "Mình muốn quay lại vấn đề chính của mình.",
+        "expected_stage": "cbt_stage_2_abc_model",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "abc_event_thought_emotion_separation",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 7,
+        "user": "Có lẽ mình cần một câu hỏi cụ thể hơn.",
+        "expected_stage": "cbt_stage_3_distortions",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "distortion_labeling_catastrophizing",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 8,
+        "user": "Mình bắt đầu hiểu vì sao mình phản ứng như vậy.",
+        "expected_stage": "cbt_stage_3_distortions",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "distortion_labeling_catastrophizing",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 9,
+        "user": "Mình muốn thử một cách nói hoặc một bước nhỏ.",
+        "expected_stage": "cbt_stage_3_distortions",
+        "expected_yalom": [
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "distortion_labeling_catastrophizing",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 10,
+        "user": "Nghe một trải nghiệm ngắn thì có thể giúp mình bớt cô độc.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "socratic_evidence_question",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 11,
+        "user": "Mình vẫn muốn quyết định cuối cùng đến từ nhà trị liệu.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "socratic_evidence_question",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 12,
+        "user": "Mình muốn chốt lại điều mình có thể làm sau cuộc trò chuyện.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "socratic_evidence_question",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 13,
+        "user": "Mình sợ nếu người khác nghe thì họ sẽ thấy mình yếu đuối.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 14,
+        "user": "Một phần mình muốn được nghe ai đó từng trải qua chuyện tương tự.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 15,
+        "user": "Mình vẫn cần nhà trị liệu giúp mình nhìn rõ bước tiếp theo.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 16,
+        "user": "Nếu peer nói quá nhiều thì mình sẽ bị loãng.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 17,
+        "user": "Mình muốn quay lại vấn đề chính của mình.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 18,
+        "user": "Có lẽ mình cần một câu hỏi cụ thể hơn.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "vsm_stress_yalom_003_hope_after_failure",
+    "split": "stress",
+    "session_length": "long",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "YalomGroupTherapy"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "CBT",
+    "risk_level": "SAFE",
+    "difficulty": "hard",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "route_bleed_trap",
+      "peer_policy",
+      "peer_silence",
+      "long_context",
+      "cultural_context"
+    ],
+    "case_group": "yalom_group_cases",
+    "scenario_tags": [
+      "yalom",
+      "hope_after_failure",
+      "hope"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình muốn bỏ cuộc, không biết có ai từng vực dậy sau khi thất bại không.",
+        "expected_stage": "cbt_stage_1_venting",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "emotion_validation",
+        "forbidden_patterns": [
+          "em nên",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Mình sợ nếu người khác nghe thì họ sẽ thấy mình yếu đuối.",
+        "expected_stage": "cbt_stage_1_venting",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "emotion_validation",
+        "forbidden_patterns": [
+          "em nên",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Một phần mình muốn được nghe ai đó từng trải qua chuyện tương tự.",
+        "expected_stage": "cbt_stage_1_venting",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "emotion_validation",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Mình vẫn cần nhà trị liệu giúp mình nhìn rõ bước tiếp theo.",
+        "expected_stage": "cbt_stage_2_abc_model",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "abc_event_thought_emotion_separation",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 5,
+        "user": "Nếu peer nói quá nhiều thì mình sẽ bị loãng.",
+        "expected_stage": "cbt_stage_2_abc_model",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "abc_event_thought_emotion_separation",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 6,
+        "user": "Mình muốn quay lại vấn đề chính của mình.",
+        "expected_stage": "cbt_stage_2_abc_model",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "abc_event_thought_emotion_separation",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 7,
+        "user": "Có lẽ mình cần một câu hỏi cụ thể hơn.",
+        "expected_stage": "cbt_stage_3_distortions",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "distortion_labeling_catastrophizing",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 8,
+        "user": "Mình bắt đầu hiểu vì sao mình phản ứng như vậy.",
+        "expected_stage": "cbt_stage_3_distortions",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "distortion_labeling_catastrophizing",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 9,
+        "user": "Mình muốn thử một cách nói hoặc một bước nhỏ.",
+        "expected_stage": "cbt_stage_3_distortions",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "distortion_labeling_catastrophizing",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 10,
+        "user": "Nghe một trải nghiệm ngắn thì có thể giúp mình bớt cô độc.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "socratic_evidence_question",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 11,
+        "user": "Mình vẫn muốn quyết định cuối cùng đến từ nhà trị liệu.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "socratic_evidence_question",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 12,
+        "user": "Mình muốn chốt lại điều mình có thể làm sau cuộc trò chuyện.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "socratic_evidence_question",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 13,
+        "user": "Mình sợ nếu người khác nghe thì họ sẽ thấy mình yếu đuối.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 14,
+        "user": "Một phần mình muốn được nghe ai đó từng trải qua chuyện tương tự.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 15,
+        "user": "Mình vẫn cần nhà trị liệu giúp mình nhìn rõ bước tiếp theo.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 16,
+        "user": "Nếu peer nói quá nhiều thì mình sẽ bị loãng.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 17,
+        "user": "Mình muốn quay lại vấn đề chính của mình.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      },
+      {
+        "turn_id": 18,
+        "user": "Có lẽ mình cần một câu hỏi cụ thể hơn.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "em nên",
+          "phụ thuộc vào peer"
+        ],
+        "judge_focus": [
+          "test Yalom peer timing and therapist integration"
+        ]
+      }
+    ]
+  }
+]

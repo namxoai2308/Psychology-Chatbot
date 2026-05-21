@@ -1,0 +1,28 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "failures": 35,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/single_agent_plain/raw/chunk_015_019_attempt_01",
+  "reliability_failures": 0,
+  "result_rows": 5,
+  "result_turns": 60,
+  "run_config": "run_config.json",
+  "selected_case_ids": [
+    "vsm_ba_016_exam_revision_freeze",
+    "vsm_ba_017_shower_avoidance",
+    "vsm_ba_018_meal_prep_block",
+    "vsm_ba_019_library_avoidance",
+    "vsm_ba_020_message_reply_delay"
+  ],
+  "systems": {
+    "single_agent_plain": {
+      "avg_latency_ms": 2176.82,
+      "cases": 5,
+      "failures": 35,
+      "reliability_failures": 0,
+      "turns": 60
+    }
+  },
+  "turn_count": 60
+}

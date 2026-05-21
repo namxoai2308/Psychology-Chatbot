@@ -1,0 +1,30 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "env": {
+    "FAST_MODEL": "",
+    "SMART_MODEL": ""
+  },
+  "filters": {
+    "case_group": null,
+    "case_id": "vsm_mbi_001_panic_before_exam,vsm_mbi_002_night_rumination,vsm_mbi_003_deadline_overload,vsm_mbi_004_intrusive_grade_thought,vsm_mbi_005_body_tension_library",
+    "limit": null,
+    "skip": 0
+  },
+  "git_commit": "9543281a9d1cf189b0ce996211808626d0c0d06d",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "out_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/single_agent_stage_prompt/raw/chunk_050_054_attempt_01",
+  "selected_case_ids": [
+    "vsm_mbi_001_panic_before_exam",
+    "vsm_mbi_002_night_rumination",
+    "vsm_mbi_003_deadline_overload",
+    "vsm_mbi_004_intrusive_grade_thought",
+    "vsm_mbi_005_body_tension_library"
+  ],
+  "selected_model": "deepseek",
+  "systems": [
+    "single_agent_stage_prompt"
+  ],
+  "turn_count": 60
+}

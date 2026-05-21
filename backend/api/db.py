@@ -36,6 +36,8 @@ def save_or_update_conversation(thread_id: str, user_id: str, title: str):
         INSERT INTO conversations (id, user_id, title) 
         VALUES (?, ?, ?)
         ON CONFLICT(id) DO UPDATE SET 
+            user_id = excluded.user_id,
+            title = excluded.title,
             updated_at = CURRENT_TIMESTAMP
     ''', (thread_id, user_id, title))
     conn.commit()

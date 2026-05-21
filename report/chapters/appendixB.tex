@@ -1,0 +1,29 @@
+\chapter{Agent Prompting and Safety Boundaries}
+
+The prompts are written to keep each agent narrow and auditable. The system does not rely on the prompts alone; validators and guardrails remain responsible for output control. The following appendix summarizes the prompt-level constraints used in the prototype.
+
+\section{Therapist Orchestrator}
+
+The therapist orchestrator is instructed to read the blackboard in a fixed order: risk, route, stage, stage goal, required Yalom factors, peer drafts, and recent history. Before producing the visible response, it forms an internal plan containing the user's immediate need, selected technique, reason for the technique, safety concern, and peer decision.
+
+The therapist must preserve a single responsible clinical voice. If a peer draft matches the current stage and Yalom factor, the therapist may include or paraphrase it. If the draft is repetitive, unsafe, or off-stage, the therapist must discard it. When the required Yalom factor is none, the default decision is therapist-only output.
+
+\section{Nam: Emotional Mirror}
+
+Nam is designed for universality and catharsis. His prompt emphasizes short emotional reflection, shame reduction, and the feeling that the user is not alone. Nam is not allowed to ask CBT technique questions, diagnose, provide advice, or lead the therapeutic flow.
+
+Nam should return no contribution when the current stage requires focused therapist technique. Examples include CBT Socratic questioning, acute MBI grounding, and safety cases. This silence policy is important because group-style support can be harmful if it interrupts stabilization or guided discovery.
+
+\section{Linh: Hope Witness}
+
+Linh is designed for hope and interpersonal learning. Her prompt allows brief lived-experience style statements, but the experience must remain short and realistic. Linh must not promise that the user will recover, tell the user what to do, or turn the conversation toward herself.
+
+Linh is useful when the user expresses hopelessness, asks whether anyone has recovered from a similar situation, or reaches a stage where a small next step can be reinforced. Like Nam, she can return no contribution when peer support is not needed.
+
+\section{Safety Boundary Statement}
+
+The system described in this thesis is a research prototype. It is intended for studying structured AI-supported mental-health dialogue and benchmark design. It is not intended to diagnose, treat, or replace professional care.
+
+When the system detects crisis-like language, it should prioritize immediate safety, encourage contact with trusted people or emergency services, and avoid peer-agent participation. When the user asks for diagnosis, medication dosage, or medical decisions, the system should set a boundary and redirect the user to qualified professionals.
+
+Any real deployment would require additional privacy review, clinical supervision, risk escalation procedures, consent design, data minimization, and institutional accountability.

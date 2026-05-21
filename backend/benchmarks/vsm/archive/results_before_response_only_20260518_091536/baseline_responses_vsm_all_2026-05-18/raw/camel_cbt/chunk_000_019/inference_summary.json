@@ -1,0 +1,18 @@
+{
+  "case_count": 20,
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "failures": 3,
+  "hard_failures": 2,
+  "out_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/raw/camel_cbt/chunk_000_019",
+  "result_rows": 20,
+  "result_turns": 80,
+  "systems": {
+    "camel_cbt": {
+      "avg_latency_ms": 5001.81,
+      "cases": 20,
+      "failures": 3,
+      "turns": 80
+    }
+  },
+  "turn_count": 80
+}

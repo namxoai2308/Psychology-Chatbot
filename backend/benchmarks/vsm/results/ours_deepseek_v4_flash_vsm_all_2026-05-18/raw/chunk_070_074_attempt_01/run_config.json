@@ -1,0 +1,25 @@
+{
+  "chunk": {
+    "case_ids": [
+      "vsm_cbt_026_lab_mistake_personalization",
+      "vsm_cbt_027_dating_app_ghosting",
+      "vsm_cbt_028_financial_stress",
+      "vsm_cbt_029_competition_loss",
+      "vsm_cbt_030_future_uncertainty"
+    ],
+    "chunk_id": "chunk_070_074",
+    "end_index": 74,
+    "index": 14,
+    "start_index": 70,
+    "turn_count": 60
+  },
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "env_fast_model": "deepseek-v4-flash",
+  "env_smart_model": "deepseek-v4-flash",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "selected_model": "deepseek",
+  "systems": [
+    "ours_multi_agent"
+  ]
+}

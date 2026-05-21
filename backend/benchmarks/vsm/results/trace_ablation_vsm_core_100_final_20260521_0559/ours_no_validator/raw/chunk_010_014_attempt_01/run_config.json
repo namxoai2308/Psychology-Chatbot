@@ -1,0 +1,30 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "env": {
+    "FAST_MODEL": "",
+    "SMART_MODEL": ""
+  },
+  "filters": {
+    "case_group": null,
+    "case_id": "vsm_ba_011_email_avoidance,vsm_ba_012_study_desk_block,vsm_ba_013_club_task_delay,vsm_ba_014_morning_no_momentum,vsm_ba_015_financial_admin_avoidance",
+    "limit": null,
+    "skip": 0
+  },
+  "git_commit": "9543281a9d1cf189b0ce996211808626d0c0d06d",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "out_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_validator/raw/chunk_010_014_attempt_01",
+  "selected_case_ids": [
+    "vsm_ba_011_email_avoidance",
+    "vsm_ba_012_study_desk_block",
+    "vsm_ba_013_club_task_delay",
+    "vsm_ba_014_morning_no_momentum",
+    "vsm_ba_015_financial_admin_avoidance"
+  ],
+  "selected_model": "deepseek",
+  "systems": [
+    "ours_no_validator"
+  ],
+  "turn_count": 60
+}

@@ -2,29 +2,42 @@
 
 import { useMemo, useState, useEffect, useRef } from "react";
 
-type Msg = { role: "user" | "bot"; text: string };
+type Msg = { role: "user" | "bot"; text: string; sender?: string; isTyping?: boolean };
 type Conversation = { id: string; title: string; updated_at: string };
+
+import ChatSidebar from "./components/ChatSidebar";
+import Dass21Modal from "./components/Dass21Modal";
 
 export default function Page() {
   const [name, setName] = useState("");
   const [ready, setReady] = useState(false);
   const [input, setInput] = useState("");
   const [threadId, setThreadId] = useState("");
-  const [model, setModel] = useState("slm");
-  const [msgs, setMsgs] = useState<Msg[]>([
-    { role: "bot", text: "Chào bạn. Bạn đang thấy thế nào hôm nay?" },
-  ]);
+  const [model, setModel] = useState("gemini");
+  const [msgs, setMsgs] = useState<Msg[]>([]);
   const [busy, setBusy] = useState(false);
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const chatBottomRef = useRef<HTMLDivElement>(null);
+  const [showDass21, setShowDass21] = useState(false);
+
+  // Queue references
+  const abortDelayRef = useRef<() => void>(() => {});
+  const shouldFlushRef = useRef<boolean>(false);
+  const isSendingRef = useRef<boolean>(false);
 
   const apiUrl = useMemo(
     () => (process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000").replace(/\/$/, ""),
     []
   );
+  const userId = useMemo(() => name.trim() || "default_user", [name]);
+  const greeting = useMemo(
+    () =>
+      `Chào ${name || "Khách"}, mình là chuyên viên tâm lý AI. Hôm nay bạn cảm thấy thế nào?\nTrước khi bắt đầu trò chuyện sâu hơn, bạn có thể mở bài đánh giá DASS-21 ngắn để hệ thống hiểu rõ hơn chỉ số cảm xúc của bạn trong tuần qua.`,
+    [name]
+  );
 
   const fetchConversations = () => {
-    fetch(`${apiUrl}/conversations?user_id=${name || "default_user"}`)
+    fetch(`${apiUrl}/conversations?user_id=${encodeURIComponent(userId)}`)
       .then((r) => r.json())
       .then((d) => setConversations(d.conversations || []))
       .catch((err) => console.error("Lỗi tải ds hội thoại", err));
@@ -33,16 +46,74 @@ export default function Page() {
   useEffect(() => {
     if (ready) {
       fetchConversations();
+      if (msgs.length === 0) {
+        setMsgs([{ 
+          role: "bot", 
+          text: greeting
+        }]);
+      }
     }
-  }, [ready, name, apiUrl]);
+  }, [ready, name, apiUrl, userId, greeting]);
 
   useEffect(() => {
     chatBottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [msgs]);
 
+  useEffect(() => {
+    let timeout: ReturnType<typeof setTimeout>;
+    if (ready && msgs.length > 0 && msgs[msgs.length - 1].role === "bot" && msgs[msgs.length - 1].text !== "Chưa có tin nhắn nào." && !busy && !showDass21 && threadId) {
+       timeout = setTimeout(() => {
+           if (!input.trim()) send("[USER_SILENT]");
+       }, 45000); // Ngăn trigger auto ping
+    }
+    return () => clearTimeout(timeout);
+  }, [msgs, busy, ready, showDass21, threadId, input]);
+
   function newChat() {
     setThreadId("");
-    setMsgs([{ role: "bot", text: "Chào bạn. Bạn đang thấy thế nào hôm nay?" }]);
+    setMsgs([{ 
+      role: "bot", 
+      text: greeting
+    }]);
+  }
+
+  async function processQueue(items: any[]) {
+    shouldFlushRef.current = false;
+    for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+        
+        // Start typing
+        setMsgs(prev => {
+            const arr = [...prev];
+            if (arr[arr.length - 1]?.isTyping) {
+                arr[arr.length - 1] = { role: "bot", text: "...", isTyping: true, sender: item.sender };
+            } else {
+                arr.push({ role: "bot", text: "...", isTyping: true, sender: item.sender });
+            }
+            return arr;
+        });
+
+        if (!shouldFlushRef.current) {
+            await new Promise<void>(resolve => {
+                let timer = setTimeout(resolve, item.typing_time_ms || 4000);
+                abortDelayRef.current = () => {
+                    clearTimeout(timer);
+                    resolve();
+                }
+            });
+        }
+        
+        // Finalize message
+        setMsgs(prev => {
+            const arr = [...prev];
+            if (arr[arr.length - 1]?.isTyping) {
+                arr[arr.length - 1] = { role: "bot", sender: item.sender, text: item.text };
+            } else {
+                arr.push({ role: "bot", sender: item.sender, text: item.text });
+            }
+            return arr;
+        });
+    }
   }
 
   async function loadChat(id: string) {
@@ -58,26 +129,46 @@ export default function Page() {
         let currentRole: "user" | "bot" | null = null;
         let currentText = "";
 
+        const flushBotQueue = () => {
+             if (currentText.trim()) {
+                 const textToParse = currentText.trim();
+                 const re = /\[(.*?)\]: (.*)/g;
+                 let match;
+                 let hasMatches = false;
+                 while ((match = re.exec(textToParse)) !== null) {
+                     hasMatches = true;
+                     const sender = match[1];
+                     const nextMatchIdx = textToParse.indexOf("\n[", re.lastIndex);
+                     const msgText = nextMatchIdx !== -1 
+                            ? textToParse.substring(re.lastIndex, nextMatchIdx).trim() 
+                            : textToParse.substring(re.lastIndex).trim();
+                     loadedMsgs.push({ role: "bot", sender, text: textToParse.substring(match.index + match[0].length, nextMatchIdx !== -1 ? nextMatchIdx : textToParse.length).trim() });
+                     re.lastIndex = nextMatchIdx !== -1 ? nextMatchIdx : textToParse.length;
+                 }
+                 if (!hasMatches) loadedMsgs.push({ role: "bot", text: textToParse });
+             }
+        }
+
         for (const line of lines) {
           if (line.startsWith("User: ")) {
-            if (currentRole) loadedMsgs.push({ role: currentRole, text: currentText.trim() });
+            if (currentRole === "bot") flushBotQueue();
+            else if (currentRole === "user") loadedMsgs.push({ role: "user", text: currentText.trim() });
             currentRole = "user";
             currentText = line.substring(6);
           } else if (line.startsWith("Bot: ")) {
-            if (currentRole) loadedMsgs.push({ role: currentRole, text: currentText.trim() });
+            if (currentRole === "bot") flushBotQueue();
+            else if (currentRole === "user") loadedMsgs.push({ role: "user", text: currentText.trim() });
             currentRole = "bot";
             currentText = line.substring(5);
           } else {
             currentText += "\n" + line;
           }
         }
-        if (currentRole) loadedMsgs.push({ role: currentRole, text: currentText.trim() });
+        if (currentRole === "bot") flushBotQueue();
+        else if (currentRole === "user") loadedMsgs.push({ role: "user", text: currentText.trim() });
 
-        if (loadedMsgs.length > 0) {
-          setMsgs(loadedMsgs);
-        } else {
-          setMsgs([{ role: "bot", text: "Chưa có tin nhắn nào." }]);
-        }
+        if (loadedMsgs.length > 0) setMsgs(loadedMsgs);
+        else setMsgs([{ role: "bot", text: "Chưa có tin nhắn nào." }]);
       } else {
         setMsgs([{ role: "bot", text: "Chưa có tin nhắn nào." }]);
       }
@@ -86,38 +177,212 @@ export default function Page() {
     }
   }
 
-  async function send() {
-    const text = input.trim();
+  async function send(silentText?: string | React.MouseEvent | React.KeyboardEvent) {
+    if (isSendingRef.current) return;
+    
+    if (!shouldFlushRef.current) {
+       shouldFlushRef.current = true;
+       abortDelayRef.current(); 
+    }
+
+    const text = typeof silentText === "string" ? silentText : input.trim();
     if (!text || busy) return;
-    setInput("");
-    setMsgs((m) => [...m, { role: "user", text }]);
+    
+    isSendingRef.current = true;
+    if (typeof silentText !== "string") setInput("");
+    
+    if (text !== "[USER_SILENT]") {
+        setMsgs((m) => [...m, { role: "user", text }]);
+    }
     setBusy(true);
+    let finalOutputQueue: any[] = [];
+    
     try {
       const payload = {
         user_message: text,
         thread_id: threadId,
         user_name: name || "Khách",
+        user_id: userId,
         selected_model: model,
+        system_variant: "ours_full",
       };
 
-      const res = await fetch(`${apiUrl}/chat`, {
+      const res = await fetch(`${apiUrl}/chat/stream`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
 
-      const data = (await res.json()) as { reply?: string; thread_id?: string };
-      if (data.thread_id && !threadId) {
-        setThreadId(data.thread_id);
+      if (!res.body) throw new Error("No response body");
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = "";
+
+      // Cleanup old typical messages first if any
+      setMsgs((prev) => {
+          const arr = [...prev];
+          if (arr[arr.length - 1]?.isTyping) arr.pop();
+          return arr;
+      });
+      console.log("Hệ thống đang phân tích...");
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split("\n\n");
+        buffer = lines.pop() || "";
+        
+        for (const line of lines) {
+          if (line.startsWith("data: ")) {
+             const dataStr = line.substring(6);
+             const p = JSON.parse(dataStr);
+             
+	             if ((p.node === "Orchestrator" || p.node === "Therapist_Orchestrator") && p.next_speaker) {
+                 let senderName = "Nhà trị liệu";
+                 if (p.next_speaker === "peer_mirror_agent") senderName = "Nam";
+                 else if (p.next_speaker === "veteran_peer_agent") senderName = "Chị Linh";
+                 
+                 if (p.next_speaker !== "FINISH" && p.next_speaker !== "Guardrails") {
+                     setMsgs((prev) => {
+                         const arr = [...prev];
+                         if (arr[arr.length - 1]?.isTyping) arr.pop();
+                         arr.push({ role: "bot", text: "đang nhập...", isTyping: true, sender: senderName });
+                         return arr;
+                     });
+                 }
+             }
+
+	             if (p.ui_action === "SHOW_DASS21") setShowDass21(true);
+	             if (p.thread_id && !threadId) setThreadId(p.thread_id);
+	             if (p.final_output) finalOutputQueue = p.final_output;
+	             else if (p.final_reply) {
+	               finalOutputQueue = [{ sender: "Nhà trị liệu", text: p.final_reply, typing_time_ms: 800 }];
+	             }
+	          }
+        }
       }
-      setMsgs((m) => [...m, { role: "bot", text: data.reply || "Mình chưa trả lời được." }]);
       
-      // Refresh sidebar
-      fetchConversations();
     } catch {
-      setMsgs((m) => [...m, { role: "bot", text: "Lỗi kết nối backend." }]);
+      setMsgs((m) => {
+         const filtered = m.filter(msg => !msg.isTyping);
+         return [...filtered, { role: "bot", text: "Lỗi kết nối backend." }];
+      });
     } finally {
+      // Clear trailing 'isTyping' bubble from system
+      setMsgs((prev) => {
+          const arr = [...prev];
+          if (arr[arr.length - 1]?.isTyping) arr.pop();
+          return arr;
+      });
       setBusy(false);
+      isSendingRef.current = false;
+      fetchConversations();
+      
+      // FIRE THE ANIMATED QUEUE
+      if (finalOutputQueue.length > 0) {
+          processQueue(finalOutputQueue);
+      }
+    }
+  }
+
+  async function submitDass21(answers: number[]) {
+    if (isSendingRef.current) return;
+    isSendingRef.current = true;
+    setShowDass21(false);
+    
+    if (!shouldFlushRef.current) {
+       shouldFlushRef.current = true;
+       abortDelayRef.current(); 
+    }
+
+    setMsgs((m) => [...m, { role: "user", text: "[Đã nộp bài kiểm tra DASS-21]" }]);
+    setBusy(true);
+    let finalOutputQueue: any[] = [];
+    
+    try {
+      const payload = {
+        user_message: JSON.stringify({ DASS21: answers }),
+        thread_id: threadId,
+        user_name: name || "Khách",
+        user_id: userId,
+        selected_model: model,
+        system_variant: "ours_full",
+      };
+
+      const res = await fetch(`${apiUrl}/chat/stream`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      
+      if (!res.body) throw new Error("No response body");
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = "";
+
+      setMsgs((prev) => {
+          const arr = [...prev];
+          if (arr[arr.length - 1]?.isTyping) arr.pop();
+          return arr;
+      });
+      console.log("Đang phân bổ phòng trị liệu...");
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+        
+        const lines = buffer.split("\n\n");
+        buffer = lines.pop() || "";
+        
+        for (const line of lines) {
+          if (line.startsWith("data: ")) {
+             const dataStr = line.substring(6);
+             const p = JSON.parse(dataStr);
+             
+	             if ((p.node === "Orchestrator" || p.node === "Therapist_Orchestrator") && p.next_speaker) {
+                 let senderName = "Nhà trị liệu";
+                 if (p.next_speaker === "peer_mirror_agent") senderName = "Nam";
+                 else if (p.next_speaker === "veteran_peer_agent") senderName = "Chị Linh";
+                 
+                 if (p.next_speaker !== "FINISH" && p.next_speaker !== "Guardrails") {
+                     setMsgs((prev) => {
+                         const arr = [...prev];
+                         if (arr[arr.length - 1]?.isTyping) arr.pop();
+                         arr.push({ role: "bot", text: "đang nhập...", isTyping: true, sender: senderName });
+                         return arr;
+                     });
+                 }
+             }
+
+	             if (p.ui_action === "SHOW_DASS21") setShowDass21(true);
+	             if (p.thread_id && !threadId) setThreadId(p.thread_id);
+	             if (p.final_output) finalOutputQueue = p.final_output;
+	             else if (p.final_reply) {
+	               finalOutputQueue = [{ sender: "Nhà trị liệu", text: p.final_reply, typing_time_ms: 800 }];
+	             }
+	          }
+        }
+      }
+    } catch {
+      setMsgs((m) => {
+         const filtered = m.filter(msg => !msg.isTyping);
+         return [...filtered, { role: "bot", text: "Lỗi kết nối backend." }];
+      });
+    } finally {
+      setMsgs((prev) => {
+          const arr = [...prev];
+          if (arr[arr.length - 1]?.isTyping) arr.pop();
+          return arr;
+      });
+      setBusy(false);
+      isSendingRef.current = false;
+      fetchConversations();
+      
+      if (finalOutputQueue.length > 0) {
+          processQueue(finalOutputQueue);
+      }
     }
   }
 
@@ -147,7 +412,7 @@ export default function Page() {
         >
           <div style={{ marginBottom: 14 }}>
             <div style={{ fontSize: 26, fontWeight: 650, letterSpacing: -0.3, color: "#fff" }}>
-              CBT AI Therapist
+              AI Therapist
             </div>
             <div style={{ marginTop: 6, color: "rgba(238, 240, 255, 0.70)", fontSize: 14 }}>
               Nhập tên để hệ thống lưu trữ lịch sử cá nhân của bạn.
@@ -191,84 +456,39 @@ export default function Page() {
 
   return (
     <div style={{ display: "flex", height: "100vh", background: "#0B0D14", color: "#EEF0FF" }}>
-      {/* SIDEBAR */}
-      <div
-        style={{
-          width: 300,
-          borderRight: "1px solid rgba(255,255,255,0.08)",
-          display: "flex",
-          flexDirection: "column",
-          background: "rgba(15, 17, 26, 0.95)",
-        }}
-      >
-        <div style={{ padding: 20 }}>
-          <button
-            onClick={newChat}
-            style={{
-              width: "100%",
-              padding: "12px",
-              borderRadius: 12,
-              background: "linear-gradient(135deg, #A855F7 0%, #6D28D9 100%)",
-              color: "#fff",
-              cursor: "pointer",
-              border: "1px solid rgba(255,255,255,0.1)",
-              fontWeight: 600,
-              boxShadow: "0 4px 15px rgba(168, 85, 247, 0.2)",
-              transition: "opacity 0.2s",
-            }}
-          >
-            + Cuộc trò chuyện mới
-          </button>
-        </div>
-        
-        <div style={{ padding: "0 20px 10px", fontSize: 13, color: "rgba(255,255,255,0.4)", fontWeight: 600, letterSpacing: 0.5 }}>
-          LỊCH SỬ HỘI THOẠI
-        </div>
-
-        <div style={{ flex: 1, overflowY: "auto" }}>
-          {conversations.length === 0 ? (
-            <div style={{ padding: 20, color: "rgba(255,255,255,0.3)", fontSize: 13, textAlign: "center" }}>
-              Chưa có lịch sử.
-            </div>
-          ) : (
-            conversations.map((c) => (
-              <div
-                key={c.id}
-                onClick={() => loadChat(c.id)}
-                style={{
-                  padding: "14px 20px",
-                  cursor: "pointer",
-                  background: threadId === c.id ? "rgba(168, 85, 247, 0.15)" : "transparent",
-                  borderLeft: threadId === c.id ? "3px solid #A855F7" : "3px solid transparent",
-                  transition: "background 0.2s",
-                }}
-              >
-                <div style={{ color: threadId === c.id ? "#fff" : "rgba(255,255,255,0.8)", fontSize: 14, fontWeight: 500, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-                  {c.title}
-                </div>
-                <div style={{ color: "rgba(238, 240, 255, 0.4)", fontSize: 12, marginTop: 4 }}>
-                  {new Date(c.updated_at).toLocaleString('vi-VN')}
-                </div>
-              </div>
-            ))
-          )}
-        </div>
-        
-        <div style={{ padding: 20, borderTop: "1px solid rgba(255,255,255,0.08)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-           <div style={{ fontSize: 14, fontWeight: 500, color: "rgba(255,255,255,0.7)" }}>👤 {name || "Khách"}</div>
-           <button onClick={() => setReady(false)} style={{ background: "transparent", color: "rgba(255,255,255,0.5)", border: "none", cursor: "pointer", fontSize: 12 }}>Đăng xuất</button>
-        </div>
-      </div>
+      <ChatSidebar
+        conversations={conversations}
+        threadId={threadId}
+        onNewChat={newChat}
+        onLoadChat={loadChat}
+        userName={name || "Khách"}
+        onLogout={() => setReady(false)}
+      />
 
       {/* TÀI KHOẢN & MAIN CHAT */}
       <div style={{ flex: 1, display: "flex", flexDirection: "column", padding: "20px 40px" }}>
         {/* HEADER */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
           <div>
-            <div style={{ fontSize: 24, fontWeight: 700, letterSpacing: -0.5, color: "#fff" }}>Phòng Khám Tâm Lý AI</div>
-            <div style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>Luôn sẵn sàng lắng nghe bạn</div>
+            <div style={{ fontSize: 24, fontWeight: 700, letterSpacing: -0.5, color: "#fff" }}>Không Gian Lắng Nghe AI</div>
+            <div style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>Luôn sẵn sàng đồng hành cùng bạn</div>
           </div>
-          <div>
+          <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+            <button
+              onClick={() => setShowDass21(true)}
+              disabled={busy}
+              style={{
+                padding: "10px 14px",
+                borderRadius: 8,
+                background: "rgba(168, 85, 247, 0.14)",
+                border: "1px solid rgba(168, 85, 247, 0.35)",
+                color: "#EEF0FF",
+                cursor: busy ? "not-allowed" : "pointer",
+                fontWeight: 600,
+              }}
+            >
+              DASS-21
+            </button>
             <select
               value={model}
               onChange={(e) => setModel(e.target.value)}
@@ -283,6 +503,7 @@ export default function Page() {
               }}
             >
               <option value="gemini" style={{ background: "#0B0D14" }}>🤖 Google Gemini Pro</option>
+              <option value="groq" style={{ background: "#0B0D14" }}>🚀 Groq (LLaMA 3.3)</option>
               <option value="slm" style={{ background: "#0B0D14" }}>⚡ Qwen3 SLM (Kaggle)</option>
             </select>
           </div>
@@ -333,8 +554,9 @@ export default function Page() {
                   boxShadow: m.role === "user" ? "0 4px 15px rgba(168, 85, 247, 0.15)" : "none"
                 }}
               >
-                {m.role === "bot" && i > 0 && <strong style={{color: "#A855F7", display: "block", marginBottom: 6, fontSize: 12, letterSpacing: 0.5}}>AI THERAPIST</strong>}
+                {m.role === "bot" && <strong style={{color: "#A855F7", display: "block", marginBottom: 6, fontSize: 13, letterSpacing: 0.5}}>{m.sender ? m.sender.toUpperCase() : "AI THERAPIST"}</strong>}
                 {m.text}
+                {m.isTyping && <span style={{ marginLeft: 6, animation: "blink 1s infinite" }}>|</span>}
               </div>
             </div>
           ))}
@@ -381,10 +603,18 @@ export default function Page() {
               opacity: busy ? 0.75 : 1,
             }}
           >
-            {busy ? "Đang gõ..." : "Gửi"}
+            {busy ? "Đang gửi..." : "Gửi"}
           </button>
         </div>
       </div>
+
+      {/* DASS-21 MODAL */}
+      <Dass21Modal 
+         show={showDass21} 
+         onHide={() => setShowDass21(false)} 
+         onSubmit={submitDass21} 
+         busy={busy} 
+      />
     </div>
   );
 }

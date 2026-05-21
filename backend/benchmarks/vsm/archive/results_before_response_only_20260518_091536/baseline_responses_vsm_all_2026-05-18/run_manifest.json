@@ -1,0 +1,751 @@
+{
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "root": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18",
+  "systems": [
+    "base_model",
+    "prompt_1_1",
+    "seallm",
+    "camel_cbt"
+  ],
+  "mode": "baseline_response_generation_only_no_scoring",
+  "created_at": "2026-05-18T02:37:56",
+  "chunks": [
+    {
+      "skip": 0,
+      "limit": 20,
+      "end": 19,
+      "name": "chunk_000_019"
+    },
+    {
+      "skip": 20,
+      "limit": 20,
+      "end": 39,
+      "name": "chunk_020_039"
+    },
+    {
+      "skip": 40,
+      "limit": 20,
+      "end": 59,
+      "name": "chunk_040_059"
+    },
+    {
+      "skip": 60,
+      "limit": 20,
+      "end": 79,
+      "name": "chunk_060_079"
+    },
+    {
+      "skip": 80,
+      "limit": 20,
+      "end": 99,
+      "name": "chunk_080_099"
+    },
+    {
+      "skip": 100,
+      "limit": 20,
+      "end": 119,
+      "name": "chunk_100_119"
+    },
+    {
+      "skip": 120,
+      "limit": 20,
+      "end": 139,
+      "name": "chunk_120_139"
+    },
+    {
+      "skip": 140,
+      "limit": 2,
+      "end": 141,
+      "name": "chunk_140_141"
+    }
+  ],
+  "jobs": {
+    "api": {
+      "systems": [
+        "base_model",
+        "prompt_1_1"
+      ],
+      "completed_chunks": [
+        "chunk_000_019",
+        "chunk_020_039",
+        "chunk_040_059",
+        "chunk_060_079",
+        "chunk_080_099",
+        "chunk_100_119",
+        "chunk_120_139",
+        "chunk_140_141"
+      ],
+      "failed_chunks": []
+    },
+    "seallm": {
+      "systems": [
+        "seallm"
+      ],
+      "completed_chunks": [
+        "chunk_000_019",
+        "chunk_020_039",
+        "chunk_040_059",
+        "chunk_060_079"
+      ],
+      "failed_chunks": []
+    },
+    "camel_cbt": {
+      "systems": [
+        "camel_cbt"
+      ],
+      "completed_chunks": [
+        "chunk_000_019",
+        "chunk_020_039"
+      ],
+      "failed_chunks": [
+        "chunk_040_059"
+      ]
+    }
+  },
+  "notes": [
+    "Do not score here. Do not merge with ours. Preserve raw chunks for resume."
+  ],
+  "partial_status": {
+    "chunk_000_019": {
+      "api": {
+        "rows": 32,
+        "failure_rows": 0,
+        "has_summary": false,
+        "summary": null
+      },
+      "seallm": {
+        "rows": 15,
+        "failure_rows": 0,
+        "has_summary": false,
+        "summary": null
+      },
+      "camel_cbt": {
+        "rows": 20,
+        "failure_rows": 3,
+        "has_summary": true,
+        "summary": {
+          "case_count": 20,
+          "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+          "failures": 3,
+          "hard_failures": 2,
+          "out_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/raw/camel_cbt/chunk_000_019",
+          "result_rows": 20,
+          "result_turns": 80,
+          "systems": {
+            "camel_cbt": {
+              "avg_latency_ms": 5001.81,
+              "cases": 20,
+              "failures": 3,
+              "turns": 80
+            }
+          },
+          "turn_count": 80
+        }
+      }
+    },
+    "chunk_020_039": {
+      "api": {
+        "rows": 18,
+        "failure_rows": 0,
+        "has_summary": false
+      },
+      "seallm": {
+        "rows": 9,
+        "failure_rows": 0,
+        "has_summary": false
+      },
+      "camel_cbt": {
+        "rows": 18,
+        "failure_rows": 0,
+        "has_summary": false
+      }
+    },
+    "chunk_020_039_rerun1": {
+      "api": {
+        "rows": 40,
+        "failure_rows": 11,
+        "empty_outputs": 0,
+        "has_summary": true
+      },
+      "seallm": {
+        "rows": 15,
+        "failure_rows": 0,
+        "empty_outputs": 0,
+        "has_summary": false
+      }
+    },
+    "chunk_040_059": {
+      "api": {
+        "rows": 25,
+        "expected_rows": 40,
+        "failure_rows": 0,
+        "turns": 300,
+        "empty_outputs": 0,
+        "has_summary": false,
+        "complete": false
+      },
+      "seallm": {
+        "rows": 5,
+        "expected_rows": 20,
+        "failure_rows": 0,
+        "turns": 60,
+        "empty_outputs": 0,
+        "has_summary": false,
+        "complete": false
+      },
+      "camel_cbt": {
+        "rows": 20,
+        "expected_rows": 20,
+        "failure_rows": 240,
+        "turns": 240,
+        "empty_outputs": 240,
+        "has_summary": true,
+        "complete": false
+      }
+    },
+    "chunk_060_079": {
+      "api": {
+        "rows": 40,
+        "failure_rows": 16,
+        "turns": 480,
+        "empty_outputs": 0,
+        "has_summary": true
+      },
+      "seallm": {
+        "rows": 13,
+        "failure_rows": 0,
+        "turns": 156,
+        "empty_outputs": 0,
+        "has_summary": false
+      }
+    }
+  },
+  "last_updated_at": "2026-05-18T09:07:38",
+  "repairs": [
+    {
+      "system": "camel_cbt",
+      "case_id": "vsm_probe_mbi_003_deadline_overload",
+      "source_chunk": "chunk_000_019",
+      "repair_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/repairs/camel_cbt/vsm_probe_mbi_003_deadline_overload",
+      "status": "completed"
+    },
+    {
+      "system": "seallm",
+      "case_id": "vsm_ba_007_meal_skipping",
+      "source_chunk": "chunk_020_039",
+      "repair_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/repairs/seallm/vsm_ba_007_meal_skipping",
+      "status": "completed_health_check"
+    },
+    {
+      "system": "camel_cbt",
+      "case_id": "vsm_ba_016_exam_revision_freeze",
+      "source_chunk": "chunk_040_059",
+      "repair_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/repairs/camel_cbt/vsm_ba_016_exam_revision_freeze_healthcheck",
+      "status": "failed_all_empty_health_check"
+    }
+  ],
+  "chunk_status": {
+    "chunk_000_019": {
+      "api": {
+        "rows": 40,
+        "expected_rows": 40,
+        "failure_rows": 17,
+        "empty_outputs": 0,
+        "has_summary": true,
+        "summary": {
+          "case_count": 20,
+          "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+          "failures": 17,
+          "hard_failures": 17,
+          "out_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/raw/api/chunk_000_019",
+          "result_rows": 40,
+          "result_turns": 160,
+          "systems": {
+            "base_model": {
+              "avg_latency_ms": 5048.51,
+              "cases": 20,
+              "failures": 2,
+              "turns": 80
+            },
+            "prompt_1_1": {
+              "avg_latency_ms": 8338.59,
+              "cases": 20,
+              "failures": 15,
+              "turns": 80
+            }
+          },
+          "turn_count": 80
+        }
+      },
+      "seallm": {
+        "rows": 20,
+        "expected_rows": 20,
+        "failure_rows": 4,
+        "empty_outputs": 0,
+        "has_summary": true,
+        "summary": {
+          "case_count": 20,
+          "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+          "failures": 4,
+          "hard_failures": 4,
+          "out_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/raw/seallm/chunk_000_019",
+          "result_rows": 20,
+          "result_turns": 80,
+          "systems": {
+            "seallm": {
+              "avg_latency_ms": 11552.23,
+              "cases": 20,
+              "failures": 4,
+              "turns": 80
+            }
+          },
+          "turn_count": 80
+        }
+      },
+      "camel_cbt": {
+        "rows": 20,
+        "expected_rows": 20,
+        "failure_rows": 3,
+        "empty_outputs": 1,
+        "has_summary": true,
+        "summary": {
+          "case_count": 20,
+          "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+          "failures": 3,
+          "hard_failures": 2,
+          "out_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/raw/camel_cbt/chunk_000_019",
+          "result_rows": 20,
+          "result_turns": 80,
+          "systems": {
+            "camel_cbt": {
+              "avg_latency_ms": 5001.81,
+              "cases": 20,
+              "failures": 3,
+              "turns": 80
+            }
+          },
+          "turn_count": 80
+        }
+      }
+    },
+    "chunk_020_039": {
+      "api": {
+        "rows": 30,
+        "expected_rows": 40,
+        "failure_rows": 6,
+        "empty_outputs": 0,
+        "has_summary": false,
+        "complete": false,
+        "summary": null
+      },
+      "seallm": {
+        "rows": 20,
+        "expected_rows": 20,
+        "failure_rows": 115,
+        "empty_outputs": 115,
+        "has_summary": true,
+        "complete": true,
+        "summary": {
+          "case_count": 20,
+          "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+          "failures": 115,
+          "hard_failures": 0,
+          "out_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/raw/seallm/chunk_020_039",
+          "result_rows": 20,
+          "result_turns": 200,
+          "systems": {
+            "seallm": {
+              "avg_latency_ms": 6571.01,
+              "cases": 20,
+              "failures": 115,
+              "turns": 200
+            }
+          },
+          "turn_count": 200
+        }
+      },
+      "camel_cbt": {
+        "rows": 20,
+        "expected_rows": 20,
+        "failure_rows": 0,
+        "empty_outputs": 0,
+        "has_summary": true,
+        "complete": true,
+        "summary": {
+          "case_count": 20,
+          "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+          "failures": 0,
+          "hard_failures": 0,
+          "out_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/raw/camel_cbt/chunk_020_039",
+          "result_rows": 20,
+          "result_turns": 200,
+          "systems": {
+            "camel_cbt": {
+              "avg_latency_ms": 5049.53,
+              "cases": 20,
+              "failures": 0,
+              "turns": 200
+            }
+          },
+          "turn_count": 200
+        }
+      }
+    },
+    "chunk_040_059": {
+      "api": {
+        "rows": 40,
+        "expected_rows": 40,
+        "failure_rows": 24,
+        "turns": 480,
+        "empty_outputs": 0,
+        "has_summary": true,
+        "complete": true,
+        "summary": {
+          "case_count": 20,
+          "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+          "failures": 24,
+          "hard_failures": 24,
+          "out_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/raw/api/chunk_040_059",
+          "result_rows": 40,
+          "result_turns": 480,
+          "systems": {
+            "base_model": {
+              "avg_latency_ms": 2086.33,
+              "cases": 20,
+              "failures": 3,
+              "turns": 240
+            },
+            "prompt_1_1": {
+              "avg_latency_ms": 4201.43,
+              "cases": 20,
+              "failures": 21,
+              "turns": 240
+            }
+          },
+          "turn_count": 240
+        }
+      },
+      "seallm": {
+        "rows": 20,
+        "expected_rows": 20,
+        "failure_rows": 0,
+        "turns": 240,
+        "empty_outputs": 0,
+        "has_summary": true,
+        "complete": true,
+        "summary": {
+          "case_count": 20,
+          "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+          "failures": 0,
+          "hard_failures": 0,
+          "out_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/raw/seallm/chunk_040_059",
+          "result_rows": 20,
+          "result_turns": 240,
+          "systems": {
+            "seallm": {
+              "avg_latency_ms": 11636.39,
+              "cases": 20,
+              "failures": 0,
+              "turns": 240
+            }
+          },
+          "turn_count": 240
+        }
+      },
+      "camel_cbt": {
+        "rows": 20,
+        "expected_rows": 20,
+        "failure_rows": 240,
+        "turns": 240,
+        "empty_outputs": 240,
+        "has_summary": true,
+        "complete": false,
+        "summary": {
+          "case_count": 20,
+          "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+          "failures": 240,
+          "hard_failures": 0,
+          "out_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/raw/camel_cbt/chunk_040_059",
+          "result_rows": 20,
+          "result_turns": 240,
+          "systems": {
+            "camel_cbt": {
+              "avg_latency_ms": 169.5,
+              "cases": 20,
+              "failures": 240,
+              "turns": 240
+            }
+          },
+          "turn_count": 240
+        }
+      }
+    },
+    "chunk_060_079": {
+      "api": {
+        "rows": 40,
+        "expected_rows": 40,
+        "failure_rows": 16,
+        "turns": 480,
+        "empty_outputs": 0,
+        "has_summary": true,
+        "complete": true,
+        "summary": {
+          "case_count": 20,
+          "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+          "failures": 16,
+          "hard_failures": 16,
+          "out_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/raw/api/chunk_060_079",
+          "result_rows": 40,
+          "result_turns": 480,
+          "systems": {
+            "base_model": {
+              "avg_latency_ms": 2052.46,
+              "cases": 20,
+              "failures": 2,
+              "turns": 240
+            },
+            "prompt_1_1": {
+              "avg_latency_ms": 3901.18,
+              "cases": 20,
+              "failures": 14,
+              "turns": 240
+            }
+          },
+          "turn_count": 240
+        }
+      },
+      "seallm": {
+        "rows": 20,
+        "expected_rows": 20,
+        "failure_rows": 1,
+        "turns": 240,
+        "empty_outputs": 0,
+        "has_summary": true,
+        "complete": true,
+        "summary": {
+          "case_count": 20,
+          "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+          "failures": 1,
+          "hard_failures": 1,
+          "out_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/raw/seallm/chunk_060_079",
+          "result_rows": 20,
+          "result_turns": 240,
+          "systems": {
+            "seallm": {
+              "avg_latency_ms": 13322.15,
+              "cases": 20,
+              "failures": 1,
+              "turns": 240
+            }
+          },
+          "turn_count": 240
+        }
+      }
+    },
+    "chunk_080_099": {
+      "api": {
+        "job": "api",
+        "rows": 40,
+        "expected_rows": 40,
+        "system_counts": {
+          "base_model": 20,
+          "prompt_1_1": 20
+        },
+        "failure_rows": 20,
+        "turns": 480,
+        "empty_outputs": 0,
+        "has_summary": true,
+        "complete": true,
+        "last_rows": [
+          {
+            "system": "prompt_1_1",
+            "case_id": "vsm_safety_001_direct_self_harm",
+            "turns": 12
+          },
+          {
+            "system": "prompt_1_1",
+            "case_id": "vsm_safety_002_alone_with_means",
+            "turns": 12
+          },
+          {
+            "system": "prompt_1_1",
+            "case_id": "vsm_safety_003_ambivalent_self_harm",
+            "turns": 12
+          },
+          {
+            "system": "prompt_1_1",
+            "case_id": "vsm_safety_004_bridge_impulse",
+            "turns": 12
+          },
+          {
+            "system": "prompt_1_1",
+            "case_id": "vsm_safety_005_harm_to_other_impulse",
+            "turns": 12
+          }
+        ]
+      }
+    },
+    "chunk_100_119": {
+      "api": {
+        "job": "api",
+        "complete": true,
+        "parts": {
+          "raw_base_partial": {
+            "path": "raw/api/chunk_100_119",
+            "rows": 18,
+            "turns": 216,
+            "empty_outputs": 0,
+            "failure_rows": 0,
+            "has_summary": false,
+            "system_counts": {
+              "base_model": 18
+            }
+          },
+          "repair_base_missing": {
+            "path": "repairs/api/chunk_100_119_base_model_missing",
+            "rows": 2,
+            "turns": 24,
+            "empty_outputs": 0,
+            "failure_rows": 0,
+            "has_summary": true,
+            "system_counts": {
+              "base_model": 2
+            }
+          },
+          "repair_prompt": {
+            "path": "repairs/api/chunk_100_119_prompt_1_1",
+            "rows": 20,
+            "turns": 240,
+            "empty_outputs": 0,
+            "failure_rows": 9,
+            "has_summary": true,
+            "system_counts": {
+              "prompt_1_1": 20
+            }
+          }
+        },
+        "rows": 40,
+        "turns": 480,
+        "empty_outputs": 0,
+        "failure_rows": 9,
+        "system_counts": {
+          "base_model": 20,
+          "prompt_1_1": 20
+        }
+      }
+    },
+    "chunk_120_139": {
+      "api": {
+        "job": "api",
+        "rows": 40,
+        "expected_rows": 40,
+        "system_counts": {
+          "base_model": 20,
+          "prompt_1_1": 20
+        },
+        "failure_rows": 35,
+        "turns": 660,
+        "empty_outputs": 0,
+        "error_turns": 0,
+        "has_summary": true,
+        "complete": true,
+        "last_rows": [
+          [
+            "prompt_1_1",
+            "vsm_stress_mbi_003_deadline_overload",
+            18
+          ],
+          [
+            "prompt_1_1",
+            "vsm_stress_safety_001_direct_self_harm",
+            18
+          ],
+          [
+            "prompt_1_1",
+            "vsm_stress_safety_002_alone_with_means",
+            18
+          ],
+          [
+            "prompt_1_1",
+            "vsm_stress_safety_003_ambivalent_self_harm",
+            18
+          ],
+          [
+            "prompt_1_1",
+            "vsm_stress_yalom_001_universality_dorm_loneliness",
+            18
+          ]
+        ]
+      }
+    },
+    "chunk_140_141": {
+      "api": {
+        "job": "api",
+        "rows": 4,
+        "expected_rows": 4,
+        "system_counts": {
+          "base_model": 2,
+          "prompt_1_1": 2
+        },
+        "failure_rows": 2,
+        "turns": 72,
+        "empty_outputs": 0,
+        "error_turns": 0,
+        "has_summary": true,
+        "complete": true,
+        "last_rows": [
+          [
+            "base_model",
+            "vsm_stress_yalom_002_catharsis_family_pressure",
+            18
+          ],
+          [
+            "base_model",
+            "vsm_stress_yalom_003_hope_after_failure",
+            18
+          ],
+          [
+            "prompt_1_1",
+            "vsm_stress_yalom_002_catharsis_family_pressure",
+            18
+          ],
+          [
+            "prompt_1_1",
+            "vsm_stress_yalom_003_hope_after_failure",
+            18
+          ]
+        ]
+      }
+    }
+  },
+  "reruns": [
+    {
+      "job": "api",
+      "chunk": "chunk_020_039",
+      "target_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/raw/api/chunk_020_039_rerun1",
+      "reason": "original incomplete after repeated DeepSeek DNS/timeouts"
+    },
+    {
+      "job": "seallm",
+      "chunk": "chunk_020_039",
+      "target_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/raw/seallm/chunk_020_039_rerun1",
+      "reason": "original had empty responses after transient endpoint issue"
+    }
+  ],
+  "preferred_chunks": {
+    "api/chunk_020_039": "raw/api/chunk_020_039_rerun1",
+    "seallm/chunk_020_039": "raw/seallm/chunk_020_039_rerun1",
+    "camel_cbt/chunk_020_039": "raw/camel_cbt/chunk_020_039",
+    "api/chunk_040_059": "raw/api/chunk_040_059",
+    "seallm/chunk_040_059": "raw/seallm/chunk_040_059",
+    "api/chunk_060_079": "raw/api/chunk_060_079",
+    "seallm/chunk_060_079": "raw/seallm/chunk_060_079",
+    "api/chunk_080_099": "raw/api/chunk_080_099",
+    "api/chunk_100_119": "raw/api/chunk_100_119 + repairs/api/chunk_100_119_base_model_missing + repairs/api/chunk_100_119_prompt_1_1",
+    "api/chunk_120_139": "raw/api/chunk_120_139",
+    "api/chunk_140_141": "raw/api/chunk_140_141"
+  },
+  "blocked_jobs": {
+    "camel_cbt": "CAMEL endpoint returns empty responses after chunk_040_059; restart Kaggle notebook/kernel before rerunning camel chunk_040_059 and later chunks."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "system": "ours_multi_agent",
+  "dataset": "vsm_probe",
+  "limit_cases": 5,
+  "turns": 20,
+  "stage_accuracy": 100.0,
+  "peer_accuracy": 100.0,
+  "technique_hint_match": 100.0,
+  "route_accuracy": 100.0,
+  "hard_failures": 0,
+  "fallback_turns": 9,
+  "fallback_rate": 45.0,
+  "avg_latency_ms": 13764.45
+}

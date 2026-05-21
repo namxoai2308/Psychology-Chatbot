@@ -1,0 +1,7 @@
+System,Peer Selection Accuracy,Yalom Factor Match,Nam Persona Validity,Linh Persona Validity,Peer Silence Accuracy,Repetition Penalty
+Ours Full,100.0,100.0,100.0,100.0,100.0,0.0
+Ours No Peer,0.0,0.0,0.0,0.0,100.0,100.0
+Ours No Safety Critic,100.0,100.0,100.0,100.0,100.0,0.0
+Ours No Validator,100.0,100.0,100.0,100.0,100.0,0.0
+Single Agent Plain,0.0,0.0,0.0,0.0,100.0,100.0
+Single Agent + Stage,0.0,0.0,0.0,0.0,100.0,100.0

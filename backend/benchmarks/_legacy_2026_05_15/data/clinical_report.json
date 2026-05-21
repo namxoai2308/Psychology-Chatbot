@@ -1,0 +1,21 @@
+{
+  "metrics": {
+    "average_ctrs": 4.0,
+    "average_yalom": 4.0,
+    "total_sessions": 2
+  },
+  "evaluations": [
+    {
+      "ctrs_score": 4,
+      "yalom_score": 3,
+      "feedback": "Hệ thống thể hiện sự thấu cảm nhưng còn thiếu chiến lược cụ thể và cách tiếp cận CBT để giúp người dùng vượt qua khó khăn.",
+      "patient_id": "student_000"
+    },
+    {
+      "ctrs_score": 4,
+      "yalom_score": 5,
+      "feedback": "Hệ thống thể hiện sự thấu cảm và gắn kết tốt, tuy nhiên cần cải thiện chiến lược hướng dẫn người dùng vượt qua nỗi đau.",
+      "patient_id": "student_001"
+    }
+  ]
+}

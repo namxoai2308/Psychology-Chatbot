@@ -1,0 +1,35 @@
+\babel@toc {english}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.4.1}{\ignorespaces Representative related work and the design gap motivating this thesis.}}{15}{table.caption.7}%
+\contentsline {table}{\numberline {2.5.1}{\ignorespaces Mapping from literature themes to system design decisions.}}{16}{table.caption.8}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.2.1}{\ignorespaces Evidence extraction and repair strategy.}}{21}{table.caption.10}%
+\contentsline {table}{\numberline {3.2.2}{\ignorespaces Route contract fields used by the therapist core.}}{22}{table.caption.12}%
+\contentsline {table}{\numberline {3.2.3}{\ignorespaces Route-stage summary for CBT, MBI, and BA.}}{23}{table.caption.13}%
+\contentsline {table}{\numberline {3.2.4}{\ignorespaces Stage FSM transition policy.}}{23}{table.caption.14}%
+\contentsline {table}{\numberline {3.2.5}{\ignorespaces Therapist planner input and output contract.}}{24}{table.caption.15}%
+\contentsline {table}{\numberline {3.3.1}{\ignorespaces Main state groups in the blackboard.}}{26}{table.caption.17}%
+\contentsline {table}{\numberline {3.4.1}{\ignorespaces Peer role contract.}}{28}{table.caption.19}%
+\contentsline {table}{\numberline {3.4.2}{\ignorespaces Peer contribution and silence policy.}}{29}{table.caption.20}%
+\contentsline {table}{\numberline {3.5.1}{\ignorespaces Supervisor audit checks.}}{30}{table.caption.22}%
+\contentsline {table}{\numberline {3.5.2}{\ignorespaces Safety critics and fallback actions.}}{31}{table.caption.23}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1.1}{\ignorespaces Compared systems in the full benchmark.}}{36}{table.caption.25}%
+\contentsline {table}{\numberline {4.1.2}{\ignorespaces Reported task-related indicators.}}{36}{table.caption.26}%
+\contentsline {table}{\numberline {4.2.1}{\ignorespaces Dataset split statistics for VSM-All.}}{37}{table.caption.27}%
+\contentsline {table}{\numberline {4.2.2}{\ignorespaces Case-group composition in VSM-All.}}{38}{table.caption.28}%
+\contentsline {table}{\numberline {4.3.1}{\ignorespaces Overall VSM-All leaderboard with comparative LLM judging.}}{38}{table.caption.29}%
+\contentsline {table}{\numberline {4.3.2}{\ignorespaces Route-level technique fidelity (\%) by system.}}{40}{table.caption.31}%
+\contentsline {table}{\numberline {4.3.3}{\ignorespaces Safety and robustness diagnostics across specific risk dimensions.}}{41}{table.caption.33}%
+\contentsline {table}{\numberline {4.3.4}{\ignorespaces CAPE-II inspired competence dimensions.}}{41}{table.caption.35}%
+\contentsline {table}{\numberline {4.3.5}{\ignorespaces Yalom therapeutic-factor scores.}}{42}{table.caption.36}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {A.0.1}{\ignorespaces CBT stage contract used by the prototype.}}{50}{table.caption.39}%
+\contentsline {table}{\numberline {A.0.2}{\ignorespaces MBI stage contract used by the prototype.}}{51}{table.caption.40}%
+\contentsline {table}{\numberline {A.0.3}{\ignorespaces BA stage contract used by the prototype.}}{51}{table.caption.41}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }

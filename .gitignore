@@ -3,6 +3,9 @@
 venv/
 __pycache__/
 *.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
 # Env secrets
 .env
@@ -10,3 +13,20 @@ __pycache__/
 !.env.example
 node_modules/
 frontend/node_modules/
+frontend/.next/
+
+# Local backend runtime artifacts
+backend/database/*.sqlite
+backend/database/*.sqlite-*
+database/*.sqlite
+database/*.sqlite-*
+*.sqlite-journal
+backend/**/__pycache__/
+backend/benchmarks/results/
+backend/eval/results/
+backend/.agents/
+backend/.codex/
+
+# Local runtime logs/caches
+backend/tests/logs/*.log
+.next/

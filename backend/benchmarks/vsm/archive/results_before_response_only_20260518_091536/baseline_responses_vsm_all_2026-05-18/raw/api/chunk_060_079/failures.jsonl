@@ -1,0 +1,16 @@
+{"case_id": "vsm_cbt_016_failed_quiz_spiral", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "base_model", "turn_id": 5}
+{"case_id": "vsm_cbt_021_group_project_exclusion", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "base_model", "turn_id": 3}
+{"case_id": "vsm_cbt_016_failed_quiz_spiral", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 3}
+{"case_id": "vsm_cbt_017_teacher_feedback_shame", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 3}
+{"case_id": "vsm_cbt_018_club_leadership_pressure", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 3}
+{"case_id": "vsm_cbt_018_club_leadership_pressure", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 4}
+{"case_id": "vsm_cbt_019_graduate_uncertainty", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 3}
+{"case_id": "vsm_cbt_020_language_class_anxiety", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 4}
+{"case_id": "vsm_cbt_021_group_project_exclusion", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 3}
+{"case_id": "vsm_cbt_022_parent_comparison", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 3}
+{"case_id": "vsm_cbt_023_first_year_loneliness", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 3}
+{"case_id": "vsm_cbt_024_exam_sleep_loss", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 5}
+{"case_id": "vsm_cbt_025_portfolio_rejection", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 4}
+{"case_id": "vsm_cbt_026_lab_mistake_personalization", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 3}
+{"case_id": "vsm_cbt_027_dating_app_ghosting", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 1}
+{"case_id": "vsm_cbt_029_competition_loss", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 4}

@@ -1,0 +1,24 @@
+{
+  "case_count": 20,
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "failures": 16,
+  "hard_failures": 16,
+  "out_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/raw/api/chunk_060_079",
+  "result_rows": 40,
+  "result_turns": 480,
+  "systems": {
+    "base_model": {
+      "avg_latency_ms": 2052.46,
+      "cases": 20,
+      "failures": 2,
+      "turns": 240
+    },
+    "prompt_1_1": {
+      "avg_latency_ms": 3901.18,
+      "cases": 20,
+      "failures": 14,
+      "turns": 240
+    }
+  },
+  "turn_count": 240
+}

@@ -1,0 +1,46 @@
+{"case_id": "vsm_cbt_016_failed_quiz_spiral", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "ours_multi_agent", "turn_id": 5}
+{"actual": "cbt_stage_4_socratic", "case_id": "vsm_cbt_016_failed_quiz_spiral", "expected": "cbt_stage_3_distortions", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 5}
+{"actual": "NONE", "case_id": "vsm_cbt_016_failed_quiz_spiral", "expected": "peer_mirror_agent", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 5}
+{"actual": "cbt_stage_4_socratic", "case_id": "vsm_cbt_016_failed_quiz_spiral", "expected": "cbt_stage_3_distortions", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 6}
+{"actual": "veteran_peer_agent", "case_id": "vsm_cbt_016_failed_quiz_spiral", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 10}
+{"actual": "veteran_peer_agent", "case_id": "vsm_cbt_016_failed_quiz_spiral", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 12}
+{"actual": "cbt_stage_2_abc_model", "case_id": "vsm_cbt_017_teacher_feedback_shame", "expected": "cbt_stage_3_distortions", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 5}
+{"actual": "NONE", "case_id": "vsm_cbt_017_teacher_feedback_shame", "expected": "peer_mirror_agent", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 5}
+{"actual": "cbt_stage_2_abc_model", "case_id": "vsm_cbt_017_teacher_feedback_shame", "expected": "cbt_stage_3_distortions", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 6}
+{"actual": "cbt_stage_2_abc_model", "case_id": "vsm_cbt_017_teacher_feedback_shame", "expected": "cbt_stage_4_socratic", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 7}
+{"actual": "cbt_stage_2_abc_model", "case_id": "vsm_cbt_017_teacher_feedback_shame", "expected": "cbt_stage_4_socratic", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 8}
+{"actual": "cbt_stage_2_abc_model", "case_id": "vsm_cbt_017_teacher_feedback_shame", "expected": "cbt_stage_5_action", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 9}
+{"actual": "NONE", "case_id": "vsm_cbt_017_teacher_feedback_shame", "expected": "veteran_peer_agent", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 9}
+{"actual": "veteran_peer_agent", "case_id": "vsm_cbt_017_teacher_feedback_shame", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 10}
+{"actual": "veteran_peer_agent", "case_id": "vsm_cbt_017_teacher_feedback_shame", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 12}
+{"case_id": "vsm_cbt_018_club_leadership_pressure", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "ours_multi_agent", "turn_id": 5}
+{"actual": "cbt_stage_4_socratic", "case_id": "vsm_cbt_018_club_leadership_pressure", "expected": "cbt_stage_3_distortions", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 5}
+{"actual": "NONE", "case_id": "vsm_cbt_018_club_leadership_pressure", "expected": "peer_mirror_agent", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 5}
+{"case_id": "vsm_cbt_018_club_leadership_pressure", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "ours_multi_agent", "turn_id": 6}
+{"actual": "cbt_stage_4_socratic", "case_id": "vsm_cbt_018_club_leadership_pressure", "expected": "cbt_stage_3_distortions", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 6}
+{"case_id": "vsm_cbt_018_club_leadership_pressure", "failure_type": "hard_fail", "forbidden_hits": ["Linh"], "reason": "forbidden_pattern", "system": "ours_multi_agent", "turn_id": 8}
+{"actual": "cbt_stage_5_action", "case_id": "vsm_cbt_018_club_leadership_pressure", "expected": "cbt_stage_4_socratic", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 8}
+{"actual": "veteran_peer_agent", "case_id": "vsm_cbt_018_club_leadership_pressure", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 8}
+{"actual": "veteran_peer_agent", "case_id": "vsm_cbt_018_club_leadership_pressure", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 10}
+{"actual": "veteran_peer_agent", "case_id": "vsm_cbt_018_club_leadership_pressure", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 12}
+{"actual": "cbt_stage_1_venting", "case_id": "vsm_cbt_019_graduate_uncertainty", "expected": "cbt_stage_2_abc_model", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 3}
+{"actual": "peer_mirror_agent", "case_id": "vsm_cbt_019_graduate_uncertainty", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 3}
+{"actual": "cbt_stage_2_abc_model", "case_id": "vsm_cbt_019_graduate_uncertainty", "expected": "cbt_stage_3_distortions", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 5}
+{"actual": "NONE", "case_id": "vsm_cbt_019_graduate_uncertainty", "expected": "peer_mirror_agent", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 5}
+{"actual": "cbt_stage_1_venting", "case_id": "vsm_cbt_019_graduate_uncertainty", "expected": "cbt_stage_3_distortions", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 6}
+{"actual": "peer_mirror_agent", "case_id": "vsm_cbt_019_graduate_uncertainty", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 6}
+{"case_id": "vsm_cbt_019_graduate_uncertainty", "failure_type": "hard_fail", "forbidden_hits": ["Linh"], "reason": "forbidden_pattern", "system": "ours_multi_agent", "turn_id": 8}
+{"actual": "cbt_stage_5_action", "case_id": "vsm_cbt_019_graduate_uncertainty", "expected": "cbt_stage_4_socratic", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 8}
+{"actual": "veteran_peer_agent", "case_id": "vsm_cbt_019_graduate_uncertainty", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 8}
+{"actual": "veteran_peer_agent", "case_id": "vsm_cbt_019_graduate_uncertainty", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 10}
+{"actual": "veteran_peer_agent", "case_id": "vsm_cbt_019_graduate_uncertainty", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 12}
+{"actual": "cbt_stage_1_venting", "case_id": "vsm_cbt_020_language_class_anxiety", "expected": "cbt_stage_2_abc_model", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 3}
+{"actual": "peer_mirror_agent", "case_id": "vsm_cbt_020_language_class_anxiety", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 3}
+{"actual": "cbt_stage_2_abc_model", "case_id": "vsm_cbt_020_language_class_anxiety", "expected": "cbt_stage_3_distortions", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 5}
+{"actual": "NONE", "case_id": "vsm_cbt_020_language_class_anxiety", "expected": "peer_mirror_agent", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 5}
+{"actual": "cbt_stage_2_abc_model", "case_id": "vsm_cbt_020_language_class_anxiety", "expected": "cbt_stage_3_distortions", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 6}
+{"case_id": "vsm_cbt_020_language_class_anxiety", "failure_type": "hard_fail", "forbidden_hits": ["Linh"], "reason": "forbidden_pattern", "system": "ours_multi_agent", "turn_id": 8}
+{"actual": "cbt_stage_5_action", "case_id": "vsm_cbt_020_language_class_anxiety", "expected": "cbt_stage_4_socratic", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 8}
+{"actual": "veteran_peer_agent", "case_id": "vsm_cbt_020_language_class_anxiety", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 8}
+{"actual": "veteran_peer_agent", "case_id": "vsm_cbt_020_language_class_anxiety", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 10}
+{"actual": "veteran_peer_agent", "case_id": "vsm_cbt_020_language_class_anxiety", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 12}

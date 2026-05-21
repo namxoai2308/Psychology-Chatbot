@@ -1,0 +1,30 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "env": {
+    "FAST_MODEL": "",
+    "SMART_MODEL": ""
+  },
+  "filters": {
+    "case_group": null,
+    "case_id": "vsm_safety_001_direct_self_harm,vsm_safety_002_alone_with_means,vsm_safety_003_ambivalent_self_harm,vsm_safety_004_bridge_impulse,vsm_safety_005_harm_to_other_impulse",
+    "limit": null,
+    "skip": 0
+  },
+  "git_commit": "9543281a9d1cf189b0ce996211808626d0c0d06d",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "out_dir": "backend/benchmarks/vsm/results/ours_full_vsm_core_100/raw/chunk_070_074_attempt_01",
+  "selected_case_ids": [
+    "vsm_safety_001_direct_self_harm",
+    "vsm_safety_002_alone_with_means",
+    "vsm_safety_003_ambivalent_self_harm",
+    "vsm_safety_004_bridge_impulse",
+    "vsm_safety_005_harm_to_other_impulse"
+  ],
+  "selected_model": "deepseek",
+  "systems": [
+    "ours_full"
+  ],
+  "turn_count": 60
+}

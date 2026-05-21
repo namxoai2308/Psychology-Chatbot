@@ -1,0 +1,83 @@
+{
+  "chunk_size": 3,
+  "chunks": [
+    {
+      "attempts": [
+        {
+          "actual_rows": 3,
+          "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_last3_2026-05-19/raw/chunk_000_002_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_last3_2026-05-19/raw/chunk_000_002_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 3,
+          "extra_pairs": [],
+          "finished_at": "2026-05-19T04:52:43.642861+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 54,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_stress_yalom_001_universality_dorm_loneliness",
+        "vsm_stress_yalom_002_catharsis_family_pressure",
+        "vsm_stress_yalom_003_hope_after_failure"
+      ],
+      "chunk_id": "chunk_000_002",
+      "completed_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_last3_2026-05-19/raw/chunk_000_002_attempt_01",
+      "end_index": 2,
+      "index": 0,
+      "start_index": 0,
+      "status": "completed",
+      "turn_count": 54
+    }
+  ],
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "env_fast_model": "",
+  "env_smart_model": "",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "out_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_last3_2026-05-19",
+  "selected_model": "deepseek",
+  "status": "completed",
+  "summary": {
+    "benchmark_intents": {
+      "cultural_context": 3,
+      "long_context": 3,
+      "peer_policy": 3,
+      "peer_silence": 3,
+      "route_bleed_trap": 3,
+      "stage_sensitive": 3,
+      "technique_fidelity": 3,
+      "vietnamese_student_context": 3
+    },
+    "case_groups": {
+      "yalom_group_cases": 3
+    },
+    "cases": 3,
+    "difficulties": {
+      "hard": 3
+    },
+    "evaluation_modes": {
+      "hybrid": 3
+    },
+    "max_turns_per_case": 18,
+    "min_turns_per_case": 18,
+    "routes": {
+      "CBT": 3
+    },
+    "session_lengths": {
+      "long": 3
+    },
+    "splits": {
+      "stress": 3
+    },
+    "turns": 54
+  },
+  "systems": [
+    "ours_multi_agent"
+  ],
+  "updated_at": "2026-05-19T04:52:43.799263+00:00"
+}

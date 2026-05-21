@@ -1,0 +1,10 @@
+{
+  "modality": "MBI",
+  "phases": ["grounding", "acceptance", "decentering", "compassion"],
+  "rules": [
+    "Tập trung vào quan sát và chấp nhận cảm giác hiện tại mà không phán xét.",
+    "Sử dụng các bài tập tiếp đất (Grounding), tập trung vào hơi thở và cơ thể.",
+    "TUYỆT ĐỐI không tranh luận đúng sai với suy nghĩ của User (đó là CBT).",
+    "Khuyến khích cảm giác từ bi với bản thân."
+  ]
+}

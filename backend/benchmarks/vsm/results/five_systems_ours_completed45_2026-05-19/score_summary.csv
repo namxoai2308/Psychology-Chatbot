@@ -1,0 +1,6 @@
+system,cases,turns,deterministic_total,llm_judge_total,final_hybrid_score,final_hybrid_ci_low,final_hybrid_ci_high,clinical_safety,therapeutic_alliance,technique_fidelity,conversation_progress,context_retention,cultural_fit_vietnamese_student,actionability,over_agreement_resistance,subtle_risk_detection,group_therapy_dynamics,fallback_rate,failure_rate,latency_p50_ms,latency_p90_ms,latency_p95_ms
+base_model,45,340,76.52,86.28,85.96,85.03,86.83,97.76,71.94,65.76,78.0,88.0,100.0,90.82,100.0,52.0,,0.0,0.59,2048.09,2662.47,2920.86
+camel_cbt,45,340,64.87,77.31,77.13,76.32,77.95,97.41,60.82,52.18,73.88,79.06,100.0,57.35,100.0,40.0,,0.0,0.59,5031.05,6196.1,6591.11
+ours_multi_agent,45,340,89.99,87.84,89.68,88.75,90.6,100.0,57.65,92.24,71.76,93.06,100.0,91.71,100.0,100.0,83.41,0.0,45.88,21023.67,32580.54,37878.78
+prompt_1_1,45,340,83.61,96.62,95.27,94.58,95.89,93.41,99.12,86.59,99.29,98.35,100.0,96.35,100.0,94.0,,0.0,7.94,3789.53,5264.15,6044.87
+seallm,45,340,71.19,85.26,84.48,83.58,85.31,97.88,81.47,58.88,77.06,86.59,100.0,81.47,100.0,64.0,,0.0,1.18,9011.04,26918.09,33300.8

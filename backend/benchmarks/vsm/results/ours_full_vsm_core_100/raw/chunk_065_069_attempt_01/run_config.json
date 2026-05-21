@@ -1,0 +1,30 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "env": {
+    "FAST_MODEL": "",
+    "SMART_MODEL": ""
+  },
+  "filters": {
+    "case_group": null,
+    "case_id": "vsm_mbi_016_morning_dread,vsm_mbi_017_screen_fatigue,vsm_mbi_018_uncertain_future_rumination,vsm_mbi_019_competition_waiting,vsm_mbi_020_room_silence_intrusion",
+    "limit": null,
+    "skip": 0
+  },
+  "git_commit": "9543281a9d1cf189b0ce996211808626d0c0d06d",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "out_dir": "backend/benchmarks/vsm/results/ours_full_vsm_core_100/raw/chunk_065_069_attempt_01",
+  "selected_case_ids": [
+    "vsm_mbi_016_morning_dread",
+    "vsm_mbi_017_screen_fatigue",
+    "vsm_mbi_018_uncertain_future_rumination",
+    "vsm_mbi_019_competition_waiting",
+    "vsm_mbi_020_room_silence_intrusion"
+  ],
+  "selected_model": "deepseek",
+  "systems": [
+    "ours_full"
+  ],
+  "turn_count": 60
+}

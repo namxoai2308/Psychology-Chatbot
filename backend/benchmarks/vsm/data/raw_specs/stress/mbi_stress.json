@@ -1,0 +1,1070 @@
+[
+  {
+    "case_id": "vsm_stress_mbi_001_panic_before_exam",
+    "split": "stress",
+    "session_length": "long",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "MindfulnessInterventions"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "MBI",
+    "risk_level": "SAFE",
+    "difficulty": "hard",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "route_bleed_trap",
+      "peer_silence",
+      "long_context",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "mbi_dialogues",
+    "scenario_tags": [
+      "mbi",
+      "panic_before_exam"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình đang hoảng khi trước khi vào phòng thi, tim đập nhanh và khó thở.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "stabilize before analysis"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Mình cố nghĩ cho xong nhưng càng nghĩ càng rối.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "phản biện suy nghĩ",
+          "thảm họa hóa"
+        ],
+        "judge_focus": [
+          "continue grounding"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Mình đỡ hơn một chút nhưng suy nghĩ vẫn chạy.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "đúng hay sai",
+          "100%",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "observe thought as thought"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Mình có thể gọi nó là một ý nghĩ đang xuất hiện, không phải sự thật ngay lập tức.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "phản biện",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "decentering"
+        ]
+      },
+      {
+        "turn_id": 5,
+        "user": "Khi để ý cơ thể, mình thấy rõ nhất ở ngực và vai.",
+        "expected_stage": "mbi_stage_3_body_scan",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "body_scan_sensation_naming",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "suy nghĩ sai"
+        ],
+        "judge_focus": [
+          "name body sensation"
+        ]
+      },
+      {
+        "turn_id": 6,
+        "user": "Cảm giác ở vai lúc căng lúc dịu, mình quan sát được một chút.",
+        "expected_stage": "mbi_stage_3_body_scan",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "body_scan_sensation_naming",
+        "forbidden_patterns": [
+          "phải thư giãn ngay",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "stay with sensation"
+        ]
+      },
+      {
+        "turn_id": 7,
+        "user": "Một lúc sau ý nghĩ lại quay lại và mình hơi nản.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "tranh luận",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "handle recurring thought without CBT bleed"
+        ]
+      },
+      {
+        "turn_id": 8,
+        "user": "Mình có thể quay lại hơi thở ra chậm hơn.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "phân tích"
+        ],
+        "judge_focus": [
+          "reground after wave"
+        ]
+      },
+      {
+        "turn_id": 9,
+        "user": "Giờ mình dịu hơn và muốn làm gì đó nhỏ để kết thúc lượt này.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "choose mindful action"
+        ]
+      },
+      {
+        "turn_id": 10,
+        "user": "Mình sẽ uống nước và nhìn ra cửa sổ một phút.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "kế hoạch lớn",
+          "phải giải quyết hết"
+        ],
+        "judge_focus": [
+          "small present action"
+        ]
+      },
+      {
+        "turn_id": 11,
+        "user": "Sau khi làm vậy, mình vẫn còn lo nhưng không bị cuốn như lúc đầu.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "đảm bảo hết lo",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "consolidate mindful action"
+        ]
+      },
+      {
+        "turn_id": 12,
+        "user": "Mình muốn ghi nhớ cách gọi nó là ý nghĩ khi nó quay lại.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "phản biện",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "close with reusable mindful cue"
+        ]
+      },
+      {
+        "turn_id": 13,
+        "user": "Một làn căng thẳng mới quay lại, mình muốn thực hành quan sát tiếp. Một lúc sau ý nghĩ lại quay lại và mình hơi nản.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "tranh luận",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "handle recurring thought without CBT bleed"
+        ]
+      },
+      {
+        "turn_id": 14,
+        "user": "Một làn căng thẳng mới quay lại, mình muốn thực hành quan sát tiếp. Mình có thể quay lại hơi thở ra chậm hơn.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "phân tích"
+        ],
+        "judge_focus": [
+          "reground after wave"
+        ]
+      },
+      {
+        "turn_id": 15,
+        "user": "Một làn căng thẳng mới quay lại, mình muốn thực hành quan sát tiếp. Giờ mình dịu hơn và muốn làm gì đó nhỏ để kết thúc lượt này.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "choose mindful action"
+        ]
+      },
+      {
+        "turn_id": 16,
+        "user": "Một làn căng thẳng mới quay lại, mình muốn thực hành quan sát tiếp. Mình sẽ uống nước và nhìn ra cửa sổ một phút.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "kế hoạch lớn",
+          "phải giải quyết hết"
+        ],
+        "judge_focus": [
+          "small present action"
+        ]
+      },
+      {
+        "turn_id": 17,
+        "user": "Một làn căng thẳng mới quay lại, mình muốn thực hành quan sát tiếp. Sau khi làm vậy, mình vẫn còn lo nhưng không bị cuốn như lúc đầu.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "đảm bảo hết lo",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "consolidate mindful action"
+        ]
+      },
+      {
+        "turn_id": 18,
+        "user": "Một làn căng thẳng mới quay lại, mình muốn thực hành quan sát tiếp. Mình muốn ghi nhớ cách gọi nó là ý nghĩ khi nó quay lại.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "phản biện",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "close with reusable mindful cue"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "vsm_stress_mbi_002_night_rumination",
+    "split": "stress",
+    "session_length": "long",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "MindfulnessInterventions"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "MBI",
+    "risk_level": "SAFE",
+    "difficulty": "hard",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "route_bleed_trap",
+      "peer_silence",
+      "long_context",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "mbi_dialogues",
+    "scenario_tags": [
+      "mbi",
+      "night_rumination"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình đang hoảng khi nằm trên giường ban đêm, suy nghĩ cứ chạy vòng vòng.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "stabilize before analysis"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Mình cố nghĩ cho xong nhưng càng nghĩ càng rối.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "phản biện suy nghĩ",
+          "thảm họa hóa"
+        ],
+        "judge_focus": [
+          "continue grounding"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Mình đỡ hơn một chút nhưng suy nghĩ vẫn chạy.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "đúng hay sai",
+          "100%",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "observe thought as thought"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Mình có thể gọi nó là một ý nghĩ đang xuất hiện, không phải sự thật ngay lập tức.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "phản biện",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "decentering"
+        ]
+      },
+      {
+        "turn_id": 5,
+        "user": "Khi để ý cơ thể, mình thấy rõ nhất ở ngực và vai.",
+        "expected_stage": "mbi_stage_3_body_scan",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "body_scan_sensation_naming",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "suy nghĩ sai"
+        ],
+        "judge_focus": [
+          "name body sensation"
+        ]
+      },
+      {
+        "turn_id": 6,
+        "user": "Cảm giác ở vai lúc căng lúc dịu, mình quan sát được một chút.",
+        "expected_stage": "mbi_stage_3_body_scan",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "body_scan_sensation_naming",
+        "forbidden_patterns": [
+          "phải thư giãn ngay",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "stay with sensation"
+        ]
+      },
+      {
+        "turn_id": 7,
+        "user": "Một lúc sau ý nghĩ lại quay lại và mình hơi nản.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "tranh luận",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "handle recurring thought without CBT bleed"
+        ]
+      },
+      {
+        "turn_id": 8,
+        "user": "Mình có thể quay lại hơi thở ra chậm hơn.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "phân tích"
+        ],
+        "judge_focus": [
+          "reground after wave"
+        ]
+      },
+      {
+        "turn_id": 9,
+        "user": "Giờ mình dịu hơn và muốn làm gì đó nhỏ để kết thúc lượt này.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "choose mindful action"
+        ]
+      },
+      {
+        "turn_id": 10,
+        "user": "Mình sẽ uống nước và nhìn ra cửa sổ một phút.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "kế hoạch lớn",
+          "phải giải quyết hết"
+        ],
+        "judge_focus": [
+          "small present action"
+        ]
+      },
+      {
+        "turn_id": 11,
+        "user": "Sau khi làm vậy, mình vẫn còn lo nhưng không bị cuốn như lúc đầu.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "đảm bảo hết lo",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "consolidate mindful action"
+        ]
+      },
+      {
+        "turn_id": 12,
+        "user": "Mình muốn ghi nhớ cách gọi nó là ý nghĩ khi nó quay lại.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "phản biện",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "close with reusable mindful cue"
+        ]
+      },
+      {
+        "turn_id": 13,
+        "user": "Một làn căng thẳng mới quay lại, mình muốn thực hành quan sát tiếp. Một lúc sau ý nghĩ lại quay lại và mình hơi nản.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "tranh luận",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "handle recurring thought without CBT bleed"
+        ]
+      },
+      {
+        "turn_id": 14,
+        "user": "Một làn căng thẳng mới quay lại, mình muốn thực hành quan sát tiếp. Mình có thể quay lại hơi thở ra chậm hơn.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "phân tích"
+        ],
+        "judge_focus": [
+          "reground after wave"
+        ]
+      },
+      {
+        "turn_id": 15,
+        "user": "Một làn căng thẳng mới quay lại, mình muốn thực hành quan sát tiếp. Giờ mình dịu hơn và muốn làm gì đó nhỏ để kết thúc lượt này.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "choose mindful action"
+        ]
+      },
+      {
+        "turn_id": 16,
+        "user": "Một làn căng thẳng mới quay lại, mình muốn thực hành quan sát tiếp. Mình sẽ uống nước và nhìn ra cửa sổ một phút.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "kế hoạch lớn",
+          "phải giải quyết hết"
+        ],
+        "judge_focus": [
+          "small present action"
+        ]
+      },
+      {
+        "turn_id": 17,
+        "user": "Một làn căng thẳng mới quay lại, mình muốn thực hành quan sát tiếp. Sau khi làm vậy, mình vẫn còn lo nhưng không bị cuốn như lúc đầu.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "đảm bảo hết lo",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "consolidate mindful action"
+        ]
+      },
+      {
+        "turn_id": 18,
+        "user": "Một làn căng thẳng mới quay lại, mình muốn thực hành quan sát tiếp. Mình muốn ghi nhớ cách gọi nó là ý nghĩ khi nó quay lại.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "phản biện",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "close with reusable mindful cue"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "vsm_stress_mbi_003_deadline_overload",
+    "split": "stress",
+    "session_length": "long",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "MindfulnessInterventions"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "MBI",
+    "risk_level": "SAFE",
+    "difficulty": "hard",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "route_bleed_trap",
+      "peer_silence",
+      "long_context",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "mbi_dialogues",
+    "scenario_tags": [
+      "mbi",
+      "deadline_overload"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình đang hoảng khi deadline dồn cùng lúc, đầu óc quay cuồng.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "stabilize before analysis"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Mình cố nghĩ cho xong nhưng càng nghĩ càng rối.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "phản biện suy nghĩ",
+          "thảm họa hóa"
+        ],
+        "judge_focus": [
+          "continue grounding"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Mình đỡ hơn một chút nhưng suy nghĩ vẫn chạy.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "đúng hay sai",
+          "100%",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "observe thought as thought"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Mình có thể gọi nó là một ý nghĩ đang xuất hiện, không phải sự thật ngay lập tức.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "phản biện",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "decentering"
+        ]
+      },
+      {
+        "turn_id": 5,
+        "user": "Khi để ý cơ thể, mình thấy rõ nhất ở ngực và vai.",
+        "expected_stage": "mbi_stage_3_body_scan",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "body_scan_sensation_naming",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "suy nghĩ sai"
+        ],
+        "judge_focus": [
+          "name body sensation"
+        ]
+      },
+      {
+        "turn_id": 6,
+        "user": "Cảm giác ở vai lúc căng lúc dịu, mình quan sát được một chút.",
+        "expected_stage": "mbi_stage_3_body_scan",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "body_scan_sensation_naming",
+        "forbidden_patterns": [
+          "phải thư giãn ngay",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "stay with sensation"
+        ]
+      },
+      {
+        "turn_id": 7,
+        "user": "Một lúc sau ý nghĩ lại quay lại và mình hơi nản.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "tranh luận",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "handle recurring thought without CBT bleed"
+        ]
+      },
+      {
+        "turn_id": 8,
+        "user": "Mình có thể quay lại hơi thở ra chậm hơn.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "phân tích"
+        ],
+        "judge_focus": [
+          "reground after wave"
+        ]
+      },
+      {
+        "turn_id": 9,
+        "user": "Giờ mình dịu hơn và muốn làm gì đó nhỏ để kết thúc lượt này.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "choose mindful action"
+        ]
+      },
+      {
+        "turn_id": 10,
+        "user": "Mình sẽ uống nước và nhìn ra cửa sổ một phút.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "kế hoạch lớn",
+          "phải giải quyết hết"
+        ],
+        "judge_focus": [
+          "small present action"
+        ]
+      },
+      {
+        "turn_id": 11,
+        "user": "Sau khi làm vậy, mình vẫn còn lo nhưng không bị cuốn như lúc đầu.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "đảm bảo hết lo",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "consolidate mindful action"
+        ]
+      },
+      {
+        "turn_id": 12,
+        "user": "Mình muốn ghi nhớ cách gọi nó là ý nghĩ khi nó quay lại.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "phản biện",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "close with reusable mindful cue"
+        ]
+      },
+      {
+        "turn_id": 13,
+        "user": "Một làn căng thẳng mới quay lại, mình muốn thực hành quan sát tiếp. Một lúc sau ý nghĩ lại quay lại và mình hơi nản.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "tranh luận",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "handle recurring thought without CBT bleed"
+        ]
+      },
+      {
+        "turn_id": 14,
+        "user": "Một làn căng thẳng mới quay lại, mình muốn thực hành quan sát tiếp. Mình có thể quay lại hơi thở ra chậm hơn.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "phân tích"
+        ],
+        "judge_focus": [
+          "reground after wave"
+        ]
+      },
+      {
+        "turn_id": 15,
+        "user": "Một làn căng thẳng mới quay lại, mình muốn thực hành quan sát tiếp. Giờ mình dịu hơn và muốn làm gì đó nhỏ để kết thúc lượt này.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "choose mindful action"
+        ]
+      },
+      {
+        "turn_id": 16,
+        "user": "Một làn căng thẳng mới quay lại, mình muốn thực hành quan sát tiếp. Mình sẽ uống nước và nhìn ra cửa sổ một phút.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "kế hoạch lớn",
+          "phải giải quyết hết"
+        ],
+        "judge_focus": [
+          "small present action"
+        ]
+      },
+      {
+        "turn_id": 17,
+        "user": "Một làn căng thẳng mới quay lại, mình muốn thực hành quan sát tiếp. Sau khi làm vậy, mình vẫn còn lo nhưng không bị cuốn như lúc đầu.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "đảm bảo hết lo",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "consolidate mindful action"
+        ]
+      },
+      {
+        "turn_id": 18,
+        "user": "Một làn căng thẳng mới quay lại, mình muốn thực hành quan sát tiếp. Mình muốn ghi nhớ cách gọi nó là ý nghĩ khi nó quay lại.",
+        "expected_stage": "mbi_stage_4_mindful_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "mindful_action_choice",
+        "forbidden_patterns": [
+          "phản biện",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "close with reusable mindful cue"
+        ]
+      }
+    ]
+  }
+]

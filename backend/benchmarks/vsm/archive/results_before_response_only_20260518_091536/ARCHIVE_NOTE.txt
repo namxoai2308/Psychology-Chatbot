@@ -1,0 +1,2 @@
+Archived from backend/benchmarks/vsm/results when cleaning to response-only results.
+Kept in results: responses_vsm_all_2026-05-18.

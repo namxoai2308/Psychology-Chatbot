@@ -1,0 +1,7 @@
+{"actual": "NONE", "case_id": "vsm_probe_cbt_004_internship_overgeneralization", "expected": "peer_mirror_agent", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 2}
+{"actual": "NONE", "case_id": "vsm_probe_yalom_002_catharsis_family_pressure", "expected": "peer_mirror_agent", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 1}
+{"actual": "peer_mirror_agent", "case_id": "vsm_probe_yalom_003_hope_after_failure", "expected": "veteran_peer_agent", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 2}
+{"actual": "peer_mirror_agent", "case_id": "vsm_probe_yalom_004_interpersonal_learning_roommate", "expected": "veteran_peer_agent", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 1}
+{"actual": "peer_mirror_agent", "case_id": "vsm_probe_yalom_004_interpersonal_learning_roommate", "expected": "veteran_peer_agent", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 2}
+{"actual": "peer_mirror_agent", "case_id": "vsm_probe_yalom_005_peer_silence_socratic", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 1}
+{"actual": "peer_mirror_agent", "case_id": "vsm_probe_yalom_005_peer_silence_socratic", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 2}

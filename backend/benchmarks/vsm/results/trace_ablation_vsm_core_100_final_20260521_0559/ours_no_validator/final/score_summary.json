@@ -1,0 +1,183 @@
+{
+  "ablation_deltas": [],
+  "case_count": 100,
+  "confidence_intervals": {
+    "ours_no_validator": {
+      "ci_high": 90.03,
+      "ci_low": 89.12,
+      "mean": 89.61,
+      "metric": "final_hybrid_score",
+      "n_turns": 1200,
+      "std": 8.27
+    }
+  },
+  "failure_taxonomy": {
+    "crisis_protocol_used": {
+      "ours_no_validator": 0
+    },
+    "exception": {
+      "ours_no_validator": 0
+    },
+    "fallback_used": {
+      "ours_no_validator": 1
+    },
+    "generic_response": {
+      "ours_no_validator": 0
+    },
+    "hard_fail": {
+      "ours_no_validator": 0
+    },
+    "peer_capability_absent": {
+      "ours_no_validator": 0
+    },
+    "route_bleed": {
+      "ours_no_validator": 0
+    },
+    "stage_mismatch": {
+      "ours_no_validator": 285
+    },
+    "unsafe_advice": {
+      "ours_no_validator": 0
+    },
+    "wrong_peer": {
+      "ours_no_validator": 276
+    }
+  },
+  "fallback_by_stage": {
+    "ba_stage_1_energy_check": 0.0,
+    "ba_stage_2_micro_action": 0.0,
+    "ba_stage_3_barrier_schedule": 0.0,
+    "ba_stage_4_momentum_reward": 0.0,
+    "cbt_stage_1_venting": 0.56,
+    "cbt_stage_2_abc_model": 0.0,
+    "cbt_stage_3_distortions": 0.0,
+    "cbt_stage_4_socratic": 0.0,
+    "cbt_stage_5_action": 0.0,
+    "crisis_response": 0.0,
+    "mbi_stage_1_grounding": 0.0,
+    "mbi_stage_2_decentering": 0.0,
+    "mbi_stage_3_body_scan": 0.0,
+    "mbi_stage_4_mindful_action": 0.0
+  },
+  "human_audit": {
+    "agreement_summary": {},
+    "audited_turns": 0,
+    "template": "human_audit_template.csv"
+  },
+  "overall": {
+    "ours_no_validator": {
+      "actionability": 85.43,
+      "avg_latency_seconds": 6.862,
+      "cases": 100,
+      "clinical_safety": 96.77,
+      "context_retention": 93.77,
+      "contract_mismatch_rate": 33.92,
+      "conversation_progress": 82.57,
+      "crisis_protocol_rate": 100.0,
+      "cultural_fit_vietnamese_student": 100.0,
+      "deterministic_total": 87.78,
+      "failure_rate": 0.08,
+      "fallback_rate": 0.08,
+      "final_hybrid_score": 89.61,
+      "group_therapy_dynamics": 86.75,
+      "latency_p50_ms": 6711.4,
+      "latency_p90_ms": 9310.81,
+      "latency_p95_ms": 9830.61,
+      "llm_judge_total": 88.94,
+      "modality_fidelity": 81.5,
+      "over_agreement_resistance": 100.0,
+      "runtime_efficiency": 72.55,
+      "subtle_risk_detection": 86.0,
+      "system_reliability": 99.92,
+      "technique_fidelity": 81.5,
+      "therapeutic_alliance": 74.15,
+      "therapeutic_quality": 80.72,
+      "token_cost_estimate": 0.01,
+      "turns": 1200,
+      "vsm_total": 89.61
+    }
+  },
+  "protocol_version": "VSM-Core-100-v1-final",
+  "result_rows": 100,
+  "result_turns": 1200,
+  "results_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_validator/final",
+  "route_performance": [
+    {
+      "cases": 23,
+      "fallback_rate": 0.0,
+      "route": "BA",
+      "route_bleed_count": 0,
+      "stage_accuracy": 68.12,
+      "system": "ours_no_validator",
+      "technique_fidelity": 73.19,
+      "validator_pass": 100.0
+    },
+    {
+      "cases": 49,
+      "fallback_rate": 0.17,
+      "route": "CBT",
+      "route_bleed_count": 0,
+      "stage_accuracy": 78.23,
+      "system": "ours_no_validator",
+      "technique_fidelity": 57.48,
+      "validator_pass": 99.83
+    },
+    {
+      "cases": 6,
+      "fallback_rate": 0.0,
+      "route": "CRISIS",
+      "route_bleed_count": 0,
+      "stage_accuracy": 100.0,
+      "system": "ours_no_validator",
+      "technique_fidelity": 100.0,
+      "validator_pass": 100.0
+    },
+    {
+      "cases": 22,
+      "fallback_rate": 0.0,
+      "route": "MBI",
+      "route_bleed_count": 0,
+      "stage_accuracy": 73.86,
+      "system": "ours_no_validator",
+      "technique_fidelity": 82.58,
+      "validator_pass": 100.0
+    }
+  ],
+  "safety": {
+    "ours_no_validator": {
+      "adversarial_pass_rate": 100.0,
+      "crisis_protocol_rate": 100.0,
+      "crisis_safe_response": 100.0,
+      "dependency_boundary": 100.0,
+      "medical_boundary": 100.0,
+      "safety_gate_failures": 0,
+      "unsafe_advice_violation": 0
+    }
+  },
+  "score_contract": {
+    "contract_mismatch_rate": "stage/peer contract mismatches kept for audit and accuracy metrics, not counted as runtime failure",
+    "deterministic_total": "metadata/pattern metrics only; N/A values excluded",
+    "failure_rate": "runtime/safety reliability failures only: exceptions, hard fails, route bleed, and non-crisis fallback use",
+    "final_hybrid_score": "ours blends deterministic and judge signals; text baselines are judge-heavy",
+    "llm_judge_total": "1-5 judge rubric scaled to 0-100; heuristic_surrogate until live judge is enabled"
+  },
+  "systems": [
+    "ours_no_validator"
+  ],
+  "yalom_factors": {
+    "Catharsis": 75.28,
+    "Hope": 79.84,
+    "Interpersonal Learning": 89.29,
+    "Universality": 82.73
+  },
+  "yalom_group": {
+    "ours_no_validator": {
+      "linh_persona_validity": 82.77777777777777,
+      "nam_persona_validity": 79.86577181208054,
+      "peer_selection_accuracy": 81.45896656534954,
+      "peer_silence_accuracy": 75.31572904707232,
+      "repetition_penalty": 18.54103343465046,
+      "yalom_factor_match": 81.45896656534954
+    }
+  }
+}

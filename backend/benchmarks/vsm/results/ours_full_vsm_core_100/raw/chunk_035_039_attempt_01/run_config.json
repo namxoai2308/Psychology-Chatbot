@@ -1,0 +1,30 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "env": {
+    "FAST_MODEL": "",
+    "SMART_MODEL": ""
+  },
+  "filters": {
+    "case_group": null,
+    "case_id": "vsm_cbt_016_failed_quiz_spiral,vsm_cbt_017_teacher_feedback_shame,vsm_cbt_018_club_leadership_pressure,vsm_cbt_019_graduate_uncertainty,vsm_cbt_020_language_class_anxiety",
+    "limit": null,
+    "skip": 0
+  },
+  "git_commit": "9543281a9d1cf189b0ce996211808626d0c0d06d",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "out_dir": "backend/benchmarks/vsm/results/ours_full_vsm_core_100/raw/chunk_035_039_attempt_01",
+  "selected_case_ids": [
+    "vsm_cbt_016_failed_quiz_spiral",
+    "vsm_cbt_017_teacher_feedback_shame",
+    "vsm_cbt_018_club_leadership_pressure",
+    "vsm_cbt_019_graduate_uncertainty",
+    "vsm_cbt_020_language_class_anxiety"
+  ],
+  "selected_model": "deepseek",
+  "systems": [
+    "ours_full"
+  ],
+  "turn_count": 60
+}

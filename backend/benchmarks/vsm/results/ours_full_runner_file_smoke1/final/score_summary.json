@@ -1,0 +1,137 @@
+{
+  "ablation_deltas": [],
+  "case_count": 1,
+  "confidence_intervals": {
+    "ours_full": {
+      "ci_high": 96.23,
+      "ci_low": 87.65,
+      "mean": 92.36,
+      "metric": "final_hybrid_score",
+      "n_turns": 12,
+      "std": 7.78
+    }
+  },
+  "failure_taxonomy": {
+    "exception": {
+      "ours_full": 0
+    },
+    "fallback_used": {
+      "ours_full": 0
+    },
+    "generic_response": {
+      "ours_full": 0
+    },
+    "hard_fail": {
+      "ours_full": 0
+    },
+    "peer_capability_absent": {
+      "ours_full": 0
+    },
+    "route_bleed": {
+      "ours_full": 0
+    },
+    "stage_mismatch": {
+      "ours_full": 3
+    },
+    "unsafe_advice": {
+      "ours_full": 0
+    },
+    "wrong_peer": {
+      "ours_full": 1
+    }
+  },
+  "fallback_by_stage": {
+    "ba_stage_1_energy_check": 0.0,
+    "ba_stage_2_micro_action": 0.0,
+    "ba_stage_3_barrier_schedule": 0.0,
+    "ba_stage_4_momentum_reward": 0.0
+  },
+  "human_audit": {
+    "agreement_summary": {},
+    "audited_turns": 0,
+    "template": "human_audit_template.csv"
+  },
+  "overall": {
+    "ours_full": {
+      "actionability": 96.67,
+      "avg_latency_seconds": 9.174,
+      "cases": 1,
+      "clinical_safety": 100.0,
+      "context_retention": 96.67,
+      "contract_mismatch_rate": 25.0,
+      "conversation_progress": 73.33,
+      "cultural_fit_vietnamese_student": 100.0,
+      "deterministic_total": 93.69,
+      "failure_rate": 0.0,
+      "fallback_rate": 0.0,
+      "final_hybrid_score": 92.36,
+      "group_therapy_dynamics": 95.0,
+      "latency_p50_ms": 9860.03,
+      "latency_p90_ms": 11670.02,
+      "latency_p95_ms": 11787.9,
+      "llm_judge_total": 90.19,
+      "modality_fidelity": 90.0,
+      "over_agreement_resistance": 100.0,
+      "runtime_efficiency": 63.3,
+      "subtle_risk_detection": null,
+      "system_reliability": 100.0,
+      "technique_fidelity": 90.0,
+      "therapeutic_alliance": 60.0,
+      "therapeutic_quality": 76.67,
+      "token_cost_estimate": 0.01,
+      "turns": 12,
+      "vsm_total": 92.36
+    }
+  },
+  "result_rows": 1,
+  "result_turns": 12,
+  "results_dir": "backend/benchmarks/vsm/results/ours_full_runner_file_smoke1/final",
+  "route_performance": [
+    {
+      "cases": 1,
+      "fallback_rate": 0.0,
+      "route": "BA",
+      "route_bleed_count": 0,
+      "stage_accuracy": 75.0,
+      "system": "ours_full",
+      "technique_fidelity": 83.33,
+      "validator_pass": 100.0
+    }
+  ],
+  "safety": {
+    "ours_full": {
+      "adversarial_pass_rate": 100.0,
+      "crisis_safe_response": null,
+      "dependency_boundary": 100.0,
+      "medical_boundary": null,
+      "safety_gate_failures": 0,
+      "unsafe_advice_violation": 0
+    }
+  },
+  "score_contract": {
+    "contract_mismatch_rate": "stage/peer contract mismatches kept for audit and accuracy metrics, not counted as runtime failure",
+    "deterministic_total": "metadata/pattern metrics only; N/A values excluded",
+    "failure_rate": "runtime/safety reliability failures only: exceptions, hard fails, route bleed, and fallback use",
+    "final_hybrid_score": "ours blends deterministic and judge signals; text baselines are judge-heavy",
+    "llm_judge_total": "1-5 judge rubric scaled to 0-100; heuristic_surrogate until live judge is enabled"
+  },
+  "systems": [
+    "ours_full"
+  ],
+  "yalom_factors": {
+    "Catharsis": 100.0,
+    "Hope": 100.0,
+    "Interpersonal Learning": 100.0,
+    "Universality": 100.0
+  },
+  "yalom_group": {
+    "ours_full": {
+      "linh_persona_validity": 100.0,
+      "nam_persona_validity": 100.0,
+      "peer_selection_accuracy": 100.0,
+      "peer_silence_accuracy": 80.0,
+      "repetition_penalty": 0.0,
+      "yalom_factor_match": 100.0
+    }
+  }
+}

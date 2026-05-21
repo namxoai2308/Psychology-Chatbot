@@ -1,0 +1,38 @@
+{
+  "bad_case_count": 1,
+  "bad_cases": [
+    {
+      "case_group": "ba_dialogues",
+      "case_id": "vsm_ba_001_low_energy_bed",
+      "difficulty": "easy",
+      "failure_types": [
+        "peer_mismatch",
+        "stage_mismatch"
+      ],
+      "quality_score": 95.01,
+      "reasons": [
+        "peer_integration_miss",
+        "peer_mismatch",
+        "stage_mismatch",
+        "technique_hint_miss"
+      ],
+      "risk_level": "SAFE",
+      "route": "BA",
+      "system": "ours_full",
+      "turn_count": 12
+    }
+  ],
+  "case_group_counts": {
+    "ba_dialogues": 1
+  },
+  "reason_counts": {
+    "peer_integration_miss": 1,
+    "peer_mismatch": 1,
+    "stage_mismatch": 1,
+    "technique_hint_miss": 1
+  },
+  "route_counts": {
+    "BA": 1
+  },
+  "threshold": 85.0
+}

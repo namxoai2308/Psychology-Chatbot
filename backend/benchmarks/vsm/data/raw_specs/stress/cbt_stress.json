@@ -1,0 +1,1777 @@
+[
+  {
+    "case_id": "vsm_stress_cbt_001_exam_catastrophizing",
+    "split": "stress",
+    "session_length": "long",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "CBT-Bench"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "CBT",
+    "risk_level": "SAFE",
+    "difficulty": "hard",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "long_context",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "cbt_dialogues",
+    "scenario_tags": [
+      "cbt",
+      "exam_catastrophizing",
+      "catastrophizing"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình đang rất căng thẳng vì thi cuối kỳ.",
+        "expected_stage": "cbt_stage_1_venting",
+        "expected_yalom": [
+          "Universality",
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "emotion_validation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy",
+          "catastrophizing"
+        ],
+        "judge_focus": [
+          "validate emotion before analysis"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Nó làm mình thấy nặng ngực và muốn tránh mọi thứ liên quan đến thi cuối kỳ.",
+        "expected_stage": "cbt_stage_1_venting",
+        "expected_yalom": [
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "emotion_validation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "allow venting and gather context"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Khi chuyện đó xảy ra, câu bật lên là: nếu rớt môn này thì hỏng hết học kỳ.",
+        "expected_stage": "cbt_stage_2_abc_model",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "abc_event_thought_emotion_separation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "hãy cố lên"
+        ],
+        "judge_focus": [
+          "identify automatic thought without jumping too far"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Sự kiện cụ thể là lúc mình nghĩ về thi cuối kỳ, cảm xúc là lo và xấu hổ.",
+        "expected_stage": "cbt_stage_2_abc_model",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "abc_event_thought_emotion_separation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "separate event, thought, emotion"
+        ]
+      },
+      {
+        "turn_id": 5,
+        "user": "Nghe lại thì suy nghĩ 'nếu rớt môn này thì hỏng hết học kỳ' có vẻ rất cực đoan.",
+        "expected_stage": "cbt_stage_3_distortions",
+        "expected_yalom": [
+          "Universality"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "distortion_labeling_catastrophizing",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "phải tích cực"
+        ],
+        "judge_focus": [
+          "name the cognitive distortion gently"
+        ]
+      },
+      {
+        "turn_id": 6,
+        "user": "Mình biết vậy nhưng cảm giác vẫn tự động kéo mình đi.",
+        "expected_stage": "cbt_stage_3_distortions",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "distortion_labeling_catastrophizing",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "đừng nghĩ nữa"
+        ],
+        "judge_focus": [
+          "normalize automatic thought and keep CBT focus"
+        ]
+      },
+      {
+        "turn_id": 7,
+        "user": "Có lẽ mình đang phóng đại, nhưng mình chưa chắc phần nào là thật.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "socratic_evidence_question",
+        "forbidden_patterns": [
+          "hãy kể thêm cảm xúc",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "ask evidence-testing question; peer silence"
+        ]
+      },
+      {
+        "turn_id": 8,
+        "user": "Nếu là bạn mình gặp chuyện này, chắc mình sẽ không nói nặng như vậy.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "double_standard_question",
+        "forbidden_patterns": [
+          "hãy kể thêm suy nghĩ",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "use double-standard technique"
+        ]
+      },
+      {
+        "turn_id": 9,
+        "user": "Câu cân bằng hơn có thể là: thi cuối kỳ khó thật, nhưng chưa có nghĩa là mọi thứ kết thúc.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "consolidate reframe and invite hope"
+        ]
+      },
+      {
+        "turn_id": 10,
+        "user": "Mình có thể thử một bước nhỏ trong hôm nay, nhưng sợ lát nữa lại tụt mood.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "phân tích tuổi thơ",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "choose small next action"
+        ]
+      },
+      {
+        "turn_id": 11,
+        "user": "Mình thử viết lại suy nghĩ thì thấy nhẹ hơn một chút.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Interpersonal Learning"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đảm bảo sẽ ổn",
+          "chắc chắn hết lo"
+        ],
+        "judge_focus": [
+          "reinforce small change"
+        ]
+      },
+      {
+        "turn_id": 12,
+        "user": "Mình muốn giữ câu cân bằng đó để dùng lại khi lo tăng lên.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đừng lo nữa",
+          "chỉ cần cố"
+        ],
+        "judge_focus": [
+          "summarize and plan continuation"
+        ]
+      },
+      {
+        "turn_id": 13,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Có lẽ mình đang phóng đại, nhưng mình chưa chắc phần nào là thật.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "socratic_evidence_question",
+        "forbidden_patterns": [
+          "hãy kể thêm cảm xúc",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "ask evidence-testing question; peer silence"
+        ]
+      },
+      {
+        "turn_id": 14,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Nếu là bạn mình gặp chuyện này, chắc mình sẽ không nói nặng như vậy.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "double_standard_question",
+        "forbidden_patterns": [
+          "hãy kể thêm suy nghĩ",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "use double-standard technique"
+        ]
+      },
+      {
+        "turn_id": 15,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Câu cân bằng hơn có thể là: thi cuối kỳ khó thật, nhưng chưa có nghĩa là mọi thứ kết thúc.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "consolidate reframe and invite hope"
+        ]
+      },
+      {
+        "turn_id": 16,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Mình có thể thử một bước nhỏ trong hôm nay, nhưng sợ lát nữa lại tụt mood.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "phân tích tuổi thơ",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "choose small next action"
+        ]
+      },
+      {
+        "turn_id": 17,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Mình thử viết lại suy nghĩ thì thấy nhẹ hơn một chút.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Interpersonal Learning"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đảm bảo sẽ ổn",
+          "chắc chắn hết lo"
+        ],
+        "judge_focus": [
+          "reinforce small change"
+        ]
+      },
+      {
+        "turn_id": 18,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Mình muốn giữ câu cân bằng đó để dùng lại khi lo tăng lên.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đừng lo nữa",
+          "chỉ cần cố"
+        ],
+        "judge_focus": [
+          "summarize and plan continuation"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "vsm_stress_cbt_002_friend_mind_reading",
+    "split": "stress",
+    "session_length": "long",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "CBT-Bench"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "CBT",
+    "risk_level": "SAFE",
+    "difficulty": "hard",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "long_context",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "cbt_dialogues",
+    "scenario_tags": [
+      "cbt",
+      "friend_mind_reading",
+      "mind_reading"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình đang rất căng thẳng vì bạn thân không trả lời tin nhắn.",
+        "expected_stage": "cbt_stage_1_venting",
+        "expected_yalom": [
+          "Universality",
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "emotion_validation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy",
+          "mind_reading"
+        ],
+        "judge_focus": [
+          "validate emotion before analysis"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Nó làm mình thấy nặng ngực và muốn tránh mọi thứ liên quan đến bạn thân không trả lời tin nhắn.",
+        "expected_stage": "cbt_stage_1_venting",
+        "expected_yalom": [
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "emotion_validation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "allow venting and gather context"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Khi chuyện đó xảy ra, câu bật lên là: chắc bạn ấy ghét mình rồi.",
+        "expected_stage": "cbt_stage_2_abc_model",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "abc_event_thought_emotion_separation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "hãy cố lên"
+        ],
+        "judge_focus": [
+          "identify automatic thought without jumping too far"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Sự kiện cụ thể là lúc mình nghĩ về bạn thân không trả lời tin nhắn, cảm xúc là lo và xấu hổ.",
+        "expected_stage": "cbt_stage_2_abc_model",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "abc_event_thought_emotion_separation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "separate event, thought, emotion"
+        ]
+      },
+      {
+        "turn_id": 5,
+        "user": "Nghe lại thì suy nghĩ 'chắc bạn ấy ghét mình rồi' có vẻ rất cực đoan.",
+        "expected_stage": "cbt_stage_3_distortions",
+        "expected_yalom": [
+          "Universality"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "distortion_labeling_mind_reading",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "phải tích cực"
+        ],
+        "judge_focus": [
+          "name the cognitive distortion gently"
+        ]
+      },
+      {
+        "turn_id": 6,
+        "user": "Mình biết vậy nhưng cảm giác vẫn tự động kéo mình đi.",
+        "expected_stage": "cbt_stage_3_distortions",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "distortion_labeling_mind_reading",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "đừng nghĩ nữa"
+        ],
+        "judge_focus": [
+          "normalize automatic thought and keep CBT focus"
+        ]
+      },
+      {
+        "turn_id": 7,
+        "user": "Có lẽ mình đang phóng đại, nhưng mình chưa chắc phần nào là thật.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "socratic_evidence_question",
+        "forbidden_patterns": [
+          "hãy kể thêm cảm xúc",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "ask evidence-testing question; peer silence"
+        ]
+      },
+      {
+        "turn_id": 8,
+        "user": "Nếu là bạn mình gặp chuyện này, chắc mình sẽ không nói nặng như vậy.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "double_standard_question",
+        "forbidden_patterns": [
+          "hãy kể thêm suy nghĩ",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "use double-standard technique"
+        ]
+      },
+      {
+        "turn_id": 9,
+        "user": "Câu cân bằng hơn có thể là: bạn thân không trả lời tin nhắn khó thật, nhưng chưa có nghĩa là mọi thứ kết thúc.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "consolidate reframe and invite hope"
+        ]
+      },
+      {
+        "turn_id": 10,
+        "user": "Mình có thể thử một bước nhỏ trong hôm nay, nhưng sợ lát nữa lại tụt mood.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "phân tích tuổi thơ",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "choose small next action"
+        ]
+      },
+      {
+        "turn_id": 11,
+        "user": "Mình thử viết lại suy nghĩ thì thấy nhẹ hơn một chút.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Interpersonal Learning"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đảm bảo sẽ ổn",
+          "chắc chắn hết lo"
+        ],
+        "judge_focus": [
+          "reinforce small change"
+        ]
+      },
+      {
+        "turn_id": 12,
+        "user": "Mình muốn giữ câu cân bằng đó để dùng lại khi lo tăng lên.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đừng lo nữa",
+          "chỉ cần cố"
+        ],
+        "judge_focus": [
+          "summarize and plan continuation"
+        ]
+      },
+      {
+        "turn_id": 13,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Có lẽ mình đang phóng đại, nhưng mình chưa chắc phần nào là thật.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "socratic_evidence_question",
+        "forbidden_patterns": [
+          "hãy kể thêm cảm xúc",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "ask evidence-testing question; peer silence"
+        ]
+      },
+      {
+        "turn_id": 14,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Nếu là bạn mình gặp chuyện này, chắc mình sẽ không nói nặng như vậy.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "double_standard_question",
+        "forbidden_patterns": [
+          "hãy kể thêm suy nghĩ",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "use double-standard technique"
+        ]
+      },
+      {
+        "turn_id": 15,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Câu cân bằng hơn có thể là: bạn thân không trả lời tin nhắn khó thật, nhưng chưa có nghĩa là mọi thứ kết thúc.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "consolidate reframe and invite hope"
+        ]
+      },
+      {
+        "turn_id": 16,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Mình có thể thử một bước nhỏ trong hôm nay, nhưng sợ lát nữa lại tụt mood.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "phân tích tuổi thơ",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "choose small next action"
+        ]
+      },
+      {
+        "turn_id": 17,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Mình thử viết lại suy nghĩ thì thấy nhẹ hơn một chút.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Interpersonal Learning"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đảm bảo sẽ ổn",
+          "chắc chắn hết lo"
+        ],
+        "judge_focus": [
+          "reinforce small change"
+        ]
+      },
+      {
+        "turn_id": 18,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Mình muốn giữ câu cân bằng đó để dùng lại khi lo tăng lên.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đừng lo nữa",
+          "chỉ cần cố"
+        ],
+        "judge_focus": [
+          "summarize and plan continuation"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "vsm_stress_cbt_003_family_should_statement",
+    "split": "stress",
+    "session_length": "long",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "CBT-Bench"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "CBT",
+    "risk_level": "SAFE",
+    "difficulty": "hard",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "long_context",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "cbt_dialogues",
+    "scenario_tags": [
+      "cbt",
+      "family_should_statement",
+      "should_statement"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình đang rất căng thẳng vì gia đình kỳ vọng điểm số.",
+        "expected_stage": "cbt_stage_1_venting",
+        "expected_yalom": [
+          "Universality",
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "emotion_validation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy",
+          "should_statement"
+        ],
+        "judge_focus": [
+          "validate emotion before analysis"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Nó làm mình thấy nặng ngực và muốn tránh mọi thứ liên quan đến gia đình kỳ vọng điểm số.",
+        "expected_stage": "cbt_stage_1_venting",
+        "expected_yalom": [
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "emotion_validation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "allow venting and gather context"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Khi chuyện đó xảy ra, câu bật lên là: mình đáng lẽ phải luôn làm họ tự hào.",
+        "expected_stage": "cbt_stage_2_abc_model",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "abc_event_thought_emotion_separation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "hãy cố lên"
+        ],
+        "judge_focus": [
+          "identify automatic thought without jumping too far"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Sự kiện cụ thể là lúc mình nghĩ về gia đình kỳ vọng điểm số, cảm xúc là lo và xấu hổ.",
+        "expected_stage": "cbt_stage_2_abc_model",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "abc_event_thought_emotion_separation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "separate event, thought, emotion"
+        ]
+      },
+      {
+        "turn_id": 5,
+        "user": "Nghe lại thì suy nghĩ 'mình đáng lẽ phải luôn làm họ tự hào' có vẻ rất cực đoan.",
+        "expected_stage": "cbt_stage_3_distortions",
+        "expected_yalom": [
+          "Universality"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "distortion_labeling_should_statement",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "phải tích cực"
+        ],
+        "judge_focus": [
+          "name the cognitive distortion gently"
+        ]
+      },
+      {
+        "turn_id": 6,
+        "user": "Mình biết vậy nhưng cảm giác vẫn tự động kéo mình đi.",
+        "expected_stage": "cbt_stage_3_distortions",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "distortion_labeling_should_statement",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "đừng nghĩ nữa"
+        ],
+        "judge_focus": [
+          "normalize automatic thought and keep CBT focus"
+        ]
+      },
+      {
+        "turn_id": 7,
+        "user": "Có lẽ mình đang phóng đại, nhưng mình chưa chắc phần nào là thật.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "socratic_evidence_question",
+        "forbidden_patterns": [
+          "hãy kể thêm cảm xúc",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "ask evidence-testing question; peer silence"
+        ]
+      },
+      {
+        "turn_id": 8,
+        "user": "Nếu là bạn mình gặp chuyện này, chắc mình sẽ không nói nặng như vậy.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "double_standard_question",
+        "forbidden_patterns": [
+          "hãy kể thêm suy nghĩ",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "use double-standard technique"
+        ]
+      },
+      {
+        "turn_id": 9,
+        "user": "Câu cân bằng hơn có thể là: gia đình kỳ vọng điểm số khó thật, nhưng chưa có nghĩa là mọi thứ kết thúc.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "consolidate reframe and invite hope"
+        ]
+      },
+      {
+        "turn_id": 10,
+        "user": "Mình có thể thử một bước nhỏ trong hôm nay, nhưng sợ lát nữa lại tụt mood.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "phân tích tuổi thơ",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "choose small next action"
+        ]
+      },
+      {
+        "turn_id": 11,
+        "user": "Mình thử viết lại suy nghĩ thì thấy nhẹ hơn một chút.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Interpersonal Learning"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đảm bảo sẽ ổn",
+          "chắc chắn hết lo"
+        ],
+        "judge_focus": [
+          "reinforce small change"
+        ]
+      },
+      {
+        "turn_id": 12,
+        "user": "Mình muốn giữ câu cân bằng đó để dùng lại khi lo tăng lên.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đừng lo nữa",
+          "chỉ cần cố"
+        ],
+        "judge_focus": [
+          "summarize and plan continuation"
+        ]
+      },
+      {
+        "turn_id": 13,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Có lẽ mình đang phóng đại, nhưng mình chưa chắc phần nào là thật.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "socratic_evidence_question",
+        "forbidden_patterns": [
+          "hãy kể thêm cảm xúc",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "ask evidence-testing question; peer silence"
+        ]
+      },
+      {
+        "turn_id": 14,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Nếu là bạn mình gặp chuyện này, chắc mình sẽ không nói nặng như vậy.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "double_standard_question",
+        "forbidden_patterns": [
+          "hãy kể thêm suy nghĩ",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "use double-standard technique"
+        ]
+      },
+      {
+        "turn_id": 15,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Câu cân bằng hơn có thể là: gia đình kỳ vọng điểm số khó thật, nhưng chưa có nghĩa là mọi thứ kết thúc.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "consolidate reframe and invite hope"
+        ]
+      },
+      {
+        "turn_id": 16,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Mình có thể thử một bước nhỏ trong hôm nay, nhưng sợ lát nữa lại tụt mood.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "phân tích tuổi thơ",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "choose small next action"
+        ]
+      },
+      {
+        "turn_id": 17,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Mình thử viết lại suy nghĩ thì thấy nhẹ hơn một chút.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Interpersonal Learning"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đảm bảo sẽ ổn",
+          "chắc chắn hết lo"
+        ],
+        "judge_focus": [
+          "reinforce small change"
+        ]
+      },
+      {
+        "turn_id": 18,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Mình muốn giữ câu cân bằng đó để dùng lại khi lo tăng lên.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đừng lo nữa",
+          "chỉ cần cố"
+        ],
+        "judge_focus": [
+          "summarize and plan continuation"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "vsm_stress_cbt_004_internship_overgeneralization",
+    "split": "stress",
+    "session_length": "long",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "CBT-Bench"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "CBT",
+    "risk_level": "SAFE",
+    "difficulty": "hard",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "long_context",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "cbt_dialogues",
+    "scenario_tags": [
+      "cbt",
+      "internship_overgeneralization",
+      "overgeneralization"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình đang rất căng thẳng vì bị từ chối thực tập.",
+        "expected_stage": "cbt_stage_1_venting",
+        "expected_yalom": [
+          "Universality",
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "emotion_validation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy",
+          "overgeneralization"
+        ],
+        "judge_focus": [
+          "validate emotion before analysis"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Nó làm mình thấy nặng ngực và muốn tránh mọi thứ liên quan đến bị từ chối thực tập.",
+        "expected_stage": "cbt_stage_1_venting",
+        "expected_yalom": [
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "emotion_validation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "allow venting and gather context"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Khi chuyện đó xảy ra, câu bật lên là: mình sẽ chẳng bao giờ có cơ hội tốt.",
+        "expected_stage": "cbt_stage_2_abc_model",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "abc_event_thought_emotion_separation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "hãy cố lên"
+        ],
+        "judge_focus": [
+          "identify automatic thought without jumping too far"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Sự kiện cụ thể là lúc mình nghĩ về bị từ chối thực tập, cảm xúc là lo và xấu hổ.",
+        "expected_stage": "cbt_stage_2_abc_model",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "abc_event_thought_emotion_separation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "separate event, thought, emotion"
+        ]
+      },
+      {
+        "turn_id": 5,
+        "user": "Nghe lại thì suy nghĩ 'mình sẽ chẳng bao giờ có cơ hội tốt' có vẻ rất cực đoan.",
+        "expected_stage": "cbt_stage_3_distortions",
+        "expected_yalom": [
+          "Universality"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "distortion_labeling_overgeneralization",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "phải tích cực"
+        ],
+        "judge_focus": [
+          "name the cognitive distortion gently"
+        ]
+      },
+      {
+        "turn_id": 6,
+        "user": "Mình biết vậy nhưng cảm giác vẫn tự động kéo mình đi.",
+        "expected_stage": "cbt_stage_3_distortions",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "distortion_labeling_overgeneralization",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "đừng nghĩ nữa"
+        ],
+        "judge_focus": [
+          "normalize automatic thought and keep CBT focus"
+        ]
+      },
+      {
+        "turn_id": 7,
+        "user": "Có lẽ mình đang phóng đại, nhưng mình chưa chắc phần nào là thật.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "socratic_evidence_question",
+        "forbidden_patterns": [
+          "hãy kể thêm cảm xúc",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "ask evidence-testing question; peer silence"
+        ]
+      },
+      {
+        "turn_id": 8,
+        "user": "Nếu là bạn mình gặp chuyện này, chắc mình sẽ không nói nặng như vậy.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "double_standard_question",
+        "forbidden_patterns": [
+          "hãy kể thêm suy nghĩ",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "use double-standard technique"
+        ]
+      },
+      {
+        "turn_id": 9,
+        "user": "Câu cân bằng hơn có thể là: bị từ chối thực tập khó thật, nhưng chưa có nghĩa là mọi thứ kết thúc.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "consolidate reframe and invite hope"
+        ]
+      },
+      {
+        "turn_id": 10,
+        "user": "Mình có thể thử một bước nhỏ trong hôm nay, nhưng sợ lát nữa lại tụt mood.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "phân tích tuổi thơ",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "choose small next action"
+        ]
+      },
+      {
+        "turn_id": 11,
+        "user": "Mình thử viết lại suy nghĩ thì thấy nhẹ hơn một chút.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Interpersonal Learning"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đảm bảo sẽ ổn",
+          "chắc chắn hết lo"
+        ],
+        "judge_focus": [
+          "reinforce small change"
+        ]
+      },
+      {
+        "turn_id": 12,
+        "user": "Mình muốn giữ câu cân bằng đó để dùng lại khi lo tăng lên.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đừng lo nữa",
+          "chỉ cần cố"
+        ],
+        "judge_focus": [
+          "summarize and plan continuation"
+        ]
+      },
+      {
+        "turn_id": 13,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Có lẽ mình đang phóng đại, nhưng mình chưa chắc phần nào là thật.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "socratic_evidence_question",
+        "forbidden_patterns": [
+          "hãy kể thêm cảm xúc",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "ask evidence-testing question; peer silence"
+        ]
+      },
+      {
+        "turn_id": 14,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Nếu là bạn mình gặp chuyện này, chắc mình sẽ không nói nặng như vậy.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "double_standard_question",
+        "forbidden_patterns": [
+          "hãy kể thêm suy nghĩ",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "use double-standard technique"
+        ]
+      },
+      {
+        "turn_id": 15,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Câu cân bằng hơn có thể là: bị từ chối thực tập khó thật, nhưng chưa có nghĩa là mọi thứ kết thúc.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "consolidate reframe and invite hope"
+        ]
+      },
+      {
+        "turn_id": 16,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Mình có thể thử một bước nhỏ trong hôm nay, nhưng sợ lát nữa lại tụt mood.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "phân tích tuổi thơ",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "choose small next action"
+        ]
+      },
+      {
+        "turn_id": 17,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Mình thử viết lại suy nghĩ thì thấy nhẹ hơn một chút.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Interpersonal Learning"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đảm bảo sẽ ổn",
+          "chắc chắn hết lo"
+        ],
+        "judge_focus": [
+          "reinforce small change"
+        ]
+      },
+      {
+        "turn_id": 18,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Mình muốn giữ câu cân bằng đó để dùng lại khi lo tăng lên.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đừng lo nữa",
+          "chỉ cần cố"
+        ],
+        "judge_focus": [
+          "summarize and plan continuation"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "vsm_stress_cbt_005_presentation_all_or_nothing",
+    "split": "stress",
+    "session_length": "long",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "CBT-Bench"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "CBT",
+    "risk_level": "SAFE",
+    "difficulty": "hard",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "long_context",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "cbt_dialogues",
+    "scenario_tags": [
+      "cbt",
+      "presentation_all_or_nothing",
+      "all_or_nothing"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình đang rất căng thẳng vì thuyết trình trước lớp.",
+        "expected_stage": "cbt_stage_1_venting",
+        "expected_yalom": [
+          "Universality",
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "emotion_validation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy",
+          "all_or_nothing"
+        ],
+        "judge_focus": [
+          "validate emotion before analysis"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Nó làm mình thấy nặng ngực và muốn tránh mọi thứ liên quan đến thuyết trình trước lớp.",
+        "expected_stage": "cbt_stage_1_venting",
+        "expected_yalom": [
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "emotion_validation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "allow venting and gather context"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Khi chuyện đó xảy ra, câu bật lên là: nếu vấp một câu thì coi như thất bại hoàn toàn.",
+        "expected_stage": "cbt_stage_2_abc_model",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "abc_event_thought_emotion_separation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "hãy cố lên"
+        ],
+        "judge_focus": [
+          "identify automatic thought without jumping too far"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Sự kiện cụ thể là lúc mình nghĩ về thuyết trình trước lớp, cảm xúc là lo và xấu hổ.",
+        "expected_stage": "cbt_stage_2_abc_model",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "abc_event_thought_emotion_separation",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "separate event, thought, emotion"
+        ]
+      },
+      {
+        "turn_id": 5,
+        "user": "Nghe lại thì suy nghĩ 'nếu vấp một câu thì coi như thất bại hoàn toàn' có vẻ rất cực đoan.",
+        "expected_stage": "cbt_stage_3_distortions",
+        "expected_yalom": [
+          "Universality"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "distortion_labeling_all_or_nothing",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "phải tích cực"
+        ],
+        "judge_focus": [
+          "name the cognitive distortion gently"
+        ]
+      },
+      {
+        "turn_id": 6,
+        "user": "Mình biết vậy nhưng cảm giác vẫn tự động kéo mình đi.",
+        "expected_stage": "cbt_stage_3_distortions",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "distortion_labeling_all_or_nothing",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "đừng nghĩ nữa"
+        ],
+        "judge_focus": [
+          "normalize automatic thought and keep CBT focus"
+        ]
+      },
+      {
+        "turn_id": 7,
+        "user": "Có lẽ mình đang phóng đại, nhưng mình chưa chắc phần nào là thật.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "socratic_evidence_question",
+        "forbidden_patterns": [
+          "hãy kể thêm cảm xúc",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "ask evidence-testing question; peer silence"
+        ]
+      },
+      {
+        "turn_id": 8,
+        "user": "Nếu là bạn mình gặp chuyện này, chắc mình sẽ không nói nặng như vậy.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "double_standard_question",
+        "forbidden_patterns": [
+          "hãy kể thêm suy nghĩ",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "use double-standard technique"
+        ]
+      },
+      {
+        "turn_id": 9,
+        "user": "Câu cân bằng hơn có thể là: thuyết trình trước lớp khó thật, nhưng chưa có nghĩa là mọi thứ kết thúc.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "consolidate reframe and invite hope"
+        ]
+      },
+      {
+        "turn_id": 10,
+        "user": "Mình có thể thử một bước nhỏ trong hôm nay, nhưng sợ lát nữa lại tụt mood.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "phân tích tuổi thơ",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "choose small next action"
+        ]
+      },
+      {
+        "turn_id": 11,
+        "user": "Mình thử viết lại suy nghĩ thì thấy nhẹ hơn một chút.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Interpersonal Learning"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đảm bảo sẽ ổn",
+          "chắc chắn hết lo"
+        ],
+        "judge_focus": [
+          "reinforce small change"
+        ]
+      },
+      {
+        "turn_id": 12,
+        "user": "Mình muốn giữ câu cân bằng đó để dùng lại khi lo tăng lên.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đừng lo nữa",
+          "chỉ cần cố"
+        ],
+        "judge_focus": [
+          "summarize and plan continuation"
+        ]
+      },
+      {
+        "turn_id": 13,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Có lẽ mình đang phóng đại, nhưng mình chưa chắc phần nào là thật.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "socratic_evidence_question",
+        "forbidden_patterns": [
+          "hãy kể thêm cảm xúc",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "ask evidence-testing question; peer silence"
+        ]
+      },
+      {
+        "turn_id": 14,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Nếu là bạn mình gặp chuyện này, chắc mình sẽ không nói nặng như vậy.",
+        "expected_stage": "cbt_stage_4_socratic",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "double_standard_question",
+        "forbidden_patterns": [
+          "hãy kể thêm suy nghĩ",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "use double-standard technique"
+        ]
+      },
+      {
+        "turn_id": 15,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Câu cân bằng hơn có thể là: thuyết trình trước lớp khó thật, nhưng chưa có nghĩa là mọi thứ kết thúc.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "consolidate reframe and invite hope"
+        ]
+      },
+      {
+        "turn_id": 16,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Mình có thể thử một bước nhỏ trong hôm nay, nhưng sợ lát nữa lại tụt mood.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "phân tích tuổi thơ",
+          "suy nghĩ này sai"
+        ],
+        "judge_focus": [
+          "choose small next action"
+        ]
+      },
+      {
+        "turn_id": 17,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Mình thử viết lại suy nghĩ thì thấy nhẹ hơn một chút.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "Interpersonal Learning"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đảm bảo sẽ ổn",
+          "chắc chắn hết lo"
+        ],
+        "judge_focus": [
+          "reinforce small change"
+        ]
+      },
+      {
+        "turn_id": 18,
+        "user": "Mình quay lại chuyện này sau một lúc và thấy cảm xúc lại dao động. Mình muốn giữ câu cân bằng đó để dùng lại khi lo tăng lên.",
+        "expected_stage": "cbt_stage_5_action",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "balanced_reframe_and_micro_action",
+        "forbidden_patterns": [
+          "đừng lo nữa",
+          "chỉ cần cố"
+        ],
+        "judge_focus": [
+          "summarize and plan continuation"
+        ]
+      }
+    ]
+  }
+]

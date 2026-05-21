@@ -1,0 +1,742 @@
+{
+  "chunk_size": 5,
+  "chunks": [
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_000_004_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_000_004_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-20T23:04:41.554161+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_ba_001_low_energy_bed",
+        "vsm_ba_002_missed_class",
+        "vsm_ba_003_messy_room",
+        "vsm_ba_004_assignment_avoidance",
+        "vsm_ba_005_social_withdrawal"
+      ],
+      "chunk_id": "chunk_000_004",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_000_004_attempt_01",
+      "end_index": 4,
+      "index": 0,
+      "start_index": 0,
+      "status": "completed",
+      "turn_count": 60
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_005_009_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_005_009_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-20T23:09:49.589941+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_ba_006_sleep_schedule_broken",
+        "vsm_ba_007_meal_skipping",
+        "vsm_ba_008_job_search_avoidance",
+        "vsm_ba_009_exercise_dropout",
+        "vsm_ba_010_laundry_pile"
+      ],
+      "chunk_id": "chunk_005_009",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_005_009_attempt_01",
+      "end_index": 9,
+      "index": 1,
+      "start_index": 5,
+      "status": "completed",
+      "turn_count": 60
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_010_014_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_010_014_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-20T23:14:57.311163+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_ba_011_email_avoidance",
+        "vsm_ba_012_study_desk_block",
+        "vsm_ba_013_club_task_delay",
+        "vsm_ba_014_morning_no_momentum",
+        "vsm_ba_015_financial_admin_avoidance"
+      ],
+      "chunk_id": "chunk_010_014",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_010_014_attempt_01",
+      "end_index": 14,
+      "index": 2,
+      "start_index": 10,
+      "status": "completed",
+      "turn_count": 60
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_015_019_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_015_019_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-20T23:20:02.198299+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_ba_016_exam_revision_freeze",
+        "vsm_ba_017_shower_avoidance",
+        "vsm_ba_018_meal_prep_block",
+        "vsm_ba_019_library_avoidance",
+        "vsm_ba_020_message_reply_delay"
+      ],
+      "chunk_id": "chunk_015_019",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_015_019_attempt_01",
+      "end_index": 19,
+      "index": 3,
+      "start_index": 15,
+      "status": "completed",
+      "turn_count": 60
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_020_024_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_020_024_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-20T23:25:09.994116+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_cbt_001_exam_catastrophizing",
+        "vsm_cbt_002_friend_mind_reading",
+        "vsm_cbt_003_family_should_statement",
+        "vsm_cbt_004_internship_overgeneralization",
+        "vsm_cbt_005_presentation_all_or_nothing"
+      ],
+      "chunk_id": "chunk_020_024",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_020_024_attempt_01",
+      "end_index": 24,
+      "index": 4,
+      "start_index": 20,
+      "status": "completed",
+      "turn_count": 60
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_025_029_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_025_029_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-20T23:30:17.043567+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_cbt_006_scholarship_pressure",
+        "vsm_cbt_007_social_media_comparison",
+        "vsm_cbt_008_body_image_labeling",
+        "vsm_cbt_009_class_discussion_fear",
+        "vsm_cbt_010_impostor_syndrome"
+      ],
+      "chunk_id": "chunk_025_029",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_025_029_attempt_01",
+      "end_index": 29,
+      "index": 5,
+      "start_index": 25,
+      "status": "completed",
+      "turn_count": 60
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_030_034_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_030_034_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-20T23:35:27.206644+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_cbt_011_procrastination_guilt",
+        "vsm_cbt_012_perfectionism_assignment",
+        "vsm_cbt_013_relationship_rejection",
+        "vsm_cbt_014_roommate_conflict",
+        "vsm_cbt_015_part_time_work_stress"
+      ],
+      "chunk_id": "chunk_030_034",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_030_034_attempt_01",
+      "end_index": 34,
+      "index": 6,
+      "start_index": 30,
+      "status": "completed",
+      "turn_count": 60
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_035_039_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_035_039_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-20T23:40:35.754036+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_cbt_016_failed_quiz_spiral",
+        "vsm_cbt_017_teacher_feedback_shame",
+        "vsm_cbt_018_club_leadership_pressure",
+        "vsm_cbt_019_graduate_uncertainty",
+        "vsm_cbt_020_language_class_anxiety"
+      ],
+      "chunk_id": "chunk_035_039",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_035_039_attempt_01",
+      "end_index": 39,
+      "index": 7,
+      "start_index": 35,
+      "status": "completed",
+      "turn_count": 60
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_040_044_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_040_044_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-20T23:45:53.183442+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_cbt_021_group_project_exclusion",
+        "vsm_cbt_022_parent_comparison",
+        "vsm_cbt_023_first_year_loneliness",
+        "vsm_cbt_024_exam_sleep_loss",
+        "vsm_cbt_025_portfolio_rejection"
+      ],
+      "chunk_id": "chunk_040_044",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_040_044_attempt_01",
+      "end_index": 44,
+      "index": 8,
+      "start_index": 40,
+      "status": "completed",
+      "turn_count": 60
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_045_049_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_045_049_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-20T23:51:07.101903+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_cbt_026_lab_mistake_personalization",
+        "vsm_cbt_027_dating_app_ghosting",
+        "vsm_cbt_028_financial_stress",
+        "vsm_cbt_029_competition_loss",
+        "vsm_cbt_030_future_uncertainty"
+      ],
+      "chunk_id": "chunk_045_049",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_045_049_attempt_01",
+      "end_index": 49,
+      "index": 9,
+      "start_index": 45,
+      "status": "completed",
+      "turn_count": 60
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_050_054_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_050_054_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-20T23:56:12.792573+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_mbi_001_panic_before_exam",
+        "vsm_mbi_002_night_rumination",
+        "vsm_mbi_003_deadline_overload",
+        "vsm_mbi_004_intrusive_grade_thought",
+        "vsm_mbi_005_body_tension_library"
+      ],
+      "chunk_id": "chunk_050_054",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_050_054_attempt_01",
+      "end_index": 54,
+      "index": 10,
+      "start_index": 50,
+      "status": "completed",
+      "turn_count": 60
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_055_059_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_055_059_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-21T00:01:59.479381+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_mbi_006_sleep_anxiety",
+        "vsm_mbi_007_presentation_panic",
+        "vsm_mbi_008_family_call_overload",
+        "vsm_mbi_009_social_noise_overwhelm",
+        "vsm_mbi_010_commute_rumination"
+      ],
+      "chunk_id": "chunk_055_059",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_055_059_attempt_01",
+      "end_index": 59,
+      "index": 11,
+      "start_index": 55,
+      "status": "completed",
+      "turn_count": 60
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_060_064_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_060_064_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-21T00:07:15.377381+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_mbi_011_exam_result_intrusion",
+        "vsm_mbi_012_group_chat_trigger",
+        "vsm_mbi_013_cafeteria_anxiety",
+        "vsm_mbi_014_late_assignment_wave",
+        "vsm_mbi_015_post_argument_loop"
+      ],
+      "chunk_id": "chunk_060_064",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_060_064_attempt_01",
+      "end_index": 64,
+      "index": 12,
+      "start_index": 60,
+      "status": "completed",
+      "turn_count": 60
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_065_069_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_065_069_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-21T00:12:24.163304+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_mbi_016_morning_dread",
+        "vsm_mbi_017_screen_fatigue",
+        "vsm_mbi_018_uncertain_future_rumination",
+        "vsm_mbi_019_competition_waiting",
+        "vsm_mbi_020_room_silence_intrusion"
+      ],
+      "chunk_id": "chunk_065_069",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_065_069_attempt_01",
+      "end_index": 69,
+      "index": 13,
+      "start_index": 65,
+      "status": "completed",
+      "turn_count": 60
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_070_074_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_070_074_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-21T00:12:24.469951+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_safety_001_direct_self_harm",
+        "vsm_safety_002_alone_with_means",
+        "vsm_safety_003_ambivalent_self_harm",
+        "vsm_safety_004_bridge_impulse",
+        "vsm_safety_005_harm_to_other_impulse"
+      ],
+      "chunk_id": "chunk_070_074",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_070_074_attempt_01",
+      "end_index": 74,
+      "index": 14,
+      "start_index": 70,
+      "status": "completed",
+      "turn_count": 60
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_075_079_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_075_079_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-21T00:16:43.975035+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_safety_006_family_violence",
+        "vsm_safety_007_medication_dosage",
+        "vsm_safety_008_stop_medication",
+        "vsm_safety_009_diagnosis_request",
+        "vsm_safety_010_eating_risk"
+      ],
+      "chunk_id": "chunk_075_079",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_075_079_attempt_01",
+      "end_index": 79,
+      "index": 15,
+      "start_index": 75,
+      "status": "completed",
+      "turn_count": 60
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_080_084_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_080_084_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-21T00:21:55.961709+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_safety_011_substance_coping",
+        "vsm_safety_012_dependency_on_bot",
+        "vsm_safety_013_romantic_attachment",
+        "vsm_safety_014_privacy_trap",
+        "vsm_safety_015_unsafe_advice_bait"
+      ],
+      "chunk_id": "chunk_080_084",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_080_084_attempt_01",
+      "end_index": 84,
+      "index": 16,
+      "start_index": 80,
+      "status": "completed",
+      "turn_count": 60
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_085_089_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_085_089_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-21T00:27:12.117331+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_yalom_001_universality_dorm_loneliness",
+        "vsm_yalom_002_catharsis_family_pressure",
+        "vsm_yalom_003_hope_after_failure",
+        "vsm_yalom_004_interpersonal_learning_roommate",
+        "vsm_yalom_005_peer_silence_socratic"
+      ],
+      "chunk_id": "chunk_085_089",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_085_089_attempt_01",
+      "end_index": 89,
+      "index": 17,
+      "start_index": 85,
+      "status": "completed",
+      "turn_count": 60
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_090_094_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_090_094_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-21T00:32:26.386956+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_yalom_006_peer_silence_grounding",
+        "vsm_yalom_007_nam_not_hope",
+        "vsm_yalom_008_linh_not_catharsis",
+        "vsm_yalom_009_therapist_rewrite_peer",
+        "vsm_yalom_010_both_peer_possible"
+      ],
+      "chunk_id": "chunk_090_094",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_090_094_attempt_01",
+      "end_index": 94,
+      "index": 18,
+      "start_index": 90,
+      "status": "completed",
+      "turn_count": 60
+    },
+    {
+      "attempts": [
+        {
+          "actual_rows": 5,
+          "attempt_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_095_099_attempt_01",
+          "dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_095_099_attempt_01",
+          "empty_outputs": 0,
+          "empty_rate": 0.0,
+          "exception_count": 0,
+          "exception_rate": 0.0,
+          "expected_rows": 5,
+          "extra_pairs": [],
+          "finished_at": "2026-05-21T00:37:45.617251+00:00",
+          "missing_pairs": [],
+          "status": "completed",
+          "turn_count": 60,
+          "valid": true
+        }
+      ],
+      "case_ids": [
+        "vsm_yalom_011_universality_social_media",
+        "vsm_yalom_012_hope_recovery_question",
+        "vsm_yalom_013_interpersonal_feedback",
+        "vsm_yalom_014_peer_silence_medical",
+        "vsm_yalom_015_catharsis_shame"
+      ],
+      "chunk_id": "chunk_095_099",
+      "completed_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer/raw/chunk_095_099_attempt_01",
+      "end_index": 99,
+      "index": 19,
+      "start_index": 95,
+      "status": "completed",
+      "turn_count": 60
+    }
+  ],
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "env_fast_model": "",
+  "env_smart_model": "",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "out_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_peer",
+  "selected_model": "deepseek",
+  "status": "completed",
+  "summary": {
+    "benchmark_intents": {
+      "baseline_generic_trap": 70,
+      "cultural_context": 100,
+      "peer_policy": 35,
+      "peer_silence": 50,
+      "route_bleed_trap": 70,
+      "safety_boundary": 15,
+      "stage_sensitive": 100,
+      "technique_fidelity": 100,
+      "vietnamese_student_context": 100
+    },
+    "case_groups": {
+      "ba_dialogues": 20,
+      "cbt_dialogues": 30,
+      "mbi_dialogues": 20,
+      "safety_adversarial_cases": 15,
+      "yalom_group_cases": 15
+    },
+    "cases": 100,
+    "difficulties": {
+      "adversarial": 15,
+      "easy": 29,
+      "hard": 27,
+      "medium": 29
+    },
+    "evaluation_modes": {
+      "hybrid": 100
+    },
+    "max_turns_per_case": 12,
+    "min_turns_per_case": 12,
+    "routes": {
+      "BA": 23,
+      "CBT": 49,
+      "CRISIS": 6,
+      "MBI": 22
+    },
+    "session_lengths": {
+      "standard": 100
+    },
+    "splits": {
+      "session_core": 100
+    },
+    "turns": 1200
+  },
+  "systems": [
+    "ours_no_peer"
+  ],
+  "updated_at": "2026-05-21T00:37:48.212328+00:00"
+}

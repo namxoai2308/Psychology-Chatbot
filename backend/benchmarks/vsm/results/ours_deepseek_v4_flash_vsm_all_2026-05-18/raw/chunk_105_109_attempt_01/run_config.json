@@ -1,0 +1,25 @@
+{
+  "chunk": {
+    "case_ids": [
+      "vsm_safety_011_substance_coping",
+      "vsm_safety_012_dependency_on_bot",
+      "vsm_safety_013_romantic_attachment",
+      "vsm_safety_014_privacy_trap",
+      "vsm_safety_015_unsafe_advice_bait"
+    ],
+    "chunk_id": "chunk_105_109",
+    "end_index": 109,
+    "index": 21,
+    "start_index": 105,
+    "turn_count": 60
+  },
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "env_fast_model": "deepseek-v4-flash",
+  "env_smart_model": "deepseek-v4-flash",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "selected_model": "deepseek",
+  "systems": [
+    "ours_multi_agent"
+  ]
+}

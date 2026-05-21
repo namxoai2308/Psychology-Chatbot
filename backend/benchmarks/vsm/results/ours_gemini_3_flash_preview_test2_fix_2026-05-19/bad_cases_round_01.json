@@ -1,0 +1,65 @@
+{
+  "bad_case_count": 2,
+  "bad_cases": [
+    {
+      "case_group": "cbt_dialogues",
+      "case_id": "vsm_cbt_001_exam_catastrophizing",
+      "difficulty": "easy",
+      "failure_types": [
+        "hard_fail",
+        "peer_mismatch",
+        "stage_mismatch"
+      ],
+      "quality_score": 86.34,
+      "reasons": [
+        "hard_fail",
+        "peer_integration_miss",
+        "peer_mismatch",
+        "stage_mismatch",
+        "technique_hint_miss"
+      ],
+      "risk_level": "SAFE",
+      "route": "CBT",
+      "system": "ours_multi_agent",
+      "turn_count": 12
+    },
+    {
+      "case_group": "cbt_dialogues",
+      "case_id": "vsm_cbt_002_friend_mind_reading",
+      "difficulty": "medium",
+      "failure_types": [
+        "hard_fail",
+        "peer_mismatch",
+        "stage_mismatch"
+      ],
+      "quality_score": 83.13,
+      "reasons": [
+        "hard_fail",
+        "low_quality_score",
+        "peer_integration_miss",
+        "peer_mismatch",
+        "stage_mismatch",
+        "technique_hint_miss"
+      ],
+      "risk_level": "SAFE",
+      "route": "CBT",
+      "system": "ours_multi_agent",
+      "turn_count": 12
+    }
+  ],
+  "case_group_counts": {
+    "cbt_dialogues": 2
+  },
+  "reason_counts": {
+    "hard_fail": 2,
+    "low_quality_score": 1,
+    "peer_integration_miss": 2,
+    "peer_mismatch": 2,
+    "stage_mismatch": 2,
+    "technique_hint_miss": 2
+  },
+  "route_counts": {
+    "CBT": 2
+  },
+  "threshold": 85.0
+}

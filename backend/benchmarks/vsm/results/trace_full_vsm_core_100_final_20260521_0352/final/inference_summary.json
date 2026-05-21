@@ -1,0 +1,16 @@
+{
+  "case_count": 100,
+  "failures": 575,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/merged",
+  "result_rows": 100,
+  "result_turns": 1200,
+  "systems": {
+    "ours_full": {
+      "avg_latency_ms": 6114.32,
+      "cases": 100,
+      "failures": 575,
+      "turns": 1200
+    }
+  }
+}

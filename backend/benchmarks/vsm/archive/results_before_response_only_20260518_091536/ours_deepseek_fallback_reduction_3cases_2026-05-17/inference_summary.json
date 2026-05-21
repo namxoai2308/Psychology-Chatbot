@@ -1,0 +1,18 @@
+{
+  "case_count": 3,
+  "dataset": "backend/benchmarks/vsm/data/vsm_probe.jsonl",
+  "failures": 2,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/ours_deepseek_fallback_reduction_3cases_2026-05-17",
+  "result_rows": 3,
+  "result_turns": 12,
+  "systems": {
+    "ours_multi_agent": {
+      "avg_latency_ms": 18574.86,
+      "cases": 3,
+      "failures": 2,
+      "turns": 12
+    }
+  },
+  "turn_count": 12
+}

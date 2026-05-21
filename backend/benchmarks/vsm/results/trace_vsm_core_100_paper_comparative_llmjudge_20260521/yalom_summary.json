@@ -1,0 +1,129 @@
+{
+  "comparisons": {
+    "ours_full_vs_ours_no_peer": {
+      "group_therapy_dynamics": null,
+      "linh_persona_validity": 82.78,
+      "nam_persona_validity": 76.51,
+      "peer_selection_accuracy": 79.94,
+      "peer_silence_accuracy": -25.26,
+      "repetition_penalty": -79.94,
+      "yalom_factor_match": 79.94
+    },
+    "ours_full_vs_single_agent_plain": {
+      "group_therapy_dynamics": null,
+      "linh_persona_validity": 82.78,
+      "nam_persona_validity": 76.51,
+      "peer_selection_accuracy": 79.94,
+      "peer_silence_accuracy": -25.26,
+      "repetition_penalty": -79.94,
+      "yalom_factor_match": 79.94
+    },
+    "ours_full_vs_single_agent_stage_prompt": {
+      "group_therapy_dynamics": null,
+      "linh_persona_validity": 82.78,
+      "nam_persona_validity": 76.51,
+      "peer_selection_accuracy": 79.94,
+      "peer_silence_accuracy": -25.26,
+      "repetition_penalty": -79.94,
+      "yalom_factor_match": 79.94
+    }
+  },
+  "contract": {
+    "deterministic": "peer gating/factor metrics come from VSM process contracts",
+    "scope": "Peer-support dynamics only; not a claim of full group psychotherapy",
+    "visible_quality": "group_therapy_dynamics comes from comparative LLM judge where applicable"
+  },
+  "overall": {
+    "base_model": {
+      "group_therapy_dynamics": null,
+      "linh_persona_validity": null,
+      "nam_persona_validity": null,
+      "peer_selection_accuracy": null,
+      "peer_silence_accuracy": null,
+      "repetition_penalty": null,
+      "yalom_factor_match": null
+    },
+    "camel_cbt": {
+      "group_therapy_dynamics": null,
+      "linh_persona_validity": null,
+      "nam_persona_validity": null,
+      "peer_selection_accuracy": null,
+      "peer_silence_accuracy": null,
+      "repetition_penalty": null,
+      "yalom_factor_match": null
+    },
+    "ours_full": {
+      "group_therapy_dynamics": 90.22,
+      "linh_persona_validity": 82.77777777777777,
+      "nam_persona_validity": 76.51006711409396,
+      "peer_selection_accuracy": 79.93920972644376,
+      "peer_silence_accuracy": 74.74167623421354,
+      "repetition_penalty": 20.060790273556236,
+      "yalom_factor_match": 79.93920972644376
+    },
+    "ours_no_peer": {
+      "group_therapy_dynamics": null,
+      "linh_persona_validity": 0.0,
+      "nam_persona_validity": 0.0,
+      "peer_selection_accuracy": 0.0,
+      "peer_silence_accuracy": 100.0,
+      "repetition_penalty": 100.0,
+      "yalom_factor_match": 0.0
+    },
+    "ours_no_safety_critic": {
+      "group_therapy_dynamics": 79.78,
+      "linh_persona_validity": 83.88888888888889,
+      "nam_persona_validity": 73.8255033557047,
+      "peer_selection_accuracy": 79.33130699088146,
+      "peer_silence_accuracy": 75.43053960964409,
+      "repetition_penalty": 20.66869300911854,
+      "yalom_factor_match": 79.33130699088146
+    },
+    "ours_no_validator": {
+      "group_therapy_dynamics": 73.33,
+      "linh_persona_validity": 82.77777777777777,
+      "nam_persona_validity": 79.86577181208054,
+      "peer_selection_accuracy": 81.45896656534954,
+      "peer_silence_accuracy": 75.31572904707232,
+      "repetition_penalty": 18.54103343465046,
+      "yalom_factor_match": 81.45896656534954
+    },
+    "prompt_1_1": {
+      "group_therapy_dynamics": null,
+      "linh_persona_validity": null,
+      "nam_persona_validity": null,
+      "peer_selection_accuracy": null,
+      "peer_silence_accuracy": null,
+      "repetition_penalty": null,
+      "yalom_factor_match": null
+    },
+    "seallm": {
+      "group_therapy_dynamics": null,
+      "linh_persona_validity": null,
+      "nam_persona_validity": null,
+      "peer_selection_accuracy": null,
+      "peer_silence_accuracy": null,
+      "repetition_penalty": null,
+      "yalom_factor_match": null
+    },
+    "single_agent_plain": {
+      "group_therapy_dynamics": null,
+      "linh_persona_validity": 0.0,
+      "nam_persona_validity": 0.0,
+      "peer_selection_accuracy": 0.0,
+      "peer_silence_accuracy": 100.0,
+      "repetition_penalty": 100.0,
+      "yalom_factor_match": 0.0
+    },
+    "single_agent_stage_prompt": {
+      "group_therapy_dynamics": null,
+      "linh_persona_validity": 0.0,
+      "nam_persona_validity": 0.0,
+      "peer_selection_accuracy": 0.0,
+      "peer_silence_accuracy": 100.0,
+      "repetition_penalty": 100.0,
+      "yalom_factor_match": 0.0
+    }
+  },
+  "scoring_mode": "deterministic_yalom_plus_visible_group_dynamics"
+}

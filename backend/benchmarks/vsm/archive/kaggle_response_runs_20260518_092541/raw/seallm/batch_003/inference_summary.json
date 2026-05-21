@@ -1,0 +1,18 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "failures": 5,
+  "hard_failures": 5,
+  "out_dir": "backend/benchmarks/vsm/archive/kaggle_response_runs_20260518_092541/raw/seallm/batch_003",
+  "result_rows": 5,
+  "result_turns": 60,
+  "systems": {
+    "seallm": {
+      "avg_latency_ms": 11806.81,
+      "cases": 5,
+      "failures": 5,
+      "turns": 60
+    }
+  },
+  "turn_count": 60
+}

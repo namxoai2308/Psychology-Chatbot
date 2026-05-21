@@ -1,0 +1,21 @@
+{
+  "chunk": {
+    "case_ids": [
+      "vsm_cbt_002_friend_mind_reading"
+    ],
+    "chunk_id": "chunk_001_001",
+    "end_index": 1,
+    "index": 1,
+    "start_index": 1,
+    "turn_count": 12
+  },
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "env_fast_model": "gemini-3-flash-preview",
+  "env_smart_model": "gemini-3-flash-preview",
+  "model": "gemini-3-flash-preview",
+  "model_type": "gemini",
+  "selected_model": "gemini",
+  "systems": [
+    "ours_multi_agent"
+  ]
+}

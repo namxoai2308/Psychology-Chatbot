@@ -1,0 +1,90 @@
+{
+  "mbi_stage_1_grounding": {
+    "stage_task": "Stabilize acute overload through present-moment anchoring before any analysis.",
+    "micro_skills": [
+      "paced exhale",
+      "feet-on-floor anchoring",
+      "one-sense orientation",
+      "short body contact cue"
+    ],
+    "avoid": [
+      "cognitive disputation",
+      "asking for evidence",
+      "long explanations",
+      "forcing insight while the user is panicking"
+    ],
+    "good_moves": [
+      "Name that analysis can wait.",
+      "Give one concrete sensory instruction.",
+      "Use a small time window such as one breath or 30 seconds."
+    ],
+    "example": "Mình tạm chưa phân tích nội dung suy nghĩ nhé. Bạn thử đặt hai bàn chân xuống sàn, thở ra chậm hơn một chút, rồi nói với tôi một thứ bạn đang nhìn thấy ngay lúc này."
+  },
+  "mbi_stage_2_decentering": {
+    "stage_task": "Help the user observe thoughts as mental events without debating them.",
+    "micro_skills": [
+      "thought labeling",
+      "decentering phrase",
+      "noticing without arguing",
+      "returning to breath or senses"
+    ],
+    "avoid": [
+      "proving the thought wrong",
+      "naming CBT distortions",
+      "asking whether the thought is 100 percent true",
+      "turning mindfulness into advice"
+    ],
+    "good_moves": [
+      "Use the phrase 'mình đang có suy nghĩ rằng...'.",
+      "Invite the user to notice the thought's arrival and passing.",
+      "Keep the focus on relationship to thought, not content."
+    ],
+    "example": "Thay vì tranh luận với suy nghĩ đó, mình thử đứng lùi lại một chút: 'mình đang có suy nghĩ rằng...'. Bạn có thể đặt câu đang chạy trong đầu vào sau cụm này không?"
+  },
+  "mbi_stage_3_body_scan": {
+    "stage_task": "Locate the strongest body sensation and observe it gently.",
+    "micro_skills": [
+      "body region scan",
+      "sensation naming",
+      "soft attention",
+      "permission to reduce intensity"
+    ],
+    "avoid": [
+      "interpreting symptoms medically",
+      "deep cognitive analysis",
+      "asking multiple body questions at once",
+      "telling the user the sensation must disappear"
+    ],
+    "good_moves": [
+      "Ask for one body region only.",
+      "Offer common options such as chest, shoulders, throat, stomach.",
+      "Invite curiosity rather than control."
+    ],
+    "example": "Mình đưa sự chú ý về cơ thể một chút nhé. Cảm giác rõ nhất đang nằm ở vùng nào: ngực, vai, cổ, bụng, hay chỗ khác?"
+  },
+  "mbi_stage_4_mindful_action": {
+    "stage_task": "Close with one small mindful action that preserves regulation.",
+    "micro_skills": [
+      "mindful transition",
+      "single physical action",
+      "choice architecture",
+      "low-pressure closure"
+    ],
+    "avoid": [
+      "large plans",
+      "new cognitive analysis",
+      "pressure to stay calm",
+      "toxic positivity"
+    ],
+    "good_moves": [
+      "Offer two or three tiny body-based options.",
+      "Tie the action to present-moment awareness.",
+      "Let the user choose the least effortful option."
+    ],
+    "validator_anchors": [
+      "Use at least one concrete mindful action: uống nước, vươn vai, đứng dậy, nhìn ra, or một việc.",
+      "If Hope peer appears, doctor_speech still needs a body-based mindful action."
+    ],
+    "example": "Nếu cơ thể đã dịu hơn một chút, mình khép lại bằng một bước nhỏ có chánh niệm: uống vài ngụm nước, vươn vai chậm, hoặc nhìn ra xa 30 giây. Bạn chọn việc nào vừa sức nhất?"
+  }
+}

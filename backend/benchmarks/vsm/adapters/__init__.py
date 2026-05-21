@@ -1,0 +1,1 @@
+"""Standalone VSM baseline adapters."""

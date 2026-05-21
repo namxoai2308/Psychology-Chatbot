@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "title": "Group Dynamics (Yalom Factors)",
+    "chart_type": "Diverging Stacked Bar",
+    "scale": "1-5 Likert"
+  },
+  "data": {
+    "Single-Agent (Nhà trị liệu)": {
+      "Universality": {
+        "mean": 3.0,
+        "std": 0.72
+      },
+      "Altruism_Hope": {
+        "mean": 2.9,
+        "std": 0.7
+      },
+      "Cohesion_ImpartingInfo": {
+        "mean": 3.2,
+        "std": 0.75
+      },
+      "Reduced_Defense": {
+        "mean": 3.1,
+        "std": 0.68
+      }
+    },
+    "Multi-Agent (Nam, Linh, Nhà trị liệu)": {
+      "Universality": {
+        "mean": 3.6,
+        "std": 0.65
+      },
+      "Altruism_Hope": {
+        "mean": 3.7,
+        "std": 0.6
+      },
+      "Cohesion_ImpartingInfo": {
+        "mean": 3.3,
+        "std": 0.7
+      },
+      "Reduced_Defense": {
+        "mean": 3.5,
+        "std": 0.66
+      }
+    }
+  }
+}

@@ -1,0 +1,626 @@
+REALISTIC CBT HYBRID TEST - 10 CASES, 2-3 TURNS EACH
+Scope: heuristic evidence extractor -> deterministic FSM/rubric. Live graph uses LLM evidence extractor with same schema.
+========================================================================================
+
+>>> 01 - Áp lực thi cuối kỳ / thảm họa hóa <<<
+
+[TURN 1] USER: Mình đang rất căng thẳng với áp lực thi cuối kỳ.
+- previous_stage: cbt_stage_1_venting
+- current_stage: cbt_stage_1_venting
+- transition: STAY
+- completion_status: in_progress
+- confidence: 0.74
+- stage_goal: Validate emotion, invite more context, do not challenge thoughts yet.
+- required_yalom_factors: ['Universality', 'Catharsis']
+- allowed_yalom_factors: ['Catharsis', 'Hope', 'Interpersonal Learning', 'Universality']
+- Nam allowed: True
+- Linh allowed: False
+- evidence_details: {'emotion_present': True, 'event_present': False, 'automatic_thought': '', 'distortion_candidates': [], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.7000000000000001, 'evidence_quotes': ['Mình đang rất căng thẳng với áp lực thi cuối kỳ.'], 'source': 'heuristic'}
+- transition_reason: STAY: User is primarily venting strong emotion.
+- stage_evidence:
+  + User is primarily venting strong emotion.
+  + Evidence quote: Mình đang rất căng thẳng với áp lực thi cuối kỳ.
+  + CBT evidence features: emotion=True, event=False, automatic_thought=False, distortions=[], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Nghe vậy thì việc bạn thấy nặng nề là rất dễ hiểu. Trong chuyện này, phần nào đang khiến bạn muốn bỏ cuộc hoặc thấy khó chịu nhất?
+
+[TURN 2] USER: Mình cứ nghĩ nếu rớt môn này thì coi như hỏng hết cả học kỳ.
+- previous_stage: cbt_stage_1_venting
+- current_stage: cbt_stage_3_distortions
+- transition: ADVANCE
+- completion_status: ready_to_advance
+- confidence: 0.82
+- stage_goal: Name one possible thinking trap gently.
+- required_yalom_factors: ['Universality']
+- allowed_yalom_factors: ['Hope', 'Universality']
+- Nam allowed: True
+- Linh allowed: False
+- evidence_details: {'emotion_present': False, 'event_present': False, 'automatic_thought': 'Mình cứ nghĩ nếu rớt môn này thì coi như hỏng hết cả học kỳ.', 'distortion_candidates': ['catastrophizing', 'all_or_nothing'], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.78, 'evidence_quotes': ['Mình cứ nghĩ nếu rớt môn này thì coi như hỏng hết cả học kỳ.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User gave an automatic thought with possible distortion: catastrophizing, all_or_nothing.
+- stage_evidence:
+  + User gave an automatic thought with possible distortion: catastrophizing, all_or_nothing.
+  + Evidence quote: Mình cứ nghĩ nếu rớt môn này thì coi như hỏng hết cả học kỳ.
+  + CBT evidence features: emotion=False, event=False, automatic_thought=True, distortions=['catastrophizing', 'all_or_nothing'], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+
+[TURN 3] USER: Nghĩ lại thì có lẽ mình đang phóng đại, nhưng cảm giác lo vẫn tự bật lên.
+- previous_stage: cbt_stage_3_distortions
+- current_stage: cbt_stage_4_socratic
+- transition: ADVANCE
+- completion_status: ready_to_advance
+- confidence: 0.84
+- stage_goal: Ask one evidence-testing or double-standard Socratic question.
+- required_yalom_factors: ['NONE']
+- allowed_yalom_factors: ['NONE']
+- Nam allowed: False
+- Linh allowed: False
+- evidence_details: {'emotion_present': True, 'event_present': False, 'automatic_thought': '', 'distortion_candidates': [], 'insight_present': True, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.8, 'evidence_quotes': ['Nghĩ lại thì có lẽ mình đang phóng đại, nhưng cảm giác lo vẫn tự bật lên.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User is starting to doubt or observe the original negative thought.
+- stage_evidence:
+  + User is starting to doubt or observe the original negative thought.
+  + Evidence quote: Nghĩ lại thì có lẽ mình đang phóng đại, nhưng cảm giác lo vẫn tự bật lên.
+  + CBT evidence features: emotion=True, event=False, automatic_thought=False, distortions=[], insight=True, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 02 - Chia tay / đọc tâm trí <<<
+
+[TURN 1] USER: Từ lúc chia tay mình thấy rất trống rỗng và xấu hổ.
+- previous_stage: cbt_stage_1_venting
+- current_stage: cbt_stage_2_abc_model
+- transition: ADVANCE
+- completion_status: in_progress
+- confidence: 0.72
+- stage_goal: Separate event, automatic thought, and emotional consequence.
+- required_yalom_factors: ['NONE']
+- allowed_yalom_factors: ['Catharsis', 'NONE']
+- Nam allowed: False
+- Linh allowed: False
+- evidence_details: {'emotion_present': True, 'event_present': True, 'automatic_thought': '', 'distortion_candidates': [], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.7000000000000001, 'evidence_quotes': ['Từ lúc chia tay mình thấy rất trống rỗng và xấu hổ.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User described a concrete event/context but not a clear automatic thought.
+- stage_evidence:
+  + User described a concrete event/context but not a clear automatic thought.
+  + Evidence quote: Từ lúc chia tay mình thấy rất trống rỗng và xấu hổ.
+  + CBT evidence features: emotion=True, event=True, automatic_thought=False, distortions=[], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+
+[TURN 2] USER: Mình nghĩ chắc ai cũng thấy mình bị bỏ rơi nên rất thảm hại.
+- previous_stage: cbt_stage_2_abc_model
+- current_stage: cbt_stage_3_distortions
+- transition: ADVANCE
+- completion_status: ready_to_advance
+- confidence: 0.82
+- stage_goal: Name one possible thinking trap gently.
+- required_yalom_factors: ['Universality']
+- allowed_yalom_factors: ['Hope', 'Universality']
+- Nam allowed: True
+- Linh allowed: False
+- evidence_details: {'emotion_present': False, 'event_present': True, 'automatic_thought': 'Mình nghĩ chắc ai cũng thấy mình bị bỏ rơi nên rất thảm hại.', 'distortion_candidates': ['mind_reading'], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.8200000000000001, 'evidence_quotes': ['Mình nghĩ chắc ai cũng thấy mình bị bỏ rơi nên rất thảm hại.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User gave an automatic thought with possible distortion: mind_reading.
+- stage_evidence:
+  + User gave an automatic thought with possible distortion: mind_reading.
+  + Evidence quote: Mình nghĩ chắc ai cũng thấy mình bị bỏ rơi nên rất thảm hại.
+  + CBT evidence features: emotion=False, event=True, automatic_thought=True, distortions=['mind_reading'], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Câu đó nghe giống bẫy đọc tâm trí: mình đoán chắc người khác đang nghĩ xấu về mình dù chưa có đủ dữ kiện. Bạn thấy phần nào trong suy nghĩ đó là điều mình đang tự đoán không?
+
+[TURN 3] USER: Mình biết mình không thể chắc mọi người nghĩ vậy, nhưng cảm giác vẫn đau.
+- previous_stage: cbt_stage_3_distortions
+- current_stage: cbt_stage_4_socratic
+- transition: ADVANCE
+- completion_status: ready_to_advance
+- confidence: 0.92
+- stage_goal: Ask one evidence-testing or double-standard Socratic question.
+- required_yalom_factors: ['NONE']
+- allowed_yalom_factors: ['NONE']
+- Nam allowed: False
+- Linh allowed: False
+- evidence_details: {'emotion_present': True, 'event_present': False, 'automatic_thought': 'Mình biết mình không thể chắc mọi người nghĩ vậy, nhưng cảm giác vẫn đau.', 'distortion_candidates': ['mind_reading'], 'insight_present': True, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.92, 'evidence_quotes': ['Mình biết mình không thể chắc mọi người nghĩ vậy, nhưng cảm giác vẫn đau.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User is starting to doubt or observe the original negative thought.
+- stage_evidence:
+  + User is starting to doubt or observe the original negative thought.
+  + Evidence quote: Mình biết mình không thể chắc mọi người nghĩ vậy, nhưng cảm giác vẫn đau.
+  + CBT evidence features: emotion=True, event=False, automatic_thought=True, distortions=['mind_reading'], insight=True, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 03 - Thuyết trình / trắng-đen <<<
+
+[TURN 1] USER: Mai mình phải thuyết trình, mình hồi hộp đến mức chỉ muốn tránh luôn.
+- previous_stage: cbt_stage_1_venting
+- current_stage: cbt_stage_2_abc_model
+- transition: ADVANCE
+- completion_status: in_progress
+- confidence: 0.72
+- stage_goal: Separate event, automatic thought, and emotional consequence.
+- required_yalom_factors: ['NONE']
+- allowed_yalom_factors: ['Catharsis', 'NONE']
+- Nam allowed: False
+- Linh allowed: False
+- evidence_details: {'emotion_present': True, 'event_present': True, 'automatic_thought': '', 'distortion_candidates': [], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.7000000000000001, 'evidence_quotes': ['Mai mình phải thuyết trình, mình hồi hộp đến mức chỉ muốn tránh luôn.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User described a concrete event/context but not a clear automatic thought.
+- stage_evidence:
+  + User described a concrete event/context but not a clear automatic thought.
+  + Evidence quote: Mai mình phải thuyết trình, mình hồi hộp đến mức chỉ muốn tránh luôn.
+  + CBT evidence features: emotion=True, event=True, automatic_thought=False, distortions=[], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+
+[TURN 2] USER: Nếu mình nói vấp một câu thì coi như bài thuyết trình thất bại hoàn toàn.
+- previous_stage: cbt_stage_2_abc_model
+- current_stage: cbt_stage_3_distortions
+- transition: ADVANCE
+- completion_status: ready_to_advance
+- confidence: 0.82
+- stage_goal: Name one possible thinking trap gently.
+- required_yalom_factors: ['Universality']
+- allowed_yalom_factors: ['Hope', 'Universality']
+- Nam allowed: True
+- Linh allowed: False
+- evidence_details: {'emotion_present': False, 'event_present': True, 'automatic_thought': 'Nếu mình nói vấp một câu thì coi như bài thuyết trình thất bại hoàn toàn.', 'distortion_candidates': ['all_or_nothing', 'labeling'], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.8200000000000001, 'evidence_quotes': ['Nếu mình nói vấp một câu thì coi như bài thuyết trình thất bại hoàn toàn.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User gave an automatic thought with possible distortion: all_or_nothing, labeling.
+- stage_evidence:
+  + User gave an automatic thought with possible distortion: all_or_nothing, labeling.
+  + Evidence quote: Nếu mình nói vấp một câu thì coi như bài thuyết trình thất bại hoàn toàn.
+  + CBT evidence features: emotion=False, event=True, automatic_thought=True, distortions=['all_or_nothing', 'labeling'], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Câu đó nghe giống bẫy trắng-đen: hoặc hoàn hảo, hoặc xem như thất bại toàn bộ. Bạn thấy suy nghĩ này có đang bỏ qua những vùng ở giữa không?
+
+[TURN 3] USER: Có lẽ một lỗi nhỏ không có nghĩa là hỏng hết, nhưng mình vẫn sợ.
+- previous_stage: cbt_stage_3_distortions
+- current_stage: cbt_stage_5_action
+- transition: ADVANCE
+- completion_status: ready_to_advance
+- confidence: 0.92
+- stage_goal: Help user formulate balanced thought and one next step.
+- required_yalom_factors: ['Hope', 'Interpersonal Learning']
+- allowed_yalom_factors: ['Hope', 'Interpersonal Learning']
+- Nam allowed: False
+- Linh allowed: True
+- evidence_details: {'emotion_present': True, 'event_present': False, 'automatic_thought': 'Có lẽ một lỗi nhỏ không có nghĩa là hỏng hết, nhưng mình vẫn sợ.', 'distortion_candidates': ['catastrophizing'], 'insight_present': False, 'balanced_reframe': True, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.92, 'evidence_quotes': ['Có lẽ một lỗi nhỏ không có nghĩa là hỏng hết, nhưng mình vẫn sợ.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User produced a more balanced thought/reframe.
+- stage_evidence:
+  + User produced a more balanced thought/reframe.
+  + Evidence quote: Có lẽ một lỗi nhỏ không có nghĩa là hỏng hết, nhưng mình vẫn sợ.
+  + CBT evidence features: emotion=True, event=False, automatic_thought=True, distortions=['catastrophizing'], insight=False, reframe=True, action=False, source=heuristic.
+- therapist_stage_fallback: Mình thử đóng gói nó thành một câu công bằng hơn: một kết quả không như ý không có nghĩa là hết cơ hội sửa. Một bước nhỏ thực tế bạn có thể làm trong hôm nay là gì?
+
+>>> 04 - Phỏng vấn việc làm / dán nhãn bản thân <<<
+
+[TURN 1] USER: Mình vừa phỏng vấn xong và thấy rất hụt hẫng.
+- previous_stage: cbt_stage_1_venting
+- current_stage: cbt_stage_2_abc_model
+- transition: ADVANCE
+- completion_status: in_progress
+- confidence: 0.72
+- stage_goal: Separate event, automatic thought, and emotional consequence.
+- required_yalom_factors: ['NONE']
+- allowed_yalom_factors: ['Catharsis', 'NONE']
+- Nam allowed: False
+- Linh allowed: False
+- evidence_details: {'emotion_present': True, 'event_present': True, 'automatic_thought': '', 'distortion_candidates': [], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.7000000000000001, 'evidence_quotes': ['Mình vừa phỏng vấn xong và thấy rất hụt hẫng.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User described a concrete event/context but not a clear automatic thought.
+- stage_evidence:
+  + User described a concrete event/context but not a clear automatic thought.
+  + Evidence quote: Mình vừa phỏng vấn xong và thấy rất hụt hẫng.
+  + CBT evidence features: emotion=True, event=True, automatic_thought=False, distortions=[], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+
+[TURN 2] USER: Mình trả lời không tốt một câu, chắc mình đúng là kém cỏi.
+- previous_stage: cbt_stage_2_abc_model
+- current_stage: cbt_stage_3_distortions
+- transition: ADVANCE
+- completion_status: ready_to_advance
+- confidence: 0.82
+- stage_goal: Name one possible thinking trap gently.
+- required_yalom_factors: ['Universality']
+- allowed_yalom_factors: ['Hope', 'Universality']
+- Nam allowed: True
+- Linh allowed: False
+- evidence_details: {'emotion_present': False, 'event_present': False, 'automatic_thought': 'Mình trả lời không tốt một câu, chắc mình đúng là kém cỏi.', 'distortion_candidates': ['labeling'], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.78, 'evidence_quotes': ['Mình trả lời không tốt một câu, chắc mình đúng là kém cỏi.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User gave an automatic thought with possible distortion: labeling.
+- stage_evidence:
+  + User gave an automatic thought with possible distortion: labeling.
+  + Evidence quote: Mình trả lời không tốt một câu, chắc mình đúng là kém cỏi.
+  + CBT evidence features: emotion=False, event=False, automatic_thought=True, distortions=['labeling'], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Câu đó nghe giống bẫy dán nhãn: lấy một kết quả hoặc một cảm giác để kết luận toàn bộ con người mình. Bạn thấy nhãn đó có đang quá nặng so với sự việc thật không?
+
+[TURN 3] USER: Nói mình kém cỏi vì một câu trả lời có vẻ hơi cực đoan.
+- previous_stage: cbt_stage_3_distortions
+- current_stage: cbt_stage_4_socratic
+- transition: ADVANCE
+- completion_status: ready_to_advance
+- confidence: 0.88
+- stage_goal: Ask one evidence-testing or double-standard Socratic question.
+- required_yalom_factors: ['NONE']
+- allowed_yalom_factors: ['NONE']
+- Nam allowed: False
+- Linh allowed: False
+- evidence_details: {'emotion_present': False, 'event_present': False, 'automatic_thought': 'Nói mình kém cỏi vì một câu trả lời có vẻ hơi cực đoan.', 'distortion_candidates': ['labeling'], 'insight_present': True, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.88, 'evidence_quotes': ['Nói mình kém cỏi vì một câu trả lời có vẻ hơi cực đoan.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User is starting to doubt or observe the original negative thought.
+- stage_evidence:
+  + User is starting to doubt or observe the original negative thought.
+  + Evidence quote: Nói mình kém cỏi vì một câu trả lời có vẻ hơi cực đoan.
+  + CBT evidence features: emotion=False, event=False, automatic_thought=True, distortions=['labeling'], insight=True, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 05 - Mâu thuẫn gia đình / cá nhân hóa <<<
+
+[TURN 1] USER: Tối qua bố mẹ cãi nhau, mình thấy rất nặng nề.
+- previous_stage: cbt_stage_1_venting
+- current_stage: cbt_stage_2_abc_model
+- transition: ADVANCE
+- completion_status: in_progress
+- confidence: 0.72
+- stage_goal: Separate event, automatic thought, and emotional consequence.
+- required_yalom_factors: ['NONE']
+- allowed_yalom_factors: ['Catharsis', 'NONE']
+- Nam allowed: False
+- Linh allowed: False
+- evidence_details: {'emotion_present': True, 'event_present': True, 'automatic_thought': '', 'distortion_candidates': [], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.7000000000000001, 'evidence_quotes': ['Tối qua bố mẹ cãi nhau, mình thấy rất nặng nề.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User described a concrete event/context but not a clear automatic thought.
+- stage_evidence:
+  + User described a concrete event/context but not a clear automatic thought.
+  + Evidence quote: Tối qua bố mẹ cãi nhau, mình thấy rất nặng nề.
+  + CBT evidence features: emotion=True, event=True, automatic_thought=False, distortions=[], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+
+[TURN 2] USER: Mình cứ nghĩ chắc tại mình học hành không tốt nên nhà mới căng thẳng như vậy.
+- previous_stage: cbt_stage_2_abc_model
+- current_stage: cbt_stage_3_distortions
+- transition: ADVANCE
+- completion_status: ready_to_advance
+- confidence: 0.82
+- stage_goal: Name one possible thinking trap gently.
+- required_yalom_factors: ['Universality']
+- allowed_yalom_factors: ['Hope', 'Universality']
+- Nam allowed: True
+- Linh allowed: False
+- evidence_details: {'emotion_present': True, 'event_present': False, 'automatic_thought': 'Mình cứ nghĩ chắc tại mình học hành không tốt nên nhà mới căng thẳng như vậy.', 'distortion_candidates': ['personalization'], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.8200000000000001, 'evidence_quotes': ['Mình cứ nghĩ chắc tại mình học hành không tốt nên nhà mới căng thẳng như vậy.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User gave an automatic thought with possible distortion: personalization.
+- stage_evidence:
+  + User gave an automatic thought with possible distortion: personalization.
+  + Evidence quote: Mình cứ nghĩ chắc tại mình học hành không tốt nên nhà mới căng thẳng như vậy.
+  + CBT evidence features: emotion=True, event=False, automatic_thought=True, distortions=['personalization'], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+
+[TURN 3] USER: Mình không chắc mọi chuyện thật sự là lỗi của mình.
+- previous_stage: cbt_stage_3_distortions
+- current_stage: cbt_stage_4_socratic
+- transition: ADVANCE
+- completion_status: ready_to_advance
+- confidence: 0.88
+- stage_goal: Ask one evidence-testing or double-standard Socratic question.
+- required_yalom_factors: ['NONE']
+- allowed_yalom_factors: ['NONE']
+- Nam allowed: False
+- Linh allowed: False
+- evidence_details: {'emotion_present': False, 'event_present': False, 'automatic_thought': 'Mình không chắc mọi chuyện thật sự là lỗi của mình.', 'distortion_candidates': ['personalization'], 'insight_present': True, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.88, 'evidence_quotes': ['Mình không chắc mọi chuyện thật sự là lỗi của mình.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User is starting to doubt or observe the original negative thought.
+- stage_evidence:
+  + User is starting to doubt or observe the original negative thought.
+  + Evidence quote: Mình không chắc mọi chuyện thật sự là lỗi của mình.
+  + CBT evidence features: emotion=False, event=False, automatic_thought=True, distortions=['personalization'], insight=True, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 06 - Deadline luận văn / mất hy vọng <<<
+
+[TURN 1] USER: Mình muốn bỏ cuộc với luận văn rồi, không biết có ai từng kẹt như mình mà thoát ra được không.
+- previous_stage: cbt_stage_1_venting
+- current_stage: cbt_stage_2_abc_model
+- transition: ADVANCE
+- completion_status: in_progress
+- confidence: 0.72
+- stage_goal: Separate event, automatic thought, and emotional consequence.
+- required_yalom_factors: ['NONE']
+- allowed_yalom_factors: ['Catharsis', 'NONE']
+- Nam allowed: False
+- Linh allowed: False
+- evidence_details: {'emotion_present': True, 'event_present': True, 'automatic_thought': '', 'distortion_candidates': [], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': True, 'confidence': 0.7000000000000001, 'evidence_quotes': ['Mình muốn bỏ cuộc với luận văn rồi, không biết có ai từng kẹt như mình mà thoát ra được không.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User described a concrete event/context but not a clear automatic thought.
+- stage_evidence:
+  + User described a concrete event/context but not a clear automatic thought.
+  + Evidence quote: Mình muốn bỏ cuộc với luận văn rồi, không biết có ai từng kẹt như mình mà thoát ra được không.
+  + CBT evidence features: emotion=True, event=True, automatic_thought=False, distortions=[], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+
+[TURN 2] USER: Mình nghĩ chắc mình sẽ không bao giờ hoàn thành nổi.
+- previous_stage: cbt_stage_2_abc_model
+- current_stage: cbt_stage_3_distortions
+- transition: ADVANCE
+- completion_status: ready_to_advance
+- confidence: 0.82
+- stage_goal: Name one possible thinking trap gently.
+- required_yalom_factors: ['Universality']
+- allowed_yalom_factors: ['Hope', 'Universality']
+- Nam allowed: True
+- Linh allowed: False
+- evidence_details: {'emotion_present': False, 'event_present': False, 'automatic_thought': 'Mình nghĩ chắc mình sẽ không bao giờ hoàn thành nổi.', 'distortion_candidates': ['catastrophizing'], 'insight_present': False, 'balanced_reframe': False, 'action_step': True, 'overload': False, 'hope_request': False, 'confidence': 0.8200000000000001, 'evidence_quotes': ['Mình nghĩ chắc mình sẽ không bao giờ hoàn thành nổi.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User gave an automatic thought with possible distortion: catastrophizing.
+- stage_evidence:
+  + User gave an automatic thought with possible distortion: catastrophizing.
+  + Evidence quote: Mình nghĩ chắc mình sẽ không bao giờ hoàn thành nổi.
+  + CBT evidence features: emotion=False, event=False, automatic_thought=True, distortions=['catastrophizing'], insight=False, reframe=False, action=True, source=heuristic.
+- therapist_stage_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+
+[TURN 3] USER: Có lẽ nói không bao giờ hoàn thành là quá tuyệt đối, nhưng mình vẫn rất đuối.
+- previous_stage: cbt_stage_3_distortions
+- current_stage: cbt_stage_3_distortions
+- transition: STAY
+- completion_status: ready_to_advance
+- confidence: 0.82
+- stage_goal: Name one possible thinking trap gently.
+- required_yalom_factors: ['Universality']
+- allowed_yalom_factors: ['Hope', 'Universality']
+- Nam allowed: True
+- Linh allowed: False
+- evidence_details: {'emotion_present': True, 'event_present': False, 'automatic_thought': 'Có lẽ nói không bao giờ hoàn thành là quá tuyệt đối, nhưng mình vẫn rất đuối.', 'distortion_candidates': ['catastrophizing'], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.8200000000000001, 'evidence_quotes': ['Có lẽ nói không bao giờ hoàn thành là quá tuyệt đối, nhưng mình vẫn rất đuối.'], 'source': 'heuristic'}
+- transition_reason: STAY: User gave an automatic thought with possible distortion: catastrophizing.
+- stage_evidence:
+  + User gave an automatic thought with possible distortion: catastrophizing.
+  + Evidence quote: Có lẽ nói không bao giờ hoàn thành là quá tuyệt đối, nhưng mình vẫn rất đuối.
+  + CBT evidence features: emotion=True, event=False, automatic_thought=True, distortions=['catastrophizing'], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+
+>>> 07 - So sánh mạng xã hội / tự hạ thấp <<<
+
+[TURN 1] USER: Lướt mạng thấy bạn bè ai cũng giỏi, mình buồn và thấy tụt lại.
+- previous_stage: cbt_stage_1_venting
+- current_stage: cbt_stage_3_distortions
+- transition: ADVANCE
+- completion_status: ready_to_advance
+- confidence: 0.82
+- stage_goal: Name one possible thinking trap gently.
+- required_yalom_factors: ['Universality']
+- allowed_yalom_factors: ['Hope', 'Universality']
+- Nam allowed: True
+- Linh allowed: False
+- evidence_details: {'emotion_present': True, 'event_present': False, 'automatic_thought': 'Lướt mạng thấy bạn bè ai cũng giỏi, mình buồn và thấy tụt lại.', 'distortion_candidates': ['mind_reading'], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.8200000000000001, 'evidence_quotes': ['Lướt mạng thấy bạn bè ai cũng giỏi, mình buồn và thấy tụt lại.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User gave an automatic thought with possible distortion: mind_reading.
+- stage_evidence:
+  + User gave an automatic thought with possible distortion: mind_reading.
+  + Evidence quote: Lướt mạng thấy bạn bè ai cũng giỏi, mình buồn và thấy tụt lại.
+  + CBT evidence features: emotion=True, event=False, automatic_thought=True, distortions=['mind_reading'], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Câu đó nghe giống bẫy đọc tâm trí: mình đoán chắc người khác đang nghĩ xấu về mình dù chưa có đủ dữ kiện. Bạn thấy phần nào trong suy nghĩ đó là điều mình đang tự đoán không?
+
+[TURN 2] USER: Mình nghĩ mình thất bại một lần là mình vô dụng so với mọi người.
+- previous_stage: cbt_stage_3_distortions
+- current_stage: cbt_stage_3_distortions
+- transition: STAY
+- completion_status: ready_to_advance
+- confidence: 0.82
+- stage_goal: Name one possible thinking trap gently.
+- required_yalom_factors: ['Universality']
+- allowed_yalom_factors: ['Hope', 'Universality']
+- Nam allowed: True
+- Linh allowed: False
+- evidence_details: {'emotion_present': False, 'event_present': False, 'automatic_thought': 'Mình nghĩ mình thất bại một lần là mình vô dụng so với mọi người.', 'distortion_candidates': ['all_or_nothing', 'labeling'], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.78, 'evidence_quotes': ['Mình nghĩ mình thất bại một lần là mình vô dụng so với mọi người.'], 'source': 'heuristic'}
+- transition_reason: STAY: User gave an automatic thought with possible distortion: all_or_nothing, labeling.
+- stage_evidence:
+  + User gave an automatic thought with possible distortion: all_or_nothing, labeling.
+  + Evidence quote: Mình nghĩ mình thất bại một lần là mình vô dụng so với mọi người.
+  + CBT evidence features: emotion=False, event=False, automatic_thought=True, distortions=['all_or_nothing', 'labeling'], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Câu đó nghe giống bẫy trắng-đen: hoặc hoàn hảo, hoặc xem như thất bại toàn bộ. Bạn thấy suy nghĩ này có đang bỏ qua những vùng ở giữa không?
+
+[TURN 3] USER: Mình biết so sánh như vậy không công bằng hoàn toàn.
+- previous_stage: cbt_stage_3_distortions
+- current_stage: cbt_stage_4_socratic
+- transition: ADVANCE
+- completion_status: ready_to_advance
+- confidence: 0.88
+- stage_goal: Ask one evidence-testing or double-standard Socratic question.
+- required_yalom_factors: ['NONE']
+- allowed_yalom_factors: ['NONE']
+- Nam allowed: False
+- Linh allowed: False
+- evidence_details: {'emotion_present': False, 'event_present': False, 'automatic_thought': 'Mình biết so sánh như vậy không công bằng hoàn toàn.', 'distortion_candidates': ['all_or_nothing'], 'insight_present': True, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.88, 'evidence_quotes': ['Mình biết so sánh như vậy không công bằng hoàn toàn.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User is starting to doubt or observe the original negative thought.
+- stage_evidence:
+  + User is starting to doubt or observe the original negative thought.
+  + Evidence quote: Mình biết so sánh như vậy không công bằng hoàn toàn.
+  + CBT evidence features: emotion=False, event=False, automatic_thought=True, distortions=['all_or_nothing'], insight=True, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 08 - Lo sức khỏe / thảm họa hóa <<<
+
+[TURN 1] USER: Mấy hôm nay mình đau đầu nhẹ và cứ lo mãi.
+- previous_stage: cbt_stage_1_venting
+- current_stage: cbt_stage_2_abc_model
+- transition: ADVANCE
+- completion_status: in_progress
+- confidence: 0.72
+- stage_goal: Separate event, automatic thought, and emotional consequence.
+- required_yalom_factors: ['NONE']
+- allowed_yalom_factors: ['Catharsis', 'NONE']
+- Nam allowed: False
+- Linh allowed: False
+- evidence_details: {'emotion_present': True, 'event_present': True, 'automatic_thought': '', 'distortion_candidates': [], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.7000000000000001, 'evidence_quotes': ['Mấy hôm nay mình đau đầu nhẹ và cứ lo mãi.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User described a concrete event/context but not a clear automatic thought.
+- stage_evidence:
+  + User described a concrete event/context but not a clear automatic thought.
+  + Evidence quote: Mấy hôm nay mình đau đầu nhẹ và cứ lo mãi.
+  + CBT evidence features: emotion=True, event=True, automatic_thought=False, distortions=[], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+
+[TURN 2] USER: Mình nghĩ chắc chắn mình bị bệnh gì đó rất nặng.
+- previous_stage: cbt_stage_2_abc_model
+- current_stage: cbt_stage_3_distortions
+- transition: ADVANCE
+- completion_status: ready_to_advance
+- confidence: 0.82
+- stage_goal: Name one possible thinking trap gently.
+- required_yalom_factors: ['Universality']
+- allowed_yalom_factors: ['Hope', 'Universality']
+- Nam allowed: True
+- Linh allowed: False
+- evidence_details: {'emotion_present': False, 'event_present': True, 'automatic_thought': 'Mình nghĩ chắc chắn mình bị bệnh gì đó rất nặng.', 'distortion_candidates': ['catastrophizing'], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.8200000000000001, 'evidence_quotes': ['Mình nghĩ chắc chắn mình bị bệnh gì đó rất nặng.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User gave an automatic thought with possible distortion: catastrophizing.
+- stage_evidence:
+  + User gave an automatic thought with possible distortion: catastrophizing.
+  + Evidence quote: Mình nghĩ chắc chắn mình bị bệnh gì đó rất nặng.
+  + CBT evidence features: emotion=False, event=True, automatic_thought=True, distortions=['catastrophizing'], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+
+[TURN 3] USER: Có lẽ từ đau đầu nhẹ đến bệnh rất nặng là mình đang nhảy quá xa.
+- previous_stage: cbt_stage_3_distortions
+- current_stage: cbt_stage_2_abc_model
+- transition: REGRESS
+- completion_status: in_progress
+- confidence: 0.72
+- stage_goal: Separate event, automatic thought, and emotional consequence.
+- required_yalom_factors: ['NONE']
+- allowed_yalom_factors: ['Catharsis', 'NONE']
+- Nam allowed: False
+- Linh allowed: False
+- evidence_details: {'emotion_present': True, 'event_present': True, 'automatic_thought': '', 'distortion_candidates': [], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.7000000000000001, 'evidence_quotes': ['Có lẽ từ đau đầu nhẹ đến bệnh rất nặng là mình đang nhảy quá xa.'], 'source': 'heuristic'}
+- transition_reason: REGRESS: User described a concrete event/context but not a clear automatic thought.
+- stage_evidence:
+  + User described a concrete event/context but not a clear automatic thought.
+  + Evidence quote: Có lẽ từ đau đầu nhẹ đến bệnh rất nặng là mình đang nhảy quá xa.
+  + CBT evidence features: emotion=True, event=True, automatic_thought=False, distortions=[], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+
+>>> 09 - Bạn không trả lời tin nhắn / đọc tâm trí <<<
+
+[TURN 1] USER: Bạn thân mình không trả lời tin nhắn từ hôm qua, mình thấy hụt hẫng.
+- previous_stage: cbt_stage_1_venting
+- current_stage: cbt_stage_2_abc_model
+- transition: ADVANCE
+- completion_status: in_progress
+- confidence: 0.72
+- stage_goal: Separate event, automatic thought, and emotional consequence.
+- required_yalom_factors: ['NONE']
+- allowed_yalom_factors: ['Catharsis', 'NONE']
+- Nam allowed: False
+- Linh allowed: False
+- evidence_details: {'emotion_present': True, 'event_present': True, 'automatic_thought': '', 'distortion_candidates': [], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.7000000000000001, 'evidence_quotes': ['Bạn thân mình không trả lời tin nhắn từ hôm qua, mình thấy hụt hẫng.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User described a concrete event/context but not a clear automatic thought.
+- stage_evidence:
+  + User described a concrete event/context but not a clear automatic thought.
+  + Evidence quote: Bạn thân mình không trả lời tin nhắn từ hôm qua, mình thấy hụt hẫng.
+  + CBT evidence features: emotion=True, event=True, automatic_thought=False, distortions=[], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Mình tách nhẹ ra một chút nhé: sự kiện là điều đã xảy ra, còn phần làm cảm xúc tăng mạnh là câu bạn tự nói với mình. Ngay khoảnh khắc đó, suy nghĩ tự động đầu tiên xuất hiện là gì?
+
+[TURN 2] USER: Mình nghĩ chắc bạn ấy ghét mình rồi và không muốn chơi với mình nữa.
+- previous_stage: cbt_stage_2_abc_model
+- current_stage: cbt_stage_3_distortions
+- transition: ADVANCE
+- completion_status: ready_to_advance
+- confidence: 0.82
+- stage_goal: Name one possible thinking trap gently.
+- required_yalom_factors: ['Universality']
+- allowed_yalom_factors: ['Hope', 'Universality']
+- Nam allowed: True
+- Linh allowed: False
+- evidence_details: {'emotion_present': False, 'event_present': False, 'automatic_thought': 'Mình nghĩ chắc bạn ấy ghét mình rồi và không muốn chơi với mình nữa.', 'distortion_candidates': ['mind_reading'], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.78, 'evidence_quotes': ['Mình nghĩ chắc bạn ấy ghét mình rồi và không muốn chơi với mình nữa.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User gave an automatic thought with possible distortion: mind_reading.
+- stage_evidence:
+  + User gave an automatic thought with possible distortion: mind_reading.
+  + Evidence quote: Mình nghĩ chắc bạn ấy ghét mình rồi và không muốn chơi với mình nữa.
+  + CBT evidence features: emotion=False, event=False, automatic_thought=True, distortions=['mind_reading'], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Câu đó nghe giống một cái bẫy thảm họa hóa: não đang kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy suy nghĩ này có đang phóng đại hậu quả lên không?
+
+[TURN 3] USER: Mình không có bằng chứng chắc chắn là bạn ấy ghét mình.
+- previous_stage: cbt_stage_3_distortions
+- current_stage: cbt_stage_4_socratic
+- transition: ADVANCE
+- completion_status: ready_to_advance
+- confidence: 0.88
+- stage_goal: Ask one evidence-testing or double-standard Socratic question.
+- required_yalom_factors: ['NONE']
+- allowed_yalom_factors: ['NONE']
+- Nam allowed: False
+- Linh allowed: False
+- evidence_details: {'emotion_present': False, 'event_present': False, 'automatic_thought': 'Mình không có bằng chứng chắc chắn là bạn ấy ghét mình.', 'distortion_candidates': ['catastrophizing', 'mind_reading'], 'insight_present': True, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.88, 'evidence_quotes': ['Mình không có bằng chứng chắc chắn là bạn ấy ghét mình.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User is starting to doubt or observe the original negative thought.
+- stage_evidence:
+  + User is starting to doubt or observe the original negative thought.
+  + Evidence quote: Mình không có bằng chứng chắc chắn là bạn ấy ghét mình.
+  + CBT evidence features: emotion=False, event=False, automatic_thought=True, distortions=['catastrophizing', 'mind_reading'], insight=True, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Bạn đã nhận ra điểm rất quan trọng: suy nghĩ ấy có thể đang phóng đại, dù cảm giác vẫn tự động bật lên. Có bằng chứng nào cho thấy kết luận đó đúng 100%, và có bằng chứng nào làm nó bớt tuyệt đối hơn?
+
+>>> 10 - Kiệt sức học tập / reframe sang hành động <<<
+
+[TURN 1] USER: Mình kiệt sức vì học, nhìn sách là thấy nản.
+- previous_stage: cbt_stage_1_venting
+- current_stage: cbt_stage_1_venting
+- transition: STAY
+- completion_status: in_progress
+- confidence: 0.74
+- stage_goal: Validate emotion, invite more context, do not challenge thoughts yet.
+- required_yalom_factors: ['Universality', 'Catharsis']
+- allowed_yalom_factors: ['Catharsis', 'Hope', 'Interpersonal Learning', 'Universality']
+- Nam allowed: True
+- Linh allowed: False
+- evidence_details: {'emotion_present': True, 'event_present': False, 'automatic_thought': '', 'distortion_candidates': [], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.7000000000000001, 'evidence_quotes': ['Mình kiệt sức vì học, nhìn sách là thấy nản.'], 'source': 'heuristic'}
+- transition_reason: STAY: User is primarily venting strong emotion.
+- stage_evidence:
+  + User is primarily venting strong emotion.
+  + Evidence quote: Mình kiệt sức vì học, nhìn sách là thấy nản.
+  + CBT evidence features: emotion=True, event=False, automatic_thought=False, distortions=[], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Nghe vậy thì việc bạn thấy nặng nề là rất dễ hiểu. Trong chuyện này, phần nào đang khiến bạn muốn bỏ cuộc hoặc thấy khó chịu nhất?
+
+[TURN 2] USER: Mình nghĩ nếu hôm nay không học được nhiều thì mình là đứa vô kỷ luật.
+- previous_stage: cbt_stage_1_venting
+- current_stage: cbt_stage_3_distortions
+- transition: ADVANCE
+- completion_status: ready_to_advance
+- confidence: 0.82
+- stage_goal: Name one possible thinking trap gently.
+- required_yalom_factors: ['Universality']
+- allowed_yalom_factors: ['Hope', 'Universality']
+- Nam allowed: True
+- Linh allowed: False
+- evidence_details: {'emotion_present': False, 'event_present': False, 'automatic_thought': 'Mình nghĩ nếu hôm nay không học được nhiều thì mình là đứa vô kỷ luật.', 'distortion_candidates': ['labeling'], 'insight_present': False, 'balanced_reframe': False, 'action_step': False, 'overload': False, 'hope_request': False, 'confidence': 0.78, 'evidence_quotes': ['Mình nghĩ nếu hôm nay không học được nhiều thì mình là đứa vô kỷ luật.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User gave an automatic thought with possible distortion: labeling.
+- stage_evidence:
+  + User gave an automatic thought with possible distortion: labeling.
+  + Evidence quote: Mình nghĩ nếu hôm nay không học được nhiều thì mình là đứa vô kỷ luật.
+  + CBT evidence features: emotion=False, event=False, automatic_thought=True, distortions=['labeling'], insight=False, reframe=False, action=False, source=heuristic.
+- therapist_stage_fallback: Câu đó nghe giống bẫy dán nhãn: lấy một kết quả hoặc một cảm giác để kết luận toàn bộ con người mình. Bạn thấy nhãn đó có đang quá nặng so với sự việc thật không?
+
+[TURN 3] USER: Có thể hôm nay mình chỉ cần học 15 phút một phần nhỏ, không phải chứng minh tất cả.
+- previous_stage: cbt_stage_3_distortions
+- current_stage: cbt_stage_5_action
+- transition: ADVANCE
+- completion_status: ready_to_advance
+- confidence: 0.92
+- stage_goal: Help user formulate balanced thought and one next step.
+- required_yalom_factors: ['Hope', 'Interpersonal Learning']
+- allowed_yalom_factors: ['Hope', 'Interpersonal Learning']
+- Nam allowed: False
+- Linh allowed: True
+- evidence_details: {'emotion_present': False, 'event_present': False, 'automatic_thought': 'Có thể hôm nay mình chỉ cần học 15 phút một phần nhỏ, không phải chứng minh tất cả.', 'distortion_candidates': ['all_or_nothing'], 'insight_present': False, 'balanced_reframe': True, 'action_step': True, 'overload': False, 'hope_request': False, 'confidence': 0.92, 'evidence_quotes': ['Có thể hôm nay mình chỉ cần học 15 phút một phần nhỏ, không phải chứng minh tất cả.'], 'source': 'heuristic'}
+- transition_reason: ADVANCE: User produced a more balanced thought/reframe.
+- stage_evidence:
+  + User produced a more balanced thought/reframe.
+  + Evidence quote: Có thể hôm nay mình chỉ cần học 15 phút một phần nhỏ, không phải chứng minh tất cả.
+  + CBT evidence features: emotion=False, event=False, automatic_thought=True, distortions=['all_or_nothing'], insight=False, reframe=True, action=True, source=heuristic.
+- therapist_stage_fallback: Mình thử đóng gói nó thành một câu công bằng hơn: một kết quả không như ý không có nghĩa là hết cơ hội sửa. Một bước nhỏ thực tế bạn có thể làm trong hôm nay là gì?
+
+========================================================================================
+SUMMARY
+01 - Áp lực thi cuối kỳ / thảm họa hóa | turn 1: cbt_stage_1_venting | Yalom=['Universality', 'Catharsis'] | Nam=True | Linh=False
+01 - Áp lực thi cuối kỳ / thảm họa hóa | turn 2: cbt_stage_3_distortions | Yalom=['Universality'] | Nam=True | Linh=False
+01 - Áp lực thi cuối kỳ / thảm họa hóa | turn 3: cbt_stage_4_socratic | Yalom=['NONE'] | Nam=False | Linh=False
+02 - Chia tay / đọc tâm trí | turn 1: cbt_stage_2_abc_model | Yalom=['NONE'] | Nam=False | Linh=False
+02 - Chia tay / đọc tâm trí | turn 2: cbt_stage_3_distortions | Yalom=['Universality'] | Nam=True | Linh=False
+02 - Chia tay / đọc tâm trí | turn 3: cbt_stage_4_socratic | Yalom=['NONE'] | Nam=False | Linh=False
+03 - Thuyết trình / trắng-đen | turn 1: cbt_stage_2_abc_model | Yalom=['NONE'] | Nam=False | Linh=False
+03 - Thuyết trình / trắng-đen | turn 2: cbt_stage_3_distortions | Yalom=['Universality'] | Nam=True | Linh=False
+03 - Thuyết trình / trắng-đen | turn 3: cbt_stage_5_action | Yalom=['Hope', 'Interpersonal Learning'] | Nam=False | Linh=True
+04 - Phỏng vấn việc làm / dán nhãn bản thân | turn 1: cbt_stage_2_abc_model | Yalom=['NONE'] | Nam=False | Linh=False
+04 - Phỏng vấn việc làm / dán nhãn bản thân | turn 2: cbt_stage_3_distortions | Yalom=['Universality'] | Nam=True | Linh=False
+04 - Phỏng vấn việc làm / dán nhãn bản thân | turn 3: cbt_stage_4_socratic | Yalom=['NONE'] | Nam=False | Linh=False
+05 - Mâu thuẫn gia đình / cá nhân hóa | turn 1: cbt_stage_2_abc_model | Yalom=['NONE'] | Nam=False | Linh=False
+05 - Mâu thuẫn gia đình / cá nhân hóa | turn 2: cbt_stage_3_distortions | Yalom=['Universality'] | Nam=True | Linh=False
+05 - Mâu thuẫn gia đình / cá nhân hóa | turn 3: cbt_stage_4_socratic | Yalom=['NONE'] | Nam=False | Linh=False
+06 - Deadline luận văn / mất hy vọng | turn 1: cbt_stage_2_abc_model | Yalom=['NONE'] | Nam=False | Linh=False
+06 - Deadline luận văn / mất hy vọng | turn 2: cbt_stage_3_distortions | Yalom=['Universality'] | Nam=True | Linh=False
+06 - Deadline luận văn / mất hy vọng | turn 3: cbt_stage_3_distortions | Yalom=['Universality'] | Nam=True | Linh=False
+07 - So sánh mạng xã hội / tự hạ thấp | turn 1: cbt_stage_3_distortions | Yalom=['Universality'] | Nam=True | Linh=False
+07 - So sánh mạng xã hội / tự hạ thấp | turn 2: cbt_stage_3_distortions | Yalom=['Universality'] | Nam=True | Linh=False
+07 - So sánh mạng xã hội / tự hạ thấp | turn 3: cbt_stage_4_socratic | Yalom=['NONE'] | Nam=False | Linh=False
+08 - Lo sức khỏe / thảm họa hóa | turn 1: cbt_stage_2_abc_model | Yalom=['NONE'] | Nam=False | Linh=False
+08 - Lo sức khỏe / thảm họa hóa | turn 2: cbt_stage_3_distortions | Yalom=['Universality'] | Nam=True | Linh=False
+08 - Lo sức khỏe / thảm họa hóa | turn 3: cbt_stage_2_abc_model | Yalom=['NONE'] | Nam=False | Linh=False
+09 - Bạn không trả lời tin nhắn / đọc tâm trí | turn 1: cbt_stage_2_abc_model | Yalom=['NONE'] | Nam=False | Linh=False
+09 - Bạn không trả lời tin nhắn / đọc tâm trí | turn 2: cbt_stage_3_distortions | Yalom=['Universality'] | Nam=True | Linh=False
+09 - Bạn không trả lời tin nhắn / đọc tâm trí | turn 3: cbt_stage_4_socratic | Yalom=['NONE'] | Nam=False | Linh=False
+10 - Kiệt sức học tập / reframe sang hành động | turn 1: cbt_stage_1_venting | Yalom=['Universality', 'Catharsis'] | Nam=True | Linh=False
+10 - Kiệt sức học tập / reframe sang hành động | turn 2: cbt_stage_3_distortions | Yalom=['Universality'] | Nam=True | Linh=False
+10 - Kiệt sức học tập / reframe sang hành động | turn 3: cbt_stage_5_action | Yalom=['Hope', 'Interpersonal Learning'] | Nam=False | Linh=True

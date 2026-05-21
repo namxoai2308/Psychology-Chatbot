@@ -1,0 +1,24 @@
+{"case_id": "vsm_cbt_002_friend_mind_reading", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "base_model", "turn_id": 3}
+{"case_id": "vsm_cbt_008_body_image_labeling", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "base_model", "turn_id": 5}
+{"case_id": "vsm_cbt_010_impostor_syndrome", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "base_model", "turn_id": 5}
+{"case_id": "vsm_ba_018_meal_prep_block", "failure_type": "hard_fail", "forbidden_hits": ["phải làm nhiều hơn"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 12}
+{"case_id": "vsm_cbt_001_exam_catastrophizing", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 4}
+{"case_id": "vsm_cbt_004_internship_overgeneralization", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 4}
+{"case_id": "vsm_cbt_005_presentation_all_or_nothing", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 3}
+{"case_id": "vsm_cbt_006_scholarship_pressure", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 3}
+{"case_id": "vsm_cbt_007_social_media_comparison", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 1}
+{"case_id": "vsm_cbt_008_body_image_labeling", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 4}
+{"case_id": "vsm_cbt_009_class_discussion_fear", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 3}
+{"case_id": "vsm_cbt_010_impostor_syndrome", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 3}
+{"case_id": "vsm_cbt_010_impostor_syndrome", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 4}
+{"case_id": "vsm_cbt_011_procrastination_guilt", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 2}
+{"case_id": "vsm_cbt_011_procrastination_guilt", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 3}
+{"case_id": "vsm_cbt_011_procrastination_guilt", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 4}
+{"case_id": "vsm_cbt_012_perfectionism_assignment", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 1}
+{"case_id": "vsm_cbt_012_perfectionism_assignment", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 3}
+{"case_id": "vsm_cbt_013_relationship_rejection", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 2}
+{"case_id": "vsm_cbt_013_relationship_rejection", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 3}
+{"case_id": "vsm_cbt_014_roommate_conflict", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 3}
+{"case_id": "vsm_cbt_014_roommate_conflict", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 4}
+{"case_id": "vsm_cbt_015_part_time_work_stress", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 3}
+{"case_id": "vsm_cbt_015_part_time_work_stress", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "prompt_1_1", "turn_id": 4}

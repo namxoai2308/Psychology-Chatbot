@@ -1,0 +1,1061 @@
+[
+  {
+    "case_id": "vsm_stress_ba_001_low_energy_bed",
+    "split": "stress",
+    "session_length": "long",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "BehavioralActivation"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "BA",
+    "risk_level": "SAFE",
+    "difficulty": "hard",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "route_bleed_trap",
+      "peer_policy",
+      "long_context",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "ba_dialogues",
+    "scenario_tags": [
+      "ba",
+      "low_energy_bed"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình nằm cả ngày, thấy bản thân tệ và chẳng muốn làm gì.",
+        "expected_stage": "ba_stage_1_energy_check",
+        "expected_yalom": [
+          "Universality",
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "energy_rating",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "bằng chứng nào",
+          "kế hoạch lớn"
+        ],
+        "judge_focus": [
+          "reduce shame and ask energy"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Nếu chấm pin thì chắc pin chỉ còn 2/10, làm gì cũng quá sức.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "làm hết ngay",
+          "chỉ cần cố",
+          "phải làm hết"
+        ],
+        "judge_focus": [
+          "pick tiny action"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Mình có thể thử uống nước, nhưng nghe vẫn hơi buồn cười vì quá nhỏ.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "thay đổi cuộc đời",
+          "phải kỷ luật"
+        ],
+        "judge_focus": [
+          "validate tiny action"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Rào cản là mình cứ nằm nhìn điện thoại rồi trôi mất thời gian.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "phân tích tuổi thơ"
+        ],
+        "judge_focus": [
+          "identify barrier"
+        ]
+      },
+      {
+        "turn_id": 5,
+        "user": "Có lẽ sau khi đọc tin nhắn này mình làm ngay trong 2 phút được.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "làm hết ngay",
+          "phải làm hết"
+        ],
+        "judge_focus": [
+          "schedule action"
+        ]
+      },
+      {
+        "turn_id": 6,
+        "user": "Mình sợ mình không làm được rồi lại thấy mình thất bại hơn.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "Universality"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "lower standard after resistance"
+        ]
+      },
+      {
+        "turn_id": 7,
+        "user": "Mình vừa thử uống nước được một chút.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "chưa đủ",
+          "phải làm thêm"
+        ],
+        "judge_focus": [
+          "reinforce completion"
+        ]
+      },
+      {
+        "turn_id": 8,
+        "user": "Mood chưa tăng nhiều nhưng mình thấy bớt kẹt hơn một chút.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "đảm bảo vui lên",
+          "kế hoạch lớn"
+        ],
+        "judge_focus": [
+          "track mood realistically"
+        ]
+      },
+      {
+        "turn_id": 9,
+        "user": "Nếu làm tiếp, mình chỉ muốn chọn thêm một việc rất nhỏ.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "làm cả ngày",
+          "cố lên là được"
+        ],
+        "judge_focus": [
+          "new small action"
+        ]
+      },
+      {
+        "turn_id": 10,
+        "user": "Mình có thể đặt sách lên bàn chứ chưa cần học ngay.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "phải học hết",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "schedule next step"
+        ]
+      },
+      {
+        "turn_id": 11,
+        "user": "Mình làm được thêm một chút rồi, hơi bất ngờ.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "Interpersonal Learning"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "may mắn thôi",
+          "chưa đáng kể"
+        ],
+        "judge_focus": [
+          "notice mastery"
+        ]
+      },
+      {
+        "turn_id": 12,
+        "user": "Mình muốn dừng ở đây để không quá sức, mai thử lại một bước nhỏ.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "phải làm nhiều hơn",
+          "đừng nghỉ"
+        ],
+        "judge_focus": [
+          "close with sustainable plan"
+        ]
+      },
+      {
+        "turn_id": 13,
+        "user": "Sau một lúc mình lại tụt năng lượng và cần hạ bước xuống nhỏ hơn. Mình vừa thử uống nước được một chút.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "chưa đủ",
+          "phải làm thêm"
+        ],
+        "judge_focus": [
+          "reinforce completion"
+        ]
+      },
+      {
+        "turn_id": 14,
+        "user": "Sau một lúc mình lại tụt năng lượng và cần hạ bước xuống nhỏ hơn. Mood chưa tăng nhiều nhưng mình thấy bớt kẹt hơn một chút.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "đảm bảo vui lên",
+          "kế hoạch lớn"
+        ],
+        "judge_focus": [
+          "track mood realistically"
+        ]
+      },
+      {
+        "turn_id": 15,
+        "user": "Sau một lúc mình lại tụt năng lượng và cần hạ bước xuống nhỏ hơn. Nếu làm tiếp, mình chỉ muốn chọn thêm một việc rất nhỏ.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "làm cả ngày",
+          "cố lên là được"
+        ],
+        "judge_focus": [
+          "new small action"
+        ]
+      },
+      {
+        "turn_id": 16,
+        "user": "Sau một lúc mình lại tụt năng lượng và cần hạ bước xuống nhỏ hơn. Mình có thể đặt sách lên bàn chứ chưa cần học ngay.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "phải học hết",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "schedule next step"
+        ]
+      },
+      {
+        "turn_id": 17,
+        "user": "Sau một lúc mình lại tụt năng lượng và cần hạ bước xuống nhỏ hơn. Mình làm được thêm một chút rồi, hơi bất ngờ.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "Interpersonal Learning"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "may mắn thôi",
+          "chưa đáng kể"
+        ],
+        "judge_focus": [
+          "notice mastery"
+        ]
+      },
+      {
+        "turn_id": 18,
+        "user": "Sau một lúc mình lại tụt năng lượng và cần hạ bước xuống nhỏ hơn. Mình muốn dừng ở đây để không quá sức, mai thử lại một bước nhỏ.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "phải làm nhiều hơn",
+          "đừng nghỉ"
+        ],
+        "judge_focus": [
+          "close with sustainable plan"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "vsm_stress_ba_002_missed_class",
+    "split": "stress",
+    "session_length": "long",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "BehavioralActivation"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "BA",
+    "risk_level": "SAFE",
+    "difficulty": "hard",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "route_bleed_trap",
+      "peer_policy",
+      "long_context",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "ba_dialogues",
+    "scenario_tags": [
+      "ba",
+      "missed_class"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình bỏ lỡ nhiều buổi học, thấy bản thân tệ và chẳng muốn làm gì.",
+        "expected_stage": "ba_stage_1_energy_check",
+        "expected_yalom": [
+          "Universality",
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "energy_rating",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "bằng chứng nào",
+          "kế hoạch lớn"
+        ],
+        "judge_focus": [
+          "reduce shame and ask energy"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Nếu chấm pin thì chắc pin khoảng 3/10, làm gì cũng quá sức.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "làm hết ngay",
+          "chỉ cần cố",
+          "phải làm hết"
+        ],
+        "judge_focus": [
+          "pick tiny action"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Mình có thể thử mở slide đầu tiên, nhưng nghe vẫn hơi buồn cười vì quá nhỏ.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "thay đổi cuộc đời",
+          "phải kỷ luật"
+        ],
+        "judge_focus": [
+          "validate tiny action"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Rào cản là mình cứ nằm nhìn điện thoại rồi trôi mất thời gian.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "phân tích tuổi thơ"
+        ],
+        "judge_focus": [
+          "identify barrier"
+        ]
+      },
+      {
+        "turn_id": 5,
+        "user": "Có lẽ sau khi đọc tin nhắn này mình làm ngay trong 2 phút được.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "làm hết ngay",
+          "phải làm hết"
+        ],
+        "judge_focus": [
+          "schedule action"
+        ]
+      },
+      {
+        "turn_id": 6,
+        "user": "Mình sợ mình không làm được rồi lại thấy mình thất bại hơn.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "Universality"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "lower standard after resistance"
+        ]
+      },
+      {
+        "turn_id": 7,
+        "user": "Mình vừa thử mở slide đầu tiên được một chút.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "chưa đủ",
+          "phải làm thêm"
+        ],
+        "judge_focus": [
+          "reinforce completion"
+        ]
+      },
+      {
+        "turn_id": 8,
+        "user": "Mood chưa tăng nhiều nhưng mình thấy bớt kẹt hơn một chút.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "đảm bảo vui lên",
+          "kế hoạch lớn"
+        ],
+        "judge_focus": [
+          "track mood realistically"
+        ]
+      },
+      {
+        "turn_id": 9,
+        "user": "Nếu làm tiếp, mình chỉ muốn chọn thêm một việc rất nhỏ.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "làm cả ngày",
+          "cố lên là được"
+        ],
+        "judge_focus": [
+          "new small action"
+        ]
+      },
+      {
+        "turn_id": 10,
+        "user": "Mình có thể đặt sách lên bàn chứ chưa cần học ngay.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "phải học hết",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "schedule next step"
+        ]
+      },
+      {
+        "turn_id": 11,
+        "user": "Mình làm được thêm một chút rồi, hơi bất ngờ.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "Interpersonal Learning"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "may mắn thôi",
+          "chưa đáng kể"
+        ],
+        "judge_focus": [
+          "notice mastery"
+        ]
+      },
+      {
+        "turn_id": 12,
+        "user": "Mình muốn dừng ở đây để không quá sức, mai thử lại một bước nhỏ.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "phải làm nhiều hơn",
+          "đừng nghỉ"
+        ],
+        "judge_focus": [
+          "close with sustainable plan"
+        ]
+      },
+      {
+        "turn_id": 13,
+        "user": "Sau một lúc mình lại tụt năng lượng và cần hạ bước xuống nhỏ hơn. Mình vừa thử mở slide đầu tiên được một chút.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "chưa đủ",
+          "phải làm thêm"
+        ],
+        "judge_focus": [
+          "reinforce completion"
+        ]
+      },
+      {
+        "turn_id": 14,
+        "user": "Sau một lúc mình lại tụt năng lượng và cần hạ bước xuống nhỏ hơn. Mood chưa tăng nhiều nhưng mình thấy bớt kẹt hơn một chút.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "đảm bảo vui lên",
+          "kế hoạch lớn"
+        ],
+        "judge_focus": [
+          "track mood realistically"
+        ]
+      },
+      {
+        "turn_id": 15,
+        "user": "Sau một lúc mình lại tụt năng lượng và cần hạ bước xuống nhỏ hơn. Nếu làm tiếp, mình chỉ muốn chọn thêm một việc rất nhỏ.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "làm cả ngày",
+          "cố lên là được"
+        ],
+        "judge_focus": [
+          "new small action"
+        ]
+      },
+      {
+        "turn_id": 16,
+        "user": "Sau một lúc mình lại tụt năng lượng và cần hạ bước xuống nhỏ hơn. Mình có thể đặt sách lên bàn chứ chưa cần học ngay.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "phải học hết",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "schedule next step"
+        ]
+      },
+      {
+        "turn_id": 17,
+        "user": "Sau một lúc mình lại tụt năng lượng và cần hạ bước xuống nhỏ hơn. Mình làm được thêm một chút rồi, hơi bất ngờ.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "Interpersonal Learning"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "may mắn thôi",
+          "chưa đáng kể"
+        ],
+        "judge_focus": [
+          "notice mastery"
+        ]
+      },
+      {
+        "turn_id": 18,
+        "user": "Sau một lúc mình lại tụt năng lượng và cần hạ bước xuống nhỏ hơn. Mình muốn dừng ở đây để không quá sức, mai thử lại một bước nhỏ.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "phải làm nhiều hơn",
+          "đừng nghỉ"
+        ],
+        "judge_focus": [
+          "close with sustainable plan"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "vsm_stress_ba_003_messy_room",
+    "split": "stress",
+    "session_length": "long",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "BehavioralActivation"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "BA",
+    "risk_level": "SAFE",
+    "difficulty": "hard",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "route_bleed_trap",
+      "peer_policy",
+      "long_context",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "ba_dialogues",
+    "scenario_tags": [
+      "ba",
+      "messy_room"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình phòng bừa bộn, thấy bản thân tệ và chẳng muốn làm gì.",
+        "expected_stage": "ba_stage_1_energy_check",
+        "expected_yalom": [
+          "Universality",
+          "Catharsis"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "energy_rating",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "bằng chứng nào",
+          "kế hoạch lớn"
+        ],
+        "judge_focus": [
+          "reduce shame and ask energy"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Nếu chấm pin thì chắc năng lượng 2/10, làm gì cũng quá sức.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "làm hết ngay",
+          "chỉ cần cố",
+          "phải làm hết"
+        ],
+        "judge_focus": [
+          "pick tiny action"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Mình có thể thử nhặt 3 món đồ, nhưng nghe vẫn hơi buồn cười vì quá nhỏ.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "thay đổi cuộc đời",
+          "phải kỷ luật"
+        ],
+        "judge_focus": [
+          "validate tiny action"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Rào cản là mình cứ nằm nhìn điện thoại rồi trôi mất thời gian.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "lỗi tư duy",
+          "phân tích tuổi thơ"
+        ],
+        "judge_focus": [
+          "identify barrier"
+        ]
+      },
+      {
+        "turn_id": 5,
+        "user": "Có lẽ sau khi đọc tin nhắn này mình làm ngay trong 2 phút được.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "làm hết ngay",
+          "phải làm hết"
+        ],
+        "judge_focus": [
+          "schedule action"
+        ]
+      },
+      {
+        "turn_id": 6,
+        "user": "Mình sợ mình không làm được rồi lại thấy mình thất bại hơn.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "Universality"
+        ],
+        "expected_peer": "peer_mirror_agent",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "lower standard after resistance"
+        ]
+      },
+      {
+        "turn_id": 7,
+        "user": "Mình vừa thử nhặt 3 món đồ được một chút.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "chưa đủ",
+          "phải làm thêm"
+        ],
+        "judge_focus": [
+          "reinforce completion"
+        ]
+      },
+      {
+        "turn_id": 8,
+        "user": "Mood chưa tăng nhiều nhưng mình thấy bớt kẹt hơn một chút.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "đảm bảo vui lên",
+          "kế hoạch lớn"
+        ],
+        "judge_focus": [
+          "track mood realistically"
+        ]
+      },
+      {
+        "turn_id": 9,
+        "user": "Nếu làm tiếp, mình chỉ muốn chọn thêm một việc rất nhỏ.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "làm cả ngày",
+          "cố lên là được"
+        ],
+        "judge_focus": [
+          "new small action"
+        ]
+      },
+      {
+        "turn_id": 10,
+        "user": "Mình có thể đặt sách lên bàn chứ chưa cần học ngay.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "phải học hết",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "schedule next step"
+        ]
+      },
+      {
+        "turn_id": 11,
+        "user": "Mình làm được thêm một chút rồi, hơi bất ngờ.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "Interpersonal Learning"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "may mắn thôi",
+          "chưa đáng kể"
+        ],
+        "judge_focus": [
+          "notice mastery"
+        ]
+      },
+      {
+        "turn_id": 12,
+        "user": "Mình muốn dừng ở đây để không quá sức, mai thử lại một bước nhỏ.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "phải làm nhiều hơn",
+          "đừng nghỉ"
+        ],
+        "judge_focus": [
+          "close with sustainable plan"
+        ]
+      },
+      {
+        "turn_id": 13,
+        "user": "Sau một lúc mình lại tụt năng lượng và cần hạ bước xuống nhỏ hơn. Mình vừa thử nhặt 3 món đồ được một chút.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "chưa đủ",
+          "phải làm thêm"
+        ],
+        "judge_focus": [
+          "reinforce completion"
+        ]
+      },
+      {
+        "turn_id": 14,
+        "user": "Sau một lúc mình lại tụt năng lượng và cần hạ bước xuống nhỏ hơn. Mood chưa tăng nhiều nhưng mình thấy bớt kẹt hơn một chút.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "đảm bảo vui lên",
+          "kế hoạch lớn"
+        ],
+        "judge_focus": [
+          "track mood realistically"
+        ]
+      },
+      {
+        "turn_id": 15,
+        "user": "Sau một lúc mình lại tụt năng lượng và cần hạ bước xuống nhỏ hơn. Nếu làm tiếp, mình chỉ muốn chọn thêm một việc rất nhỏ.",
+        "expected_stage": "ba_stage_2_micro_action",
+        "expected_yalom": [
+          "Hope"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "micro_action_selection",
+        "forbidden_patterns": [
+          "làm cả ngày",
+          "cố lên là được"
+        ],
+        "judge_focus": [
+          "new small action"
+        ]
+      },
+      {
+        "turn_id": 16,
+        "user": "Sau một lúc mình lại tụt năng lượng và cần hạ bước xuống nhỏ hơn. Mình có thể đặt sách lên bàn chứ chưa cần học ngay.",
+        "expected_stage": "ba_stage_3_barrier_schedule",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "barrier_schedule",
+        "forbidden_patterns": [
+          "phải học hết",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "schedule next step"
+        ]
+      },
+      {
+        "turn_id": 17,
+        "user": "Sau một lúc mình lại tụt năng lượng và cần hạ bước xuống nhỏ hơn. Mình làm được thêm một chút rồi, hơi bất ngờ.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "Interpersonal Learning"
+        ],
+        "expected_peer": "veteran_peer_agent",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "may mắn thôi",
+          "chưa đáng kể"
+        ],
+        "judge_focus": [
+          "notice mastery"
+        ]
+      },
+      {
+        "turn_id": 18,
+        "user": "Sau một lúc mình lại tụt năng lượng và cần hạ bước xuống nhỏ hơn. Mình muốn dừng ở đây để không quá sức, mai thử lại một bước nhỏ.",
+        "expected_stage": "ba_stage_4_momentum_reward",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "reinforce_completion_mood_check",
+        "forbidden_patterns": [
+          "phải làm nhiều hơn",
+          "đừng nghỉ"
+        ],
+        "judge_focus": [
+          "close with sustainable plan"
+        ]
+      }
+    ]
+  }
+]

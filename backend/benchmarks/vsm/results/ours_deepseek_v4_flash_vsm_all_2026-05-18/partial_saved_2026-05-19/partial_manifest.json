@@ -1,0 +1,908 @@
+{
+  "saved_at": "2026-05-19T03:43:48.929209+00:00",
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "run_root": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18",
+  "remaining_root": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_after_hang",
+  "snapshot_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/partial_saved_2026-05-19",
+  "system": "ours_multi_agent",
+  "model": "deepseek-v4-flash",
+  "total_dataset_cases": 142,
+  "saved_cases": 135,
+  "missing_cases": 7,
+  "saved_turns": 1480,
+  "expected_saved_turns_from_dataset": 1480,
+  "expected_total_turns": 1606,
+  "missing_case_ids": [
+    "vsm_stress_mbi_003_deadline_overload",
+    "vsm_stress_safety_001_direct_self_harm",
+    "vsm_stress_safety_002_alone_with_means",
+    "vsm_stress_safety_003_ambivalent_self_harm",
+    "vsm_stress_yalom_001_universality_dorm_loneliness",
+    "vsm_stress_yalom_002_catharsis_family_pressure",
+    "vsm_stress_yalom_003_hope_after_failure"
+  ],
+  "row_sources": {
+    "vsm_probe_ba_001_low_energy_bed": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_000_004_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_ba_002_missed_class": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_000_004_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_ba_003_messy_room": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_000_004_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_ba_004_assignment_avoidance": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_000_004_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_ba_005_social_withdrawal": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_000_004_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_cbt_001_exam_catastrophizing": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_005_009_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_cbt_002_friend_mind_reading": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_005_009_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_cbt_003_family_should_statement": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_005_009_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_cbt_004_internship_overgeneralization": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_005_009_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_cbt_005_presentation_all_or_nothing": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_005_009_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_mbi_001_panic_before_exam": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_010_014_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_mbi_002_night_rumination": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_010_014_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_mbi_003_deadline_overload": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_010_014_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_mbi_004_intrusive_grade_thought": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_010_014_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_mbi_005_body_tension_library": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_010_014_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_safety_001_direct_self_harm": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_015_019_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_safety_002_alone_with_means": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_015_019_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_safety_003_ambivalent_self_harm": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_015_019_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_safety_004_bridge_impulse": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_015_019_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_safety_005_harm_to_other_impulse": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_015_019_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_yalom_001_universality_dorm_loneliness": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_020_024_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_yalom_002_catharsis_family_pressure": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_020_024_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_yalom_003_hope_after_failure": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_020_024_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_yalom_004_interpersonal_learning_roommate": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_020_024_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_probe_yalom_005_peer_silence_socratic": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_020_024_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_001_low_energy_bed": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_025_029_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_002_missed_class": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_025_029_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_003_messy_room": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_025_029_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_004_assignment_avoidance": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_025_029_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_005_social_withdrawal": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_025_029_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_006_sleep_schedule_broken": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_030_034_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_007_meal_skipping": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_030_034_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_008_job_search_avoidance": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_030_034_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_009_exercise_dropout": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_030_034_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_010_laundry_pile": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_030_034_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_011_email_avoidance": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_035_039_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_012_study_desk_block": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_035_039_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_013_club_task_delay": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_035_039_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_014_morning_no_momentum": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_035_039_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_015_financial_admin_avoidance": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_035_039_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_016_exam_revision_freeze": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_040_044_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_017_shower_avoidance": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_040_044_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_018_meal_prep_block": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_040_044_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_019_library_avoidance": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_040_044_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_ba_020_message_reply_delay": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_040_044_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_001_exam_catastrophizing": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_045_049_attempt_02",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_002_friend_mind_reading": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_045_049_attempt_02",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_003_family_should_statement": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_045_049_attempt_02",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_004_internship_overgeneralization": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_045_049_attempt_02",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_005_presentation_all_or_nothing": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_045_049_attempt_02",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_006_scholarship_pressure": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_050_054_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_007_social_media_comparison": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_050_054_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_008_body_image_labeling": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_050_054_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_009_class_discussion_fear": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_050_054_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_010_impostor_syndrome": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_050_054_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_011_procrastination_guilt": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_055_059_attempt_03",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_012_perfectionism_assignment": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_055_059_attempt_03",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_013_relationship_rejection": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_055_059_attempt_03",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_014_roommate_conflict": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_055_059_attempt_03",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_015_part_time_work_stress": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_055_059_attempt_03",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_016_failed_quiz_spiral": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_060_064_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_017_teacher_feedback_shame": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_060_064_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_018_club_leadership_pressure": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_060_064_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_019_graduate_uncertainty": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_060_064_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_020_language_class_anxiety": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_060_064_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_021_group_project_exclusion": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_065_069_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_022_parent_comparison": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_065_069_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_023_first_year_loneliness": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_065_069_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_024_exam_sleep_loss": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_065_069_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_025_portfolio_rejection": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_065_069_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_026_lab_mistake_personalization": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_070_074_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_027_dating_app_ghosting": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_070_074_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_028_financial_stress": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_070_074_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_029_competition_loss": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_070_074_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_cbt_030_future_uncertainty": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_070_074_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_001_panic_before_exam": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_075_079_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_002_night_rumination": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_075_079_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_003_deadline_overload": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_075_079_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_004_intrusive_grade_thought": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_075_079_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_005_body_tension_library": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_075_079_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_006_sleep_anxiety": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_080_084_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_007_presentation_panic": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_080_084_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_008_family_call_overload": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_080_084_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_009_social_noise_overwhelm": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_080_084_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_010_commute_rumination": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_080_084_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_011_exam_result_intrusion": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_085_089_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_012_group_chat_trigger": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_085_089_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_013_cafeteria_anxiety": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_085_089_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_014_late_assignment_wave": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_085_089_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_015_post_argument_loop": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_085_089_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_016_morning_dread": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_090_094_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_017_screen_fatigue": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_090_094_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_018_uncertain_future_rumination": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_090_094_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_019_competition_waiting": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_090_094_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_mbi_020_room_silence_intrusion": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_090_094_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_safety_001_direct_self_harm": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_095_099_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_safety_002_alone_with_means": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_095_099_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_safety_003_ambivalent_self_harm": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_095_099_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_safety_004_bridge_impulse": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_095_099_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_safety_005_harm_to_other_impulse": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_095_099_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_safety_006_family_violence": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_100_104_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_safety_007_medication_dosage": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_100_104_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_safety_008_stop_medication": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_100_104_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_safety_009_diagnosis_request": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_100_104_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_safety_010_eating_risk": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_100_104_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_safety_011_substance_coping": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_105_109_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_safety_012_dependency_on_bot": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_105_109_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_safety_013_romantic_attachment": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_105_109_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_safety_014_privacy_trap": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_105_109_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_safety_015_unsafe_advice_bait": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_105_109_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_yalom_001_universality_dorm_loneliness": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_110_114_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_yalom_002_catharsis_family_pressure": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_110_114_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_yalom_003_hope_after_failure": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_110_114_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_yalom_004_interpersonal_learning_roommate": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_110_114_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_yalom_005_peer_silence_socratic": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_110_114_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_yalom_006_peer_silence_grounding": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_115_119_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_yalom_007_nam_not_hope": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_115_119_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_yalom_008_linh_not_catharsis": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_115_119_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_yalom_009_therapist_rewrite_peer": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_115_119_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_yalom_010_both_peer_possible": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_115_119_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_yalom_011_universality_social_media": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_120_124_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_yalom_012_hope_recovery_question": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_120_124_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_yalom_013_interpersonal_feedback": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_120_124_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_yalom_014_peer_silence_medical": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_120_124_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_yalom_015_catharsis_shame": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_120_124_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_stress_ba_001_low_energy_bed": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_125_129_attempt_01",
+      "chunk_status": "running"
+    },
+    "vsm_stress_ba_002_missed_class": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_125_129_attempt_01",
+      "chunk_status": "running"
+    },
+    "vsm_stress_ba_003_messy_room": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_125_129_attempt_01",
+      "chunk_status": "running"
+    },
+    "vsm_stress_cbt_001_exam_catastrophizing": {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_125_129_attempt_01",
+      "chunk_status": "running"
+    },
+    "vsm_stress_cbt_002_friend_mind_reading": {
+      "source": "remaining_after_hang",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_after_hang/raw/chunk_000_001_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_stress_cbt_003_family_should_statement": {
+      "source": "remaining_after_hang",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_after_hang/raw/chunk_000_001_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_stress_cbt_004_internship_overgeneralization": {
+      "source": "remaining_after_hang",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_after_hang/raw/chunk_002_003_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_stress_cbt_005_presentation_all_or_nothing": {
+      "source": "remaining_after_hang",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_after_hang/raw/chunk_002_003_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_stress_mbi_001_panic_before_exam": {
+      "source": "remaining_after_hang",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_after_hang/raw/chunk_004_005_attempt_01",
+      "chunk_status": "completed"
+    },
+    "vsm_stress_mbi_002_night_rumination": {
+      "source": "remaining_after_hang",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_after_hang/raw/chunk_004_005_attempt_01",
+      "chunk_status": "completed"
+    }
+  },
+  "source_stats": [
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_000_004_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_005_009_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_010_014_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_015_019_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_020_024_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_025_029_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_030_034_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_035_039_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_040_044_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_045_049_attempt_01",
+      "chunk_status": "running",
+      "rows_read": 3
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_045_049_attempt_02",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_050_054_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_055_059_attempt_01",
+      "chunk_status": "running",
+      "rows_read": 1
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_055_059_attempt_02",
+      "chunk_status": "running",
+      "rows_read": 0
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_055_059_attempt_03",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_060_064_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_065_069_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_070_074_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_075_079_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_080_084_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_085_089_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_090_094_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_095_099_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_100_104_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_105_109_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_110_114_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_115_119_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_120_124_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 5
+    },
+    {
+      "source": "main",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/raw/chunk_125_129_attempt_01",
+      "chunk_status": "running",
+      "rows_read": 4
+    },
+    {
+      "source": "remaining_after_hang",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_after_hang/raw/chunk_000_001_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 2
+    },
+    {
+      "source": "remaining_after_hang",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_after_hang/raw/chunk_002_003_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 2
+    },
+    {
+      "source": "remaining_after_hang",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_after_hang/raw/chunk_004_005_attempt_01",
+      "chunk_status": "completed",
+      "rows_read": 2
+    },
+    {
+      "source": "remaining_after_hang",
+      "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_after_hang/raw/chunk_006_007_attempt_01",
+      "chunk_status": "running",
+      "rows_read": 0
+    }
+  ],
+  "files": {
+    "per_case_results_partial": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/partial_saved_2026-05-19/per_case_results.partial.jsonl",
+    "responses_partial": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/partial_saved_2026-05-19/ours_multi_agent.responses.partial.jsonl",
+    "missing_case_ids": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/partial_saved_2026-05-19/missing_case_ids.txt",
+    "saved_case_ids": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/partial_saved_2026-05-19/saved_case_ids.txt"
+  },
+  "note": "Partial snapshot intentionally does not overwrite final 142-case response export."
+}

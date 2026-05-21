@@ -1,0 +1,7 @@
+{
+  "cases": 2,
+  "complete": true,
+  "empty_outputs": 0,
+  "file": "backend/benchmarks/vsm/results/ours_gemini_3_flash_preview_test2_fix_2026-05-19/final/ours_multi_agent.responses.jsonl",
+  "turns": 24
+}

@@ -1,0 +1,2 @@
+system,dataset,cases,turns,stage_accuracy,peer_accuracy,technique_hint_match,route_accuracy,case_formulation_quality,subtle_risk_detection,over_agreement_resistance,peer_integration_quality,cultural_fit_vietnamese_student,actionability,hard_failures,fallback_turns,fallback_rate,avg_latency_ms
+ours_multi_agent,vsm_probe_mixed5_hysteresis,5,20,95.0,90.0,95.0,100.0,100.0,100.0,100.0,77.78,100.0,100.0,0,3,15.0,7492.42

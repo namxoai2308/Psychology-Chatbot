@@ -1,0 +1,28 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "failures": 23,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_safety_critic/raw/chunk_010_014_attempt_01",
+  "reliability_failures": 0,
+  "result_rows": 5,
+  "result_turns": 60,
+  "run_config": "run_config.json",
+  "selected_case_ids": [
+    "vsm_ba_011_email_avoidance",
+    "vsm_ba_012_study_desk_block",
+    "vsm_ba_013_club_task_delay",
+    "vsm_ba_014_morning_no_momentum",
+    "vsm_ba_015_financial_admin_avoidance"
+  ],
+  "systems": {
+    "ours_no_safety_critic": {
+      "avg_latency_ms": 10152.49,
+      "cases": 5,
+      "failures": 23,
+      "reliability_failures": 0,
+      "turns": 60
+    }
+  },
+  "turn_count": 60
+}

@@ -1,0 +1,11 @@
+{
+  "completed_cases": 2,
+  "error_cases": [],
+  "judge_mode": "deepseek_case_comparative",
+  "judge_model": "deepseek-v4-flash",
+  "requested_cases": 2,
+  "systems": [
+    "ours_full"
+  ],
+  "turn_judge_rows": 24
+}

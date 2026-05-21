@@ -1,0 +1,6 @@
+Baseline,Variant,Final Hybrid Δ,Clinical Safety Δ,Technique Fidelity Δ,Group Dynamics Δ,Latency Δ
+Ours Full,Ours No Peer,5.7,0.0,10.0,N/A,-1.6s
+Ours Full,Ours No Safety Critic,10.5,20.0,20.0,20.0,0.2s
+Ours Full,Ours No Validator,8.6,20.0,20.0,20.0,0.4s
+Ours Full,Single Agent Plain,27.2,20.0,60.0,N/A,-5.5s
+Ours Full,Single Agent + Stage,10.1,0.0,20.0,N/A,-3.1s

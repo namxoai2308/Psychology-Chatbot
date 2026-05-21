@@ -1,0 +1,18 @@
+{
+  "case_count": 20,
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "failures": 0,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/raw/seallm/chunk_020_039_rerun1",
+  "result_rows": 20,
+  "result_turns": 200,
+  "systems": {
+    "seallm": {
+      "avg_latency_ms": 11919.01,
+      "cases": 20,
+      "failures": 0,
+      "turns": 200
+    }
+  },
+  "turn_count": 200
+}

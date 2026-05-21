@@ -1,0 +1,30 @@
+{
+  "case_count": 3,
+  "dataset": "backend/benchmarks/vsm/data/vsm_probe.jsonl",
+  "failures": 4,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/deepseek_api_3systems_probe3_after_structural_2026-05-16",
+  "result_rows": 9,
+  "result_turns": 36,
+  "systems": {
+    "base_model": {
+      "avg_latency_ms": 2052.97,
+      "cases": 3,
+      "failures": 0,
+      "turns": 12
+    },
+    "ours_multi_agent": {
+      "avg_latency_ms": 10133.22,
+      "cases": 3,
+      "failures": 4,
+      "turns": 12
+    },
+    "prompt_1_1": {
+      "avg_latency_ms": 4703.19,
+      "cases": 3,
+      "failures": 0,
+      "turns": 12
+    }
+  },
+  "turn_count": 12
+}

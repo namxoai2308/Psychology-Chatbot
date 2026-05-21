@@ -1,0 +1,18 @@
+{
+  "case_count": 3,
+  "dataset": "backend/benchmarks/vsm/data/vsm_probe.jsonl",
+  "failures": 0,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/seallm_probe3_2026-05-18",
+  "result_rows": 3,
+  "result_turns": 12,
+  "systems": {
+    "seallm": {
+      "avg_latency_ms": 20189.13,
+      "cases": 3,
+      "failures": 0,
+      "turns": 12
+    }
+  },
+  "turn_count": 12
+}

@@ -1,0 +1,545 @@
+{
+  "results_dir": "backend/benchmarks/vsm/results/five_systems_ours_completed45_llmjudge_2026-05-19",
+  "systems": [
+    "base_model",
+    "camel_cbt",
+    "ours_multi_agent",
+    "prompt_1_1",
+    "seallm"
+  ],
+  "case_count": 45,
+  "result_rows": 225,
+  "result_turns": 1700,
+  "overall": {
+    "base_model": {
+      "cases": 45,
+      "turns": 340,
+      "vsm_total": 71.29,
+      "deterministic_total": 76.52,
+      "llm_judge_total": 69.1,
+      "final_hybrid_score": 71.29,
+      "clinical_safety": 81.88,
+      "therapeutic_quality": 69.26,
+      "therapeutic_alliance": 73.65,
+      "modality_fidelity": 52.94,
+      "technique_fidelity": 52.94,
+      "group_therapy_dynamics": null,
+      "conversation_progress": 64.24,
+      "context_retention": 74.35,
+      "cultural_fit_vietnamese_student": 74.35,
+      "actionability": 69.88,
+      "over_agreement_resistance": 68.71,
+      "subtle_risk_detection": 61.88,
+      "system_reliability": 99.41,
+      "runtime_efficiency": 88.88,
+      "fallback_rate": 0.0,
+      "failure_rate": 0.59,
+      "avg_latency_seconds": 2.781,
+      "latency_p50_ms": 2048.09,
+      "latency_p90_ms": 2662.47,
+      "latency_p95_ms": 2920.86,
+      "token_cost_estimate": 0.01
+    },
+    "camel_cbt": {
+      "cases": 45,
+      "turns": 340,
+      "vsm_total": 52.45,
+      "deterministic_total": 64.87,
+      "llm_judge_total": 48.37,
+      "final_hybrid_score": 52.45,
+      "clinical_safety": 76.71,
+      "therapeutic_quality": 34.59,
+      "therapeutic_alliance": 54.35,
+      "modality_fidelity": 23.29,
+      "technique_fidelity": 23.29,
+      "group_therapy_dynamics": null,
+      "conversation_progress": 26.12,
+      "context_retention": 56.71,
+      "cultural_fit_vietnamese_student": 58.59,
+      "actionability": 23.29,
+      "over_agreement_resistance": 69.18,
+      "subtle_risk_detection": 47.06,
+      "system_reliability": 99.41,
+      "runtime_efficiency": 79.91,
+      "fallback_rate": 0.0,
+      "failure_rate": 0.59,
+      "avg_latency_seconds": 5.024,
+      "latency_p50_ms": 5031.05,
+      "latency_p90_ms": 6196.1,
+      "latency_p95_ms": 6591.11,
+      "token_cost_estimate": 0.01
+    },
+    "ours_multi_agent": {
+      "cases": 45,
+      "turns": 340,
+      "vsm_total": 91.86,
+      "deterministic_total": 89.99,
+      "llm_judge_total": 91.86,
+      "final_hybrid_score": 91.86,
+      "clinical_safety": 97.65,
+      "therapeutic_quality": 91.76,
+      "therapeutic_alliance": 92.94,
+      "modality_fidelity": 92.47,
+      "technique_fidelity": 92.47,
+      "group_therapy_dynamics": 87.75,
+      "conversation_progress": 90.59,
+      "context_retention": 89.65,
+      "cultural_fit_vietnamese_student": 96.71,
+      "actionability": 91.76,
+      "over_agreement_resistance": 92.71,
+      "subtle_risk_detection": 86.12,
+      "system_reliability": 54.12,
+      "runtime_efficiency": 8.03,
+      "fallback_rate": 0.0,
+      "failure_rate": 45.88,
+      "avg_latency_seconds": 22.993,
+      "latency_p50_ms": 21023.67,
+      "latency_p90_ms": 32580.54,
+      "latency_p95_ms": 37878.78,
+      "token_cost_estimate": 0.01
+    },
+    "prompt_1_1": {
+      "cases": 45,
+      "turns": 340,
+      "vsm_total": 76.61,
+      "deterministic_total": 83.61,
+      "llm_judge_total": 74.69,
+      "final_hybrid_score": 76.61,
+      "clinical_safety": 91.29,
+      "therapeutic_quality": 71.69,
+      "therapeutic_alliance": 85.65,
+      "modality_fidelity": 54.12,
+      "technique_fidelity": 54.12,
+      "group_therapy_dynamics": null,
+      "conversation_progress": 63.53,
+      "context_retention": 79.53,
+      "cultural_fit_vietnamese_student": 83.76,
+      "actionability": 65.88,
+      "over_agreement_resistance": 76.47,
+      "subtle_risk_detection": 72.0,
+      "system_reliability": 92.06,
+      "runtime_efficiency": 80.42,
+      "fallback_rate": 0.0,
+      "failure_rate": 7.94,
+      "avg_latency_seconds": 4.895,
+      "latency_p50_ms": 3789.53,
+      "latency_p90_ms": 5264.15,
+      "latency_p95_ms": 6044.87,
+      "token_cost_estimate": 0.01
+    },
+    "seallm": {
+      "cases": 45,
+      "turns": 340,
+      "vsm_total": 44.56,
+      "deterministic_total": 71.19,
+      "llm_judge_total": 38.35,
+      "final_hybrid_score": 44.56,
+      "clinical_safety": 58.35,
+      "therapeutic_quality": 32.39,
+      "therapeutic_alliance": 37.18,
+      "modality_fidelity": 20.71,
+      "technique_fidelity": 20.71,
+      "group_therapy_dynamics": null,
+      "conversation_progress": 25.88,
+      "context_retention": 35.06,
+      "cultural_fit_vietnamese_student": 46.82,
+      "actionability": 34.12,
+      "over_agreement_resistance": 52.47,
+      "subtle_risk_detection": 34.59,
+      "system_reliability": 98.82,
+      "runtime_efficiency": 52.07,
+      "fallback_rate": 0.0,
+      "failure_rate": 1.18,
+      "avg_latency_seconds": 11.984,
+      "latency_p50_ms": 9011.04,
+      "latency_p90_ms": 26918.09,
+      "latency_p95_ms": 33300.8,
+      "token_cost_estimate": 0.01
+    }
+  },
+  "route_performance": [
+    {
+      "system": "base_model",
+      "route": "BA",
+      "cases": 25,
+      "stage_accuracy": 0.0,
+      "technique_fidelity": 37.31,
+      "route_bleed_count": 0,
+      "validator_pass": 100.0,
+      "fallback_rate": 0.0
+    },
+    {
+      "system": "base_model",
+      "route": "CBT",
+      "cases": 10,
+      "stage_accuracy": 0.0,
+      "technique_fidelity": 85.0,
+      "route_bleed_count": 0,
+      "validator_pass": 100.0,
+      "fallback_rate": 0.0
+    },
+    {
+      "system": "base_model",
+      "route": "CRISIS",
+      "cases": 5,
+      "stage_accuracy": 0.0,
+      "technique_fidelity": 20.0,
+      "route_bleed_count": 0,
+      "validator_pass": 100.0,
+      "fallback_rate": 0.0
+    },
+    {
+      "system": "base_model",
+      "route": "MBI",
+      "cases": 5,
+      "stage_accuracy": 0.0,
+      "technique_fidelity": 55.0,
+      "route_bleed_count": 0,
+      "validator_pass": 100.0,
+      "fallback_rate": 0.0
+    },
+    {
+      "system": "camel_cbt",
+      "route": "BA",
+      "cases": 25,
+      "stage_accuracy": 0.0,
+      "technique_fidelity": 16.54,
+      "route_bleed_count": 0,
+      "validator_pass": 100.0,
+      "fallback_rate": 0.0
+    },
+    {
+      "system": "camel_cbt",
+      "route": "CBT",
+      "cases": 10,
+      "stage_accuracy": 0.0,
+      "technique_fidelity": 42.5,
+      "route_bleed_count": 0,
+      "validator_pass": 100.0,
+      "fallback_rate": 0.0
+    },
+    {
+      "system": "camel_cbt",
+      "route": "CRISIS",
+      "cases": 5,
+      "stage_accuracy": 0.0,
+      "technique_fidelity": 0.0,
+      "route_bleed_count": 0,
+      "validator_pass": 100.0,
+      "fallback_rate": 0.0
+    },
+    {
+      "system": "camel_cbt",
+      "route": "MBI",
+      "cases": 5,
+      "stage_accuracy": 0.0,
+      "technique_fidelity": 45.0,
+      "route_bleed_count": 0,
+      "validator_pass": 100.0,
+      "fallback_rate": 0.0
+    },
+    {
+      "system": "ours_multi_agent",
+      "route": "BA",
+      "cases": 25,
+      "stage_accuracy": 76.54,
+      "technique_fidelity": 84.62,
+      "route_bleed_count": 0,
+      "validator_pass": 99.62,
+      "fallback_rate": 0.38
+    },
+    {
+      "system": "ours_multi_agent",
+      "route": "CBT",
+      "cases": 10,
+      "stage_accuracy": 100.0,
+      "technique_fidelity": 92.5,
+      "route_bleed_count": 0,
+      "validator_pass": 100.0,
+      "fallback_rate": 0.0
+    },
+    {
+      "system": "ours_multi_agent",
+      "route": "CRISIS",
+      "cases": 5,
+      "stage_accuracy": 100.0,
+      "technique_fidelity": 100.0,
+      "route_bleed_count": 0,
+      "validator_pass": 100.0,
+      "fallback_rate": 0.0
+    },
+    {
+      "system": "ours_multi_agent",
+      "route": "MBI",
+      "cases": 5,
+      "stage_accuracy": 100.0,
+      "technique_fidelity": 95.0,
+      "route_bleed_count": 0,
+      "validator_pass": 100.0,
+      "fallback_rate": 0.0
+    },
+    {
+      "system": "prompt_1_1",
+      "route": "BA",
+      "cases": 25,
+      "stage_accuracy": 0.0,
+      "technique_fidelity": 73.46,
+      "route_bleed_count": 0,
+      "validator_pass": 100.0,
+      "fallback_rate": 0.0
+    },
+    {
+      "system": "prompt_1_1",
+      "route": "CBT",
+      "cases": 10,
+      "stage_accuracy": 0.0,
+      "technique_fidelity": 92.5,
+      "route_bleed_count": 0,
+      "validator_pass": 100.0,
+      "fallback_rate": 0.0
+    },
+    {
+      "system": "prompt_1_1",
+      "route": "CRISIS",
+      "cases": 5,
+      "stage_accuracy": 0.0,
+      "technique_fidelity": 90.0,
+      "route_bleed_count": 0,
+      "validator_pass": 100.0,
+      "fallback_rate": 0.0
+    },
+    {
+      "system": "prompt_1_1",
+      "route": "MBI",
+      "cases": 5,
+      "stage_accuracy": 0.0,
+      "technique_fidelity": 90.0,
+      "route_bleed_count": 0,
+      "validator_pass": 100.0,
+      "fallback_rate": 0.0
+    },
+    {
+      "system": "seallm",
+      "route": "BA",
+      "cases": 25,
+      "stage_accuracy": 0.0,
+      "technique_fidelity": 25.0,
+      "route_bleed_count": 0,
+      "validator_pass": 100.0,
+      "fallback_rate": 0.0
+    },
+    {
+      "system": "seallm",
+      "route": "CBT",
+      "cases": 10,
+      "stage_accuracy": 0.0,
+      "technique_fidelity": 55.0,
+      "route_bleed_count": 0,
+      "validator_pass": 100.0,
+      "fallback_rate": 0.0
+    },
+    {
+      "system": "seallm",
+      "route": "CRISIS",
+      "cases": 5,
+      "stage_accuracy": 0.0,
+      "technique_fidelity": 40.0,
+      "route_bleed_count": 0,
+      "validator_pass": 100.0,
+      "fallback_rate": 0.0
+    },
+    {
+      "system": "seallm",
+      "route": "MBI",
+      "cases": 5,
+      "stage_accuracy": 0.0,
+      "technique_fidelity": 60.0,
+      "route_bleed_count": 0,
+      "validator_pass": 100.0,
+      "fallback_rate": 0.0
+    }
+  ],
+  "safety": {
+    "base_model": {
+      "crisis_safe_response": 90.0,
+      "unsafe_advice_violation": 2,
+      "medical_boundary": null,
+      "dependency_boundary": 100.0,
+      "adversarial_pass_rate": 99.41176470588235,
+      "safety_gate_failures": 2
+    },
+    "camel_cbt": {
+      "crisis_safe_response": 90.0,
+      "unsafe_advice_violation": 2,
+      "medical_boundary": null,
+      "dependency_boundary": 100.0,
+      "adversarial_pass_rate": 99.41176470588235,
+      "safety_gate_failures": 2
+    },
+    "ours_multi_agent": {
+      "crisis_safe_response": 100.0,
+      "unsafe_advice_violation": 0,
+      "medical_boundary": null,
+      "dependency_boundary": 100.0,
+      "adversarial_pass_rate": 100.0,
+      "safety_gate_failures": 0
+    },
+    "prompt_1_1": {
+      "crisis_safe_response": 70.0,
+      "unsafe_advice_violation": 27,
+      "medical_boundary": null,
+      "dependency_boundary": 100.0,
+      "adversarial_pass_rate": 92.05882352941177,
+      "safety_gate_failures": 27
+    },
+    "seallm": {
+      "crisis_safe_response": 80.0,
+      "unsafe_advice_violation": 4,
+      "medical_boundary": null,
+      "dependency_boundary": 100.0,
+      "adversarial_pass_rate": 98.82352941176471,
+      "safety_gate_failures": 4
+    }
+  },
+  "yalom_group": {
+    "base_model": {},
+    "camel_cbt": {},
+    "ours_multi_agent": {
+      "peer_selection_accuracy": 80.34682080924856,
+      "yalom_factor_match": 80.34682080924856,
+      "nam_persona_validity": 62.71186440677966,
+      "linh_persona_validity": 89.47368421052632,
+      "peer_silence_accuracy": 64.07185628742515,
+      "repetition_penalty": 19.653179190751445
+    },
+    "prompt_1_1": {},
+    "seallm": {}
+  },
+  "yalom_factors": {
+    "Catharsis": 98.92,
+    "Hope": 97.39,
+    "Interpersonal Learning": 100.0,
+    "Universality": 91.54
+  },
+  "failure_taxonomy": {
+    "exception": {
+      "base_model": 0,
+      "camel_cbt": 0,
+      "ours_multi_agent": 0,
+      "prompt_1_1": 0,
+      "seallm": 0
+    },
+    "fallback_used": {
+      "base_model": 0,
+      "camel_cbt": 0,
+      "ours_multi_agent": 1,
+      "prompt_1_1": 0,
+      "seallm": 0
+    },
+    "generic_response": {
+      "base_model": 0,
+      "camel_cbt": 0,
+      "ours_multi_agent": 0,
+      "prompt_1_1": 0,
+      "seallm": 0
+    },
+    "hard_fail": {
+      "base_model": 2,
+      "camel_cbt": 2,
+      "ours_multi_agent": 0,
+      "prompt_1_1": 27,
+      "seallm": 4
+    },
+    "route_bleed": {
+      "base_model": 0,
+      "camel_cbt": 0,
+      "ours_multi_agent": 0,
+      "prompt_1_1": 0,
+      "seallm": 0
+    },
+    "stage_mismatch": {
+      "base_model": 0,
+      "camel_cbt": 0,
+      "ours_multi_agent": 61,
+      "prompt_1_1": 0,
+      "seallm": 0
+    },
+    "unsafe_advice": {
+      "base_model": 0,
+      "camel_cbt": 0,
+      "ours_multi_agent": 0,
+      "prompt_1_1": 0,
+      "seallm": 0
+    },
+    "wrong_peer": {
+      "base_model": 0,
+      "camel_cbt": 0,
+      "ours_multi_agent": 94,
+      "prompt_1_1": 0,
+      "seallm": 0
+    }
+  },
+  "fallback_by_stage": {
+    "ba_stage_1_energy_check": 0.8,
+    "ba_stage_2_micro_action": 0.0,
+    "ba_stage_3_barrier_schedule": 0.0,
+    "ba_stage_4_momentum_reward": 0.0,
+    "cbt_stage_1_venting": 0.0,
+    "cbt_stage_2_abc_model": 0.0,
+    "crisis_response": 0.0,
+    "mbi_stage_1_grounding": 0.0,
+    "mbi_stage_2_decentering": 0.0
+  },
+  "confidence_intervals": {
+    "base_model": {
+      "metric": "final_hybrid_score",
+      "mean": 71.29,
+      "std": 13.03,
+      "ci_low": 69.93,
+      "ci_high": 72.8,
+      "n_turns": 340
+    },
+    "camel_cbt": {
+      "metric": "final_hybrid_score",
+      "mean": 52.45,
+      "std": 7.22,
+      "ci_low": 51.66,
+      "ci_high": 53.22,
+      "n_turns": 340
+    },
+    "ours_multi_agent": {
+      "metric": "final_hybrid_score",
+      "mean": 91.86,
+      "std": 7.59,
+      "ci_low": 91.03,
+      "ci_high": 92.67,
+      "n_turns": 340
+    },
+    "prompt_1_1": {
+      "metric": "final_hybrid_score",
+      "mean": 76.61,
+      "std": 9.47,
+      "ci_low": 75.58,
+      "ci_high": 77.59,
+      "n_turns": 340
+    },
+    "seallm": {
+      "metric": "final_hybrid_score",
+      "mean": 44.56,
+      "std": 7.04,
+      "ci_low": 43.8,
+      "ci_high": 45.32,
+      "n_turns": 340
+    }
+  },
+  "human_audit": {
+    "template": "human_audit_template.csv",
+    "audited_turns": 0,
+    "agreement_summary": {}
+  },
+  "score_contract": {
+    "deterministic_total": "metadata/pattern metrics only; N/A values excluded",
+    "llm_judge_total": "1-5 judge rubric scaled to 0-100; heuristic_surrogate until live judge is enabled",
+    "final_hybrid_score": "ours blends deterministic and judge signals; text baselines are judge-heavy"
+  }
+}

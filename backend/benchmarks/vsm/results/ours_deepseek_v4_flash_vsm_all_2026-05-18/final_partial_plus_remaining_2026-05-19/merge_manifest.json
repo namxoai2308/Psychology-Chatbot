@@ -1,0 +1,11 @@
+{
+  "expected_cases": 142,
+  "final_cases": 142,
+  "missing_case_ids": [],
+  "sources": {
+    "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/partial_saved_2026-05-19/per_case_results.partial.jsonl": 135,
+    "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_2026-05-19/raw/chunk_000_004_attempt_01/per_case_results.jsonl": 4,
+    "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_last3_2026-05-19/final/per_case_results.jsonl": 3,
+    "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_last3_2026-05-19/merged/per_case_results.jsonl": 3
+  }
+}

@@ -1,0 +1,13 @@
+The final analysis will explain why aggregate scores occur rather than merely restating them. This draft fixes the planned analysis axes so that interpretation follows the benchmark design.
+
+\paragraph{Mechanism analysis.}
+Each ablation will be compared against \tracefull. The peer ablation will be discussed through group-dynamics and peer-accuracy metrics. The validator ablation will be discussed through stage accuracy, technique fidelity, and fallback behavior. The safety-critic ablation will be discussed through safety cases and boundary failures. The single-agent baselines will test whether blackboard coordination matters beyond route/stage prompting.
+
+\paragraph{Error taxonomy.}
+Qualitative failures will be categorized as wrong route, premature stage advance, delayed stage transition, generic reassurance, peer overuse, wrong peer persona, unsafe advice, dependency reinforcement, crisis mishandling, fallback, or long-context drift. The final paper will report frequencies for major categories and include brief anonymized examples when space permits.
+
+\paragraph{Case studies.}
+Two case studies are reserved for the final result pass. The CBT case study will show whether \tracefull\ holds ABC, distortion, and Socratic stages rather than jumping to action. The peer-gating case study will show when a peer contribution helps and when silence preserves therapist-led work. Both case studies will use short excerpts and will not claim clinical improvement.
+
+\paragraph{Human audit.}
+The audit will check whether deterministic labels and LLM judge scores agree with human judgment. If the audit finds recurring disagreement, the paper will report the disagreement as a limitation and adjust claims accordingly.

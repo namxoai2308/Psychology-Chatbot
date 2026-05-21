@@ -1,0 +1,25 @@
+{
+  "chunk": {
+    "case_ids": [
+      "vsm_yalom_006_peer_silence_grounding",
+      "vsm_yalom_007_nam_not_hope",
+      "vsm_yalom_008_linh_not_catharsis",
+      "vsm_yalom_009_therapist_rewrite_peer",
+      "vsm_yalom_010_both_peer_possible"
+    ],
+    "chunk_id": "chunk_115_119",
+    "end_index": 119,
+    "index": 23,
+    "start_index": 115,
+    "turn_count": 60
+  },
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "env_fast_model": "deepseek-v4-flash",
+  "env_smart_model": "deepseek-v4-flash",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "selected_model": "deepseek",
+  "systems": [
+    "ours_multi_agent"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "case_count": 1,
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "failures": 12,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/baseline_responses_vsm_all_2026-05-18/repairs/camel_cbt/vsm_ba_016_exam_revision_freeze_healthcheck",
+  "result_rows": 1,
+  "result_turns": 12,
+  "systems": {
+    "camel_cbt": {
+      "avg_latency_ms": 178.86,
+      "cases": 1,
+      "failures": 12,
+      "turns": 12
+    }
+  },
+  "turn_count": 12
+}

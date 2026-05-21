@@ -1,0 +1,16 @@
+{
+  "case_count": 100,
+  "failures": 329,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/single_agent_plain/merged",
+  "result_rows": 100,
+  "result_turns": 1200,
+  "systems": {
+    "single_agent_plain": {
+      "avg_latency_ms": 1988.27,
+      "cases": 100,
+      "failures": 329,
+      "turns": 1200
+    }
+  }
+}

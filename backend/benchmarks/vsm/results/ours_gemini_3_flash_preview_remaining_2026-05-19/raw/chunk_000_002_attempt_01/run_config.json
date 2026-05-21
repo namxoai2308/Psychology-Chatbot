@@ -1,0 +1,23 @@
+{
+  "chunk": {
+    "case_ids": [
+      "vsm_cbt_001_exam_catastrophizing",
+      "vsm_cbt_002_friend_mind_reading",
+      "vsm_cbt_003_family_should_statement"
+    ],
+    "chunk_id": "chunk_000_002",
+    "end_index": 2,
+    "index": 0,
+    "start_index": 0,
+    "turn_count": 36
+  },
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "env_fast_model": "gemini-3-flash-preview",
+  "env_smart_model": "gemini-3-flash-preview",
+  "model": "gemini-3-flash-preview",
+  "model_type": "gemini",
+  "selected_model": "gemini",
+  "systems": [
+    "ours_multi_agent"
+  ]
+}

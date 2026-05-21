@@ -1,0 +1,8 @@
+{"actual": "ba_stage_3_barrier_schedule", "case_id": "vsm_probe_ba_001_low_energy_bed", "expected": "ba_stage_2_micro_action", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 3}
+{"actual": "ba_stage_1_energy_check", "case_id": "vsm_probe_ba_001_low_energy_bed", "expected": "ba_stage_3_barrier_schedule", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 4}
+{"actual": "peer_mirror_agent", "case_id": "vsm_probe_ba_001_low_energy_bed", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 4}
+{"actual": "ba_stage_3_barrier_schedule", "case_id": "vsm_probe_ba_002_missed_class", "expected": "ba_stage_2_micro_action", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 3}
+{"actual": "ba_stage_1_energy_check", "case_id": "vsm_probe_ba_002_missed_class", "expected": "ba_stage_3_barrier_schedule", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 4}
+{"actual": "peer_mirror_agent", "case_id": "vsm_probe_ba_002_missed_class", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 4}
+{"actual": "ba_stage_1_energy_check", "case_id": "vsm_probe_ba_003_messy_room", "expected": "ba_stage_3_barrier_schedule", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 4}
+{"actual": "peer_mirror_agent", "case_id": "vsm_probe_ba_003_messy_room", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 4}

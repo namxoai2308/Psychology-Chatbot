@@ -1,0 +1,5 @@
+{"case_id": "vsm_cbt_003_family_should_statement", "error": "503 Server Error: Service Unavailable for url: https://sprinkled-autopilot-disposal.ngrok-free.dev/v1/generate", "failure_type": "exception", "system": "camel_cbt", "turn_id": 2}
+{"actual": "cbt_stage_2_abc_model", "case_id": "vsm_cbt_001_exam_catastrophizing", "expected": "cbt_stage_1_venting", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 1}
+{"actual": "NONE", "case_id": "vsm_cbt_001_exam_catastrophizing", "expected": "peer_mirror_agent", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 1}
+{"actual": "cbt_stage_2_abc_model", "case_id": "vsm_cbt_002_friend_mind_reading", "expected": "cbt_stage_1_venting", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 1}
+{"actual": "NONE", "case_id": "vsm_cbt_002_friend_mind_reading", "expected": "peer_mirror_agent", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 1}

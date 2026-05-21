@@ -1,0 +1,17 @@
+[
+  {
+    "case_id": "idx01_CRISIS_7a02",
+    "results": {
+      "Base_LLM": {
+        "Efficacy": {
+          "Empathy": 6,
+          "Guided_Discovery": 5,
+          "Strategy": 4,
+          "Adherence": 5,
+          "Reasoning": "Therapist đã thể hiện sự thấu cảm và hiểu biết về cảm xúc của bệnh nhân, đồng thời áp dụng các kỹ thuật của CBT như khơi gợi bệnh nhân tự nhận ra vấn đề và tập trung vào vòng lặp Suy nghĩ - Cảm xúc - Hành vi. Tuy nhiên, vẫn cần cải thiện về việc đặt câu hỏi Socratic và định hướng mục tiêu chữa trị rõ ràng hơn.",
+          "Overall": 5.0
+        }
+      }
+    }
+  }
+]

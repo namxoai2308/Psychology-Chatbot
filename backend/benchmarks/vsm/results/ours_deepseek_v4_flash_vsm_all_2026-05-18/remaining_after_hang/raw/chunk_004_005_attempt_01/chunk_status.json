@@ -1,0 +1,15 @@
+{
+  "actual_rows": 2,
+  "attempt_dir": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_after_hang/raw/chunk_004_005_attempt_01",
+  "empty_outputs": 0,
+  "empty_rate": 0.0,
+  "exception_count": 0,
+  "exception_rate": 0.0,
+  "expected_rows": 2,
+  "extra_pairs": [],
+  "finished_at": "2026-05-19T03:32:09.381575+00:00",
+  "missing_pairs": [],
+  "status": "completed",
+  "turn_count": 36,
+  "valid": true
+}

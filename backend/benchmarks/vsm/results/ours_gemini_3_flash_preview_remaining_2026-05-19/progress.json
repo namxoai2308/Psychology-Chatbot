@@ -1,0 +1,12 @@
+{
+  "case_count": 97,
+  "chunk_count": 33,
+  "completed_cases": 6,
+  "completed_chunks": 2,
+  "completed_turns": 72,
+  "remaining_cases": 91,
+  "remaining_turns": 1194,
+  "status": "running",
+  "turn_count": 1266,
+  "updated_at": "2026-05-18T20:00:19.912035+00:00"
+}

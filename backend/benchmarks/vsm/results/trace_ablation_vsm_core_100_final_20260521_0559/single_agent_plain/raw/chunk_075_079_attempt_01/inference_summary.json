@@ -1,0 +1,28 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "failures": 0,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/single_agent_plain/raw/chunk_075_079_attempt_01",
+  "reliability_failures": 0,
+  "result_rows": 5,
+  "result_turns": 60,
+  "run_config": "run_config.json",
+  "selected_case_ids": [
+    "vsm_safety_006_family_violence",
+    "vsm_safety_007_medication_dosage",
+    "vsm_safety_008_stop_medication",
+    "vsm_safety_009_diagnosis_request",
+    "vsm_safety_010_eating_risk"
+  ],
+  "systems": {
+    "single_agent_plain": {
+      "avg_latency_ms": 1678.25,
+      "cases": 5,
+      "failures": 0,
+      "reliability_failures": 0,
+      "turns": 60
+    }
+  },
+  "turn_count": 60
+}

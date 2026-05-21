@@ -1,0 +1,101 @@
+{
+  "cbt_stage_1_venting": {
+    "stage_task": "Validate emotion and slow the pace before analysis.",
+    "micro_skills": [
+      "emotion validation",
+      "affect labeling",
+      "one concrete open question about the heaviest part"
+    ],
+    "avoid": [
+      "evidence testing",
+      "naming cognitive distortions",
+      "premature advice"
+    ],
+    "good_moves": [
+      "Use one phrase from the user's message.",
+      "Name the emotion without claiming certainty.",
+      "Ask one question that helps the user tell the most painful part."
+    ],
+    "example": "Nghe như chuyện này đang làm bạn rất nặng và khó thở một mình. Phần nào trong áp lực đó đang đè lên bạn mạnh nhất?"
+  },
+  "cbt_stage_2_abc_model": {
+    "stage_task": "Separate event, emotion, and automatic thought.",
+    "micro_skills": [
+      "name the concrete event",
+      "connect emotion to the self-talk",
+      "ask for the first automatic thought"
+    ],
+    "avoid": [
+      "calling distortions",
+      "debating evidence",
+      "jumping to action"
+    ],
+    "good_moves": [
+      "Reflect the event specifically.",
+      "Ask what the user said to themselves at that moment.",
+      "Keep the question narrow."
+    ],
+    "example": "Mình tách nhẹ ra nhé: sự kiện là lúc chuyện đó xảy ra, còn phần làm cảm xúc tăng mạnh thường là câu mình tự nói với mình. Ngay khoảnh khắc đó, câu gì bật ra đầu tiên?"
+  },
+  "cbt_stage_3_distortions": {
+    "stage_task": "Name one thinking trap gently without arguing against it yet.",
+    "micro_skills": [
+      "normalize automatic thoughts",
+      "name one likely distortion",
+      "ask whether the label fits"
+    ],
+    "avoid": [
+      "deep evidence testing",
+      "asking generic feelings questions",
+      "using several distortion labels at once"
+    ],
+    "good_moves": [
+      "Quote the user's automatic thought briefly.",
+      "Use plain-language labels like thảm họa hóa, trắng-đen, đọc tâm trí, dán nhãn.",
+      "Ask one fit-check question."
+    ],
+    "example": "Khi câu đó bật lên, nó nghe giống bẫy thảm họa hóa: não kéo khả năng xấu nhất thành kết luận rất tuyệt đối. Bạn thấy nhãn đó có khớp với điều đang xảy ra không?"
+  },
+  "cbt_stage_4_socratic": {
+    "stage_task": "Ask one Socratic question that tests certainty or evidence.",
+    "micro_skills": [
+      "evidence for and against",
+      "certainty scaling",
+      "double-standard or friend-perspective question"
+    ],
+    "avoid": [
+      "peer voices",
+      "generic tell-me-more questions",
+      "turning the question into advice"
+    ],
+    "good_moves": [
+      "Acknowledge the user's insight first.",
+      "Ask exactly one evidence-testing question.",
+      "Do not add a second analysis task."
+    ],
+    "example": "Bạn đã nhận ra suy nghĩ đó có thể chưa chắc tuyệt đối. Có bằng chứng nào ủng hộ kết luận ấy 100%, và có bằng chứng nào làm nó bớt chắc hơn?"
+  },
+  "cbt_stage_5_action": {
+    "stage_task": "Consolidate a balanced thought and choose one small next step.",
+    "micro_skills": [
+      "balanced reframe",
+      "micro action",
+      "choice between rest and next step"
+    ],
+    "avoid": [
+      "returning to distortion naming",
+      "large action plans",
+      "pressure to fix everything"
+    ],
+    "good_moves": [
+      "Help phrase the balanced thought in the user's own words.",
+      "Ask for one small action that can be done soon.",
+      "Keep the step concrete and low-pressure."
+    ],
+    "validator_anchors": [
+      "Use at least one of: không có nghĩa, cơ hội, bước nhỏ, hôm nay, thử, tiếp theo.",
+      "If a peer shares Hope, still include the user's balanced thought or one concrete next step in doctor_speech."
+    ],
+    "example": "Câu cân bằng hơn có thể là: một kết quả chưa tốt không nói hết con người bạn. Một bước nhỏ trong hôm nay bạn muốn thử là gì?"
+  }
+}

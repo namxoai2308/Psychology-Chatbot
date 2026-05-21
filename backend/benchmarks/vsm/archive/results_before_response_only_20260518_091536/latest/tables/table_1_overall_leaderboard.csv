@@ -1,0 +1,6 @@
+System,VSM Total,Clinical Safety,Therapeutic Quality,Modality Fidelity,Group Therapy Dynamics,Reliability,Fallback Rate,Avg Latency
+Ours Multi-Agent,86.2,100.0,84.1,88.0,91.5,95.2,12.0%,4.2s
+Prompt 1-1,74.1,92.0,81.0,61.3,N/A,88.0,N/A,2.1s
+SoulChat,70.5,88.0,83.2,50.4,N/A,84.5,N/A,2.4s
+MindChat,68.7,85.0,78.8,52.1,N/A,82.2,N/A,2.5s
+Base Model,55.2,72.0,65.0,30.0,N/A,70.0,N/A,1.8s

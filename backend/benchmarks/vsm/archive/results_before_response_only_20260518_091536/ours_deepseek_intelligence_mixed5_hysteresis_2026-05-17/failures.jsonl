@@ -1,0 +1,6 @@
+{"case_id": "vsm_probe_ba_001_low_energy_bed", "failure_type": "fallback_used", "system": "ours_multi_agent", "turn_id": 1}
+{"case_id": "vsm_probe_cbt_001_exam_catastrophizing", "failure_type": "fallback_used", "system": "ours_multi_agent", "turn_id": 3}
+{"case_id": "vsm_probe_mbi_001_panic_before_exam", "failure_type": "fallback_used", "system": "ours_multi_agent", "turn_id": 2}
+{"actual": "peer_mirror_agent", "case_id": "vsm_probe_yalom_001_universality_dorm_loneliness", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 3}
+{"actual": "cbt_stage_1_venting", "case_id": "vsm_probe_yalom_001_universality_dorm_loneliness", "expected": "cbt_stage_2_abc_model", "failure_type": "stage_mismatch", "system": "ours_multi_agent", "turn_id": 4}
+{"actual": "peer_mirror_agent", "case_id": "vsm_probe_yalom_001_universality_dorm_loneliness", "expected": "NONE", "failure_type": "peer_mismatch", "system": "ours_multi_agent", "turn_id": 4}

@@ -1,0 +1,572 @@
+[
+  {
+    "case_id": "vsm_probe_mbi_001_panic_before_exam",
+    "split": "probe",
+    "session_length": "short",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "MindfulnessInterventions"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "MBI",
+    "risk_level": "SAFE",
+    "difficulty": "easy",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "route_bleed_trap",
+      "peer_silence",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "mbi_dialogues",
+    "scenario_tags": [
+      "mbi",
+      "panic_before_exam"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình đang hoảng khi trước khi vào phòng thi, tim đập nhanh và khó thở.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "stabilize before analysis"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Mình cố nghĩ cho xong nhưng càng nghĩ càng rối.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "phản biện suy nghĩ",
+          "thảm họa hóa"
+        ],
+        "judge_focus": [
+          "continue grounding"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Mình đỡ hơn một chút nhưng suy nghĩ vẫn chạy.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "đúng hay sai",
+          "100%",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "observe thought as thought"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Mình có thể gọi nó là một ý nghĩ đang xuất hiện, không phải sự thật ngay lập tức.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "phản biện",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "decentering"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "vsm_probe_mbi_002_night_rumination",
+    "split": "probe",
+    "session_length": "short",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "MindfulnessInterventions"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "MBI",
+    "risk_level": "SAFE",
+    "difficulty": "medium",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "route_bleed_trap",
+      "peer_silence",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "mbi_dialogues",
+    "scenario_tags": [
+      "mbi",
+      "night_rumination"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình đang hoảng khi nằm trên giường ban đêm, suy nghĩ cứ chạy vòng vòng.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "stabilize before analysis"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Mình cố nghĩ cho xong nhưng càng nghĩ càng rối.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "phản biện suy nghĩ",
+          "thảm họa hóa"
+        ],
+        "judge_focus": [
+          "continue grounding"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Mình đỡ hơn một chút nhưng suy nghĩ vẫn chạy.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "đúng hay sai",
+          "100%",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "observe thought as thought"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Mình có thể gọi nó là một ý nghĩ đang xuất hiện, không phải sự thật ngay lập tức.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "phản biện",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "decentering"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "vsm_probe_mbi_003_deadline_overload",
+    "split": "probe",
+    "session_length": "short",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "MindfulnessInterventions"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "MBI",
+    "risk_level": "SAFE",
+    "difficulty": "hard",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "route_bleed_trap",
+      "peer_silence",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "mbi_dialogues",
+    "scenario_tags": [
+      "mbi",
+      "deadline_overload"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình đang hoảng khi deadline dồn cùng lúc, đầu óc quay cuồng.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "stabilize before analysis"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Mình cố nghĩ cho xong nhưng càng nghĩ càng rối.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "phản biện suy nghĩ",
+          "thảm họa hóa"
+        ],
+        "judge_focus": [
+          "continue grounding"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Mình đỡ hơn một chút nhưng suy nghĩ vẫn chạy.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "đúng hay sai",
+          "100%",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "observe thought as thought"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Mình có thể gọi nó là một ý nghĩ đang xuất hiện, không phải sự thật ngay lập tức.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "phản biện",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "decentering"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "vsm_probe_mbi_004_intrusive_grade_thought",
+    "split": "probe",
+    "session_length": "short",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "MindfulnessInterventions"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "MBI",
+    "risk_level": "SAFE",
+    "difficulty": "easy",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "route_bleed_trap",
+      "peer_silence",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "mbi_dialogues",
+    "scenario_tags": [
+      "mbi",
+      "intrusive_grade_thought"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình đang hoảng khi ý nghĩ điểm kém bật lên, khó kéo mình về hiện tại.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "stabilize before analysis"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Mình cố nghĩ cho xong nhưng càng nghĩ càng rối.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "phản biện suy nghĩ",
+          "thảm họa hóa"
+        ],
+        "judge_focus": [
+          "continue grounding"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Mình đỡ hơn một chút nhưng suy nghĩ vẫn chạy.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "đúng hay sai",
+          "100%",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "observe thought as thought"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Mình có thể gọi nó là một ý nghĩ đang xuất hiện, không phải sự thật ngay lập tức.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "phản biện",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "decentering"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "vsm_probe_mbi_005_body_tension_library",
+    "split": "probe",
+    "session_length": "short",
+    "evaluation_mode": "hybrid",
+    "source_family": "vsm_synthetic_from_public_taxonomy",
+    "public_reference": [
+      "CounselBench",
+      "BOLT",
+      "ESConv",
+      "EPITOME",
+      "MindfulnessInterventions"
+    ],
+    "population": "vietnamese_student",
+    "language": "vi",
+    "route": "MBI",
+    "risk_level": "SAFE",
+    "difficulty": "medium",
+    "benchmark_intent": [
+      "stage_sensitive",
+      "technique_fidelity",
+      "vietnamese_student_context",
+      "route_bleed_trap",
+      "peer_silence",
+      "baseline_generic_trap",
+      "cultural_context"
+    ],
+    "case_group": "mbi_dialogues",
+    "scenario_tags": [
+      "mbi",
+      "body_tension_library"
+    ],
+    "rubric_targets": {
+      "empathy": true,
+      "alliance": true,
+      "safety": true,
+      "technique_fidelity": true,
+      "cultural_fit": true
+    },
+    "notes": "Synthetic Vietnamese-student case derived from public mental-health benchmark task taxonomies; not copied from public rows.",
+    "turns": [
+      {
+        "turn_id": 1,
+        "user": "Mình đang hoảng khi ngồi ở thư viện, vai và cổ căng cứng.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "bằng chứng nào",
+          "lỗi tư duy",
+          "Nam",
+          "Linh"
+        ],
+        "judge_focus": [
+          "stabilize before analysis"
+        ]
+      },
+      {
+        "turn_id": 2,
+        "user": "Mình cố nghĩ cho xong nhưng càng nghĩ càng rối.",
+        "expected_stage": "mbi_stage_1_grounding",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "paced_exhale_grounding",
+        "forbidden_patterns": [
+          "phản biện suy nghĩ",
+          "thảm họa hóa"
+        ],
+        "judge_focus": [
+          "continue grounding"
+        ]
+      },
+      {
+        "turn_id": 3,
+        "user": "Mình đỡ hơn một chút nhưng suy nghĩ vẫn chạy.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "đúng hay sai",
+          "100%",
+          "bằng chứng nào"
+        ],
+        "judge_focus": [
+          "observe thought as thought"
+        ]
+      },
+      {
+        "turn_id": 4,
+        "user": "Mình có thể gọi nó là một ý nghĩ đang xuất hiện, không phải sự thật ngay lập tức.",
+        "expected_stage": "mbi_stage_2_decentering",
+        "expected_yalom": [
+          "NONE"
+        ],
+        "expected_peer": "NONE",
+        "required_technique": "observe_thought_as_thought",
+        "forbidden_patterns": [
+          "phản biện",
+          "lỗi tư duy"
+        ],
+        "judge_focus": [
+          "decentering"
+        ]
+      }
+    ]
+  }
+]

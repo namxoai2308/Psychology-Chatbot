@@ -1,0 +1,78 @@
+OURS STRUCTURAL VSM_ALL ANALYSIS - NO LLM - 2026-05-16
+Result dir: backend/benchmarks/vsm/results/ours_structural_vsm_all_2026-05-16
+
+=== GROUP SUMMARY ===
+ALL: turns=1606 | stage=49.6% | peer=57.2% | technique=65.4% | hard_fail=220
+ba_dialogues: turns=314 | stage=47.8% | peer=54.8% | technique=60.2% | hard_fail=0
+cbt_dialogues: turns=470 | stage=45.7% | peer=53.2% | technique=62.1% | hard_fail=110
+mbi_dialogues: turns=314 | stage=59.6% | peer=84.4% | technique=91.7% | hard_fail=49
+safety_adversarial_cases: turns=254 | stage=74.4% | peer=76.0% | technique=57.5% | hard_fail=61
+yalom_group_cases: turns=254 | stage=22.0% | peer=15.4% | technique=53.5% | hard_fail=0
+
+=== FAILURE TYPES ===
+stage_mismatch: 809
+peer_mismatch: 687
+hard_fail: 220
+
+=== TOP STAGE MISMATCHES ===
+78: route=MBI group=mbi_dialogues expected=mbi_stage_4_mindful_action actual=mbi_stage_2_decentering
+74: route=BA group=ba_dialogues expected=ba_stage_3_barrier_schedule actual=ba_stage_1_energy_check
+70: route=CBT group=cbt_dialogues expected=cbt_stage_3_distortions actual=cbt_stage_4_socratic
+58: route=CBT group=cbt_dialogues expected=cbt_stage_2_abc_model actual=cbt_stage_3_distortions
+45: route=CBT group=yalom_group_cases expected=cbt_stage_4_socratic actual=cbt_stage_5_action
+44: route=CBT group=yalom_group_cases expected=cbt_stage_1_venting actual=cbt_stage_3_distortions
+40: route=CBT group=cbt_dialogues expected=cbt_stage_4_socratic actual=cbt_stage_3_distortions
+40: route=CBT group=cbt_dialogues expected=cbt_stage_5_action actual=cbt_stage_2_abc_model
+36: route=CBT group=cbt_dialogues expected=cbt_stage_1_venting actual=cbt_stage_2_abc_model
+30: route=CBT group=yalom_group_cases expected=cbt_stage_2_abc_model actual=cbt_stage_3_distortions
+26: route=BA group=ba_dialogues expected=ba_stage_2_micro_action actual=ba_stage_4_momentum_reward
+26: route=BA group=ba_dialogues expected=ba_stage_3_barrier_schedule actual=ba_stage_4_momentum_reward
+26: route=MBI group=mbi_dialogues expected=mbi_stage_1_grounding actual=mbi_stage_2_decentering
+23: route=MBI group=mbi_dialogues expected=mbi_stage_3_body_scan actual=mbi_stage_4_mindful_action
+23: route=CBT group=safety_adversarial_cases expected=cbt_stage_1_venting actual=cbt_stage_3_distortions
+21: route=CBT group=safety_adversarial_cases expected=cbt_stage_1_venting actual=cbt_stage_2_abc_model
+20: route=CBT group=yalom_group_cases expected=cbt_stage_2_abc_model actual=cbt_stage_5_action
+15: route=CBT group=yalom_group_cases expected=cbt_stage_3_distortions actual=cbt_stage_5_action
+15: route=CBT group=yalom_group_cases expected=cbt_stage_5_action actual=cbt_stage_3_distortions
+14: route=CBT group=safety_adversarial_cases expected=cbt_stage_1_venting actual=cbt_stage_4_socratic
+13: route=BA group=ba_dialogues expected=ba_stage_2_micro_action actual=ba_stage_3_barrier_schedule
+13: route=BA group=ba_dialogues expected=ba_stage_4_momentum_reward actual=ba_stage_1_energy_check
+12: route=BA group=ba_dialogues expected=ba_stage_4_momentum_reward actual=ba_stage_3_barrier_schedule
+11: route=CBT group=cbt_dialogues expected=cbt_stage_2_abc_model actual=cbt_stage_1_venting
+7: route=CBT group=safety_adversarial_cases expected=cbt_stage_1_venting actual=cbt_stage_5_action
+6: route=BA group=yalom_group_cases expected=ba_stage_2_micro_action actual=ba_stage_1_energy_check
+6: route=BA group=yalom_group_cases expected=ba_stage_3_barrier_schedule actual=ba_stage_1_energy_check
+6: route=BA group=yalom_group_cases expected=ba_stage_4_momentum_reward actual=ba_stage_1_energy_check
+3: route=MBI group=yalom_group_cases expected=mbi_stage_2_decentering actual=mbi_stage_1_grounding
+3: route=MBI group=yalom_group_cases expected=mbi_stage_3_body_scan actual=mbi_stage_1_grounding
+
+=== TOP PEER MISMATCHES ===
+98: route=CBT group=cbt_dialogues stage=cbt_stage_3_distortions expected_peer=NONE actual_peer=peer_mirror_agent
+98: route=CBT group=yalom_group_cases stage=cbt_stage_3_distortions expected_peer=NONE actual_peer=peer_mirror_agent
+78: route=BA group=ba_dialogues stage=ba_stage_4_momentum_reward expected_peer=NONE actual_peer=veteran_peer_agent
+70: route=CBT group=yalom_group_cases stage=cbt_stage_5_action expected_peer=NONE actual_peer=veteran_peer_agent
+51: route=BA group=ba_dialogues stage=ba_stage_1_energy_check expected_peer=NONE actual_peer=peer_mirror_agent
+49: route=MBI group=mbi_dialogues stage=mbi_stage_4_mindful_action expected_peer=NONE actual_peer=veteran_peer_agent
+40: route=CBT group=cbt_dialogues stage=cbt_stage_5_action expected_peer=NONE actual_peer=veteran_peer_agent
+36: route=CBT group=cbt_dialogues stage=cbt_stage_2_abc_model expected_peer=peer_mirror_agent actual_peer=NONE
+35: route=CBT group=cbt_dialogues stage=cbt_stage_4_socratic expected_peer=peer_mirror_agent actual_peer=NONE
+23: route=CBT group=safety_adversarial_cases stage=cbt_stage_3_distortions expected_peer=NONE actual_peer=peer_mirror_agent
+19: route=CBT group=safety_adversarial_cases stage=cbt_stage_1_venting expected_peer=NONE actual_peer=peer_mirror_agent
+16: route=BA group=yalom_group_cases stage=ba_stage_1_energy_check expected_peer=NONE actual_peer=peer_mirror_agent
+13: route=BA group=ba_dialogues stage=ba_stage_1_energy_check expected_peer=veteran_peer_agent actual_peer=peer_mirror_agent
+12: route=BA group=safety_adversarial_cases stage=ba_stage_1_energy_check expected_peer=NONE actual_peer=peer_mirror_agent
+11: route=CBT group=cbt_dialogues stage=cbt_stage_1_venting expected_peer=NONE actual_peer=peer_mirror_agent
+8: route=CBT group=yalom_group_cases stage=cbt_stage_5_action expected_peer=peer_mirror_agent actual_peer=veteran_peer_agent
+8: route=BA group=yalom_group_cases stage=ba_stage_1_energy_check expected_peer=veteran_peer_agent actual_peer=peer_mirror_agent
+7: route=CBT group=yalom_group_cases stage=cbt_stage_3_distortions expected_peer=veteran_peer_agent actual_peer=peer_mirror_agent
+7: route=CBT group=safety_adversarial_cases stage=cbt_stage_5_action expected_peer=NONE actual_peer=veteran_peer_agent
+3: route=CBT group=yalom_group_cases stage=cbt_stage_1_venting expected_peer=veteran_peer_agent actual_peer=peer_mirror_agent
+3: route=CBT group=yalom_group_cases stage=cbt_stage_1_venting expected_peer=NONE actual_peer=peer_mirror_agent
+1: route=CBT group=yalom_group_cases stage=cbt_stage_2_abc_model expected_peer=peer_mirror_agent actual_peer=NONE
+1: route=CBT group=yalom_group_cases stage=cbt_stage_2_abc_model expected_peer=veteran_peer_agent actual_peer=NONE
+
+=== TOP FORBIDDEN HITS ===
+94: Nam
+70: bằng chứng nào
+30: Linh
+26: tranh luận

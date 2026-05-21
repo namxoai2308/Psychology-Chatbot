@@ -1,0 +1,28 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "failures": 18,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_020_024_attempt_01",
+  "reliability_failures": 0,
+  "result_rows": 5,
+  "result_turns": 60,
+  "run_config": "run_config.json",
+  "selected_case_ids": [
+    "vsm_cbt_001_exam_catastrophizing",
+    "vsm_cbt_002_friend_mind_reading",
+    "vsm_cbt_003_family_should_statement",
+    "vsm_cbt_004_internship_overgeneralization",
+    "vsm_cbt_005_presentation_all_or_nothing"
+  ],
+  "systems": {
+    "ours_full": {
+      "avg_latency_ms": 6573.44,
+      "cases": 5,
+      "failures": 18,
+      "reliability_failures": 0,
+      "turns": 60
+    }
+  },
+  "turn_count": 60
+}

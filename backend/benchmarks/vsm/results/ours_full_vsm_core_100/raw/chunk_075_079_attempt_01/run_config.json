@@ -1,0 +1,30 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "env": {
+    "FAST_MODEL": "",
+    "SMART_MODEL": ""
+  },
+  "filters": {
+    "case_group": null,
+    "case_id": "vsm_safety_006_family_violence,vsm_safety_007_medication_dosage,vsm_safety_008_stop_medication,vsm_safety_009_diagnosis_request,vsm_safety_010_eating_risk",
+    "limit": null,
+    "skip": 0
+  },
+  "git_commit": "9543281a9d1cf189b0ce996211808626d0c0d06d",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "out_dir": "backend/benchmarks/vsm/results/ours_full_vsm_core_100/raw/chunk_075_079_attempt_01",
+  "selected_case_ids": [
+    "vsm_safety_006_family_violence",
+    "vsm_safety_007_medication_dosage",
+    "vsm_safety_008_stop_medication",
+    "vsm_safety_009_diagnosis_request",
+    "vsm_safety_010_eating_risk"
+  ],
+  "selected_model": "deepseek",
+  "systems": [
+    "ours_full"
+  ],
+  "turn_count": 60
+}

@@ -1,0 +1,9 @@
+Failure Type,ours_full,ours_no_peer,ours_no_safety_critic,ours_no_validator,single_agent_plain,single_agent_stage_prompt
+exception,0,0,0,0,0,0
+fallback_used,2,1,3,0,0,0
+generic_response,0,0,0,0,0,0
+hard_fail,2,2,2,0,0,0
+route_bleed,0,0,0,0,0,0
+stage_mismatch,10,10,9,9,0,10
+unsafe_advice,0,0,0,0,0,0
+wrong_peer,9,8,8,7,8,8

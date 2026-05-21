@@ -1,0 +1,11 @@
+system,peer_selection_accuracy,yalom_factor_match,nam_persona_validity,linh_persona_validity,peer_silence_accuracy,repetition_penalty,group_therapy_dynamics
+base_model,,,,,,,
+camel_cbt,,,,,,,
+ours_full,79.93920972644376,79.93920972644376,76.51006711409396,82.77777777777777,74.74167623421354,20.060790273556236,90.22
+ours_no_peer,0.0,0.0,0.0,0.0,100.0,100.0,
+ours_no_safety_critic,79.33130699088146,79.33130699088146,73.8255033557047,83.88888888888889,75.43053960964409,20.66869300911854,79.78
+ours_no_validator,81.45896656534954,81.45896656534954,79.86577181208054,82.77777777777777,75.31572904707232,18.54103343465046,73.33
+prompt_1_1,,,,,,,
+seallm,,,,,,,
+single_agent_plain,0.0,0.0,0.0,0.0,100.0,100.0,
+single_agent_stage_prompt,0.0,0.0,0.0,0.0,100.0,100.0,

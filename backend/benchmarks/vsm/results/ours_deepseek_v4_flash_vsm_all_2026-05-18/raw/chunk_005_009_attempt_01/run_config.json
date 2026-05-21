@@ -1,0 +1,25 @@
+{
+  "chunk": {
+    "case_ids": [
+      "vsm_probe_cbt_001_exam_catastrophizing",
+      "vsm_probe_cbt_002_friend_mind_reading",
+      "vsm_probe_cbt_003_family_should_statement",
+      "vsm_probe_cbt_004_internship_overgeneralization",
+      "vsm_probe_cbt_005_presentation_all_or_nothing"
+    ],
+    "chunk_id": "chunk_005_009",
+    "end_index": 9,
+    "index": 1,
+    "start_index": 5,
+    "turn_count": 20
+  },
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "env_fast_model": "deepseek-v4-flash",
+  "env_smart_model": "deepseek-v4-flash",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "selected_model": "deepseek",
+  "systems": [
+    "ours_multi_agent"
+  ]
+}

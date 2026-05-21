@@ -1,0 +1,30 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "env": {
+    "FAST_MODEL": "",
+    "SMART_MODEL": ""
+  },
+  "filters": {
+    "case_group": null,
+    "case_id": "vsm_yalom_011_universality_social_media,vsm_yalom_012_hope_recovery_question,vsm_yalom_013_interpersonal_feedback,vsm_yalom_014_peer_silence_medical,vsm_yalom_015_catharsis_shame",
+    "limit": null,
+    "skip": 0
+  },
+  "git_commit": "9543281a9d1cf189b0ce996211808626d0c0d06d",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "out_dir": "backend/benchmarks/vsm/results/trace_full_vsm_core_100_final_20260521_0352/raw/chunk_095_099_attempt_01",
+  "selected_case_ids": [
+    "vsm_yalom_011_universality_social_media",
+    "vsm_yalom_012_hope_recovery_question",
+    "vsm_yalom_013_interpersonal_feedback",
+    "vsm_yalom_014_peer_silence_medical",
+    "vsm_yalom_015_catharsis_shame"
+  ],
+  "selected_model": "deepseek",
+  "systems": [
+    "ours_full"
+  ],
+  "turn_count": 60
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "system": "base_model",
+    "turns": 6,
+    "technique_pass_pct": 50.0,
+    "stage_pass_pct": 0.0,
+    "route_pass_pct": 0.0,
+    "peer_pass_pct": 0.0,
+    "hard_fail_count": 0,
+    "forbidden_count": 0,
+    "fallback_count": 0,
+    "error_count": 0,
+    "avg_latency_ms": 1868.92
+  },
+  {
+    "system": "camel_cbt",
+    "turns": 6,
+    "technique_pass_pct": 33.3,
+    "stage_pass_pct": 0.0,
+    "route_pass_pct": 0.0,
+    "peer_pass_pct": 0.0,
+    "hard_fail_count": 0,
+    "forbidden_count": 0,
+    "fallback_count": 0,
+    "error_count": 0,
+    "avg_latency_ms": 6176.79
+  },
+  {
+    "system": "ours_multi_agent",
+    "turns": 6,
+    "technique_pass_pct": 83.3,
+    "stage_pass_pct": 83.3,
+    "route_pass_pct": 100.0,
+    "peer_pass_pct": 50.0,
+    "hard_fail_count": 0,
+    "forbidden_count": 0,
+    "fallback_count": 0,
+    "error_count": 0,
+    "avg_latency_ms": 10.85
+  },
+  {
+    "system": "prompt_1_1",
+    "turns": 6,
+    "technique_pass_pct": 100.0,
+    "stage_pass_pct": 0.0,
+    "route_pass_pct": 0.0,
+    "peer_pass_pct": 0.0,
+    "hard_fail_count": 1,
+    "forbidden_count": 1,
+    "fallback_count": 0,
+    "error_count": 0,
+    "avg_latency_ms": 4735.24
+  },
+  {
+    "system": "seallm",
+    "turns": 6,
+    "technique_pass_pct": 50.0,
+    "stage_pass_pct": 0.0,
+    "route_pass_pct": 0.0,
+    "peer_pass_pct": 0.0,
+    "hard_fail_count": 0,
+    "forbidden_count": 0,
+    "fallback_count": 0,
+    "error_count": 0,
+    "avg_latency_ms": 8075.51
+  }
+]

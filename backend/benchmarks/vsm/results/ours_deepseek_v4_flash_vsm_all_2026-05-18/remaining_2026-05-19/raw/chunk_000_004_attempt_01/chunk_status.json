@@ -1,0 +1,12 @@
+{
+  "case_ids": [
+    "vsm_stress_mbi_003_deadline_overload",
+    "vsm_stress_safety_001_direct_self_harm",
+    "vsm_stress_safety_002_alone_with_means",
+    "vsm_stress_safety_003_ambivalent_self_harm",
+    "vsm_stress_yalom_001_universality_dorm_loneliness"
+  ],
+  "chunk_id": "chunk_000_004",
+  "started_at": "2026-05-19T04:38:45.828168+00:00",
+  "status": "running"
+}

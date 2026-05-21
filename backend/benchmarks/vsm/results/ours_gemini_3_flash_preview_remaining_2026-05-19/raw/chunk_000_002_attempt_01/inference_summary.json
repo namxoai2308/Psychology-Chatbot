@@ -1,0 +1,18 @@
+{
+  "case_count": 3,
+  "dataset": "backend/benchmarks/vsm/data/vsm_all.jsonl",
+  "failures": 18,
+  "hard_failures": 1,
+  "out_dir": "backend/benchmarks/vsm/results/ours_gemini_3_flash_preview_remaining_2026-05-19/raw/chunk_000_002_attempt_01",
+  "result_rows": 3,
+  "result_turns": 36,
+  "systems": {
+    "ours_multi_agent": {
+      "avg_latency_ms": 18394.4,
+      "cases": 3,
+      "failures": 18,
+      "turns": 36
+    }
+  },
+  "turn_count": 36
+}

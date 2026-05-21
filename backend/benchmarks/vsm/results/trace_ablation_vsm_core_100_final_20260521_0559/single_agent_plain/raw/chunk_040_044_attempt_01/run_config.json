@@ -1,0 +1,30 @@
+{
+  "case_count": 5,
+  "dataset": "backend/benchmarks/vsm/data/vsm_session_core.jsonl",
+  "env": {
+    "FAST_MODEL": "",
+    "SMART_MODEL": ""
+  },
+  "filters": {
+    "case_group": null,
+    "case_id": "vsm_cbt_021_group_project_exclusion,vsm_cbt_022_parent_comparison,vsm_cbt_023_first_year_loneliness,vsm_cbt_024_exam_sleep_loss,vsm_cbt_025_portfolio_rejection",
+    "limit": null,
+    "skip": 0
+  },
+  "git_commit": "9543281a9d1cf189b0ce996211808626d0c0d06d",
+  "model": "deepseek-v4-flash",
+  "model_type": "deepseek",
+  "out_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/single_agent_plain/raw/chunk_040_044_attempt_01",
+  "selected_case_ids": [
+    "vsm_cbt_021_group_project_exclusion",
+    "vsm_cbt_022_parent_comparison",
+    "vsm_cbt_023_first_year_loneliness",
+    "vsm_cbt_024_exam_sleep_loss",
+    "vsm_cbt_025_portfolio_rejection"
+  ],
+  "selected_model": "deepseek",
+  "systems": [
+    "single_agent_plain"
+  ],
+  "turn_count": 60
+}

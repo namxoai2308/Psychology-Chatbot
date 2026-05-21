@@ -1,0 +1,16 @@
+{
+  "case_count": 100,
+  "failures": 562,
+  "hard_failures": 0,
+  "out_dir": "backend/benchmarks/vsm/results/trace_ablation_vsm_core_100_final_20260521_0559/ours_no_validator/merged",
+  "result_rows": 100,
+  "result_turns": 1200,
+  "systems": {
+    "ours_no_validator": {
+      "avg_latency_ms": 6862.36,
+      "cases": 100,
+      "failures": 562,
+      "turns": 1200
+    }
+  }
+}
