@@ -1,4 +1,0 @@
-system,turns,technique_pass_pct,stage_pass_pct,route_pass_pct,peer_pass_pct,hard_fail_count,forbidden_count,fallback_count,avg_latency_ms
-base_model,12,16.7,0.0,0.0,0.0,0,0,0,2052.97
-ours_multi_agent,12,83.3,100.0,100.0,66.7,0,0,0,10133.22
-prompt_1_1,12,50.0,0.0,0.0,0.0,0,0,0,4703.19

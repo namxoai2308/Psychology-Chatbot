@@ -1,6 +1,0 @@
-System,Peer Selection Accuracy,Yalom Factor Match,Nam Persona Validity,Linh Persona Validity,Peer Silence Accuracy,Repetition Penalty
-Ours Multi-Agent,93.5,94.1,96.0,95.2,97.0,3.1
-Prompt 1-1,N/A,N/A,N/A,N/A,N/A,N/A
-SoulChat,N/A,N/A,N/A,N/A,N/A,N/A
-MindChat,N/A,N/A,N/A,N/A,N/A,N/A
-Base Model,N/A,N/A,N/A,N/A,N/A,N/A

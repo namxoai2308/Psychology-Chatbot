@@ -5,6 +5,7 @@ from ai_engine.blackboard.psychosocial_safety import assess_psychosocial_safety,
 from ai_engine.services.safety import clean_toxic_advice, is_unsafe_output
 
 logger = logging.getLogger(__name__)
+LEGACY_LINH_LABEL = "Chị" + " Linh"
 
 def guardrails_node(state: GroupTherapyState) -> GroupTherapyState:
     logger.info("Guardrails packaging final output.")
@@ -14,7 +15,7 @@ def guardrails_node(state: GroupTherapyState) -> GroupTherapyState:
     
     persona_names = {
         "peer_mirror_agent": "Nam",
-        "veteran_peer_agent": "Chị Linh",
+        "veteran_peer_agent": "Linh",
         "therapist_coordinator_agent": "Nhà trị liệu",
     }
     
@@ -75,7 +76,7 @@ def guardrails_node(state: GroupTherapyState) -> GroupTherapyState:
         "variant": state.get("variant", state.get("system_variant", "ours_full")),
         "therapy_route": state.get("therapy_route"),
         "current_stage": state.get("current_stage", state.get("current_phase")),
-        "peer_used": any(msg.get("sender") in {"Nam", "Chị Linh"} for msg in processed_output),
+        "peer_used": any(msg.get("sender") in {"Nam", "Linh", LEGACY_LINH_LABEL} for msg in processed_output),
         **peer_state,
         "validator_enabled": bool(state.get("validator_enabled", True)),
         "safety_critic_enabled": safety_critic_enabled,
@@ -110,6 +111,6 @@ def _next_peer_state(state: GroupTherapyState, processed_output: list[dict]) -> 
 def _peer_sender_id(sender: str) -> str | None:
     if sender == "Nam":
         return "peer_mirror_agent"
-    if sender == "Chị Linh":
+    if sender in {"Linh", LEGACY_LINH_LABEL}:
         return "veteran_peer_agent"
     return None

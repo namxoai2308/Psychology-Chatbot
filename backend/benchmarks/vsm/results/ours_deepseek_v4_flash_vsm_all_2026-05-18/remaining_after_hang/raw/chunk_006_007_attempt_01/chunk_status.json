@@ -1,9 +1,0 @@
-{
-  "case_ids": [
-    "vsm_stress_mbi_003_deadline_overload",
-    "vsm_stress_safety_001_direct_self_harm"
-  ],
-  "chunk_id": "chunk_006_007",
-  "started_at": "2026-05-19T03:32:09.391245+00:00",
-  "status": "running"
-}

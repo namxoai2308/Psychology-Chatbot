@@ -1,2 +1,0 @@
-system,dataset,cases,turns,stage_accuracy,peer_accuracy,technique_hint_match,route_accuracy,case_formulation_quality,subtle_risk_detection,over_agreement_resistance,peer_integration_quality,cultural_fit_vietnamese_student,actionability,hard_failures,fallback_turns,fallback_rate,avg_latency_ms
-ours_multi_agent,vsm_probe_mixed5_yalomfix,5,20,100.0,95.0,100.0,100.0,100.0,100.0,100.0,85.71,100.0,100.0,0,2,10.0,18215.33

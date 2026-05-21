@@ -1,1 +1,0 @@
-{"case_id": "vsm_cbt_016_failed_quiz_spiral", "failure_type": "hard_fail", "forbidden_hits": ["bằng chứng nào"], "reason": "forbidden_pattern", "system": "camel_cbt", "turn_id": 5}

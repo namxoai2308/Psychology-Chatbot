@@ -1,7 +1,0 @@
-{
-  "cases": 3,
-  "complete": true,
-  "empty_outputs": 0,
-  "file": "backend/benchmarks/vsm/results/ours_deepseek_v4_flash_vsm_all_2026-05-18/remaining_last3_2026-05-19/final/ours_multi_agent.responses.jsonl",
-  "turns": 54
-}

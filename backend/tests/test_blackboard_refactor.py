@@ -173,7 +173,7 @@ class BlackboardRefactorTests(unittest.TestCase):
     def test_guardrails_tracks_peer_cooldown_from_visible_output_metadata(self) -> None:
         state = {"last_peer_sender": "veteran_peer_agent", "consecutive_peer_turns": 1, "peer_silence_cooldown": 1}
         self.assertEqual(
-            _next_peer_state(state, [{"sender": "Chị Linh", "text": "Một chia sẻ ngắn."}]),
+            _next_peer_state(state, [{"sender": "Linh", "text": "Một chia sẻ ngắn."}]),
             {"last_peer_sender": "veteran_peer_agent", "consecutive_peer_turns": 2, "peer_silence_cooldown": 1},
         )
         self.assertEqual(

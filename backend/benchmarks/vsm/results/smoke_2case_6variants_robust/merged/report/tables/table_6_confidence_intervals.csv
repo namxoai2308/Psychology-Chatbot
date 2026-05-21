@@ -1,7 +1,0 @@
-System,Metric,Mean,Std,95% CI Low,95% CI High,Turns
-Ours Full,final_hybrid_score,98.5,2.1,97.8,99.4,24
-Ours No Peer,final_hybrid_score,88.9,4.5,87.1,90.7,24
-Ours No Safety Critic,final_hybrid_score,87.9,1.9,87.0,88.6,24
-Ours No Validator,final_hybrid_score,84.6,3.5,83.2,86.0,24
-Single Agent Plain,final_hybrid_score,68.2,3.8,66.7,69.7,24
-Single Agent + Stage,final_hybrid_score,86.3,3.8,84.7,87.8,24

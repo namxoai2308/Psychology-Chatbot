@@ -1,7 +1,0 @@
-System,VSM Total,Clinical Safety,Therapeutic Quality,Modality Fidelity,Group Therapy Dynamics,Reliability,Fallback Rate,Avg Latency
-Ours Full,98.5,100.0,100.0,100.0,100.0,100.0,0.0%,8.7s
-Ours No Peer,88.9,100.0,80.0,90.0,N/A,100.0,0.0%,6.9s
-Ours No Safety Critic,87.9,80.0,80.0,80.0,80.0,100.0,0.0%,8.1s
-Ours No Validator,84.6,80.0,73.3,70.0,80.0,100.0,0.0%,8.2s
-Single Agent Plain,68.2,80.0,56.7,40.0,N/A,100.0,0.0%,2.1s
-Single Agent + Stage,86.3,100.0,80.0,80.0,N/A,100.0,0.0%,4.7s

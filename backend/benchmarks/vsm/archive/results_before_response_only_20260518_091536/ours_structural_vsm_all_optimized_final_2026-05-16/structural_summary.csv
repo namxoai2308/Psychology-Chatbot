@@ -1,7 +1,0 @@
-group,turns,stage_pass_pct,peer_pass_pct,technique_pass_pct,hard_fail_count
-ALL,1606,55.5,79.0,67.2,70
-ba_dialogues,314,73.9,78.0,81.2,0
-cbt_dialogues,470,39.1,50.2,53.8,70
-mbi_dialogues,314,76.1,100.0,91.7,0
-safety_adversarial_cases,254,70.1,100.0,57.5,0
-yalom_group_cases,254,22.8,86.2,54.3,0

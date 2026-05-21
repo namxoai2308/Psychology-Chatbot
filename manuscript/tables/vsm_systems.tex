@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{p{0.19\linewidth}p{0.15\linewidth}p{0.39\linewidth}p{0.17\linewidth}}
+\toprule
+System & Family & Description & Primary contrast \\
+\midrule
+\tracefull & Proposed & Full graph: blackboard, assessor, therapist orchestrator, peer gating, validator, and safety critic. & Main system. \\
+\textsc{TRACE-NoPeer} & Ablation & Removes Nam/Linh peer branch while preserving route, stage, validator, and safety modules. & Tests Yalom-style peer contribution. \\
+\textsc{TRACE-NoValidator} & Ablation & Disables validator repair after therapist generation. & Tests stage/technique repair. \\
+\textsc{TRACE-NoSafetyCritic} & Ablation & Disables post-generation safety critic while keeping input crisis routing. & Tests output safety layer. \\
+Stage prompt & Internal baseline & Single response generator given route/stage context but no peer planning or blackboard coordination. & Tests graph coordination beyond stage prompting. \\
+Plain & Internal baseline & Single supportive response generator without route/stage/peer blackboard logic. & Tests generic support prompting. \\
+Base model & Text baseline & Direct model response without the structured support prompt. & Tests base model behavior. \\
+Prompt 1-1 & Text baseline & One-to-one supportive therapist prompt without multi-agent graph. & Tests strong prompt-only baseline. \\
+\bottomrule
+\end{tabular}
+\caption{Systems fixed for the main VSM evaluation. External Vietnamese or therapy-oriented baselines are appendix-only unless they complete at least 95\% of the core split under the same scoring pipeline.}
+\label{tab:vsm_systems}
+\end{table*}

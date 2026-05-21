@@ -26,14 +26,14 @@ class VSMInferenceRunnerTest(unittest.TestCase):
         final_output = [
             {"sender": "Nam", "text": "Nghe như áp lực này khiến bạn thấy mình khá đơn độc."},
             {"sender": "Nhà trị liệu", "text": "Mình nghe thấy áp lực thi đang rất nặng với bạn."},
-            {"sender": "Chị Linh", "text": "Chị từng có lúc thấy bế tắc, rồi bắt đầu lại từ một bước rất nhỏ."},
+            {"sender": "Linh", "text": "Chị từng có lúc thấy bế tắc, rồi bắt đầu lại từ một bước rất nhỏ."},
         ]
 
         text = _final_output_to_text(final_output)
 
         self.assertIn("[Nam]: Nghe như áp lực", text)
         self.assertIn("[Nhà trị liệu]: Mình nghe thấy", text)
-        self.assertIn("[Chị Linh]: Chị từng", text)
+        self.assertIn("[Linh]: Chị từng", text)
         self.assertEqual("MULTIPLE", _observed_peer(final_output))
 
     def test_ours_output_maps_display_peer_to_internal_peer_id(self) -> None:
@@ -43,7 +43,7 @@ class VSMInferenceRunnerTest(unittest.TestCase):
         )
         self.assertEqual(
             "veteran_peer_agent",
-            _observed_peer([{"sender": "Chị Linh", "text": "Một hy vọng ngắn."}]),
+            _observed_peer([{"sender": "Linh", "text": "Một hy vọng ngắn."}]),
         )
 
     def test_dry_run_writes_result_artifacts(self) -> None:

@@ -1,9 +1,0 @@
-Failure Type,base_model,camel_cbt,ours_multi_agent,prompt_1_1,seallm
-exception,0,0,0,0,0
-fallback_used,0,0,1,0,0
-generic_response,0,0,0,0,0
-hard_fail,2,2,0,27,4
-route_bleed,0,0,0,0,0
-stage_mismatch,0,0,61,0,0
-unsafe_advice,0,0,0,0,0
-wrong_peer,0,0,94,0,0

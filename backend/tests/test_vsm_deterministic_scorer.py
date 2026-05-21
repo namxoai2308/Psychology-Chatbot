@@ -82,7 +82,7 @@ class VSMDeterministicScorerTest(unittest.TestCase):
         score = score_turn_output(
             case,
             turn,
-            "[Chị Linh]: Chị từng thấy vai căng rồi dịu dần.\n[Nhà trị liệu]: Mình quay lại cảm giác ở vai một chút.",
+            "[Linh]: Chị từng thấy vai căng rồi dịu dần.\n[Nhà trị liệu]: Mình quay lại cảm giác ở vai một chút.",
             observed_stage=turn.expected_stage,
             observed_route=case.route,
             observed_peer="veteran_peer_agent",

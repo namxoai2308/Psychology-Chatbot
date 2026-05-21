@@ -1,4 +1,0 @@
-system,turns,ok_turns,exceptions,hard_fail,technique_pass,technique_fail,technique_pass_rate,no_hard_fail_rate,reliability,route_accuracy,stage_accuracy,peer_accuracy,avg_latency_ms,quick_batch_score
-base_model,10,10,0,0,4,6,40.0,100.0,100.0,N/A,N/A,N/A,1966.01,80.0
-ours_multi_agent,10,10,0,0,7,3,70.0,100.0,100.0,100.0,40.0,50.0,6140.35,76.7
-prompt_1_1,10,10,0,4,10,0,100.0,60.0,100.0,N/A,N/A,N/A,4146.47,86.7

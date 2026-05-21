@@ -1,6 +1,0 @@
-System,Peer Selection Accuracy,Yalom Factor Match,Nam Persona Validity,Linh Persona Validity,Peer Silence Accuracy,Repetition Penalty
-Base Model,N/A,N/A,N/A,N/A,N/A,N/A
-CAMEL-CBT,N/A,N/A,N/A,N/A,N/A,N/A
-Ours Multi-Agent,0.0,0.0,0.0,0.0,0.0,100.0
-Prompt 1-1,N/A,N/A,N/A,N/A,N/A,N/A
-SeaLLM,N/A,N/A,N/A,N/A,N/A,N/A

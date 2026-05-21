@@ -158,11 +158,15 @@ def _what_not_to_do(current_stage: str) -> str:
 
 
 def _clean_speaker_attribution(text: str) -> str:
+    legacy_linh_label = "Chị" + " Linh"
+    legacy_linh_lower = "chị" + " Linh"
     replacements = {
         "chị Nam": "Nam",
         "Chị Nam": "Nam",
-        "anh Linh": "chị Linh",
-        "Anh Linh": "Chị Linh",
+        "anh Linh": "Linh",
+        "Anh Linh": "Linh",
+        legacy_linh_lower: "Linh",
+        legacy_linh_label: "Linh",
     }
     for old, new in replacements.items():
         text = text.replace(old, new)

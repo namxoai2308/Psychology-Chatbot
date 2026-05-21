@@ -1,3 +1,0 @@
-vsm_stress_yalom_001_universality_dorm_loneliness
-vsm_stress_yalom_002_catharsis_family_pressure
-vsm_stress_yalom_003_hope_after_failure

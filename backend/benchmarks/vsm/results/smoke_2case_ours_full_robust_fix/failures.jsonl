@@ -1,4 +1,0 @@
-{"case_id": "vsm_cbt_001_exam_catastrophizing", "counts_toward_failure_rate": true, "failure_type": "fallback_used", "severity": "runtime", "system": "ours_full", "turn_id": 9}
-{"actual": "cbt_stage_2_abc_model", "case_id": "vsm_yalom_001_universality_dorm_loneliness", "counts_toward_failure_rate": false, "expected": "cbt_stage_1_venting", "failure_type": "stage_mismatch", "severity": "contract", "system": "ours_full", "turn_id": 2}
-{"actual": "NONE", "case_id": "vsm_yalom_001_universality_dorm_loneliness", "counts_toward_failure_rate": false, "expected": "peer_mirror_agent", "failure_type": "peer_mismatch", "severity": "contract", "system": "ours_full", "turn_id": 2}
-{"actual": "cbt_stage_2_abc_model", "case_id": "vsm_yalom_001_universality_dorm_loneliness", "counts_toward_failure_rate": false, "expected": "cbt_stage_1_venting", "failure_type": "stage_mismatch", "severity": "contract", "system": "ours_full", "turn_id": 3}

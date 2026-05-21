@@ -126,6 +126,42 @@ class LLMService:
                 logger.warning("DeepSeek async call failed: %s", e)
                 return "{}" if is_json else f"LỖI DEEPSEEK: {e}"
 
+        if model_type in {"openai", "gpt"}:
+            api_key = os.getenv("OPENAI_API_KEY", "")
+            if not api_key:
+                return "System Error: OPENAI_API_KEY not set."
+
+            system_msg = "You are a helpful assistant."
+            is_json = kwargs.get("config", {}).get("response_mime_type") == "application/json"
+            if is_json:
+                system_msg = "You are a specialized JSON AI. You must ALWAYS reply with a valid JSON object. Do not output markdown code blocks, just raw JSON."
+
+            payload = {
+                "model": model if model not in ["gemini-2.5-flash", ""] else os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
+                "messages": [
+                    {"role": "system", "content": system_msg},
+                    {"role": "user", "content": contents},
+                ],
+                "temperature": kwargs.get("config", {}).get("temperature", 0.7),
+            }
+            if is_json:
+                payload["response_format"] = {"type": "json_object"}
+
+            headers = {
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+            }
+            base_url = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
+
+            try:
+                async with httpx.AsyncClient(timeout=120.0) as client:
+                    res = await client.post(f"{base_url}/chat/completions", json=payload, headers=headers)
+                    res.raise_for_status()
+                    return res.json().get("choices", [{}])[0].get("message", {}).get("content", "")
+            except Exception as e:
+                logger.warning("OpenAI async call failed: %s", e)
+                return "{}" if is_json else f"LỖI OPENAI: {e}"
+
         if model_type == "slm":
             slm_url = os.getenv("SLM_NGROK_URL")
             if not slm_url:
@@ -230,6 +266,41 @@ class LLMService:
             except Exception as e:
                 logger.warning("DeepSeek sync call failed: %s", e)
                 return "{}" if is_json else f"LỖI DEEPSEEK: {e}"
+
+        if model_type in {"openai", "gpt"}:
+            api_key = os.getenv("OPENAI_API_KEY", "")
+            if not api_key:
+                return "System Error: OPENAI_API_KEY not set."
+
+            system_msg = "You are a helpful assistant."
+            is_json = kwargs.get("config", {}).get("response_mime_type") == "application/json"
+            if is_json:
+                system_msg = "You are a specialized JSON AI. You must ALWAYS reply with a valid JSON object. Do not output markdown code blocks, just raw JSON."
+
+            payload = {
+                "model": model if model not in ["gemini-2.5-flash", ""] else os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
+                "messages": [
+                    {"role": "system", "content": system_msg},
+                    {"role": "user", "content": contents},
+                ],
+                "temperature": kwargs.get("config", {}).get("temperature", 0.7),
+            }
+            if is_json:
+                payload["response_format"] = {"type": "json_object"}
+
+            headers = {
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+            }
+            base_url = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1").rstrip("/")
+
+            try:
+                res = requests.post(f"{base_url}/chat/completions", json=payload, headers=headers, timeout=120.0)
+                res.raise_for_status()
+                return res.json().get("choices", [{}])[0].get("message", {}).get("content", "")
+            except Exception as e:
+                logger.warning("OpenAI sync call failed: %s", e)
+                return "{}" if is_json else f"LỖI OPENAI: {e}"
 
         if model_type == "slm":
             slm_url = os.getenv("SLM_NGROK_URL")

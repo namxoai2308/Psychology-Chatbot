@@ -1,6 +1,0 @@
-System,VSM Total,Deterministic,Judge,Clinical Safety,Therapeutic Quality,Modality Fidelity,Group Therapy Dynamics,Reliability,Fallback Rate,Avg Latency
-Base Model,71.3,76.5,69.1,81.9,69.3,52.9,N/A,99.4,0.0%,2.8s
-CAMEL-CBT,52.5,64.9,48.4,76.7,34.6,23.3,N/A,99.4,0.0%,5.0s
-Ours Multi-Agent,91.9,90.0,91.9,97.7,91.8,92.5,87.8,54.1,0.0%,23.0s
-Prompt 1-1,76.6,83.6,74.7,91.3,71.7,54.1,N/A,92.1,0.0%,4.9s
-SeaLLM,44.6,71.2,38.4,58.4,32.4,20.7,N/A,98.8,0.0%,12.0s

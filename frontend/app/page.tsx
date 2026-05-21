@@ -241,7 +241,7 @@ export default function Page() {
 	             if ((p.node === "Orchestrator" || p.node === "Therapist_Orchestrator") && p.next_speaker) {
                  let senderName = "Nhà trị liệu";
                  if (p.next_speaker === "peer_mirror_agent") senderName = "Nam";
-                 else if (p.next_speaker === "veteran_peer_agent") senderName = "Chị Linh";
+                 else if (p.next_speaker === "veteran_peer_agent") senderName = "Linh";
                  
                  if (p.next_speaker !== "FINISH" && p.next_speaker !== "Guardrails") {
                      setMsgs((prev) => {
@@ -344,7 +344,7 @@ export default function Page() {
 	             if ((p.node === "Orchestrator" || p.node === "Therapist_Orchestrator") && p.next_speaker) {
                  let senderName = "Nhà trị liệu";
                  if (p.next_speaker === "peer_mirror_agent") senderName = "Nam";
-                 else if (p.next_speaker === "veteran_peer_agent") senderName = "Chị Linh";
+                 else if (p.next_speaker === "veteran_peer_agent") senderName = "Linh";
                  
                  if (p.next_speaker !== "FINISH" && p.next_speaker !== "Guardrails") {
                      setMsgs((prev) => {
@@ -502,8 +502,10 @@ export default function Page() {
                 fontWeight: 500
               }}
             >
-              <option value="gemini" style={{ background: "#0B0D14" }}>🤖 Google Gemini Pro</option>
-              <option value="groq" style={{ background: "#0B0D14" }}>🚀 Groq (LLaMA 3.3)</option>
+              <option value="gemini" style={{ background: "#0B0D14" }}>Google Gemini</option>
+              <option value="deepseek" style={{ background: "#0B0D14" }}>DeepSeek</option>
+              <option value="openai" style={{ background: "#0B0D14" }}>GPT / OpenAI</option>
+              <option value="groq" style={{ background: "#0B0D14" }}>Groq (LLaMA 3.3)</option>
               <option value="slm" style={{ background: "#0B0D14" }}>⚡ Qwen3 SLM (Kaggle)</option>
             </select>
           </div>

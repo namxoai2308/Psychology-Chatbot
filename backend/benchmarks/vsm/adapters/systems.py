@@ -37,15 +37,16 @@ from benchmarks.vsm.data.schema import VSMCase, VSMTurn
 
 
 Conversation = list[dict[str, str]]
+LEGACY_LINH_LABEL = "Chị" + " Linh"
 
 
 DISPLAY_SENDER_BY_ID = {
     "peer_mirror_agent": "Nam",
-    "veteran_peer_agent": "Chị Linh",
+    "veteran_peer_agent": "Linh",
     "therapist_coordinator_agent": "Nhà trị liệu",
     "Nam": "Nam",
-    "Linh": "Chị Linh",
-    "Chị Linh": "Chị Linh",
+    "Linh": "Linh",
+    LEGACY_LINH_LABEL: "Linh",
     "Nhà trị liệu": "Nhà trị liệu",
 }
 
@@ -54,7 +55,7 @@ PEER_ID_BY_SENDER = {
     "Nam": "peer_mirror_agent",
     "veteran_peer_agent": "veteran_peer_agent",
     "Linh": "veteran_peer_agent",
-    "Chị Linh": "veteran_peer_agent",
+    LEGACY_LINH_LABEL: "veteran_peer_agent",
 }
 
 
